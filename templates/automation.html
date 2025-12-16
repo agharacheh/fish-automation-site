@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ _("Automation & Control Architecture") }}</h1>
+
+<div class="card-light">
+    <p>{{ _("This section covers PLC logic, IO mapping, control loops, interlocks, and hatchery automation design.") }}</p>
+</div>
+
+<div class="card-light">
+    <h2>{{ _("Automation Components") }}</h2>
+    <ul>
+        <li>{{ _("PLC / RTU panels") }}</li>
+        <li>{{ _("IO modules and sensors mapping") }}</li>
+        <li>{{ _("Control loops for pumps, feeders, and aeration") }}</li>
+        <li>{{ _("Alarm logic, safety interlocks, and fault detection") }}</li>
+        <li>{{ _("Data logging and communication network") }}</li>
+    </ul>
+</div>
+
+{% endblock %}

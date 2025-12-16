@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ _("Upload Engineering Drawings") }}</h1>
+
+<div class="card-light">
+    <p>
+        {{ _("Upload PDF, image, or CAD drawings (DWG, DXF) for engineering review.") }}
+    </p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="drawing" required>
+        <button type="submit" class="btn-primary">
+            {{ _("Upload File") }}
+        </button>
+    </form>
+
+    {% if message %}
+        <p class="status-msg">{{ message }}</p>
+    {% endif %}
+</div>
+
+<div class="card-light">
+    <h2>{{ _("Uploaded Files") }}</h2>
+
+    {% if files %}
+        <table class="file-table">
+    <thead>
+        <tr>
+            <th>{{ _("File Name") }}</th>
+            <th>{{ _("Type") }}</th>
+            <th>{{ _("Actions") }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for file in files %}
+        <tr>
+            <td>{{ file }}</td>
+            <td>{{ file.split('.')[-1]|upper }}</td>
+            <td class="file-actions">
+
+                <a href="{{ url_for('download_file', filename=file) }}"
+                   class="btn-download">
+                    {{ _("Download") }}
+                </a>
+
+                <form action="{{ url_for('delete_file', filename=file) }}"
+                      method="POST"
+                      style="display:inline;">
+                    <button type="submit"
+                            class="btn-delete"
+                            onclick="return confirm('{{ _('Are you sure?') }}')">
+                        {{ _("Delete") }}
+                    </button>
+                </form>
+
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+    {% else %}
+        <p>{{ _("No files uploaded yet.") }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}

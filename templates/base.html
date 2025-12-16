@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="{{ current_locale }}"
+      dir="{{ 'rtl' if current_locale == 'fa' else 'ltr' }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ _("Fish Hatchery – Automation & Engineering") }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<header class="header-light">
+
+    <div class="header-left">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="logo">
+        <span class="brand-title">{{ _("Fish Hatchery – Automation & Engineering") }}</span>
+    </div>
+
+    <!-- MOBILE TOGGLE -->
+    <button class="nav-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+<nav class="nav-menu-light">
+
+    <!-- ENGLISH MENU -->
+    <div class="menu-en">
+
+        <a class="{% if page == 'home' %}active{% endif %}" href="{{ lang_url('index') }}">
+            <i class="fa-solid fa-house nav-icon"></i> {{ _("Home") }}
+        </a>
+
+        <div class="dropdown">
+            <a class="dropdown-btn {% if page == 'process' or page == 'diagram' %}active{% endif %}">
+                <i class="fa-solid fa-diagram-project nav-icon"></i>
+                {{ _("Process Design") }}
+                <i class="fa-solid fa-caret-down submenu-arrow"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="{{ lang_url('process') }}">{{ _("Process Design") }}</a>
+                <a href="{{ lang_url('process_diagram') }}">{{ _("Process Diagram") }}</a>
+                <a href="{{ lang_url('upload_drawings') }}">{{ _("Upload Drawings") }}</a>
+            </div>
+        </div>
+
+        <a href="{{ lang_url('automation') }}">
+            <i class="fa-solid fa-microchip nav-icon"></i> {{ _("Automation & Control") }}
+        </a>
+
+        <div class="dropdown">
+            <a class="dropdown-btn">
+                <i class="fa-solid fa-chart-line nav-icon"></i>
+                {{ _("Monitoring & SCADA") }}
+                <i class="fa-solid fa-caret-down submenu-arrow"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="{{ lang_url('monitoring') }}">{{ _("Monitoring & SCADA") }}</a>
+                <a href="{{ lang_url('scada') }}">{{ _("SCADA") }}</a>
+            </div>
+        </div>
+
+        <a href="{{ lang_url('contact') }}">
+            <i class="fa-solid fa-envelope nav-icon"></i> {{ _("Contact / Specs") }}
+        </a>
+
+    </div>
+
+    <!-- PERSIAN MENU (CUSTOM ORDER) -->
+    <div class="menu-fa">
+
+        <a href="{{ lang_url('index') }}">{{ _("Home") }}</a>
+
+        <div class="dropdown">
+            <a class="dropdown-btn">
+                {{ _("Process Design") }}
+                <i class="fa-solid fa-caret-down submenu-arrow"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="{{ lang_url('process') }}">{{ _("Process Design") }}</a>
+                <a href="{{ lang_url('process_diagram') }}">{{ _("Process Diagram") }}</a>
+                <a href="{{ lang_url('upload_drawings') }}">{{ _("Upload Drawings") }}</a>
+            </div>
+        </div>
+
+        <a href="{{ lang_url('automation') }}">{{ _("Automation & Control") }}</a>
+
+        <div class="dropdown">
+            <a class="dropdown-btn">
+                {{ _("Monitoring & SCADA") }}
+                <i class="fa-solid fa-caret-down submenu-arrow"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="{{ lang_url('monitoring') }}">{{ _("Monitoring & SCADA") }}</a>
+                <a href="{{ lang_url('scada') }}">{{ _("SCADA") }}</a>
+            </div>
+        </div>
+
+        <a href="{{ lang_url('contact') }}">{{ _("Contact / Specs") }}</a>
+
+    </div>
+
+</nav>
+
+    <div class="lang-switch-light">
+        <a href="{{ url_for('setlang', lang_code='en', next=request.full_path) }}" class="lang-btn-light">EN</a>
+        <a href="{{ url_for('setlang', lang_code='fa', next=request.full_path) }}" class="lang-btn-light">FA</a>
+    </div>
+
+    
+
+</header>
+
+
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    © 2025 – {{ _("Tamhid Gostar") }}
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15 }
+    );
+
+    document.querySelectorAll(".fade-up").forEach(el => {
+        observer.observe(el);
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav-menu-light");
+
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+});
+</script>
+
+<script>
+window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header-light");
+    if (!header) return;
+
+    if (window.scrollY > 10) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
+
+</body>
+</html>

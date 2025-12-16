@@ -1,0 +1,47 @@
+{#<!-- {% extends "base.html" %}
+{% block content %}
+
+<h1>{{ _("Contact & Technical Details") }}</h1>
+
+<div class="card-light">
+    <p>{{ _("Send your inquiry for hatchery engineering and automation design.") }}</p>
+</div>
+
+<div class="card-light">
+    <h2>{{ _("Technical Contact") }}</h2>
+    <ul>
+        <li>{{ _("Engineering support for full hatchery process design") }}</li>
+        <li>{{ _("Automation & control system development") }}</li>
+        <li>{{ _("SCADA integration and equipment specifications") }}</li>
+    </ul>
+</div>
+
+{% endblock %} -->#}
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ _("Technical Contact") }}</h1>
+
+<div class="card-light">
+    <p>{{ _("Send your technical inquiry for hatchery engineering, automation, SCADA integration, or equipment specifications.") }}</p>
+
+    <form action="{{ url_for('contact_submit', lang=current_locale) }}" method="POST" class="contact-form">
+
+        <label>{{ _("Your Name") }}</label>
+        <input type="text" name="name" required placeholder="{{ _('Enter your name') }}">
+
+        <label>{{ _("Email Address") }}</label>
+        <input type="email" name="email" required placeholder="{{ _('Enter your email') }}">
+
+        <label>{{ _("Message") }}</label>
+        <textarea name="message" required placeholder="{{ _('Write your inquiry here…') }}"></textarea>
+
+        <button type="submit" class="btn-submit">{{ _("Send Message") }}</button>
+    </form>
+
+    {% if success %}
+        <p class="success-msg">{{ _("Your message was sent successfully!") }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}

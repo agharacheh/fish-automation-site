@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ _("SCADA Live Mockup") }}</h1>
+
+<div class="scada-panel">
+
+    <div class="scada-card">
+        <h3>{{ _("Incubation Temperature") }}</h3>
+        <div class="scada-value" id="tempVal">27.1°C</div>
+        <div class="status-light green" id="tempStatus"></div>
+    </div>
+
+    <div class="scada-card">
+        <h3>{{ _("Dissolved Oxygen") }}</h3>
+        <div class="scada-value" id="doVal">6.9 mg/L</div>
+        <div class="status-light green" id="doStatus"></div>
+    </div>
+
+    <div class="scada-card">
+        <h3>{{ _("Water Flow Rate") }}</h3>
+        <div class="scada-value" id="flowVal">420 L/hr</div>
+        <div class="status-light green" id="flowStatus"></div>
+    </div>
+
+</div>
+
+<script>
+// Simulated SCADA value changes every 3 seconds
+function simulateValues() {
+    let t = (26 + Math.random() * 2).toFixed(1);
+    let d = (6.5 + Math.random() * 1).toFixed(1);
+    let f = (400 + Math.random() * 60).toFixed(0);
+
+    document.getElementById("tempVal").innerText = t + "°C";
+    document.getElementById("doVal").innerText = d + " mg/L";
+    document.getElementById("flowVal").innerText = f + " L/hr";
+}
+setInterval(simulateValues, 3000);
+</script>
+
+{% endblock %}

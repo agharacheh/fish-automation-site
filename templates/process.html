@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ _("Hatchery Process Engineering") }}</h1>
+
+<div class="card-light">
+    <p>{{ _("This section explains the complete process flow: broodstock, egg handling, incubation, larval rearing, nursery, and water treatment.") }}</p>
+</div>
+
+<div class="card-light">
+    <h2>{{ _("Process Stages") }}</h2>
+    <ul>
+        <li>{{ _("Broodstock & Egg Handling") }}</li>
+        <li>{{ _("Incubation Phase") }}</li>
+        <li>{{ _("Larval Rearing Phase") }}</li>
+        <li>{{ _("Nursery / Fingerling Phase") }}</li>
+        <li>{{ _("Water Treatment") }}</li>
+    </ul>
+</div>
+
+{% endblock %}

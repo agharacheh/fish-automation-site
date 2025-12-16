@@ -1,0 +1,464 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version:  fish-hatchery-automation\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-12-14 13:33+0330\n"
+"PO-Revision-Date: 2025-12-07 00:00+0000\n"
+"Last-Translator: Amir\n"
+"Language: fa\n"
+"Language-Team: Persian\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: app.py:144
+msgid "No file selected."
+msgstr ""
+
+#: app.py:148
+msgid "File uploaded successfully."
+msgstr ""
+
+#: app.py:150
+msgid "Invalid file type."
+msgstr ""
+
+#: app.py:171
+msgid "File deleted successfully."
+msgstr ""
+
+#: app.py:173
+msgid "File not found."
+msgstr ""
+
+# ==========================
+# automation.html
+#: templates/automation.html:4
+msgid "Automation & Control Architecture"
+msgstr "معماری اتوماسیون و کنترل"
+
+#: templates/automation.html:7
+msgid ""
+"This section covers PLC logic, IO mapping, control loops, interlocks, and"
+" hatchery automation design."
+msgstr ""
+"منطق PLC، نگاشت IO، لوپ‌های کنترلی ، اینترلاک‌های ایمنی و طراحی کل سیستم "
+"هچری. "
+
+#: templates/automation.html:11
+msgid "Automation Components"
+msgstr "اتوماسیون و کنترل"
+
+#: templates/automation.html:13
+msgid "PLC / RTU panels"
+msgstr "لایه PLC / RTU"
+
+#: templates/automation.html:14
+msgid "IO modules and sensors mapping"
+msgstr "نگاشت ماژول‌های IO و سنسورها"
+
+#: templates/automation.html:15
+msgid "Control loops for pumps, feeders, and aeration"
+msgstr "لوپ‌های کنترلی برای پمپ‌ها، فیدرها و هوادهی"
+
+#: templates/automation.html:16
+msgid "Alarm logic, safety interlocks, and fault detection"
+msgstr "منطق آلارم، اینترلاک‌های ایمنی و تشخیص خطا"
+
+#: templates/automation.html:17
+msgid "Data logging and communication network"
+msgstr "ثبت داده‌ها و شبکه ارتباطی"
+
+# ==========================
+# base.html
+#: templates/base.html:6 templates/base.html:15 templates/index.html:26
+msgid "Fish Hatchery – Automation & Engineering"
+msgstr "هچری ماهی – اتوماسیون و مهندسی"
+
+#: templates/base.html:27
+msgid "Home"
+msgstr "خانه"
+
+#: templates/base.html:34 templates/base.html:39 templates/index.html:35
+#: templates/index.html:47
+msgid "Process Design"
+msgstr "طراحی فرآیند"
+
+#: templates/base.html:42
+msgid "Process Diagram"
+msgstr "طراحی فرآیند"
+
+#: templates/base.html:44
+msgid "Upload Drawings"
+msgstr "آپلود نقشه ها"
+
+#: templates/base.html:51 templates/index.html:56
+msgid "Automation & Control"
+msgstr "اتوماسیون و کنترل"
+
+#: templates/base.html:58 templates/base.html:64 templates/index.html:65
+#: templates/monitoring.html:4
+msgid "Monitoring & SCADA"
+msgstr "مانیتورینگ و اسکادا"
+
+#: templates/base.html:67
+msgid "SCADA"
+msgstr "اسکادا"
+
+#: templates/base.html:74
+msgid "Contact / Specs"
+msgstr "تماس / مشخصات فنی"
+
+#: templates/base.html:96
+msgid "Tamhid Gostar"
+msgstr "تمهید گستر"
+
+#: templates/contact.html:23
+msgid "Technical Contact"
+msgstr "تماس با تیم فنی"
+
+#: templates/contact.html:26
+msgid ""
+"Send your technical inquiry for hatchery engineering, automation, SCADA "
+"integration, or equipment specifications."
+msgstr ""
+"درخواست فنی خود را برای مهندسی هچری، اتوماسیون، یکپارچه‌سازی SCADA یا "
+"مشخصات تجهیزات ارسال کنید."
+
+#: templates/contact.html:30
+msgid "Your Name"
+msgstr "نام شما"
+
+#: templates/contact.html:31
+msgid "Enter your name"
+msgstr "نام خود را وارد کنید"
+
+#: templates/contact.html:33
+msgid "Email Address"
+msgstr "ایمیل"
+
+#: templates/contact.html:34
+msgid "Enter your email"
+msgstr "ایمیل خود را وارد کنید"
+
+#: templates/contact.html:36
+msgid "Message"
+msgstr "پیام"
+
+#: templates/contact.html:37
+msgid "Write your inquiry here…"
+msgstr "پیام خود را اینجا بنویسید…"
+
+#: templates/contact.html:39
+msgid "Send Message"
+msgstr "ارسال پیام"
+
+#: templates/contact.html:43
+msgid "Your message was sent successfully!"
+msgstr "پیام شما با موفقیت ارسال شد!"
+
+#: templates/index.html:4
+msgid "Welcome to Fish Hatchery Automation"
+msgstr "اتوماسیون و مهندسی هچری ماهی"
+
+#: templates/index.html:7
+msgid ""
+"This website provides full engineering documentation, automation details,"
+" SCADA monitoring layout, and equipment specifications for a complete "
+"fish hatchery system."
+msgstr ""
+"این وب‌سایت مستندات کامل مهندسی، جزئیات اتوماسیون، طرح پایش SCADA و "
+"مشخصات تجهیزات یک سیستم کامل هچری ماهی را ارائه می‌دهد."
+
+#: templates/index.html:11
+msgid "Main Sections"
+msgstr "بخش‌های اصلی"
+
+#: templates/index.html:13
+msgid "Process Design – full hatchery flow engineering"
+msgstr "طراحی فرآیند – مهندسی کامل جریان هچری"
+
+# ==========================
+# automation.html
+#: templates/index.html:14
+msgid "Automation & Control – PLC, IO, logic, and control architecture"
+msgstr "معماری اتوماسیون و کنترل"
+
+#: templates/index.html:15
+msgid "Monitoring & SCADA – dashboards, alarms, trends, sensors"
+msgstr "مانیتورینگ و SCADA – داشبوردها، آلارم‌ها، روندها و سنسورها"
+
+#: templates/index.html:16
+msgid "Contact / Specs – technical inquiries and system requirements"
+msgstr "تماس / مشخصات – سوالات فنی و نیازمندی‌های سیستم"
+
+#: templates/index.html:30
+msgid ""
+"Complete process engineering, automation design, monitoring, SCADA "
+"layout, and system documentation for a modern fish hatchery."
+msgstr ""
+"این وب‌سایت مستندات کامل مهندسی، جزئیات اتوماسیون، طرح پایش SCADA و "
+"مشخصات تجهیزات یک سیستم کامل هچری ماهی را ارائه می‌دهد."
+
+#: templates/index.html:38
+msgid "Automation & SCADA"
+msgstr "اتوماسیون و کنترل"
+
+# ==========================
+# process.html
+# (adjust to your actual English texts)
+#: templates/index.html:48
+msgid "Complete hatchery process engineering from broodstock to nursery."
+msgstr "مهندسی فرآیند هچری"
+
+#: templates/index.html:50 templates/index.html:59 templates/index.html:68
+msgid "View Details"
+msgstr "مشاهده جزئیات"
+
+#: templates/index.html:57
+msgid "PLC logic, IO mapping, control loops, and safety interlocks."
+msgstr ""
+"منطق PLC، نگاشت IO، لوپ‌های کنترلی ، اینترلاک‌های ایمنی و طراحی کل سیستم "
+"هچری. "
+
+#: templates/index.html:66
+msgid "Dashboards, alarms, trends, KPIs, and remote access."
+msgstr ""
+"این بخش داشبوردهای اسکادا، آلارم‌ها، روندهای تاریخی، شاخص‌ها و دسترسی از "
+"راه دور را پوشش می‌دهد."
+
+#: templates/index.html:74
+msgid "Engineering Drawings"
+msgstr "فایل طراح های  مهندسی خود را آپلود کنید."
+
+#: templates/index.html:75
+msgid "Upload and manage CAD, PDF, and technical drawings."
+msgstr "طراحی های PDF, CAD, و مهندسی خود را برای اصلاح به ما بسپارید."
+
+#: templates/index.html:77
+msgid "Open Workspace"
+msgstr "فضای کاربری"
+
+#: templates/monitoring.html:7
+msgid ""
+"This section covers SCADA dashboards, alarms, historical trends, KPIs, "
+"and remote access."
+msgstr ""
+"این بخش داشبوردهای اسکادا، آلارم‌ها، روندهای تاریخی، شاخص‌ها و دسترسی از "
+"راه دور را پوشش می‌دهد."
+
+#: templates/monitoring.html:11
+msgid "SCADA Features"
+msgstr "ویژگی‌های SCADA"
+
+#: templates/monitoring.html:13
+msgid "Sensor live monitoring (temperature, DO, pH, ORP)"
+msgstr "پایش زنده سنسورها (دما، اکسیژن محلول، pH، ORP)"
+
+#: templates/monitoring.html:14
+msgid "Alarm notifications and fault signals"
+msgstr "اعلان‌های آلارم و سیگنال‌های خطا"
+
+#: templates/monitoring.html:15
+msgid "Historical trend charts for every hatchery unit"
+msgstr "نمودارهای روند تاریخی برای هر واحد هچری"
+
+#: templates/monitoring.html:16
+msgid "KPI calculations (FCR, survival rate)"
+msgstr "محاسبات شاخص‌ها (FCR، نرخ بقا)"
+
+#: templates/monitoring.html:17
+msgid "Remote access and data visualization"
+msgstr "دسترسی از راه دور و یکپارچه‌سازی"
+
+# ==========================
+# process.html
+# (adjust to your actual English texts)
+#: templates/process.html:4
+msgid "Hatchery Process Engineering"
+msgstr "مهندسی فرآیند هچری"
+
+#: templates/process.html:7
+msgid ""
+"This section explains the complete process flow: broodstock, egg "
+"handling, incubation, larval rearing, nursery, and water treatment."
+msgstr ""
+"این بخش جریان کامل فرآیند را توضیح می‌دهد: مولدین، مدیریت تخم، "
+"انکوباسیون، پرورش لارو، نرسری و تصفیه آب."
+
+#: templates/process.html:11
+msgid "Process Stages"
+msgstr "طراحی فرآیند"
+
+#: templates/process.html:13
+msgid "Broodstock & Egg Handling"
+msgstr "مولدین و مدیریت تخم"
+
+#: templates/process.html:14
+msgid "Incubation Phase"
+msgstr "سیستم‌های انکوباسیون"
+
+#: templates/process.html:15
+msgid "Larval Rearing Phase"
+msgstr "پرورش لارو"
+
+#: templates/process.html:16
+msgid "Nursery / Fingerling Phase"
+msgstr "مرحله نرسری / بچه‌ماهی"
+
+#: templates/process.html:17
+msgid "Water Treatment"
+msgstr "تصفیه آب"
+
+#: templates/process_diagram.html:4
+msgid "Interactive Process Diagram"
+msgstr "نمودار تعاملی فرآیند"
+
+#: templates/process_diagram.html:11
+msgid "Water Tank – Raw water storage & filtration"
+msgstr "تانک آب - ذخیره آب و فیلتراسیون"
+
+#: templates/process_diagram.html:19
+msgid "Incubation Unit – Egg incubation & control"
+msgstr "واحد انکوباسیون - انکوباسیون تخم ها و کنترل"
+
+#: templates/process_diagram.html:25
+msgid "Larval Rearing – Early growth stage"
+msgstr "پرورش لارو"
+
+#: templates/process_diagram.html:46 templates/process_diagram.html:57
+msgid "Hover over any component to see details."
+msgstr "برای مشاهده جزئیات روی هر قسمت بروید."
+
+#: templates/scada.html:4
+msgid "SCADA Live Mockup"
+msgstr "ماکاپ زنده اسکادا"
+
+#: templates/scada.html:9
+msgid "Incubation Temperature"
+msgstr "دمای انکوباسیون"
+
+#: templates/scada.html:15
+msgid "Dissolved Oxygen"
+msgstr "اکسیژن محلول"
+
+#: templates/scada.html:21
+msgid "Water Flow Rate"
+msgstr "نرخ جریان آب"
+
+#: templates/upload_drawings.html:4
+msgid "Upload Engineering Drawings"
+msgstr "فایل طراح های  مهندسی خود را آپلود کنید."
+
+#: templates/upload_drawings.html:8
+msgid "Upload PDF, image, or CAD drawings (DWG, DXF) for engineering review."
+msgstr "فایل های PDF, image یا CAD را برای بررسی آپلود کنید."
+
+#: templates/upload_drawings.html:14
+msgid "Upload File"
+msgstr "فایل آپلود کنید"
+
+#: templates/upload_drawings.html:24
+msgid "Uploaded Files"
+msgstr "فایل آپلود کنید"
+
+#: templates/upload_drawings.html:30
+msgid "File Name"
+msgstr "نام فایل"
+
+#: templates/upload_drawings.html:31
+msgid "Type"
+msgstr "نوع فایل"
+
+#: templates/upload_drawings.html:32
+msgid "Actions"
+msgstr "بخش‌های اصلی"
+
+#: templates/upload_drawings.html:44
+msgid "Download"
+msgstr "دانلود"
+
+#: templates/upload_drawings.html:52
+msgid "Are you sure?"
+msgstr "اطمینان دارید؟"
+
+#: templates/upload_drawings.html:53
+msgid "Delete"
+msgstr "پاک کردن"
+
+#: templates/upload_drawings.html:64
+msgid "No files uploaded yet."
+msgstr "فایلی آپلود نشده"
+
+#~ msgid ""
+#~ "From broodstock management to larval "
+#~ "rearing and nursery, we design the "
+#~ "complete fish hatchery flow."
+#~ msgstr ""
+#~ "از مدیریت مولدین تا پرورش لارو و"
+#~ " نرسری، کل جریان فرآیند هچری ماهی "
+#~ "را طراحی می‌کنیم."
+
+#~ msgid "SOP Documentation"
+#~ msgstr "مستندسازی رویه‌های استاندارد (SOP)"
+
+#~ msgid ""
+#~ "Centralized dashboards, alarms, and historical"
+#~ " trends for optimizing survival rate, "
+#~ "FCR and energy usage."
+#~ msgstr ""
+#~ "داشبوردهای متمرکز، آلارم‌ها و روندهای "
+#~ "تاریخی برای بهینه‌سازی نرخ بقا، ضریب "
+#~ "تبدیل غذایی (FCR) و مصرف انرژی."
+
+#~ msgid "Control Loops"
+#~ msgstr "لوپ‌های کنترلی"
+
+#~ msgid "Interlocks & Fail-Safe Logic"
+#~ msgstr "اینترلاک‌ها و منطق ایمن (Fail-Safe)"
+
+#~ msgid "Typical Automation Deliverables"
+#~ msgstr "خروجی‌های معمول اتوماسیون"
+
+#~ msgid "This section describes engineering design of the full hatchery process."
+#~ msgstr "این بخش طراحی مهندسی کل فرآیند هچری را توضیح می‌دهد."
+
+#~ msgid "View Process Design"
+#~ msgstr "مشاهده طراحی فرآیند"
+
+# ==========================
+# monitoring.html
+#~ msgid "Monitoring, SCADA & Data Analytics"
+#~ msgstr "مانیتورینگ، اسکادا و تحلیل داده"
+
+#~ msgid "SCADA / HMI Design"
+#~ msgstr "طراحی SCADA / HMI"
+
+#~ msgid "KPIs & Reports"
+#~ msgstr "شاخص‌ها و گزارش‌ها"
+
+# ==========================
+# contact.html
+#~ msgid "Contact & Technical Details"
+#~ msgstr "تماس و مشخصات فنی"
+
+#~ msgid "Send your inquiry for hatchery engineering and automation design."
+#~ msgstr "در خصوص طراحی مهندسی هچری و سیستم اتوماسیون پیام خود را ارسال کنید."
+
+#~ msgid "SCADA Mockup"
+#~ msgstr "ماکاپ زنده اسکادا"
+
+# ==========================
+# process_diagram.html
+#~ msgid "Water Tank"
+#~ msgstr "مخزن آب"
+
+#~ msgid "Incubation Unit"
+#~ msgstr "واحد انکوباسیون"
+
+#~ msgid "Larval Rearing Tank"
+#~ msgstr "مخزن پرورش لارو"
+

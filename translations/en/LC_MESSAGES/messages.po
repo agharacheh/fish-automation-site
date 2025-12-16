@@ -1,0 +1,473 @@
+# English translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-12-14 13:33+0330\n"
+"PO-Revision-Date: 2025-12-07 21:55+0330\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: app.py:144
+msgid "No file selected."
+msgstr ""
+
+#: app.py:148
+msgid "File uploaded successfully."
+msgstr ""
+
+#: app.py:150
+msgid "Invalid file type."
+msgstr ""
+
+#: app.py:171
+msgid "File deleted successfully."
+msgstr ""
+
+#: app.py:173
+msgid "File not found."
+msgstr ""
+
+#: templates/automation.html:4
+msgid "Automation & Control Architecture"
+msgstr ""
+
+#: templates/automation.html:7
+msgid ""
+"This section covers PLC logic, IO mapping, control loops, interlocks, and"
+" hatchery automation design."
+msgstr ""
+
+#: templates/automation.html:11
+msgid "Automation Components"
+msgstr ""
+
+#: templates/automation.html:13
+msgid "PLC / RTU panels"
+msgstr ""
+
+#: templates/automation.html:14
+msgid "IO modules and sensors mapping"
+msgstr ""
+
+#: templates/automation.html:15
+msgid "Control loops for pumps, feeders, and aeration"
+msgstr ""
+
+#: templates/automation.html:16
+msgid "Alarm logic, safety interlocks, and fault detection"
+msgstr ""
+
+#: templates/automation.html:17
+msgid "Data logging and communication network"
+msgstr ""
+
+#: templates/base.html:6 templates/base.html:15 templates/index.html:26
+msgid "Fish Hatchery – Automation & Engineering"
+msgstr ""
+
+#: templates/base.html:27
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:34 templates/base.html:39 templates/index.html:35
+#: templates/index.html:47
+msgid "Process Design"
+msgstr ""
+
+#: templates/base.html:42
+msgid "Process Diagram"
+msgstr ""
+
+#: templates/base.html:44
+msgid "Upload Drawings"
+msgstr ""
+
+#: templates/base.html:51 templates/index.html:56
+msgid "Automation & Control"
+msgstr ""
+
+#: templates/base.html:58 templates/base.html:64 templates/index.html:65
+#: templates/monitoring.html:4
+msgid "Monitoring & SCADA"
+msgstr ""
+
+#: templates/base.html:67
+msgid "SCADA"
+msgstr ""
+
+#: templates/base.html:74
+msgid "Contact / Specs"
+msgstr ""
+
+#: templates/base.html:96
+msgid "Tamhid Gostar"
+msgstr ""
+
+#: templates/contact.html:23
+msgid "Technical Contact"
+msgstr ""
+
+#: templates/contact.html:26
+msgid ""
+"Send your technical inquiry for hatchery engineering, automation, SCADA "
+"integration, or equipment specifications."
+msgstr ""
+
+#: templates/contact.html:30
+msgid "Your Name"
+msgstr ""
+
+#: templates/contact.html:31
+msgid "Enter your name"
+msgstr ""
+
+#: templates/contact.html:33
+msgid "Email Address"
+msgstr ""
+
+#: templates/contact.html:34
+msgid "Enter your email"
+msgstr ""
+
+#: templates/contact.html:36
+msgid "Message"
+msgstr ""
+
+#: templates/contact.html:37
+msgid "Write your inquiry here…"
+msgstr ""
+
+#: templates/contact.html:39
+msgid "Send Message"
+msgstr ""
+
+#: templates/contact.html:43
+msgid "Your message was sent successfully!"
+msgstr ""
+
+#: templates/index.html:4
+msgid "Welcome to Fish Hatchery Automation"
+msgstr ""
+
+#: templates/index.html:7
+msgid ""
+"This website provides full engineering documentation, automation details,"
+" SCADA monitoring layout, and equipment specifications for a complete "
+"fish hatchery system."
+msgstr ""
+
+#: templates/index.html:11
+msgid "Main Sections"
+msgstr ""
+
+#: templates/index.html:13
+msgid "Process Design – full hatchery flow engineering"
+msgstr ""
+
+#: templates/index.html:14
+msgid "Automation & Control – PLC, IO, logic, and control architecture"
+msgstr ""
+
+#: templates/index.html:15
+msgid "Monitoring & SCADA – dashboards, alarms, trends, sensors"
+msgstr ""
+
+#: templates/index.html:16
+msgid "Contact / Specs – technical inquiries and system requirements"
+msgstr ""
+
+#: templates/index.html:30
+msgid ""
+"Complete process engineering, automation design, monitoring, SCADA "
+"layout, and system documentation for a modern fish hatchery."
+msgstr ""
+
+#: templates/index.html:38
+msgid "Automation & SCADA"
+msgstr ""
+
+#: templates/index.html:48
+msgid "Complete hatchery process engineering from broodstock to nursery."
+msgstr ""
+
+#: templates/index.html:50 templates/index.html:59 templates/index.html:68
+msgid "View Details"
+msgstr ""
+
+#: templates/index.html:57
+msgid "PLC logic, IO mapping, control loops, and safety interlocks."
+msgstr ""
+
+#: templates/index.html:66
+msgid "Dashboards, alarms, trends, KPIs, and remote access."
+msgstr ""
+
+#: templates/index.html:74
+msgid "Engineering Drawings"
+msgstr ""
+
+#: templates/index.html:75
+msgid "Upload and manage CAD, PDF, and technical drawings."
+msgstr ""
+
+#: templates/index.html:77
+msgid "Open Workspace"
+msgstr ""
+
+#: templates/monitoring.html:7
+msgid ""
+"This section covers SCADA dashboards, alarms, historical trends, KPIs, "
+"and remote access."
+msgstr ""
+
+#: templates/monitoring.html:11
+msgid "SCADA Features"
+msgstr ""
+
+#: templates/monitoring.html:13
+msgid "Sensor live monitoring (temperature, DO, pH, ORP)"
+msgstr ""
+
+#: templates/monitoring.html:14
+msgid "Alarm notifications and fault signals"
+msgstr ""
+
+#: templates/monitoring.html:15
+msgid "Historical trend charts for every hatchery unit"
+msgstr ""
+
+#: templates/monitoring.html:16
+msgid "KPI calculations (FCR, survival rate)"
+msgstr ""
+
+#: templates/monitoring.html:17
+msgid "Remote access and data visualization"
+msgstr ""
+
+#: templates/process.html:4
+msgid "Hatchery Process Engineering"
+msgstr ""
+
+#: templates/process.html:7
+msgid ""
+"This section explains the complete process flow: broodstock, egg "
+"handling, incubation, larval rearing, nursery, and water treatment."
+msgstr ""
+
+#: templates/process.html:11
+msgid "Process Stages"
+msgstr ""
+
+#: templates/process.html:13
+msgid "Broodstock & Egg Handling"
+msgstr ""
+
+#: templates/process.html:14
+msgid "Incubation Phase"
+msgstr ""
+
+#: templates/process.html:15
+msgid "Larval Rearing Phase"
+msgstr ""
+
+#: templates/process.html:16
+msgid "Nursery / Fingerling Phase"
+msgstr ""
+
+#: templates/process.html:17
+msgid "Water Treatment"
+msgstr ""
+
+#: templates/process_diagram.html:4
+msgid "Interactive Process Diagram"
+msgstr ""
+
+#: templates/process_diagram.html:11
+msgid "Water Tank – Raw water storage & filtration"
+msgstr ""
+
+#: templates/process_diagram.html:19
+msgid "Incubation Unit – Egg incubation & control"
+msgstr ""
+
+#: templates/process_diagram.html:25
+msgid "Larval Rearing – Early growth stage"
+msgstr ""
+
+#: templates/process_diagram.html:46 templates/process_diagram.html:57
+msgid "Hover over any component to see details."
+msgstr ""
+
+#: templates/scada.html:4
+msgid "SCADA Live Mockup"
+msgstr ""
+
+#: templates/scada.html:9
+msgid "Incubation Temperature"
+msgstr ""
+
+#: templates/scada.html:15
+msgid "Dissolved Oxygen"
+msgstr ""
+
+#: templates/scada.html:21
+msgid "Water Flow Rate"
+msgstr ""
+
+#: templates/upload_drawings.html:4
+msgid "Upload Engineering Drawings"
+msgstr ""
+
+#: templates/upload_drawings.html:8
+msgid "Upload PDF, image, or CAD drawings (DWG, DXF) for engineering review."
+msgstr ""
+
+#: templates/upload_drawings.html:14
+msgid "Upload File"
+msgstr ""
+
+#: templates/upload_drawings.html:24
+msgid "Uploaded Files"
+msgstr ""
+
+#: templates/upload_drawings.html:30
+msgid "File Name"
+msgstr ""
+
+#: templates/upload_drawings.html:31
+msgid "Type"
+msgstr ""
+
+#: templates/upload_drawings.html:32
+msgid "Actions"
+msgstr ""
+
+#: templates/upload_drawings.html:44
+msgid "Download"
+msgstr ""
+
+#: templates/upload_drawings.html:52
+msgid "Are you sure?"
+msgstr ""
+
+#: templates/upload_drawings.html:53
+msgid "Delete"
+msgstr ""
+
+#: templates/upload_drawings.html:64
+msgid "No files uploaded yet."
+msgstr ""
+
+#~ msgid "PLC / RTU Layer"
+#~ msgstr ""
+
+#~ msgid "Control Loops"
+#~ msgstr ""
+
+#~ msgid "Interlocks & Fail-Safe Logic"
+#~ msgstr ""
+
+#~ msgid "Typical Automation Deliverables"
+#~ msgstr ""
+
+#~ msgid "Complete Fish Hatchery Process Design"
+#~ msgstr ""
+
+#~ msgid "This section describes engineering design of the full hatchery process."
+#~ msgstr ""
+
+#~ msgid "View Process Design"
+#~ msgstr ""
+
+#~ msgid "Monitoring, SCADA & Data Analytics"
+#~ msgstr ""
+
+#~ msgid "SCADA / HMI Design"
+#~ msgstr ""
+
+#~ msgid "KPIs & Reports"
+#~ msgstr ""
+
+#~ msgid "Remote Access & Integration"
+#~ msgstr ""
+
+#~ msgid "Incubation Systems"
+#~ msgstr ""
+
+#~ msgid "Larval Rearing"
+#~ msgstr ""
+
+#~ msgid "Contact & Technical Details"
+#~ msgstr ""
+
+#~ msgid "Send your inquiry for hatchery engineering and automation design."
+#~ msgstr ""
+
+#~ msgid "Engineering support for full hatchery process design"
+#~ msgstr ""
+
+#~ msgid "Automation & control system development"
+#~ msgstr ""
+
+#~ msgid "SCADA integration and equipment specifications"
+#~ msgstr ""
+
+#~ msgid "File type not allowed"
+#~ msgstr ""
+
+#~ msgid "Engineering Drawings Upload"
+#~ msgstr ""
+
+#~ msgid "Choose a file"
+#~ msgstr ""
+
+#~ msgid "Invalid file type! Allowed: PDF, images, DWG, DXF."
+#~ msgstr ""
+
+#~ msgid "FInvalid file type. Allowed: PDF, PNG, JPG, DWG, DXF"
+#~ msgstr ""
+
+#~ msgid "No file part in form"
+#~ msgstr ""
+
+#~ msgid "No file selected"
+#~ msgstr ""
+
+#~ msgid "File uploaded successfully!"
+#~ msgstr ""
+
+#~ msgid "Invalid file type. Allowed file types are: PDF, PNG, JPG, DWG, DXF"
+#~ msgstr ""
+
+#~ msgid "Upload PDF, images, or CAD drawings (DWG, DXF) for review."
+#~ msgstr ""
+
+#~ msgid "Choose File"
+#~ msgstr ""
+
+#~ msgid "SCADA Mockup"
+#~ msgstr ""
+
+#~ msgid "Fish Hatchery Automation & Engineering"
+#~ msgstr ""
+
+#~ msgid "Water Tank"
+#~ msgstr ""
+
+#~ msgid "Incubation Unit"
+#~ msgstr ""
+
+#~ msgid "Larval Rearing Tank"
+#~ msgstr ""
+

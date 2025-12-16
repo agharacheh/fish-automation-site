@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ _("Monitoring & SCADA") }}</h1>
+
+<div class="card-light">
+    <p>{{ _("This section covers SCADA dashboards, alarms, historical trends, KPIs, and remote access.") }}</p>
+</div>
+
+<div class="card-light">
+    <h2>{{ _("SCADA Features") }}</h2>
+    <ul>
+        <li>{{ _("Sensor live monitoring (temperature, DO, pH, ORP)") }}</li>
+        <li>{{ _("Alarm notifications and fault signals") }}</li>
+        <li>{{ _("Historical trend charts for every hatchery unit") }}</li>
+        <li>{{ _("KPI calculations (FCR, survival rate)") }}</li>
+        <li>{{ _("Remote access and data visualization") }}</li>
+    </ul>
+</div>
+
+{% endblock %}

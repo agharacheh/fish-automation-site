@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ _("Interactive Process Diagram") }}</h1>
+
+<div class="diagram-container">
+
+    <svg id="hatcheryDiagram" viewBox="0 0 900 500" class="diagram-svg">
+
+    <!-- WATER TANK (CYLINDRICAL) -->
+    <g class="unit tank" data-label="{{ _('Water Tank – Raw water storage & filtration') }}">
+        <ellipse cx="170" cy="120" rx="90" ry="18"/>
+        <rect x="80" y="120" width="180" height="140"/>
+        <ellipse cx="170" cy="260" rx="90" ry="18"/>
+        <text x="170" y="200" text-anchor="middle">Water Tank</text>
+    </g>
+
+    <!-- INCUBATION UNIT -->
+    <g class="unit incubator" data-label="{{ _('Incubation Unit – Egg incubation & control') }}">
+        <rect x="350" y="90" rx="14" ry="14" width="200" height="120"/>
+        <text x="450" y="155" text-anchor="middle">Incubation</text>
+    </g>
+
+    <!-- LARVAL TANK -->
+    <g class="unit larval" data-label="{{ _('Larval Rearing – Early growth stage') }}">
+        <rect x="650" y="150" rx="18" ry="18" width="180" height="160"/>
+        <text x="740" y="235" text-anchor="middle">Larval Tank</text>
+    </g>
+
+    <!-- FLOW ARROWS -->
+    <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10"
+                refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" />
+        </marker>
+    </defs>
+
+    <line x1="260" y1="190" x2="350" y2="150"
+          class="flow-line" marker-end="url(#arrow)"/>
+
+    <line x1="550" y1="150" x2="650" y2="230"
+          class="flow-line" marker-end="url(#arrow)"/>
+
+</svg>
+    <div class="diagram-info" id="infoBox">
+        {{ _("Hover over any component to see details.") }}
+    </div>
+</div>
+
+<script>
+document.querySelectorAll(".tank, .incubator, .larval").forEach(el => {
+    el.addEventListener("mouseover", () => {
+        document.getElementById("infoBox").innerText = el.dataset.label;
+    });
+    el.addEventListener("mouseout", () => {
+        document.getElementById("infoBox").innerText =
+            "{{ _('Hover over any component to see details.') }}";
+    });
+});
+</script>
+
+{% endblock %}
+
+
