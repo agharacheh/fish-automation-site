@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config["BABEL_DEFAULT_LOCALE"] = "en"
 app.config["BABEL_TRANSLATION_DIRECTORIES"] = "translations"
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-secret-key")
-
+app.secret_key = os.environ.get("SECRET_KEY", "dev-secret")
 
 
 

@@ -20,96 +20,83 @@
         <i class="fa-solid fa-bars"></i>
     </button>
 
-<nav class="nav-menu-light">
+    <!-- NAVIGATION -->
+    <nav class="nav-menu-light">
 
-    <!-- ENGLISH MENU -->
-    <div class="menu-en">
+        <!-- ENGLISH MENU -->
+        <div class="menu-en">
+            <a href="{{ lang_url('index') }}"><i class="fa-solid fa-house nav-icon"></i> {{ _("Home") }}</a>
 
-        <a class="{% if page == 'home' %}active{% endif %}" href="{{ lang_url('index') }}">
-            <i class="fa-solid fa-house nav-icon"></i> {{ _("Home") }}
-        </a>
-
-        <div class="dropdown">
-            <a class="dropdown-btn {% if page == 'process' or page == 'diagram' %}active{% endif %}">
-                <i class="fa-solid fa-diagram-project nav-icon"></i>
-                {{ _("Process Design") }}
-                <i class="fa-solid fa-caret-down submenu-arrow"></i>
-            </a>
-            <div class="dropdown-content">
-                <a href="{{ lang_url('process') }}">{{ _("Process Design") }}</a>
-                <a href="{{ lang_url('process_diagram') }}">{{ _("Process Diagram") }}</a>
-                <a href="{{ lang_url('upload_drawings') }}">{{ _("Upload Drawings") }}</a>
+            <div class="dropdown">
+                <a class="dropdown-btn">
+                    <i class="fa-solid fa-diagram-project nav-icon"></i>
+                    {{ _("Process Design") }}
+                    <i class="fa-solid fa-caret-down submenu-arrow"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="{{ lang_url('process') }}">{{ _("Process Design") }}</a>
+                    <a href="{{ lang_url('process_diagram') }}">{{ _("Process Diagram") }}</a>
+                    <a href="{{ lang_url('upload_drawings') }}">{{ _("Upload Drawings") }}</a>
+                </div>
             </div>
+
+            <a href="{{ lang_url('automation') }}"><i class="fa-solid fa-microchip nav-icon"></i> {{ _("Automation & Control") }}</a>
+
+            <div class="dropdown">
+                <a class="dropdown-btn">
+                    <i class="fa-solid fa-chart-line nav-icon"></i>
+                    {{ _("Monitoring & SCADA") }}
+                    <i class="fa-solid fa-caret-down submenu-arrow"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="{{ lang_url('monitoring') }}">{{ _("Monitoring & SCADA") }}</a>
+                    <a href="{{ lang_url('scada') }}">{{ _("SCADA") }}</a>
+                </div>
+            </div>
+
+            <a href="{{ lang_url('contact') }}"><i class="fa-solid fa-envelope nav-icon"></i> {{ _("Contact / Specs") }}</a>
         </div>
 
-        <a href="{{ lang_url('automation') }}">
-            <i class="fa-solid fa-microchip nav-icon"></i> {{ _("Automation & Control") }}
-        </a>
+        <!-- PERSIAN MENU -->
+        <div class="menu-fa">
+            <a href="{{ lang_url('index') }}">{{ _("Home") }}</a>
 
-        <div class="dropdown">
-            <a class="dropdown-btn">
-                <i class="fa-solid fa-chart-line nav-icon"></i>
-                {{ _("Monitoring & SCADA") }}
-                <i class="fa-solid fa-caret-down submenu-arrow"></i>
-            </a>
-            <div class="dropdown-content">
-                <a href="{{ lang_url('monitoring') }}">{{ _("Monitoring & SCADA") }}</a>
-                <a href="{{ lang_url('scada') }}">{{ _("SCADA") }}</a>
+            <div class="dropdown">
+                <a class="dropdown-btn">
+                    {{ _("Process Design") }}
+                    <i class="fa-solid fa-caret-down submenu-arrow"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="{{ lang_url('process') }}">{{ _("Process Design") }}</a>
+                    <a href="{{ lang_url('process_diagram') }}">{{ _("Process Diagram") }}</a>
+                    <a href="{{ lang_url('upload_drawings') }}">{{ _("Upload Drawings") }}</a>
+                </div>
             </div>
+
+            <a href="{{ lang_url('automation') }}">{{ _("Automation & Control") }}</a>
+
+            <div class="dropdown">
+                <a class="dropdown-btn">
+                    {{ _("Monitoring & SCADA") }}
+                    <i class="fa-solid fa-caret-down submenu-arrow"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="{{ lang_url('monitoring') }}">{{ _("Monitoring & SCADA") }}</a>
+                    <a href="{{ lang_url('scada') }}">{{ _("SCADA") }}</a>
+                </div>
+            </div>
+
+            <a href="{{ lang_url('contact') }}">{{ _("Contact / Specs") }}</a>
         </div>
 
-        <a href="{{ lang_url('contact') }}">
-            <i class="fa-solid fa-envelope nav-icon"></i> {{ _("Contact / Specs") }}
-        </a>
-
-    </div>
-
-    <!-- PERSIAN MENU (CUSTOM ORDER) -->
-    <div class="menu-fa">
-
-        <a href="{{ lang_url('index') }}">{{ _("Home") }}</a>
-
-        <div class="dropdown">
-            <a class="dropdown-btn">
-                {{ _("Process Design") }}
-                <i class="fa-solid fa-caret-down submenu-arrow"></i>
-            </a>
-            <div class="dropdown-content">
-                <a href="{{ lang_url('process') }}">{{ _("Process Design") }}</a>
-                <a href="{{ lang_url('process_diagram') }}">{{ _("Process Diagram") }}</a>
-                <a href="{{ lang_url('upload_drawings') }}">{{ _("Upload Drawings") }}</a>
-            </div>
-        </div>
-
-        <a href="{{ lang_url('automation') }}">{{ _("Automation & Control") }}</a>
-
-        <div class="dropdown">
-            <a class="dropdown-btn">
-                {{ _("Monitoring & SCADA") }}
-                <i class="fa-solid fa-caret-down submenu-arrow"></i>
-            </a>
-            <div class="dropdown-content">
-                <a href="{{ lang_url('monitoring') }}">{{ _("Monitoring & SCADA") }}</a>
-                <a href="{{ lang_url('scada') }}">{{ _("SCADA") }}</a>
-            </div>
-        </div>
-
-        <a href="{{ lang_url('contact') }}">{{ _("Contact / Specs") }}</a>
-
-    </div>
-
-</nav>
+    </nav>
 
     <div class="lang-switch-light">
         <a href="{{ url_for('setlang', lang_code='en', next=request.full_path) }}" class="lang-btn-light">EN</a>
         <a href="{{ url_for('setlang', lang_code='fa', next=request.full_path) }}" class="lang-btn-light">FA</a>
     </div>
 
-    
-
 </header>
-
-
 
 <main>
     {% block content %}{% endblock %}
