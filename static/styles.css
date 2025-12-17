@@ -1238,3 +1238,70 @@ html[dir="rtl"] .eng-text {
         text-align: right;
     }
 }
+/* ===============================
+   MOBILE NAVIGATION (FIX)
+   =============================== */
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #1F6FB2;
+}
+
+/* MOBILE MODE */
+@media (max-width: 900px) {
+
+    /* Show hamburger */
+    .nav-toggle {
+        display: block;
+    }
+
+    /* Hide menu by default */
+    .nav-menu-light {
+        display: none;
+        position: absolute;
+        top: 64px; /* below header */
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 16px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        z-index: 999;
+    }
+
+    /* Open state */
+    .nav-menu-light.open {
+        display: flex;
+    }
+
+    /* Stack items */
+    .nav-menu-light a,
+    .nav-menu-light .dropdown-btn {
+        width: 100%;
+        padding: 12px 10px;
+    }
+
+    /* Dropdown full width */
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 6px;
+    }
+
+    /* Hide EN/FA desktop split logic on mobile */
+    .menu-en,
+    .menu-fa {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* RTL mobile */
+    html[dir="rtl"] .nav-menu-light {
+        text-align: right;
+    }
+}
