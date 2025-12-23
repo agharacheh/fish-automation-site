@@ -1019,3 +1019,96 @@ html[dir="rtl"] .eng-text {
     align-items: center;
     text-decoration: none;
 }
+/* ===============================
+   MOBILE DROPDOWN RTL / LTR FIX
+   =============================== */
+
+@media (max-width: 900px) {
+
+    /* Base mobile menu container */
+    .nav-menu-light {
+        align-items: stretch;
+    }
+
+    /* Menu groups */
+    .menu-en,
+    .menu-fa {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* ---------- ENGLISH (LTR) ---------- */
+    html[dir="ltr"] .nav-menu-light,
+    html[dir="ltr"] .menu-en {
+        text-align: left;
+        direction: ltr;
+    }
+
+    html[dir="ltr"] .dropdown-content {
+        text-align: left;
+        padding-left: 16px;
+        padding-right: 0;
+    }
+
+    /* ---------- FARSI (RTL) ---------- */
+    html[dir="rtl"] .nav-menu-light,
+    html[dir="rtl"] .menu-fa {
+        text-align: right;
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .dropdown-content {
+        text-align: right;
+        padding-right: 16px;
+        padding-left: 0;
+    }
+
+    /* Dropdown arrows align correctly */
+    html[dir="rtl"] .submenu-arrow {
+        margin-right: 8px;
+        margin-left: 0;
+    }
+
+    html[dir="ltr"] .submenu-arrow {
+        margin-left: 8px;
+        margin-right: 0;
+    }
+}
+/* ===============================
+   MOBILE MENU SPACING TIGHTENING
+   =============================== */
+
+@media (max-width: 900px) {
+
+    /* Reduce vertical gaps */
+    .nav-menu-light {
+        padding: 10px 12px;
+        gap: 6px;
+    }
+
+    .menu-en,
+    .menu-fa {
+        gap: 4px;
+    }
+
+    /* Main menu items */
+    .nav-menu-light a,
+    .dropdown-btn {
+        padding: 10px 12px;
+        font-size: 15px;
+        border-radius: 6px;
+    }
+
+    /* Dropdown items */
+    .dropdown-content a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Remove hover slide animation on mobile */
+    .dropdown-content a:hover {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}

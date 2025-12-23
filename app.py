@@ -188,6 +188,11 @@ def download_file(filename):
     )
 
 
+
+# if __name__ == "__main__":
+#     debug = os.getenv("FLASK_DEBUG", "false").lower() == "true"
+#     app.run(debug=debug)
+    
 # if __name__ == "__main__":
 #     app.run(debug=True)
 

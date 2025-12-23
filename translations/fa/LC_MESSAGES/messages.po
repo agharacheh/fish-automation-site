@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  fish-hatchery-automation\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-14 13:33+0330\n"
+"POT-Creation-Date: 2025-12-23 13:11+0330\n"
 "PO-Revision-Date: 2025-12-07 00:00+0000\n"
 "Last-Translator: Amir\n"
 "Language: fa\n"
@@ -14,23 +14,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: app.py:144
+#: app.py:147
 msgid "No file selected."
 msgstr ""
 
-#: app.py:148
+#: app.py:151
 msgid "File uploaded successfully."
 msgstr ""
 
-#: app.py:150
+#: app.py:153
 msgid "Invalid file type."
 msgstr ""
 
-#: app.py:171
+#: app.py:174
 msgid "File deleted successfully."
 msgstr ""
 
-#: app.py:173
+#: app.py:176
 msgid "File not found."
 msgstr ""
 
@@ -74,45 +74,45 @@ msgstr "ثبت داده‌ها و شبکه ارتباطی"
 
 # ==========================
 # base.html
-#: templates/base.html:6 templates/base.html:15 templates/index.html:26
+#: templates/base.html:6 templates/base.html:16 templates/index.html:26
 msgid "Fish Hatchery – Automation & Engineering"
 msgstr "هچری ماهی – اتوماسیون و مهندسی"
 
-#: templates/base.html:27
+#: templates/base.html:30 templates/base.html:65
 msgid "Home"
 msgstr "خانه"
 
-#: templates/base.html:34 templates/base.html:39 templates/index.html:35
-#: templates/index.html:47
+#: templates/base.html:35 templates/base.html:39 templates/base.html:70
+#: templates/base.html:74 templates/index.html:35 templates/index.html:47
 msgid "Process Design"
 msgstr "طراحی فرآیند"
 
-#: templates/base.html:42
+#: templates/base.html:40 templates/base.html:75
 msgid "Process Diagram"
 msgstr "طراحی فرآیند"
 
-#: templates/base.html:44
+#: templates/base.html:41 templates/base.html:76
 msgid "Upload Drawings"
 msgstr "آپلود نقشه ها"
 
-#: templates/base.html:51 templates/index.html:56
+#: templates/base.html:45 templates/base.html:80 templates/index.html:56
 msgid "Automation & Control"
 msgstr "اتوماسیون و کنترل"
 
-#: templates/base.html:58 templates/base.html:64 templates/index.html:65
-#: templates/monitoring.html:4
+#: templates/base.html:50 templates/base.html:54 templates/base.html:85
+#: templates/base.html:89 templates/index.html:65 templates/monitoring.html:4
 msgid "Monitoring & SCADA"
 msgstr "مانیتورینگ و اسکادا"
 
-#: templates/base.html:67
+#: templates/base.html:55 templates/base.html:90
 msgid "SCADA"
 msgstr "اسکادا"
 
-#: templates/base.html:74
+#: templates/base.html:59 templates/base.html:94
 msgid "Contact / Specs"
 msgstr "تماس / مشخصات فنی"
 
-#: templates/base.html:96
+#: templates/base.html:120
 msgid "Tamhid Gostar"
 msgstr "تمهید گستر"
 
@@ -166,16 +166,15 @@ msgstr "اتوماسیون و مهندسی هچری ماهی"
 
 #: templates/index.html:7
 msgid ""
-"This website provides full engineering documentation, automation details,"
-" SCADA monitoring layout, and equipment specifications for a complete "
-"fish hatchery system."
+"We specialized aquaculture engineering, delivering integrated solutions "
+"across the aquaculture value chain."
 msgstr ""
-"این وب‌سایت مستندات کامل مهندسی، جزئیات اتوماسیون، طرح پایش SCADA و "
-"مشخصات تجهیزات یک سیستم کامل هچری ماهی را ارائه می‌دهد."
+"ما با تخصص در مهندسی آبزی‌پروری، راهکارهای یکپارچه و هوشمند را در تمامی "
+"مراحل زنجیره ارزش آبزی‌پروری ارائه می‌دهیم."
 
 #: templates/index.html:11
-msgid "Main Sections"
-msgstr "بخش‌های اصلی"
+msgid "Our services"
+msgstr "خدمات ما"
 
 #: templates/index.html:13
 msgid "Process Design – full hatchery flow engineering"
@@ -461,4 +460,19 @@ msgstr "فایلی آپلود نشده"
 
 #~ msgid "Larval Rearing Tank"
 #~ msgstr "مخزن پرورش لارو"
+
+#~ msgid ""
+#~ "This website provides full engineering "
+#~ "documentation, automation details, SCADA "
+#~ "monitoring layout, and equipment "
+#~ "specifications for a complete fish "
+#~ "hatchery system."
+#~ msgstr ""
+#~ "این وب‌سایت مستندات کامل مهندسی، جزئیات"
+#~ " اتوماسیون، طرح پایش SCADA و مشخصات"
+#~ " تجهیزات یک سیستم کامل هچری ماهی "
+#~ "را ارائه می‌دهد."
+
+#~ msgid "Main Sections"
+#~ msgstr "بخش‌های اصلی"
 
