@@ -1,0 +1,22 @@
+<div class="company-profile-cta">
+
+  <h3>{{ _("Download Company Profile") }}</h3>
+
+  <p class="muted-text">
+    {{ _("Learn more about our engineering expertise, services, and project experience in a concise PDF document.") }}
+  </p>
+
+  <a href="{{ url_for('static', filename='docs/company_profile.pdf') }}"
+     class="btn btn-primary track-cta profile-download"
+     data-event="download_company_profile"
+     download>
+
+    <svg class="icon icon-pdf">
+      <use href="#icon-pdf"></use>
+    </svg>
+
+    {{ _("Download Company Profile (PDF)") }}
+
+  </a>
+
+</div>

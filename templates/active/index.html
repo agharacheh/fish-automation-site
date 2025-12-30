@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero-section">
+    <div class="hero-content fade-up">
+        <img src="{{ url_for('static', filename='logo.png') }}"
+             alt="Fish Hatchery Automation"
+             class="hero-logo">
+
+        <h1>{{ _("Fish Hatchery Automation & Engineering Commercial Services") }}</h1>
+
+        <p>
+            {{ _("Design, manufacturing, automation, and SCADA solutions for modern aquaculture systems.") }}
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#main-sections" class="hero-btn primary">
+                {{ _("Explore Solutions") }}
+            </a>
+            <a href="{{ url_for('contact') }}" class="hero-btn secondary">
+                {{ _("Contact Us") }}
+            </a>
+        </div>
+    </div>
+</section>
+
+<main id="main-sections">
+
+    <div class="engineering-cards">
+
+        <div class="eng-card fade-up delay-1">
+            <div class="eng-icon">⚙️</div>
+            <h3>{{ _("Equipment Manufacturing") }}</h3>
+            <p>
+                {{ _("Design and fabrication of hatchery equipment including tanks, RAS systems, and filtration units.") }}
+            </p>
+        </div>
+
+        <div class="eng-card fade-up delay-2">
+            <div class="eng-icon">🏗️</div>
+            <h3>{{ _("Commercial Services") }}</h3>
+            <p>
+                {{ _("Engineering consulting, system integration, and commissioning services for aquaculture projects.") }}
+            </p>
+        </div>
+
+        <div class="eng-card fade-up delay-3">
+            <div class="eng-icon">🤖</div>
+            <h3>{{ _("Automation & Control") }}</h3>
+            <p>
+                {{ _("PLC, HMI, and control system design for reliable hatchery operations.") }}
+            </p>
+        </div>
+
+        <div class="eng-card fade-up delay-4">
+            <div class="eng-icon">📊</div>
+            <h3>{{ _("Monitoring & SCADA") }}</h3>
+            <p>
+                {{ _("Real-time monitoring, dashboards, alarms, and data logging for aquaculture facilities.") }}
+            </p>
+        </div>
+
+        <div class="eng-card fade-up delay-1">
+            <div class="eng-icon">🧪</div>
+            <h3>{{ _("Research & Development (R&D)") }}</h3>
+            <p>
+                {{ _("Innovation, pilot systems, and performance optimization for next-generation hatcheries.") }}
+            </p>
+        </div>
+
+        <div class="eng-card fade-up delay-2">
+            <div class="eng-icon">ℹ️</div>
+            <h3>{{ _("About Us") }}</h3>
+            <p>
+                {{ _("Company background, project experience, and expert team profiles.") }}
+            </p>
+        </div>
+
+    </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="about-container">
+
+    <section class="page-header">
+        <h1>{{ _("About Us") }}</h1>
+            <p class="lead">
+                {{ _("Engineering-driven automation and control solutions for modern fish hatcheries and RAS facilities.") }}
+            </p>
+    </section>
+
+    <section class="card-light about-overview">
+        <div class="about-overview-text">
+            <h2>{{ _("Company Overview") }}</h2>
+                <p>
+                    {{ _("We specialize in the design and implementation of PLC-based automation, SCADA monitoring systems, and industrial control solutions for fish hatcheries and aquaculture facilities.") }}
+                </p>
+                <p>
+                    {{ _("Our work focuses on operational reliability, system scalability, and long-term maintainability — from concept design and engineering to commissioning and technical support.") }}
+                </p>
+        </div>
+
+        <div class="about-overview-visual">
+            <!-- Step 3: Replace with your chosen image -->
+            <img src="{{ url_for('static', filename='img/about/overview.jpg') }}"
+                alt="{{ _('Automation and engineering for fish hatcheries') }}"
+                loading="lazy">
+        </div>
+    </section>
+
+    <section class="card-light">
+        <h2>{{ _("What We Do") }}</h2>
+
+        <div class="capabilities-grid">
+            <div class="capability">
+                <h3><span class="cap-icon">⚙️</span> {{ _("Hatchery Automation & PLC") }}</h3>
+                <p>{{ _("Control logic, interlocks, and reliable operation for hatchery processes.") }}</p>
+            </div>
+
+            <div class="capability">
+                <h3><span class="cap-icon">📊</span> {{ _("SCADA & Monitoring") }}</h3>
+                <p>{{ _("Real-time dashboards, alarms, trends, and remote visibility.") }}</p>
+            </div>
+
+            <div class="capability">
+                <h3><span class="cap-icon">👷</span> {{ _("RAS Engineering") }}</h3>
+                <p>{{ _("System design support for recirculating aquaculture applications.") }}</p>
+            </div>
+
+            <div class="capability">
+                <h3><span class="cap-icon">🔌</span> {{ _("Electrical & Control Panels") }}</h3>
+                <p>{{ _("Panel design, wiring standards, documentation, and integration.") }}</p>
+            </div>
+
+            <div class="capability">
+                <h3><span class="cap-icon">🧪</span> {{ _("Sensors & Instrumentation") }}</h3>
+                <p>{{ _("Selection, installation, and calibration of industrial sensors.") }}</p>
+            </div>
+
+            <div class="capability">
+                <h3><span class="cap-icon">🛠</span> {{ _("Commissioning & Support") }}</h3>
+                <p>{{ _("Testing, training, handover, and long-term technical support.") }}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card-light">
+        <h2>{{ _("Facility & Engineering") }}</h2>
+        <p class="muted-text">
+            {{ _("A glimpse into our engineering work and implementation environments.") }}
+        </p>
+
+        <div class="about-gallery">
+            <!-- Step 4: Add 2–4 real images here -->
+            <img src="{{ url_for('static', filename='img/about/gallery-1.jpg') }}" alt="{{ _('Engineering work 1') }}" loading="lazy">
+            <img src="{{ url_for('static', filename='img/about/gallery-2.jpg') }}" alt="{{ _('Engineering work 2') }}" loading="lazy">
+            <img src="{{ url_for('static', filename='img/about/gallery-3.jpg') }}" alt="{{ _('Engineering work 3') }}" loading="lazy">
+        </div>
+    </section>
+
+    <section class="card-light">
+        <h2>{{ _("How We Work") }}</h2>
+
+        <ol class="work-steps">
+            <li>
+                <strong>{{ _("Assessment & Requirements") }}</strong><br>
+                {{ _("Technical review of process requirements, constraints, and operational goals.") }}
+            </li>
+            <li>
+                <strong>{{ _("Engineering & Design") }}</strong><br>
+                {{ _("We deliver diagrams, control philosophy, BOMs, and documentation.") }}
+            </li>
+            <li>
+                <strong>{{ _("Manufacturing & Integration") }}</strong><br>
+                {{ _("Panels, wiring, assembly, and system integration testing.") }}
+            </li>
+            <li>
+                <strong>{{ _("Commissioning & Support") }}</strong><br>
+                {{ _("On-site or remote commissioning, training, and ongoing support.") }}
+            </li>
+        </ol>
+    </section>
+    
+{% include "partials/company_profile_cta.html" %}
+
+    <section class="card-light about-cta">
+        <h2>{{ _("Work With Us") }}</h2>
+        <p>{{ _("Tell us about your hatchery project and we’ll respond with a clear technical path forward.") }}</p>
+        <p class="muted-text">
+            {{ _("Our engineers review every inquiry directly.") }}
+        </p>
+        <a href="{{ url_for('contact', lang=current_locale) }}" class="btn btn-primary">
+            {{ _("Contact Our Engineering Team") }}
+        </a>
+    </section>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,117 @@
+{% from "partials/icons.html" import icon %}
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ _("Technical Contact") }}</h1>
+
+<div class="card-light">
+    <p>{{ _("Send your technical inquiry for hatchery engineering, automation, SCADA integration, or equipment specifications.") }}</p>
+
+<!-- contact details -->
+<ul class="contact-details">
+
+  <li>
+    <svg class="icon"><use href="#icon-location"></use></svg>
+    <span class="contact-label">{{ _("Office Location") }}:</span>
+    <span class="contact-address" id="office-address">
+        {{ _("Shiraz, Iran East Ghodoosi, Seda va sima street, Honar building") }}
+    </span>
+
+  </li>
+
+  <li>
+    <svg class="icon"><use href="#icon-email"></use></svg>
+    <a href="mailto:info@tdqco.com"
+        class="copyable"
+        data-copy="info@tdqco.com">
+        info@tdqco.com
+    </a>
+  </li>
+
+  <li>
+    <svg class="icon"><use href="#icon-phone"></use></svg>
+    <a href="tel:+987138239933"
+        class="ltr copyable"
+        data-copy="+98 71 3823 9933">
+        +98 71 3823 9933
+    </a>
+  </li>
+    <li>
+        <svg class="icon"><use href="#icon-clock"></use></svg>
+        <span class="contact-label">{{ _("Working Hours") }}:</span>
+        <span class="contact-value">
+            {{ _("Saturday to Thursday, 8:00 – 16:00") }}
+        </span>
+    </li>
+
+</ul>
+
+<hr class="soft-divider">
+
+<div class="contact-socials">
+  <a href="https://wa.me/989379964159" aria-label="WhatsApp" data-tooltip="WhatsApp">
+    <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+  </a>
+  <a href="https://t.me/989379964159" aria-label="Telegram" data-tooltip="Telegram">
+    <svg class="icon"><use href="#icon-telegram"></use></svg>
+  </a>
+  <a href="https://instagram.com/yourinstagram" aria-label="Instagram" data-tooltip="Instagram">
+    <svg class="icon"><use href="#icon-instagram"></use></svg>
+  </a>
+  <a href="https://linkedin.com/company/yourlinkedin" aria-label="LinkedIn" data-tooltip="LinkedIn">
+    <svg class="icon"><use href="#icon-linkedin"></use></svg>
+  </a>
+</div>
+
+
+    <div class="contact-map" id="office-map">
+    <iframe
+        src="https://www.google.com/maps?q=Shiraz+E Ghodoosi Blvd+املاک صفاریان&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="{{ _('Company location map') }}">
+    </iframe>
+</div>
+
+<div class="specs-cta">
+
+  <h3>{{ _("Download Technical Specifications") }}</h3>
+
+  <p class="muted-text">
+    {{ _("Get an overview of our automation, control systems, aquaculture engineering capabilities, aquaculture equipments.") }}
+  </p>
+
+<a href="{{ url_for('static', filename='docs/hatchery_specs.pdf') }}"
+   class="btn btn-primary track-cta specs-download"
+   data-event="download_specs"
+   download>
+   <svg class="icon icon-pdf">
+     <use href="#icon-pdf"></use>
+   </svg>
+   {{ _("Download Specs (PDF)") }}
+</a>
+
+
+
+</div>
+
+    <form action="{{ url_for('contact', lang=current_locale) }}" method="POST" class="contact-form">
+
+        <label>{{ _("Your Name") }}</label>
+        <input type="text" name="name" required placeholder="{{ _('Enter your name') }}">
+
+        <label>{{ _("Email Address") }}</label>
+        <input type="email" name="email" required placeholder="{{ _('Enter your email') }}">
+
+        <label>{{ _("Message") }}</label>
+        <textarea name="message" required placeholder="{{ _('Write your inquiry here…') }}"></textarea>
+
+        <button type="submit" class="btn-submit">{{ _("Send Message") }}</button>
+    </form>
+
+    {% if success %}
+        <p class="success-msg">{{ _("Your message was sent successfully!") }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}

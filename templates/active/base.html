@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<body>
+{% include "partials/icons_sprite.html" %}
 <html lang="{{ current_locale }}"
       dir="{{ 'rtl' if current_locale == 'fa' else 'ltr' }}">
 <head>
     <meta charset="UTF-8">
-    <title>{{ _("Fish Hatchery – Automation & Engineering") }}</title>
+    <title>{{ _("Fish Hatchery – Automation & Engineering – Commercial Services ") }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
@@ -30,73 +32,82 @@
         <!-- ENGLISH MENU -->
         <!-- <div class="menu-en"> -->
             <div class="menu-en {% if current_locale != 'en' %}is-hidden{% endif %}">
-            <a href="{{ lang_url('index') }}"><i class="fa-solid fa-house nav-icon"></i> {{ _("Home") }}</a>
+                <a href="{{ lang_url('index') }}">
+                    <i class="fa-solid fa-house nav-icon"></i> Home
+                </a>
+
+            <a href="{{ lang_url('equipment') }}">
+                <i class="fa-solid fa-industry nav-icon"></i> Equipment Manufacturing
+            </a>
+
+            <a href="{{ lang_url('commercial') }}">
+                <i class="fa-solid fa-briefcase nav-icon"></i> Commercial Services
+            </a>
 
             <div class="dropdown">
                 <a class="dropdown-btn">
-                    <i class="fa-solid fa-diagram-project nav-icon"></i>
-                    {{ _("Process Design") }}
+                    <i class="fa-solid fa-microchip nav-icon"></i>
+                    Automation & Control
                     <i class="fa-solid fa-caret-down submenu-arrow"></i>
                 </a>
                 <div class="dropdown-content">
-                    <a href="{{ lang_url('process') }}">{{ _("Process Design") }}</a>
-                    <a href="{{ lang_url('process_diagram') }}">{{ _("Process Diagram") }}</a>
-                    <a href="{{ lang_url('upload_drawings') }}">{{ _("Upload Drawings") }}</a>
+                    <a href="{{ lang_url('monitoring') }}">Monitoring & SCADA</a>
                 </div>
             </div>
 
-            <a href="{{ lang_url('automation') }}"><i class="fa-solid fa-microchip nav-icon"></i> {{ _("Automation & Control") }}</a>
+            <a href="{{ lang_url('rnd') }}">
+                <i class="fa-solid fa-flask nav-icon"></i> Research & Development
+            </a>
 
-            <div class="dropdown">
-                <a class="dropdown-btn">
-                    <i class="fa-solid fa-chart-line nav-icon"></i>
-                    {{ _("Monitoring & SCADA") }}
-                    <i class="fa-solid fa-caret-down submenu-arrow"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="{{ lang_url('monitoring') }}">{{ _("Monitoring & SCADA") }}</a>
-                    <a href="{{ lang_url('scada') }}">{{ _("SCADA") }}</a>
-                </div>
-            </div>
+            <a href="{{ lang_url('about') }}">
+                <i class="fa-solid fa-users nav-icon"></i> About Us
+            </a>
 
-            <a href="{{ lang_url('contact') }}"><i class="fa-solid fa-envelope nav-icon"></i> {{ _("Contact / Specs") }}</a>
+            <a href="{{ lang_url('contact') }}">
+                <i class="fa-solid fa-envelope nav-icon"></i> Contact / Specs
+            </a>
+
         </div>
 
         <!-- PERSIAN MENU -->
         <!-- <div class="menu-fa"> -->
         <div class="menu-fa {% if current_locale != 'fa' %}is-hidden{% endif %}">
-  <a href="{{ lang_url('index') }}"><i class="fa-solid fa-house nav-icon"></i> {{ _("Home") }}</a>
+        <a href="{{ lang_url('index') }}">
+                <i class="fa-solid fa-house nav-icon"></i> خانه
+            </a>
 
-  <div class="dropdown">
-    <a class="dropdown-btn">
-      <i class="fa-solid fa-diagram-project nav-icon"></i>
-      {{ _("Process Design") }}
-      <i class="fa-solid fa-caret-down submenu-arrow"></i>
-    </a>
-    <div class="dropdown-content">
-      <a href="{{ lang_url('process') }}">{{ _("Process Design") }}</a>
-      <a href="{{ lang_url('process_diagram') }}">{{ _("Process Diagram") }}</a>
-      <a href="{{ lang_url('upload_drawings') }}">{{ _("Upload Drawings") }}</a>
-    </div>
-  </div>
+            <a href="{{ lang_url('equipment') }}">
+                <i class="fa-solid fa-industry nav-icon"></i> ساخت تجهیزات
+            </a>
 
-  <a href="{{ lang_url('automation') }}"><i class="fa-solid fa-microchip nav-icon"></i> {{ _("Automation & Control") }}</a>
+            <a href="{{ lang_url('commercial') }}">
+                <i class="fa-solid fa-briefcase nav-icon"></i> خدمات بازرگانی
+            </a>
 
-  <div class="dropdown">
-    <a class="dropdown-btn">
-      <i class="fa-solid fa-chart-line nav-icon"></i>
-      {{ _("Monitoring & SCADA") }}
-      <i class="fa-solid fa-caret-down submenu-arrow"></i>
-    </a>
-    <div class="dropdown-content">
-      <a href="{{ lang_url('monitoring') }}">{{ _("Monitoring & SCADA") }}</a>
-      <a href="{{ lang_url('scada') }}">{{ _("SCADA") }}</a>
-    </div>
-  </div>
+            <div class="dropdown">
+                <a class="dropdown-btn">
+                    <i class="fa-solid fa-microchip nav-icon"></i>
+                    اتوماسیون و کنترل
+                    <i class="fa-solid fa-caret-down submenu-arrow"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="{{ lang_url('monitoring') }}">پایش و اسکادا</a>
+                </div>
+            </div>
 
-  <a href="{{ lang_url('contact') }}"><i class="fa-solid fa-envelope nav-icon"></i> {{ _("Contact / Specs") }}</a>
-</div>
+            <a href="{{ lang_url('rnd') }}">
+                <i class="fa-solid fa-flask nav-icon"></i> تحقیق و توسعه
+            </a>
 
+            <a href="{{ lang_url('about') }}">
+                <i class="fa-solid fa-users nav-icon"></i> درباره ما
+            </a>
+
+            <a href="{{ lang_url('contact') }}">
+                <i class="fa-solid fa-envelope nav-icon"></i> تماس / مشخصات
+            </a>
+
+        </div>
 
     </nav>
 
@@ -114,6 +125,7 @@
     </div>
 
 </header>
+
 
 <main>
     {% block content %}{% endblock %}
@@ -164,6 +176,33 @@ window.addEventListener("scroll", () => {
     } else {
         header.classList.remove("scrolled");
     }
+});
+</script>
+<script>
+document.addEventListener("click", function (e) {
+  const el = e.target.closest(".copyable");
+  if (!el) return;
+
+  const text = el.dataset.copy;
+  navigator.clipboard.writeText(text).then(() => {
+    el.classList.add("copied");
+    setTimeout(() => el.classList.remove("copied"), 1200);
+  });
+});
+</script>
+<script>
+document.addEventListener("click", function (e) {
+  const cta = e.target.closest(".track-cta");
+  if (!cta) return;
+
+  const eventName = cta.dataset.event;
+
+  if (window.gtag) {
+    gtag("event", eventName, {
+      event_category: "CTA",
+      event_label: window.location.pathname
+    });
+  }
 });
 </script>
 
