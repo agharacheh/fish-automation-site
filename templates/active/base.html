@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<body>
-{% include "partials/icons_sprite.html" %}
+
 <html lang="{{ current_locale }}"
       dir="{{ 'rtl' if current_locale == 'fa' else 'ltr' }}">
 <head>
@@ -11,20 +10,27 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
+<body>
+{% include "partials/icons_sprite.html" %}
+
 <header class="header-light">
 
     <div class="header-left">
         <a href="{{ lang_url('index') }}" class="logo-link">
             <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="logo">
         </a>
-        <!-- <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="logo"> -->
-        <!-- <span class="brand-title">{{ _("Fish Hatchery – Automation & Engineering") }}</span> -->
     </div>
 
     <!-- MOBILE TOGGLE -->
-    <button class="nav-toggle" aria-label="Toggle menu">
-        <i class="fa-solid fa-bars"></i>
+    <button class="hamburger" id="navToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
     </button>
+
+    <!-- <button class="nav-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+    </button> -->
 
     <!-- NAVIGATION -->
     <nav class="nav-menu-light">
@@ -166,6 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+
+
 <script>
 window.addEventListener("scroll", () => {
     const header = document.querySelector(".header-light");
@@ -205,6 +213,21 @@ document.addEventListener("click", function (e) {
   }
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("navToggle");
+  const menu = document.querySelector(".nav-menu-light");
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+});
+</script>
+
 
 </body>
 </html>

@@ -100,6 +100,19 @@ body {
 .lang-btn-light:hover {
     background: #3485CC;
 }
+/* ===============================
+   LANGUAGE SWITCH – SIZE LOCK
+=============================== */
+
+.lang-btn-light {
+    min-width: 42px;        /* SAME width always */
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+}
 
 /* MAIN CONTENT */
 main {
@@ -128,9 +141,13 @@ footer {
 html[dir="rtl"] .header-light {
     flex-direction: row-reverse;
 }
+/* ===============================
+   RTL NAV ALIGNMENT (CLEAN)
+=============================== */
 
 html[dir="rtl"] .nav-menu-light {
-    flex-direction: row-reverse;
+    justify-content: flex-end;
+    text-align: right;
 }
 
 html[dir="rtl"] .header-left {
@@ -141,11 +158,6 @@ html[dir="rtl"] .header-left {
     font-size: 15px;
 }
 
-/* RTL fix: icon on left side */
-html[dir="rtl"] .nav-modern a i {
-    margin-right: 0;
-    margin-left: 6px;
-}
 
 /* LANGUAGE MENU VISIBILITY FIX */
 .menu-en,
@@ -409,8 +421,20 @@ svg .larval {
 
 /* RTL fix: icon on right side for Persian */
 html[dir="rtl"] .nav-menu-light a {
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
+ /* ===============================
+   NAV ICON POSITION (LOCKED)
+=============================== */
+
+.nav-menu-light a,
+.dropdown-btn {
+    display: flex;
+    align-items: right;
+    gap: 10px;
+    /* flex-direction: row-reverse;    */
+}
+
 /* ACTIVE MENU ITEM ----------------------------------- */
 .nav-menu-light a.active {
     color: #0D5C91;                  /* Strong engineering blue */
@@ -884,23 +908,8 @@ html[dir="rtl"] .eng-text {
 /* ===============================
    MOBILE HAMBURGER NAV (FINAL)
 =============================== */
-
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #1F6FB2;
-    cursor: pointer;
-}
-
 /* Mobile only */
 @media (max-width: 900px) {
-
-    /* Show hamburger */
-    .nav-toggle {
-        display: block;
-    }
 
     /* Hide desktop menu */
     .nav-menu-light {
@@ -1042,7 +1051,7 @@ html[dir="rtl"] .eng-text {
     html[dir="ltr"] .nav-menu-light,
     html[dir="ltr"] .menu-en {
         text-align: left;
-        direction: ltr;
+        /* direction: ltr; */
     }
 
     html[dir="ltr"] .dropdown-content {
@@ -1301,7 +1310,7 @@ html[dir="rtl"] .eng-text {
   margin: 16px 0 18px;
 }
 .ltr {
-    direction: ltr;
+    /* direction: ltr; */
     unicode-bidi: bidi-override;
     display: inline-block;
 }
@@ -1513,4 +1522,552 @@ html[dir="rtl"] .eng-text {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+}
+/* ===============================
+   BILINGUAL TEXT JUSTIFICATION
+=============================== */
+
+/* English & other LTR languages */
+html[lang="en"] body {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Persian (Farsi) */
+html[lang="fa"] body {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.9; /* important for Persian readability */
+}
+html[lang="fa"] p,
+html[lang="fa"] li,
+html[lang="fa"] .card-light {
+    word-spacing: normal;
+    hyphens: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-align: start;
+}
+html[lang="fa"] {
+    font-feature-settings: "kern", "liga";
+}
+/* ===============================
+   NAV DROPDOWN – RTL FIX
+=============================== */
+
+html[dir="rtl"] .dropdown-menu {
+    right: 0;
+    left: auto;
+    transform-origin: top right;
+}
+/* ===============================
+   NAV ICON POSITION (EN + FA)
+=============================== */
+
+.nav-menu li a {
+    display: flex;
+    align-items: right;
+    gap: 10px;
+}
+
+/* Prevent RTL from reversing icon/text */
+html[dir="rtl"] .nav-menu li a {
+    flex-direction: row;
+}
+/* ===============================
+   NAV TYPOGRAPHY NORMALIZATION
+=============================== */
+
+.nav-menu a {
+    line-height: 1.4;
+}
+html[lang="fa"] .nav-menu a {
+    line-height: 1.6;
+}
+.nav-menu a {
+    padding: 10px 16px;
+}
+/* ===============================
+   MOBILE MENU WIDTH CONSISTENCY
+=============================== */
+
+.mobile-menu,
+.dropdown-menu {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+/* =========================================
+   HARD RTL FIX — MOBILE NAV DROPDOWN PANEL
+   Paste at END of style.css
+========================================= */
+
+/* Make sure everything uses border-box so width calculations are stable */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Target the most common dropdown containers (adjusts even if your class name differs) */
+html[dir="rtl"] :is(
+  .mobile-menu,
+  .mobile-nav,
+  .nav-links,
+  .nav-menu,
+  .menu,
+  .dropdown,
+  .dropdown-menu,
+  .dropdown-content,
+  .dropdown-panel,
+  .submenu,
+  .sub-menu
+) {
+  left: auto !important;
+  right: 0 !important;
+}
+
+/* If your dropdown panel is absolutely positioned, ensure it stays inside viewport */
+html[dir="rtl"] :is(
+  .dropdown-menu,
+  .dropdown-content,
+  .dropdown-panel,
+  .submenu,
+  .sub-menu
+) {
+  width: min(92vw, 360px) !important; /* prevents edge clipping */
+  max-width: 92vw !important;
+  transform-origin: top right !important;
+}
+
+/* If your dropdown is inside a wrapper with padding, keep it aligned */
+html[dir="rtl"] :is(
+  .nav,
+  nav,
+  .navbar,
+  .nav-container,
+  .header,
+  .topbar
+) {
+  overflow-x: hidden;
+}
+
+/* Keep icon BEFORE text even in RTL (do not allow row-reverse) */
+:is(
+  .nav a,
+  .nav-menu a,
+  .nav-links a,
+  .mobile-menu a,
+  .dropdown-menu a,
+  .dropdown-content a,
+  .submenu a,
+  .sub-menu a
+) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Force consistent visual order: icon then label */
+:is(
+  .nav a i, .nav a svg, .nav a .icon,
+  .nav-menu a i, .nav-menu a svg, .nav-menu a .icon,
+  .nav-links a i, .nav-links a svg, .nav-links a .icon,
+  .mobile-menu a i, .mobile-menu a svg, .mobile-menu a .icon,
+  .dropdown-menu a i, .dropdown-menu a svg, .dropdown-menu a .icon,
+  .dropdown-content a i, .dropdown-content a svg, .dropdown-content a .icon
+) { order: 0; }
+
+:is(
+  .nav a span, .nav a .label,
+  .nav-menu a span, .nav-menu a .label,
+  .nav-links a span, .nav-links a .label,
+  .mobile-menu a span, .mobile-menu a .label,
+  .dropdown-menu a span, .dropdown-menu a .label,
+  .dropdown-content a span, .dropdown-content a .label
+) { order: 1; }
+
+/* Normalize size so EN/FA menu height looks the same */
+:is(
+  .nav a,
+  .nav-menu a,
+  .nav-links a,
+  .mobile-menu a,
+  .dropdown-menu a,
+  .dropdown-content a
+) {
+  padding: 10px 16px;
+  line-height: 1.4;
+}
+
+/* Slightly higher line-height for Persian readability WITHOUT changing height too much */
+html[lang="fa"] :is(
+  .nav a,
+  .nav-menu a,
+  .nav-links a,
+  .mobile-menu a,
+  .dropdown-menu a,
+  .dropdown-content a
+) {
+  line-height: 1.6;
+}
+/* ===============================
+   REMOVE STRAY DROPDOWN CARET (RTL)
+=============================== */
+
+/* Hide any leftover dropdown indicator near logo */
+html[dir="rtl"] .dropdown-btn::after,
+html[dir="rtl"] .dropdown-toggle::after,
+html[dir="rtl"] .nav-menu-light::before,
+html[dir="rtl"] .nav-menu-light::after {
+    display: none !important;
+    content: none !important;
+}
+/* ===============================
+   REMOVE NAV SCROLLBAR (DESKTOP)
+=============================== */
+
+/* Desktop nav should NEVER scroll */
+.nav-menu-light {
+    overflow: visible !important;
+}
+
+/* Safety: also prevent accidental scrollbars */
+.header-light,
+.navbar,
+nav {
+    overflow: visible;
+}
+/* Mobile menu can scroll */
+@media (max-width: 768px) {
+    .mobile-menu,
+    .nav-menu-mobile {
+        overflow-y: auto;
+    }
+}
+/* =======================================
+   MOBILE NAV – RTL ALIGNMENT FIX (FINAL)
+======================================= */
+
+/* Default mobile menu (LTR) */
+.mobile-menu {
+    left: 0;
+    right: auto;
+}
+
+/* RTL override */
+html[dir="rtl"] .mobile-menu {
+    right: 0 !important;
+    left: auto !important;
+}
+/* RTL slide direction */
+html[dir="rtl"] .mobile-menu {
+    transform: translateX(100%);
+}
+
+html[dir="rtl"] .mobile-menu.open {
+    transform: translateX(0);
+}
+.mobile-menu {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+/* =========================================
+   MOBILE DROPDOWN MENU — RTL CORRECT FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* The dropdown menu panel itself */
+  html[dir="rtl"] .nav-menu-light {
+      direction: rtl;
+      text-align: right;
+  }
+
+  /* Each menu item */
+  html[dir="rtl"] .nav-menu-light li a {
+      display: flex;
+      flex-direction: row-reverse;   /* ICON → TEXT (RIGHT SIDE) */
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+  }
+
+  /* Icon styling */
+  html[dir="rtl"] .nav-menu-light li a i,
+  html[dir="rtl"] .nav-menu-light li a svg {
+      margin: 0;
+  }
+}
+/* =========================================
+   MOBILE MENU: SMOOTH OPEN/CLOSE
+========================================= */
+
+@media (max-width: 768px) {
+  /* mobile menu container - collapsed by default */
+  .nav-menu-light {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height 280ms ease, opacity 220ms ease, transform 220ms ease;
+    border-radius: 12px;
+  }
+
+  /* open state */
+  .nav-menu-light.open {
+    max-height: 80vh; /* enough for most menus */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =========================================
+   MOBILE MENU: DIVIDERS
+========================================= */
+
+@media (max-width: 768px) {
+  .nav-menu-light li {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .nav-menu-light li:last-child {
+    border-bottom: none;
+  }
+}
+/* =========================================
+   TAP TARGET QUALITY
+========================================= */
+
+@media (max-width: 768px) {
+  .nav-menu-light a {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Make icon area consistent */
+  .nav-menu-light a .nav-icon,
+  .nav-menu-light a i,
+  .nav-menu-light a svg {
+    width: 22px;
+    min-width: 22px;
+    text-align: center;
+    pointer-events: none; /* so tap always counts as clicking the row */
+  }
+
+  .nav-menu-light a:active {
+    background: rgba(31,95,168,0.08);
+  }
+}
+/* =====================================
+   MOBILE MENU ANIMATION
+===================================== */
+@media (max-width: 768px) {
+  .nav-menu-light {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 300ms ease, opacity 220ms ease;
+  }
+
+  .nav-menu-light.open {
+    max-height: 85vh;
+    opacity: 1;
+  }
+}
+/* =====================================
+   MENU DIVIDERS
+===================================== */
+@media (max-width: 768px) {
+  .nav-menu-light > div > a,
+  .nav-menu-light .dropdown-btn {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .nav-menu-light > div > a:last-child {
+    border-bottom: none;
+  }
+}
+/* =====================================
+   CARET RTL FLIP
+===================================== */
+html[dir="rtl"] .submenu-arrow {
+  transform: scaleX(-1);
+}
+/* =====================================
+   TAP TARGET QUALITY
+===================================== */
+@media (max-width: 768px) {
+  .nav-menu-light a,
+  .dropdown-btn {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-menu-light a:active,
+  .dropdown-btn:active {
+    background: rgba(31,95,168,0.08);
+  }
+
+  .nav-icon {
+    width: 24px;
+    text-align: center;
+    pointer-events: none;
+  }
+}
+/* =====================================
+   GRID MENU (RTL SAFE)
+===================================== */
+@media (max-width: 768px) {
+
+  /* EN */
+  html[dir="ltr"] .nav-menu-light a,
+  html[dir="ltr"] .dropdown-btn {
+    grid-template-columns: 24px 1fr;
+    text-align: left;
+  }
+
+  /* FA */
+  html[dir="rtl"] .nav-menu-light a,
+  html[dir="rtl"] .dropdown-btn {
+    grid-template-columns: 1fr 24px;
+    text-align: right;
+  }
+
+  html[dir="rtl"] .nav-icon {
+    order: 2;
+  }
+}
+/* =====================================
+   SUBMENU ANIMATION
+===================================== */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 220ms ease;
+}
+
+.dropdown-content.open {
+  max-height: 300px;
+}
+/* =====================================================
+   FINAL: FA MOBILE MENU ICON POSITION (WORKING)
+===================================================== */
+
+@media (max-width: 900px) {
+
+  /* Persian mobile menu items */
+  html[dir="rtl"] .nav-menu-light a,
+  html[dir="rtl"] .nav-menu-light .dropdown-btn {
+    display: grid !important;
+    grid-template-columns: 1fr 26px !important; /* text | icon */
+    align-items: center !important;
+    column-gap: 12px !important;
+
+    /* kill earlier flex/space-between rules */
+    justify-content: unset !important;
+  }
+
+  /* icon column (RIGHT side) */
+  html[dir="rtl"] .nav-menu-light .nav-icon,
+  html[dir="rtl"] .nav-menu-light i,
+  html[dir="rtl"] .nav-menu-light svg {
+    justify-self: end !important;
+    width: 26px;
+    text-align: center;
+  }
+
+  /* text column */
+  html[dir="rtl"] .nav-menu-light a {
+    text-align: right !important;
+  }
+}
+/* =====================================================
+   MOBILE MENU SLIDE-DOWN ANIMATION
+===================================================== */
+
+@media (max-width: 900px) {
+
+  /* Initial (closed) state */
+  .nav-menu-light {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+      max-height 320ms ease,
+      opacity 220ms ease,
+      transform 220ms ease;
+    will-change: max-height, opacity, transform;
+  }
+
+  /* Open state */
+  .nav-menu-light.open {
+    max-height: 80vh;          /* large enough for menu */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+   HAMBURGER BASE
+===================================== */
+
+.hamburger {
+  width: 36px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: #1f5fa8;
+  border-radius: 3px;
+  transition:
+    transform 260ms ease,
+    opacity 180ms ease;
+}
+/* =====================================
+   HAMBURGER → X (OPEN STATE)
+===================================== */
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+/* =========================================
+   ABSOLUTE DESKTOP HAMBURGER KILL SWITCH
+   (FINAL OVERRIDE)
+========================================= */
+
+/* Desktop: FORCE hide hamburger */
+@media (min-width: 901px) {
+  .hamburger {
+    display: none !important;
+  }
+}
+
+/* Mobile only */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex !important;
+  }
 }

@@ -294,7 +294,7 @@ msgstr "پیام شما با موفقیت ارسال شد!"
 # base.html
 #: templates/active/index.html:11
 msgid "Fish Hatchery Automation & Engineering Commercial Services"
-msgstr "خدمات بازرگانی – هچری ماهی – اتوماسیون و مهندسی"
+msgstr "خدمات بازرگانی هچری اتوماسیون و مهندسی"
 
 #: templates/active/index.html:14
 msgid ""
@@ -308,7 +308,7 @@ msgstr "مشاهده راهکارها"
 
 #: templates/active/index.html:22
 msgid "Contact Us"
-msgstr "تماس / مشخصات فنی"
+msgstr "تماس با ما"
 
 #: templates/active/index.html:34
 msgid "Equipment Manufacturing"
