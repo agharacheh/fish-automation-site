@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-30 15:07+0330\n"
+"POT-Creation-Date: 2026-01-07 10:47+0330\n"
 "PO-Revision-Date: 2025-12-07 21:55+0330\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,171 +18,167 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: templates/active/about.html:7 templates/active/index.html:74
+#: templates/active/about.html:9 templates/active/index.html:72
 msgid "About Us"
 msgstr ""
 
-#: templates/active/about.html:9
+#: templates/active/about.html:11
 msgid ""
 "Engineering-driven automation and control solutions for modern fish "
 "hatcheries and RAS facilities."
 msgstr ""
 
-#: templates/active/about.html:15
+#: templates/active/about.html:17
 msgid "Company Overview"
 msgstr ""
 
-#: templates/active/about.html:17
+#: templates/active/about.html:19
 msgid ""
 "We specialize in the design and implementation of PLC-based automation, "
 "SCADA monitoring systems, and industrial control solutions for fish "
 "hatcheries and aquaculture facilities."
 msgstr ""
 
-#: templates/active/about.html:20
+#: templates/active/about.html:22
 msgid ""
 "Our work focuses on operational reliability, system scalability, and "
 "long-term maintainability — from concept design and engineering to "
 "commissioning and technical support."
 msgstr ""
 
-#: templates/active/about.html:27
+#: templates/active/about.html:29
 msgid "Automation and engineering for fish hatcheries"
 msgstr ""
 
-#: templates/active/about.html:33
+#: templates/active/about.html:36
 msgid "What We Do"
 msgstr ""
 
-#: templates/active/about.html:37
+#: templates/active/about.html:40
 msgid "Hatchery Automation & PLC"
 msgstr ""
 
-#: templates/active/about.html:38
+#: templates/active/about.html:41
 msgid "Control logic, interlocks, and reliable operation for hatchery processes."
 msgstr ""
 
-#: templates/active/about.html:42
+#: templates/active/about.html:45
 msgid "SCADA & Monitoring"
 msgstr ""
 
-#: templates/active/about.html:43
+#: templates/active/about.html:46
 msgid "Real-time dashboards, alarms, trends, and remote visibility."
 msgstr ""
 
-#: templates/active/about.html:47
+#: templates/active/about.html:50
 msgid "RAS Engineering"
 msgstr ""
 
-#: templates/active/about.html:48
+#: templates/active/about.html:51
 msgid "System design support for recirculating aquaculture applications."
 msgstr ""
 
-#: templates/active/about.html:52
+#: templates/active/about.html:55
 msgid "Electrical & Control Panels"
 msgstr ""
 
-#: templates/active/about.html:53
+#: templates/active/about.html:56
 msgid "Panel design, wiring standards, documentation, and integration."
 msgstr ""
 
-#: templates/active/about.html:57
+#: templates/active/about.html:60
 msgid "Sensors & Instrumentation"
 msgstr ""
 
-#: templates/active/about.html:58
+#: templates/active/about.html:61
 msgid "Selection, installation, and calibration of industrial sensors."
 msgstr ""
 
-#: templates/active/about.html:62 templates/active/about.html:99
+#: templates/active/about.html:65 templates/active/about.html:104
 msgid "Commissioning & Support"
 msgstr ""
 
-#: templates/active/about.html:63
+#: templates/active/about.html:66
 msgid "Testing, training, handover, and long-term technical support."
 msgstr ""
 
-#: templates/active/about.html:69
+#: templates/active/about.html:73
 msgid "Facility & Engineering"
 msgstr ""
 
-#: templates/active/about.html:71
+#: templates/active/about.html:75
 msgid "A glimpse into our engineering work and implementation environments."
 msgstr ""
 
-#: templates/active/about.html:76
+#: templates/active/about.html:80
 msgid "Engineering work 1"
 msgstr ""
 
-#: templates/active/about.html:77
+#: templates/active/about.html:81
 msgid "Engineering work 2"
 msgstr ""
 
-#: templates/active/about.html:78
+#: templates/active/about.html:82
 msgid "Engineering work 3"
 msgstr ""
 
-#: templates/active/about.html:83
+#: templates/active/about.html:88
 msgid "How We Work"
 msgstr ""
 
-#: templates/active/about.html:87
+#: templates/active/about.html:92
 msgid "Assessment & Requirements"
 msgstr ""
 
-#: templates/active/about.html:88
+#: templates/active/about.html:93
 msgid ""
 "Technical review of process requirements, constraints, and operational "
 "goals."
 msgstr ""
 
-#: templates/active/about.html:91
+#: templates/active/about.html:96
 msgid "Engineering & Design"
 msgstr ""
 
-#: templates/active/about.html:92
+#: templates/active/about.html:97
 msgid "We deliver diagrams, control philosophy, BOMs, and documentation."
 msgstr ""
 
-#: templates/active/about.html:95
+#: templates/active/about.html:100
 msgid "Manufacturing & Integration"
 msgstr ""
 
-#: templates/active/about.html:96
+#: templates/active/about.html:101
 msgid "Panels, wiring, assembly, and system integration testing."
 msgstr ""
 
-#: templates/active/about.html:100
+#: templates/active/about.html:105
 msgid "On-site or remote commissioning, training, and ongoing support."
 msgstr ""
 
-#: templates/active/about.html:108
+#: templates/active/about.html:115
 msgid "Work With Us"
 msgstr ""
 
-#: templates/active/about.html:109
+#: templates/active/about.html:116
 msgid ""
 "Tell us about your hatchery project and we’ll respond with a clear "
 "technical path forward."
 msgstr ""
 
-#: templates/active/about.html:111
+#: templates/active/about.html:118
 msgid "Our engineers review every inquiry directly."
 msgstr ""
 
-#: templates/active/about.html:114
+#: templates/active/about.html:121
 msgid "Contact Our Engineering Team"
 msgstr ""
 
-#: templates/active/base.html:8
+#: templates/active/base.html:7
 msgid "Fish Hatchery – Automation & Engineering – Commercial Services "
 msgstr ""
 
-#: templates/active/base.html:21
-msgid "Fish Hatchery – Automation & Engineering"
-msgstr ""
-
-#: templates/active/base.html:135
+#: templates/active/base.html:142
 msgid "Tamhid Gostar"
 msgstr ""
 
@@ -190,7 +186,7 @@ msgstr ""
 msgid "Technical Contact"
 msgstr ""
 
-#: templates/active/contact.html:8
+#: templates/active/contact.html:9
 msgid ""
 "Send your technical inquiry for hatchery engineering, automation, SCADA "
 "integration, or equipment specifications."
@@ -204,62 +200,177 @@ msgstr ""
 msgid "Shiraz, Iran East Ghodoosi, Seda va sima street, Honar building"
 msgstr ""
 
-#: templates/active/contact.html:41
+#: templates/active/contact.html:38
 msgid "Working Hours"
 msgstr ""
 
-#: templates/active/contact.html:43
+#: templates/active/contact.html:40
 msgid "Saturday to Thursday, 8:00 – 16:00"
 msgstr ""
 
-#: templates/active/contact.html:72
+#: templates/active/contact.html:66
 msgid "Company location map"
 msgstr ""
 
-#: templates/active/contact.html:78 templates/active/partials/specs_cta.html:2
-msgid "Download Technical Specifications"
-msgstr ""
-
-#: templates/active/contact.html:81
-msgid ""
-"Get an overview of our automation, control systems, aquaculture "
-"engineering capabilities, aquaculture equipments."
-msgstr ""
-
-#: templates/active/contact.html:91 templates/active/partials/specs_cta.html:10
-msgid "Download Specs (PDF)"
-msgstr ""
-
-#: templates/active/contact.html:100
+#: templates/active/contact.html:76
 msgid "Your Name"
 msgstr ""
 
-#: templates/active/contact.html:101
+#: templates/active/contact.html:77
 msgid "Enter your name"
 msgstr ""
 
-#: templates/active/contact.html:103
+#: templates/active/contact.html:79
 msgid "Email Address"
 msgstr ""
 
-#: templates/active/contact.html:104
+#: templates/active/contact.html:80
 msgid "Enter your email"
 msgstr ""
 
-#: templates/active/contact.html:106
+#: templates/active/contact.html:82
 msgid "Message"
 msgstr ""
 
-#: templates/active/contact.html:107
+#: templates/active/contact.html:83
 msgid "Write your inquiry here…"
 msgstr ""
 
-#: templates/active/contact.html:109
+#: templates/active/contact.html:85
 msgid "Send Message"
 msgstr ""
 
-#: templates/active/contact.html:113
+#: templates/active/contact.html:89
 msgid "Your message was sent successfully!"
+msgstr ""
+
+#: templates/active/equipment.html:5
+msgid "Equipment & Systems"
+msgstr ""
+
+#: templates/active/equipment.html:7
+msgid ""
+"Design, manufacturing, and supply of advanced aquaculture equipment and "
+"integrated systems for modern hatcheries and farms."
+msgstr ""
+
+#: templates/active/equipment.html:12
+msgid ""
+"We design and manufacture a comprehensive range of aquaculture equipment "
+"and systems, covering water treatment, culture, biosecurity, and "
+"automation. All solutions are engineered for reliability, efficiency, and"
+" long-term operational performance."
+msgstr ""
+
+#: templates/active/equipment.html:19
+msgid "Microalgae Photobioreactors"
+msgstr ""
+
+#: templates/active/equipment.html:21
+msgid ""
+"Design and manufacturing of closed and semi-closed photobioreactors for "
+"edible and industrial microalgae production."
+msgstr ""
+
+#: templates/active/equipment.html:24
+msgid "Larval nutrition"
+msgstr ""
+
+#: templates/active/equipment.html:25
+msgid "Biomass production"
+msgstr ""
+
+#: templates/active/equipment.html:26
+msgid "Pigment extraction and fatty acids"
+msgstr ""
+
+#: templates/active/equipment.html:31
+msgid "Filtration Systems"
+msgstr ""
+
+#: templates/active/equipment.html:32
+msgid "Mechanical and biological filtration solutions for optimal water quality."
+msgstr ""
+
+#: templates/active/equipment.html:34
+msgid "Drum filters"
+msgstr ""
+
+#: templates/active/equipment.html:35
+msgid "Biofilters"
+msgstr ""
+
+#: templates/active/equipment.html:36
+msgid "Sand & carbon filters"
+msgstr ""
+
+#: templates/active/equipment.html:41
+msgid "Disinfection Systems"
+msgstr ""
+
+#: templates/active/equipment.html:43
+msgid "UV and ozone systems for microbial control and enhanced farm biosecurity."
+msgstr ""
+
+#: templates/active/equipment.html:48
+msgid "RAS & Hybrid Systems"
+msgstr ""
+
+#: templates/active/equipment.html:50
+msgid ""
+"Complete Recirculating Aquaculture Systems (RAS) and hybrid "
+"configurations in various capacities."
+msgstr ""
+
+#: templates/active/equipment.html:53
+msgid "Pumps and skimmers"
+msgstr ""
+
+#: templates/active/equipment.html:54
+msgid "Oxygenation systems"
+msgstr ""
+
+#: templates/active/equipment.html:55
+msgid "Smart control systems"
+msgstr ""
+
+#: templates/active/equipment.html:60
+msgid "Aeration Systems"
+msgstr ""
+
+#: templates/active/equipment.html:62
+msgid ""
+"Blowers, diffusers, paddle wheels, and nanobubble systems to ensure "
+"optimal dissolved oxygen levels."
+msgstr ""
+
+#: templates/active/equipment.html:67
+msgid "Rearing & Culture Tanks"
+msgstr ""
+
+#: templates/active/equipment.html:69
+msgid ""
+"Fiberglass and polyethylene tanks with optimized hydrodynamic design and "
+"easy maintenance."
+msgstr ""
+
+#: templates/active/equipment.html:72
+msgid "Central or side outlets"
+msgstr ""
+
+#: templates/active/equipment.html:73
+msgid "Custom sizes and configurations"
+msgstr ""
+
+#: templates/active/equipment.html:80
+msgid "Engineering & Manufacturing Scope"
+msgstr ""
+
+#: templates/active/equipment.html:82
+msgid ""
+"All equipment is designed based on process engineering principles, site-"
+"specific requirements, and long-term operational efficiency. Our scope "
+"includes manufacturing, system integration, testing, and commissioning."
 msgstr ""
 
 #: templates/active/index.html:11
@@ -280,55 +391,55 @@ msgstr ""
 msgid "Contact Us"
 msgstr ""
 
-#: templates/active/index.html:34
+#: templates/active/index.html:32
 msgid "Equipment Manufacturing"
 msgstr ""
 
-#: templates/active/index.html:36
+#: templates/active/index.html:34
 msgid ""
 "Design and fabrication of hatchery equipment including tanks, RAS "
 "systems, and filtration units."
 msgstr ""
 
-#: templates/active/index.html:42
+#: templates/active/index.html:40
 msgid "Commercial Services"
 msgstr ""
 
-#: templates/active/index.html:44
+#: templates/active/index.html:42
 msgid ""
 "Engineering consulting, system integration, and commissioning services "
 "for aquaculture projects."
 msgstr ""
 
-#: templates/active/index.html:50
+#: templates/active/index.html:48
 msgid "Automation & Control"
 msgstr ""
 
-#: templates/active/index.html:52
+#: templates/active/index.html:50
 msgid "PLC, HMI, and control system design for reliable hatchery operations."
 msgstr ""
 
-#: templates/active/index.html:58 templates/active/monitoring.html:4
+#: templates/active/index.html:56 templates/active/monitoring.html:4
 msgid "Monitoring & SCADA"
 msgstr ""
 
-#: templates/active/index.html:60
+#: templates/active/index.html:58
 msgid ""
 "Real-time monitoring, dashboards, alarms, and data logging for "
 "aquaculture facilities."
 msgstr ""
 
-#: templates/active/index.html:66
+#: templates/active/index.html:64
 msgid "Research & Development (R&D)"
 msgstr ""
 
-#: templates/active/index.html:68
+#: templates/active/index.html:66
 msgid ""
 "Innovation, pilot systems, and performance optimization for next-"
 "generation hatcheries."
 msgstr ""
 
-#: templates/active/index.html:76
+#: templates/active/index.html:74
 msgid "Company background, project experience, and expert team profiles."
 msgstr ""
 
@@ -376,10 +487,18 @@ msgstr ""
 msgid "Download Company Profile (PDF)"
 msgstr ""
 
+#: templates/active/partials/specs_cta.html:2
+msgid "Download Technical Specifications"
+msgstr ""
+
 #: templates/active/partials/specs_cta.html:4
 msgid ""
 "Get an overview of our automation, control systems, and hatchery "
 "engineering capabilities."
+msgstr ""
+
+#: templates/active/partials/specs_cta.html:13
+msgid "Download Specs (PDF)"
 msgstr ""
 
 #~ msgid "PLC / RTU Layer"
@@ -699,5 +818,14 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "No files uploaded yet."
+#~ msgstr ""
+
+#~ msgid "Fish Hatchery – Automation & Engineering"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Get an overview of our automation, "
+#~ "control systems, aquaculture engineering "
+#~ "capabilities, aquaculture equipments."
 #~ msgstr ""
 
