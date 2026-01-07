@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #F4F7FB;                 /* Light engineering grey-blue */
+    background:#eef2f6;                 /* Light engineering grey-blue */
     font-family: "Segoe UI", sans-serif;
     color: #1A1D21;
 }
@@ -57,10 +57,6 @@ body {
 }
 
 /* NAVIGATION */
-/* .nav-menu-light {
-    display: flex;
-    gap: 26px;
-} */
 
 .nav-menu-light {
     display: flex;
@@ -124,10 +120,13 @@ main {
     background: #FFFFFF;
     border-radius: 8px;
     padding: 28px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.05);
     margin-bottom: 28px;
 }
-
+/* .card-light {
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.06),
+    0 14px 36px rgba(0,0,0,0.08);
+} */
 /* FOOTER */
 footer {
     text-align: center;
@@ -176,6 +175,58 @@ html[lang="fa"] .menu-fa {
 /* ---------------------------------------------------
    HERO SECTION (FIXED)
 --------------------------------------------------- */
+/* Default content sections */
+.section-light {
+  background: #ffffff;
+}
+
+.section-white {
+  background: #ffffff;
+}
+
+/* section {
+  padding: 4rem 0;
+} */
+
+ /* Only real content panels get padding */
+.section-panel {
+  padding: 3rem 2.5rem;
+}
+.section-panel img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* Normalize spacing inside panels */
+.section-panel > *:first-child {
+  margin-top: 0;
+}
+
+.section-panel > *:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ===============================
+   ELEVATION SYSTEM (PASS 4.5)
+   =============================== */
+
+/* Section panels */
+.elev-1 {
+  background: #ffffff;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Floating cards / boxes */
+.elev-2 {
+  background: #ffffff;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    0 14px 36px rgba(0, 0, 0, 0.08);
+}
+
 
 .hero-section{
   position: relative;
@@ -185,6 +236,7 @@ html[lang="fa"] .menu-fa {
   text-align: center;
   overflow: hidden;
   background: none;            /* IMPORTANT */
+  border-radius: 4px;
 }
 
 /* Full-bleed blue background (not affected by RTL/LTR container) */
@@ -758,6 +810,11 @@ html[dir="rtl"] .dropdown-content a:hover {
 /* ===============================
    ENGINEERING DASHBOARD CARDS
    =============================== */
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+}
 
 .engineering-cards {
     display: grid;
@@ -773,15 +830,18 @@ html[dir="rtl"] .dropdown-content a:hover {
     background: #ffffff;
     border-radius: 10px;
     padding: 26px 24px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     border-top: 4px solid #1F6FB2;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.eng-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.1);
+.eng-card {
+  transition: transform 0.25s ease;
 }
+
+.eng-card:hover {
+  transform: translateY(-6px);
+}
+
 
 .eng-icon {
     font-size: 32px;
@@ -814,6 +874,17 @@ html[dir="rtl"] .dropdown-content a:hover {
 /* RTL support */
 html[dir="rtl"] .eng-card {
     text-align: right;
+}
+/* Auto-elevate card-like components (no HTML edits needed) */
+.card,
+.card-light,
+.eng-card,
+.specs-cta,
+.company-profile-cta {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    0 14px 36px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
 }
 
 /* ---------------------------------
@@ -1122,7 +1193,7 @@ html[dir="rtl"] .eng-text {
     }
 }
 .contact-map {
-    margin: 1.8rem 0 2.2rem;
+    margin: 0;
 }
 
 .contact-map iframe {
@@ -1131,6 +1202,7 @@ html[dir="rtl"] .eng-text {
     border: 0;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: block;
 }
 /* ===============================
    ABOUT US – PRESENTATION WIDTH
@@ -1139,6 +1211,24 @@ html[dir="rtl"] .eng-text {
 .about-container {
     max-width: 1280px;     /* wider than default content */
     margin: 0 auto;
+}
+
+.about-overview {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about-overview {
+    grid-template-columns: 1fr;
+  }
+}
+.about-overview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 /* Give About cards more breathing room */
@@ -1306,14 +1396,17 @@ html[dir="rtl"] .eng-text {
 .soft-divider{
   border:0;
   height:1px;
-  background: rgba(0,0,0,0.08);
+  background: rgba(0, 0, 0, 0.149);
   margin: 16px 0 18px;
 }
 .ltr {
-    /* direction: ltr; */
+    /* direction: ltr; */   
     unicode-bidi: bidi-override;
     display: inline-block;
 }
+
+
+
 /* ===============================
    CONTACT – SOCIAL LINKS
 =============================== */
@@ -1351,6 +1444,31 @@ html[dir="rtl"] .eng-text {
 
 .specs-cta h3 {
     margin-bottom: 8px;
+}
+/* Fix specs download button on mobile */
+.specs-cta .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  width: 100%;
+  max-width: 260px;
+
+  white-space: nowrap;
+}
+.specs-cta {
+  text-align: center;
+}
+
+.specs-cta .btn-primary {
+  margin: 0 auto;
+}
+@media (max-width: 360px) {
+  .specs-cta .btn-primary {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
 }
 /* ===============================
    SVG ICONS
@@ -1506,13 +1624,20 @@ html[dir="rtl"] .eng-text {
     padding: 24px;
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 12px;
-    background: linear-gradient(
+    /* background: linear-gradient(
         to bottom,
         rgba(31,95,168,0.04),
         rgba(31,95,168,0.01)
-    );
+    ); */
+    background: #ffffff;
     text-align: center;
 }
+.company-profile-cta {
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.06),
+    0 14px 36px rgba(0,0,0,0.08);
+}
+
 
 .company-profile-cta h3 {
     margin-bottom: 8px;
@@ -1834,15 +1959,6 @@ html[dir="rtl"] .mobile-menu.open {
 /* =========================================
    TAP TARGET QUALITY
 ========================================= */
-
-@media (max-width: 768px) {
-  .nav-menu-light a {
-    width: 100%;
-    padding: 12px 16px;
-    border-radius: 10px;
-    -webkit-tap-highlight-color: transparent;
-  }
-
   /* Make icon area consistent */
   .nav-menu-light a .nav-icon,
   .nav-menu-light a i,
@@ -1856,7 +1972,6 @@ html[dir="rtl"] .mobile-menu.open {
   .nav-menu-light a:active {
     background: rgba(31,95,168,0.08);
   }
-}
 /* =====================================
    MOBILE MENU ANIMATION
 ===================================== */
@@ -1895,17 +2010,7 @@ html[dir="rtl"] .submenu-arrow {
 /* =====================================
    TAP TARGET QUALITY
 ===================================== */
-@media (max-width: 768px) {
-  .nav-menu-light a,
-  .dropdown-btn {
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    border-radius: 10px;
-    -webkit-tap-highlight-color: transparent;
-  }
+
 
   .nav-menu-light a:active,
   .dropdown-btn:active {
@@ -1917,7 +2022,6 @@ html[dir="rtl"] .submenu-arrow {
     text-align: center;
     pointer-events: none;
   }
-}
 /* =====================================
    GRID MENU (RTL SAFE)
 ===================================== */
@@ -2011,15 +2115,14 @@ html[dir="rtl"] .submenu-arrow {
     transform: translateY(0);
   }
 }
-
-/* =====================================
+/* ===============================
    HAMBURGER BASE
-===================================== */
+=============================== */
 
 .hamburger {
+  display: none;          /* hidden by default (desktop) */
   width: 36px;
   height: 28px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: none;
@@ -2033,41 +2136,106 @@ html[dir="rtl"] .submenu-arrow {
   width: 100%;
   background-color: #1f5fa8;
   border-radius: 3px;
-  transition:
-    transform 260ms ease,
-    opacity 180ms ease;
+  transition: transform 260ms ease, opacity 180ms ease;
 }
-/* =====================================
-   HAMBURGER → X (OPEN STATE)
-===================================== */
 
+/* open → X */
 .hamburger.open span:nth-child(1) {
   transform: translateY(12px) rotate(45deg);
 }
-
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.open span:nth-child(3) {
   transform: translateY(-12px) rotate(-45deg);
 }
-
-/* =========================================
-   ABSOLUTE DESKTOP HAMBURGER KILL SWITCH
-   (FINAL OVERRIDE)
-========================================= */
-
-/* Desktop: FORCE hide hamburger */
-@media (min-width: 901px) {
-  .hamburger {
-    display: none !important;
-  }
-}
-
-/* Mobile only */
 @media (max-width: 900px) {
   .hamburger {
-    display: flex !important;
+    display: flex;
   }
 }
+
+/* =====================================================
+   MOBILE NAV — SINGLE SOURCE OF TRUTH
+===================================================== */
+
+@media (max-width: 900px) {
+
+  /* menu container */
+  .nav-menu-light {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      max-height 320ms ease,
+      opacity 220ms ease,
+      transform 220ms ease;
+    border-radius: 12px;
+  }
+
+  /* open state */
+  .nav-menu-light.open {
+    max-height: 80vh;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* menu items */
+  .nav-menu-light a,
+  .dropdown-btn {
+    display: grid;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* divider lines */
+  .nav-menu-light li {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .nav-menu-light li:last-child {
+    border-bottom: none;
+  }
+
+  /* icon column size */
+  .nav-icon,
+  .nav-menu-light svg {
+    width: 24px;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  /* tap feedback */
+  .nav-menu-light a:active,
+  .dropdown-btn:active {
+    background: rgba(31,95,168,0.08);
+  }
+
+  /* ---------- LTR (English) ---------- */
+  html[dir="ltr"] .nav-menu-light a,
+  html[dir="ltr"] .dropdown-btn {
+    grid-template-columns: 24px 1fr;
+    text-align: left;
+  }
+
+  /* ---------- RTL (Farsi) ---------- */
+  html[dir="rtl"] .nav-menu-light a,
+  html[dir="rtl"] .dropdown-btn {
+    grid-template-columns: 1fr 24px;
+    text-align: right;
+  }
+
+  html[dir="rtl"] .nav-icon {
+    order: 2;
+  }
+
+  /* submenu caret RTL flip */
+  html[dir="rtl"] .submenu-arrow {
+    transform: scaleX(-1);
+  }
+}
+

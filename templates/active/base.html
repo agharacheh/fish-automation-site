@@ -11,7 +11,10 @@
 </head>
 
 <body>
+    
 {% include "partials/icons_sprite.html" %}
+
+
 
 <header class="header-light">
 
@@ -28,9 +31,7 @@
         <span></span>
     </button>
 
-    <!-- <button class="nav-toggle" aria-label="Toggle menu">
-        <i class="fa-solid fa-bars"></i>
-    </button> -->
+   
 
     <!-- NAVIGATION -->
     <nav class="nav-menu-light">
@@ -186,6 +187,7 @@ window.addEventListener("scroll", () => {
     }
 });
 </script>
+
 <script>
 document.addEventListener("click", function (e) {
   const el = e.target.closest(".copyable");
@@ -198,6 +200,7 @@ document.addEventListener("click", function (e) {
   });
 });
 </script>
+
 <script>
 document.addEventListener("click", function (e) {
   const cta = e.target.closest(".track-cta");

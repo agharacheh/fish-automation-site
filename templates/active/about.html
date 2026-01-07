@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+
 <section class="about-container">
 
     <section class="page-header">
@@ -9,7 +11,7 @@
                 {{ _("Engineering-driven automation and control solutions for modern fish hatcheries and RAS facilities.") }}
             </p>
     </section>
-
+<section class="section-white elev-1 section-panel">
     <section class="card-light about-overview">
         <div class="about-overview-text">
             <h2>{{ _("Company Overview") }}</h2>
@@ -22,13 +24,14 @@
         </div>
 
         <div class="about-overview-visual">
-            <!-- Step 3: Replace with your chosen image -->
+            <!-- Replace with chosen image -->
             <img src="{{ url_for('static', filename='img/about/overview.jpg') }}"
                 alt="{{ _('Automation and engineering for fish hatcheries') }}"
                 loading="lazy">
         </div>
     </section>
-
+    </section>
+<section class="section-white elev-1 section-panel">
     <section class="card-light">
         <h2>{{ _("What We Do") }}</h2>
 
@@ -64,7 +67,8 @@
             </div>
         </div>
     </section>
-
+</section>
+<section class="section-white elev-1 section-panel">
     <section class="card-light">
         <h2>{{ _("Facility & Engineering") }}</h2>
         <p class="muted-text">
@@ -72,13 +76,14 @@
         </p>
 
         <div class="about-gallery">
-            <!-- Step 4: Add 2–4 real images here -->
+            <!-- Add 2–4 real images here -->
             <img src="{{ url_for('static', filename='img/about/gallery-1.jpg') }}" alt="{{ _('Engineering work 1') }}" loading="lazy">
             <img src="{{ url_for('static', filename='img/about/gallery-2.jpg') }}" alt="{{ _('Engineering work 2') }}" loading="lazy">
             <img src="{{ url_for('static', filename='img/about/gallery-3.jpg') }}" alt="{{ _('Engineering work 3') }}" loading="lazy">
         </div>
     </section>
-
+</section>
+<section class="section-white elev-1 section-panel">
     <section class="card-light">
         <h2>{{ _("How We Work") }}</h2>
 
@@ -101,9 +106,11 @@
             </li>
         </ol>
     </section>
-    
-{% include "partials/company_profile_cta.html" %}
-
+    </section>
+    <section class="section-white elev-1 section-panel">
+        {% include "partials/company_profile_cta.html" %}
+    </section>
+    <section class="section-white elev-1 about-cta">
     <section class="card-light about-cta">
         <h2>{{ _("Work With Us") }}</h2>
         <p>{{ _("Tell us about your hatchery project and we’ll respond with a clear technical path forward.") }}</p>
@@ -114,7 +121,9 @@
             {{ _("Contact Our Engineering Team") }}
         </a>
     </section>
+    </section>
 </section>
+
 
 
 {% endblock %}

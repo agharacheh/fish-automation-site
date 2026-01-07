@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-header">
+  <h1>{{ _("Equipment & Systems") }}</h1>
+  <p>
+    {{ _("Design, manufacturing, and supply of advanced aquaculture equipment and integrated systems for modern hatcheries and farms.") }}
+  </p>
+</section>
+<section class="section-white elev-1 section-panel">
+  <p>
+    {{ _("We design and manufacture a comprehensive range of aquaculture equipment and systems, covering water treatment, culture, biosecurity, and automation. All solutions are engineered for reliability, efficiency, and long-term operational performance.") }}
+  </p>
+</section>
+
+  <div class="engineering-cards">
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Microalgae Photobioreactors") }}</h3>
+      <p>
+        {{ _("Design and manufacturing of closed and semi-closed photobioreactors for edible and industrial microalgae production.") }}
+      </p>
+      <ul>
+        <li>{{ _("Larval nutrition") }}</li>
+        <li>{{ _("Biomass production") }}</li>
+        <li>{{ _("Pigment extraction and fatty acids") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Filtration Systems") }}</h3>
+      <p>{{ _("Mechanical and biological filtration solutions for optimal water quality.") }}</p>
+      <ul>
+        <li>{{ _("Drum filters") }}</li>
+        <li>{{ _("Biofilters") }}</li>
+        <li>{{ _("Sand & carbon filters") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Disinfection Systems") }}</h3>
+      <p>
+        {{ _("UV and ozone systems for microbial control and enhanced farm biosecurity.") }}
+      </p>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("RAS & Hybrid Systems") }}</h3>
+      <p>
+        {{ _("Complete Recirculating Aquaculture Systems (RAS) and hybrid configurations in various capacities.") }}
+      </p>
+      <ul>
+        <li>{{ _("Pumps and skimmers") }}</li>
+        <li>{{ _("Oxygenation systems") }}</li>
+        <li>{{ _("Smart control systems") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Aeration Systems") }}</h3>
+      <p>
+        {{ _("Blowers, diffusers, paddle wheels, and nanobubble systems to ensure optimal dissolved oxygen levels.") }}
+      </p>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Rearing & Culture Tanks") }}</h3>
+      <p>
+        {{ _("Fiberglass and polyethylene tanks with optimized hydrodynamic design and easy maintenance.") }}
+      </p>
+      <ul>
+        <li>{{ _("Central or side outlets") }}</li>
+        <li>{{ _("Custom sizes and configurations") }}</li>
+      </ul>
+    </div>
+
+  </div>
+
+<section class="section-white elev-1 section-panel">
+  <h2>{{ _("Engineering & Manufacturing Scope") }}</h2>
+  <p>
+    {{ _("All equipment is designed based on process engineering principles, site-specific requirements, and long-term operational efficiency. Our scope includes manufacturing, system integration, testing, and commissioning.") }}
+  </p>
+</section>
+<section class="section-white elev-1 section-panel">
+  {% include "partials/specs_cta.html" %}
+</section>
+
+{% endblock %}
