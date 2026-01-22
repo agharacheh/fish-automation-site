@@ -2239,3 +2239,110 @@ html[dir="rtl"] .submenu-arrow {
   }
 }
 
+.dropdown-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.dropdown-link{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:1;
+}
+
+.submenu-toggle{
+  background:none;
+  border:0;
+  cursor:pointer;
+  padding:6px 8px;
+}
+/* =========================
+   SCADA LIVE MOCKUP – RESPONSIVE
+   ========================= */
+
+.scada-panel{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 900px){
+  .scada-panel{
+    grid-template-columns: 1fr; /* stack on mobile */
+  }
+}
+
+/* safety: prevent overflow */
+.scada-card{
+  width: 100%;
+  min-width: 0;
+}
+
+.scada-value{
+  word-break: break-word;
+}
+
+.eng-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+/* Make engineering cards equal height when wrapped with <a> */
+.eng-card-link {
+  display: block;
+  height: 100%;
+}
+
+/* Ensure card fills the link wrapper */
+.eng-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== NAV SVG ICONS: stable sizing + color ===== */
+.nav-menu-light .nav-icon {
+  width: 24px;          /* one source of truth */
+  min-width: 24px;
+  display: inline-flex; /* keeps alignment consistent */
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* If nav-icon is applied directly to <svg> */
+.nav-menu-light svg.nav-icon {
+  width: 18px;          /* actual glyph size */
+  height: 18px;
+  display: inline-block;
+  fill: currentColor;   /* inherit link color */
+}
+
+/* If you use <svg class="icon nav-icon"> */
+.nav-menu-light .icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  fill: currentColor;
+}
+
+/* Active link coloring works for SVG too */
+.nav-menu-light a.active svg,
+.nav-menu-light a.active .icon {
+  color: #0D5C91;
+}
+@media (max-width: 768px) {
+  /* RTL mobile: icon first (right), text after */
+  html[dir="rtl"] .nav-menu-light a,
+  html[dir="rtl"] .dropdown-btn {
+    grid-template-columns: 24px 1fr !important;
+  }
+
+  /* Also stop forcing icon order */
+  html[dir="rtl"] .nav-icon {
+    order: 0 !important;
+  }
+}

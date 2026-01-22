@@ -1,21 +1,84 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>{{ _("Monitoring & SCADA") }}</h1>
+<section class="page-header">
+  <h1>{{ _("Monitoring & SCADA") }}</h1>
+  <p>{{ _("SCADA dashboards, alarms, historical trends, KPIs, and secure remote access for aquaculture operations.") }}</p>
+</section>
 
-<div class="card-light">
-    <p>{{ _("This section covers SCADA dashboards, alarms, historical trends, KPIs, and remote access.") }}</p>
-</div>
+<section class="section-white elev-1 section-panel">
+  <p>{{ _("This section covers SCADA dashboards, alarms, historical trends, KPIs, and remote access.") }}</p>
+</section>
 
-<div class="card-light">
-    <h2>{{ _("SCADA Features") }}</h2>
-    <ul>
-        <li>{{ _("Sensor live monitoring (temperature, DO, pH, ORP)") }}</li>
-        <li>{{ _("Alarm notifications and fault signals") }}</li>
-        <li>{{ _("Historical trend charts for every hatchery unit") }}</li>
-        <li>{{ _("KPI calculations (FCR, survival rate)") }}</li>
-        <li>{{ _("Remote access and data visualization") }}</li>
-    </ul>
-</div>
+<section class="section-white elev-1 section-panel">
+  <h2>{{ _("SCADA Features") }}</h2>
+  <ul>
+    <li>{{ _("Sensor live monitoring (temperature, DO, pH, ORP)") }}</li>
+    <li>{{ _("Alarm notifications and fault signals") }}</li>
+    <li>{{ _("Historical trend charts for every hatchery unit") }}</li>
+    <li>{{ _("KPI calculations (FCR, survival rate)") }}</li>
+    <li>{{ _("Remote access and data visualization") }}</li>
+  </ul>
+</section>
+
+<section class="section-light">
+  <div class="section-white elev-1 section-panel">
+    <h2>{{ _("SCADA Live Mockup") }}</h2>
+
+    <div class="scada-panel">
+
+      <div class="scada-card elev-2">
+        <h3>{{ _("Incubation Temperature") }}</h3>
+        <div class="scada-value" id="tempVal">27.1°C</div>
+        <div class="status-light green" id="tempStatus"></div>
+      </div>
+
+      <div class="scada-card elev-2">
+        <h3>{{ _("Dissolved Oxygen") }}</h3>
+        <div class="scada-value" id="doVal">6.9 mg/L</div>
+        <div class="status-light green" id="doStatus"></div>
+      </div>
+
+      <div class="scada-card elev-2">
+        <h3>{{ _("Water Flow Rate") }}</h3>
+        <div class="scada-value" id="flowVal">420 L/hr</div>
+        <div class="status-light green" id="flowStatus"></div>
+      </div>
+
+      <div class="scada-card elev-2">
+        <h3>{{ _("pH Level") }}</h3>
+        <div class="scada-value" id="phVal">7.6</div>
+        <div class="status-light green" id="phStatus"></div>
+    </div>
+
+
+    </div>
+  </div>
+</section>
+
+<script>
+function simulateValues() {
+  const tempEl = document.getElementById("tempVal");
+  const doEl = document.getElementById("doVal");
+  const flowEl = document.getElementById("flowVal");
+  const phEl = document.getElementById("phVal");
+
+  if (!tempEl || !doEl || !flowEl || !phEl) return;
+
+  const t = (26 + Math.random() * 2).toFixed(1);
+  const d = (6.5 + Math.random() * 1).toFixed(1);
+  const f = (400 + Math.random() * 60).toFixed(0);
+
+  // pH range: 7.0 to 8.2
+  const ph = (7.0 + Math.random() * (8.2 - 7.0)).toFixed(1);
+
+  tempEl.innerText = t + "°C";
+  doEl.innerText = d + " mg/L";
+  flowEl.innerText = f + " L/hr";
+  phEl.innerText = ph;
+}
+setInterval(simulateValues, 3000);
+</script>
+
 
 {% endblock %}

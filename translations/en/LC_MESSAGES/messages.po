@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-07 10:47+0330\n"
+"POT-Creation-Date: 2026-01-22 01:02+0330\n"
 "PO-Revision-Date: 2025-12-07 21:55+0330\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: templates/active/about.html:9 templates/active/index.html:72
+#: templates/active/about.html:9 templates/active/index.html:80
 msgid "About Us"
 msgstr ""
 
@@ -156,11 +156,11 @@ msgstr ""
 msgid "On-site or remote commissioning, training, and ongoing support."
 msgstr ""
 
-#: templates/active/about.html:115
+#: templates/active/about.html:115 templates/active/rnd.html:96
 msgid "Work With Us"
 msgstr ""
 
-#: templates/active/about.html:116
+#: templates/active/about.html:116 templates/active/rnd.html:97
 msgid ""
 "Tell us about your hatchery project and we’ll respond with a clear "
 "technical path forward."
@@ -174,12 +174,287 @@ msgstr ""
 msgid "Contact Our Engineering Team"
 msgstr ""
 
+#: templates/active/automation.html:7 templates/active/index.html:53
+msgid "Automation & Control"
+msgstr ""
+
+#: templates/active/automation.html:9
+msgid ""
+"PLC-based automation, monitoring, and control solutions engineered for "
+"reliable hatchery operations and long-term maintainability."
+msgstr ""
+
+#: templates/active/automation.html:16
+msgid ""
+"We design and implement industrial automation systems for aquaculture "
+"facilities, covering PLC control, HMI operator interfaces, "
+"instrumentation integration, and commissioning support. Our focus is "
+"operational reliability, scalability, and clear documentation for long-"
+"term support."
+msgstr ""
+
+#: templates/active/automation.html:26
+msgid "PLC Systems"
+msgstr ""
+
+#: templates/active/automation.html:28
+msgid ""
+"Control logic design and PLC programming for pumps, blowers, valves, "
+"filters, oxygenation units, feeders, and process interlocks."
+msgstr ""
+
+#: templates/active/automation.html:31
+msgid "Process sequencing and interlocks"
+msgstr ""
+
+#: templates/active/automation.html:32
+msgid "Fail-safe behavior and alarm logic"
+msgstr ""
+
+#: templates/active/automation.html:33
+msgid "I/O list, tag naming, and documentation"
+msgstr ""
+
+#: templates/active/automation.html:34
+msgid "Commissioning and on-site testing"
+msgstr ""
+
+#: templates/active/automation.html:40
+msgid "HMI Interfaces"
+msgstr ""
+
+#: templates/active/automation.html:42
+msgid ""
+"Operator-focused HMI design for clear visualization, fast "
+"troubleshooting, and safe manual control when needed."
+msgstr ""
+
+#: templates/active/automation.html:45
+msgid "Touch-panel HMIs with clean navigation"
+msgstr ""
+
+#: templates/active/automation.html:46
+msgid "Process overview screens and device pages"
+msgstr ""
+
+#: templates/active/automation.html:47
+msgid "Alarm pages with acknowledge and history"
+msgstr ""
+
+#: templates/active/automation.html:48
+msgid "Multi-language UI readiness"
+msgstr ""
+
+#: templates/active/automation.html:54 templates/active/index.html:62
+#: templates/active/monitoring.html:5
+msgid "Monitoring & SCADA"
+msgstr ""
+
+#: templates/active/automation.html:56
+msgid ""
+"Centralized monitoring, data logging, dashboards, KPIs, alarms, and "
+"remote access for single-site or multi-site aquaculture operations."
+msgstr ""
+
+#: templates/active/automation.html:60
+msgid "Explore Monitoring & SCADA"
+msgstr ""
+
+#: templates/active/automation.html:66
+msgid "Instrumentation & Integration"
+msgstr ""
+
+#: templates/active/automation.html:68
+msgid ""
+"Integration of field sensors and equipment into a stable control system "
+"with consistent tagging, calibration support, and validation testing."
+msgstr ""
+
+#: templates/active/automation.html:71
+msgid "Water quality sensors (DO, pH, temperature, ORP)"
+msgstr ""
+
+#: templates/active/automation.html:72
+msgid "Flow, level, pressure transmitters"
+msgstr ""
+
+#: templates/active/automation.html:73
+msgid "VFD/soft-starter control integration"
+msgstr ""
+
+#: templates/active/automation.html:74
+msgid "Signal validation and fault handling"
+msgstr ""
+
+#: templates/active/automation.html:83
+msgid "Engineering Approach"
+msgstr ""
+
+#: templates/active/automation.html:85
+msgid ""
+"We follow a structured workflow to ensure stable operation and clean "
+"handover: requirement definition, I/O mapping, control philosophy, "
+"implementation, testing, commissioning, and training."
+msgstr ""
+
+#: templates/active/automation.html:89
+msgid "Control philosophy and process mapping (PFD)"
+msgstr ""
+
+#: templates/active/automation.html:90
+msgid "Panel design coordination and wiring review"
+msgstr ""
+
+#: templates/active/automation.html:91
+msgid "Factory acceptance testing (FAT) and site acceptance testing (SAT)"
+msgstr ""
+
+#: templates/active/automation.html:92
+msgid "Operator training and maintenance documentation"
+msgstr ""
+
 #: templates/active/base.html:7
 msgid "Fish Hatchery – Automation & Engineering – Commercial Services "
 msgstr ""
 
-#: templates/active/base.html:142
+#: templates/active/base.html:212
 msgid "Tamhid Gostar"
+msgstr ""
+
+#: templates/active/commercial.html:5
+msgid "Commercial Services & Consulting"
+msgstr ""
+
+#: templates/active/commercial.html:7
+msgid ""
+"Comprehensive project lifecycle support, from initial feasibility studies"
+" and conceptual design to system integration, commissioning, and "
+"operational handover for large-scale aquaculture facilities."
+msgstr ""
+
+#: templates/active/commercial.html:13
+msgid ""
+"Our commercial services division acts as your strategic partner "
+"throughout the entire lifecycle of your aquaculture project. We bridge "
+"the gap between biological requirements and robust engineering execution,"
+" ensuring projects are delivered on time, within budget, and meet "
+"performance metrics."
+msgstr ""
+
+#: templates/active/commercial.html:20
+msgid "Conceptual Design & Feasibility"
+msgstr ""
+
+#: templates/active/commercial.html:22
+msgid ""
+"Initial assessment of site potential, species selection consultation, "
+"production target setting, and detailed techno-economic feasibility "
+"studies."
+msgstr ""
+
+#: templates/active/commercial.html:25
+msgid "Site suitability analysis"
+msgstr ""
+
+#: templates/active/commercial.html:26
+msgid "Process flow charting (PFD)"
+msgstr ""
+
+#: templates/active/commercial.html:27
+msgid "Preliminary budget estimation"
+msgstr ""
+
+#: templates/active/commercial.html:32
+msgid "System Integration & Procurement"
+msgstr ""
+
+#: templates/active/commercial.html:33
+msgid ""
+"Managing the complex integration of mechanical, electrical, and "
+"automation components from global suppliers."
+msgstr ""
+
+#: templates/active/commercial.html:35
+msgid "Vendor management & QA/QC"
+msgstr ""
+
+#: templates/active/commercial.html:36
+msgid "Bill of Materials (BOM) finalization"
+msgstr ""
+
+#: templates/active/commercial.html:37
+msgid "Supply chain logistics"
+msgstr ""
+
+#: templates/active/commercial.html:42
+msgid "Project Management (EPC/EPCM)"
+msgstr ""
+
+#: templates/active/commercial.html:44
+msgid ""
+"Dedicated project management services overseeing civil works, equipment "
+"installation, and site coordination."
+msgstr ""
+
+#: templates/active/commercial.html:49
+msgid "Commissioning & Validation"
+msgstr ""
+
+#: templates/active/commercial.html:51
+msgid ""
+"Rigorous testing protocols for all subsystems (Water Quality, RAS "
+"function, Automation logic) prior to biological introduction."
+msgstr ""
+
+#: templates/active/commercial.html:54
+msgid "Hydrostatic and integrity testing"
+msgstr ""
+
+#: templates/active/commercial.html:55
+msgid "Automation FAT/SAT execution"
+msgstr ""
+
+#: templates/active/commercial.html:56
+msgid "Performance validation reports"
+msgstr ""
+
+#: templates/active/commercial.html:61
+msgid "Operational Training & SOPs"
+msgstr ""
+
+#: templates/active/commercial.html:63
+msgid ""
+"Developing comprehensive Standard Operating Procedures and training site "
+"staff on system maintenance and critical operations."
+msgstr ""
+
+#: templates/active/commercial.html:68
+msgid "System Optimization & Audits"
+msgstr ""
+
+#: templates/active/commercial.html:70
+msgid ""
+"Post-launch analysis of operational data, energy efficiency audits, and "
+"process refinement recommendations."
+msgstr ""
+
+#: templates/active/commercial.html:73
+msgid "Energy consumption analysis"
+msgstr ""
+
+#: templates/active/commercial.html:74
+msgid "Biomass yield optimization"
+msgstr ""
+
+#: templates/active/commercial.html:81
+msgid "Partnership Beyond Installation"
+msgstr ""
+
+#: templates/active/commercial.html:83
+msgid ""
+"Our commitment extends past final handover. We offer optional long-term "
+"service contracts and technical advisory roles to ensure sustained, "
+"profitable operation of your capital investment."
 msgstr ""
 
 #: templates/active/contact.html:5
@@ -391,86 +666,256 @@ msgstr ""
 msgid "Contact Us"
 msgstr ""
 
-#: templates/active/index.html:32
+#: templates/active/index.html:35
 msgid "Equipment Manufacturing"
 msgstr ""
 
-#: templates/active/index.html:34
+#: templates/active/index.html:36
 msgid ""
 "Design and fabrication of hatchery equipment including tanks, RAS "
 "systems, and filtration units."
 msgstr ""
 
-#: templates/active/index.html:40
+#: templates/active/index.html:44
 msgid "Commercial Services"
 msgstr ""
 
-#: templates/active/index.html:42
+#: templates/active/index.html:45
 msgid ""
 "Engineering consulting, system integration, and commissioning services "
 "for aquaculture projects."
 msgstr ""
 
-#: templates/active/index.html:48
-msgid "Automation & Control"
-msgstr ""
-
-#: templates/active/index.html:50
+#: templates/active/index.html:54
 msgid "PLC, HMI, and control system design for reliable hatchery operations."
 msgstr ""
 
-#: templates/active/index.html:56 templates/active/monitoring.html:4
-msgid "Monitoring & SCADA"
-msgstr ""
-
-#: templates/active/index.html:58
+#: templates/active/index.html:63
 msgid ""
 "Real-time monitoring, dashboards, alarms, and data logging for "
 "aquaculture facilities."
 msgstr ""
 
-#: templates/active/index.html:64
+#: templates/active/index.html:71 templates/active/rnd.html:6
 msgid "Research & Development (R&D)"
 msgstr ""
 
-#: templates/active/index.html:66
+#: templates/active/index.html:72
 msgid ""
 "Innovation, pilot systems, and performance optimization for next-"
 "generation hatcheries."
 msgstr ""
 
-#: templates/active/index.html:74
+#: templates/active/index.html:81
 msgid "Company background, project experience, and expert team profiles."
 msgstr ""
 
-#: templates/active/monitoring.html:7
+#: templates/active/monitoring.html:6
+msgid ""
+"SCADA dashboards, alarms, historical trends, KPIs, and secure remote "
+"access for aquaculture operations."
+msgstr ""
+
+#: templates/active/monitoring.html:10
 msgid ""
 "This section covers SCADA dashboards, alarms, historical trends, KPIs, "
 "and remote access."
 msgstr ""
 
-#: templates/active/monitoring.html:11
+#: templates/active/monitoring.html:14
 msgid "SCADA Features"
 msgstr ""
 
-#: templates/active/monitoring.html:13
+#: templates/active/monitoring.html:16
 msgid "Sensor live monitoring (temperature, DO, pH, ORP)"
 msgstr ""
 
-#: templates/active/monitoring.html:14
+#: templates/active/monitoring.html:17
 msgid "Alarm notifications and fault signals"
 msgstr ""
 
-#: templates/active/monitoring.html:15
+#: templates/active/monitoring.html:18
 msgid "Historical trend charts for every hatchery unit"
 msgstr ""
 
-#: templates/active/monitoring.html:16
+#: templates/active/monitoring.html:19
 msgid "KPI calculations (FCR, survival rate)"
 msgstr ""
 
-#: templates/active/monitoring.html:17
+#: templates/active/monitoring.html:20
 msgid "Remote access and data visualization"
+msgstr ""
+
+#: templates/active/monitoring.html:26
+msgid "SCADA Live Mockup"
+msgstr ""
+
+#: templates/active/monitoring.html:31
+msgid "Incubation Temperature"
+msgstr ""
+
+#: templates/active/monitoring.html:37
+msgid "Dissolved Oxygen"
+msgstr ""
+
+#: templates/active/monitoring.html:43
+msgid "Water Flow Rate"
+msgstr ""
+
+#: templates/active/monitoring.html:49
+msgid "pH Level"
+msgstr ""
+
+#: templates/active/rnd.html:8
+msgid ""
+"Applied research and innovation to improve performance, sustainability, "
+"fish health, and value creation across aquaculture operations."
+msgstr ""
+
+#: templates/active/rnd.html:14
+msgid ""
+"Our R&D activities focus on practical, scalable outcomes—bridging science"
+" and production through formulation work, health solutions, genetics, and"
+" product development for modern aquaculture."
+msgstr ""
+
+#: templates/active/rnd.html:21
+msgid "Feed Development"
+msgstr ""
+
+#: templates/active/rnd.html:23
+msgid ""
+"Research on feed formulation optimization to enhance growth performance "
+"and feed conversion ratios (FCR)."
+msgstr ""
+
+#: templates/active/rnd.html:26
+msgid "Nutrient profiling and formulation optimization"
+msgstr ""
+
+#: templates/active/rnd.html:27
+msgid "Performance testing for growth and FCR"
+msgstr ""
+
+#: templates/active/rnd.html:28
+msgid "Digestibility and waste reduction"
+msgstr ""
+
+#: templates/active/rnd.html:33
+msgid "Alternative Protein Sources"
+msgstr ""
+
+#: templates/active/rnd.html:35
+msgid ""
+"Study and production of alternative protein sources such as insect "
+"protein, algae, and single-cell protein."
+msgstr ""
+
+#: templates/active/rnd.html:38
+msgid "Insect protein"
+msgstr ""
+
+#: templates/active/rnd.html:39
+msgid "Algae and microalgae protein"
+msgstr ""
+
+#: templates/active/rnd.html:40
+msgid "Single-cell protein (SCP)"
+msgstr ""
+
+#: templates/active/rnd.html:41
+msgid "Sustainability and scalability assessment"
+msgstr ""
+
+#: templates/active/rnd.html:46
+msgid "Vaccines"
+msgstr ""
+
+#: templates/active/rnd.html:48
+msgid ""
+"Research and development of species-specific aquatic vaccines aimed at "
+"reducing antibiotic usage."
+msgstr ""
+
+#: templates/active/rnd.html:51
+msgid "Species-specific vaccine development"
+msgstr ""
+
+#: templates/active/rnd.html:52
+msgid "Preventive health management"
+msgstr ""
+
+#: templates/active/rnd.html:53
+msgid "Antibiotic reduction strategies"
+msgstr ""
+
+#: templates/active/rnd.html:58
+msgid "Selective Breeding & Genetics"
+msgstr ""
+
+#: templates/active/rnd.html:60
+msgid ""
+"Genetic improvement and selective breeding of fish species with high "
+"growth performance and resilience under intensive farming conditions, "
+"based on advanced global knowledge."
+msgstr ""
+
+#: templates/active/rnd.html:63
+msgid "Growth performance enhancement"
+msgstr ""
+
+#: templates/active/rnd.html:64
+msgid "Resilience under intensive farming conditions"
+msgstr ""
+
+#: templates/active/rnd.html:65
+msgid "Genetic line selection and performance tracking"
+msgstr ""
+
+#: templates/active/rnd.html:70
+msgid "Value-Added Products"
+msgstr ""
+
+#: templates/active/rnd.html:72
+msgid ""
+"Research into seafood processing and development of high value-added "
+"products such as fillets, oils, and nutritional supplements."
+msgstr ""
+
+#: templates/active/rnd.html:75
+msgid "Seafood processing and product development"
+msgstr ""
+
+#: templates/active/rnd.html:76
+msgid "Fillets, oils, and extracts"
+msgstr ""
+
+#: templates/active/rnd.html:77
+msgid "Nutritional and functional supplements"
+msgstr ""
+
+#: templates/active/rnd.html:78
+msgid "Quality and market readiness focus"
+msgstr ""
+
+#: templates/active/rnd.html:85
+msgid "R&D Scope & Deliverables"
+msgstr ""
+
+#: templates/active/rnd.html:87
+msgid ""
+"Our scope includes research planning, formulation and protocol "
+"development, pilot validation, performance tracking, and "
+"documentation—designed to support real-world deployment and measurable "
+"operational improvement."
+msgstr ""
+
+#: templates/active/rnd.html:99
+msgid "Our team review every inquiry directly."
+msgstr ""
+
+#: templates/active/rnd.html:102
+msgid "Contact Our Team"
 msgstr ""
 
 #: templates/active/partials/company_profile_cta.html:3
@@ -827,5 +1272,8 @@ msgstr ""
 #~ "Get an overview of our automation, "
 #~ "control systems, aquaculture engineering "
 #~ "capabilities, aquaculture equipments."
+#~ msgstr ""
+
+#~ msgid "Explore Monitoring & SCADA →"
 #~ msgstr ""
 

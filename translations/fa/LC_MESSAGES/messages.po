@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  fish-hatchery-automation\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-07 10:47+0330\n"
+"POT-Creation-Date: 2026-01-22 01:02+0330\n"
 "PO-Revision-Date: 2025-12-07 00:00+0000\n"
 "Last-Translator: Amir\n"
 "Language: fa\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: templates/active/about.html:9 templates/active/index.html:72
+#: templates/active/about.html:9 templates/active/index.html:80
 msgid "About Us"
 msgstr "درباره ما"
 
@@ -174,11 +174,11 @@ msgstr "ساخت تابلوها، سیم‌کشی، مونتاژ و تست یک�
 msgid "On-site or remote commissioning, training, and ongoing support."
 msgstr "راه‌اندازی در محل یا به‌صورت از راه دور، آموزش و پشتیبانی مستمر."
 
-#: templates/active/about.html:115
+#: templates/active/about.html:115 templates/active/rnd.html:96
 msgid "Work With Us"
 msgstr "همکاری با ما"
 
-#: templates/active/about.html:116
+#: templates/active/about.html:116 templates/active/rnd.html:97
 msgid ""
 "Tell us about your hatchery project and we’ll respond with a clear "
 "technical path forward."
@@ -194,15 +194,331 @@ msgstr "تمامی درخواست‌ها به‌صورت مستقیم توسط �
 msgid "Contact Our Engineering Team"
 msgstr "ارتباط با تیم مهندسی"
 
+#: templates/active/automation.html:7 templates/active/index.html:53
+msgid "Automation & Control"
+msgstr "اتوماسیون و کنترل"
+
+#: templates/active/automation.html:9
+msgid ""
+"PLC-based automation, monitoring, and control solutions engineered for "
+"reliable hatchery operations and long-term maintainability."
+msgstr ""
+"راهکارهای اتوماسیون، پایش و کنترل مبتنی بر PLC که برای بهره‌برداری پایدار"
+" مراکز تکثیر و نگهداری بلندمدت سیستم‌ها طراحی شده‌اند."
+
+#: templates/active/automation.html:16
+msgid ""
+"We design and implement industrial automation systems for aquaculture "
+"facilities, covering PLC control, HMI operator interfaces, "
+"instrumentation integration, and commissioning support. Our focus is "
+"operational reliability, scalability, and clear documentation for long-"
+"term support."
+msgstr ""
+"ما سیستم‌های اتوماسیون صنعتی ویژه مراکز آبزی‌پروری را طراحی و اجرا "
+"می‌کنیم؛ از کنترل مبتنی بر PLC و رابط‌های کاربری اپراتوری (HMI) گرفته تا "
+"یکپارچه‌سازی ابزار دقیق و پشتیبانی راه‌اندازی. تمرکز ما بر قابلیت اطمینان"
+" عملیاتی، مقیاس‌پذیری سیستم‌ها و مستندسازی شفاف برای پشتیبانی بلندمدت "
+"است."
+
+#: templates/active/automation.html:26
+msgid "PLC Systems"
+msgstr " سیستم‌های فیلتراسیون با راندمان بالا "
+
+#: templates/active/automation.html:28
+msgid ""
+"Control logic design and PLC programming for pumps, blowers, valves, "
+"filters, oxygenation units, feeders, and process interlocks."
+msgstr ""
+"طراحی منطق کنترلی و برنامه‌نویسی PLC برای پمپ‌ها، بلوئرها، شیرآلات، "
+"فیلترها، واحدهای اکسیژن‌رسانی، فیدرها و اینترلاک‌های فرایندی."
+
+#: templates/active/automation.html:31
+msgid "Process sequencing and interlocks"
+msgstr "توالی‌یابی فرایندها و اینترلاک‌های کنترلی"
+
+#: templates/active/automation.html:32
+msgid "Fail-safe behavior and alarm logic"
+msgstr "طراحی رفتار ایمن در شرایط خطا و منطق آلارم‌ها"
+
+#: templates/active/automation.html:33
+msgid "I/O list, tag naming, and documentation"
+msgstr "تهیه لیست I/O، نام‌گذاری تگ‌ها و مستندسازی"
+
+#: templates/active/automation.html:34
+msgid "Commissioning and on-site testing"
+msgstr "راه‌اندازی و پشتیبانی"
+
+#: templates/active/automation.html:40
+msgid "HMI Interfaces"
+msgstr "رابط‌های کاربری HMI"
+
+#: templates/active/automation.html:42
+msgid ""
+"Operator-focused HMI design for clear visualization, fast "
+"troubleshooting, and safe manual control when needed."
+msgstr ""
+"طراحی رابط‌های HMI با تمرکز بر اپراتور، برای نمایش شفاف اطلاعات، عیب‌یابی"
+" سریع و کنترل دستی ایمن در مواقع ضروری."
+
+#: templates/active/automation.html:45
+msgid "Touch-panel HMIs with clean navigation"
+msgstr "رابط‌های HMI لمسی با ناوبری ساده و شفاف"
+
+#: templates/active/automation.html:46
+msgid "Process overview screens and device pages"
+msgstr "صفحات نمای کلی فرایند و صفحات تجهیزات"
+
+#: templates/active/automation.html:47
+msgid "Alarm pages with acknowledge and history"
+msgstr "صفحات آلارم با امکان تأیید (Acknowledge) و ثبت تاریخچه"
+
+#: templates/active/automation.html:48
+msgid "Multi-language UI readiness"
+msgstr "آمادگی رابط کاربری چندزبانه"
+
+#: templates/active/automation.html:54 templates/active/index.html:62
+#: templates/active/monitoring.html:5
+msgid "Monitoring & SCADA"
+msgstr "مانیتورینگ و اسکادا"
+
+#: templates/active/automation.html:56
+msgid ""
+"Centralized monitoring, data logging, dashboards, KPIs, alarms, and "
+"remote access for single-site or multi-site aquaculture operations."
+msgstr ""
+"پایش متمرکز، ثبت و ذخیره‌سازی داده‌ها، داشبوردها، شاخص‌های کلیدی عملکرد "
+"(KPI)، آلارم‌ها و دسترسی از راه دور برای بهره‌برداری از مراکز آبزی‌پروری "
+"تک‌سایته یا چندسایته."
+
+#: templates/active/automation.html:60
+msgid "Explore Monitoring & SCADA"
+msgstr "مشاهده و بررسی سامانه‌های مانیتورینگ و SCADA"
+
+#: templates/active/automation.html:66
+msgid "Instrumentation & Integration"
+msgstr "ابزار دقیق و یکپارچه‌سازی سیستم‌ها"
+
+#: templates/active/automation.html:68
+msgid ""
+"Integration of field sensors and equipment into a stable control system "
+"with consistent tagging, calibration support, and validation testing."
+msgstr ""
+"یکپارچه‌سازی سنسورها و تجهیزات میدانی در یک سیستم کنترلی پایدار، همراه با"
+" نام‌گذاری یکنواخت تگ‌ها، پشتیبانی کالیبراسیون و آزمون‌های اعتبارسنجی."
+
+#: templates/active/automation.html:71
+msgid "Water quality sensors (DO, pH, temperature, ORP)"
+msgstr "سنسورهای کیفیت آب (اکسیژن محلول DO، pH، دما و ORP)"
+
+#: templates/active/automation.html:72
+msgid "Flow, level, pressure transmitters"
+msgstr "ترانسمیترهای دبی، سطح و فشار"
+
+#: templates/active/automation.html:73
+msgid "VFD/soft-starter control integration"
+msgstr "یکپارچه‌سازی کنترل درایوهای VFD و سافت‌استارتر"
+
+#: templates/active/automation.html:74
+msgid "Signal validation and fault handling"
+msgstr "بررسی صحت سیگنال‌ها و رسیدگی به خطاها"
+
+#: templates/active/automation.html:83
+msgid "Engineering Approach"
+msgstr "رویکرد مهندسی"
+
+#: templates/active/automation.html:85
+msgid ""
+"We follow a structured workflow to ensure stable operation and clean "
+"handover: requirement definition, I/O mapping, control philosophy, "
+"implementation, testing, commissioning, and training."
+msgstr ""
+"ما از یک فرایند کاری ساختارمند پیروی می‌کنیم تا بهره‌برداری پایدار و "
+"تحویل شفاف پروژه تضمین شود؛ از تعریف نیازمندی‌ها، نگاشت I/O و تدوین فلسفه"
+" کنترلی گرفته تا پیاده‌سازی، آزمون، راه‌اندازی و آموزش."
+
+#: templates/active/automation.html:89
+msgid "Control philosophy and process mapping (PFD)"
+msgstr "فلسفه کنترلی و ترسیم نقشه فرایند (PFD)"
+
+#: templates/active/automation.html:90
+msgid "Panel design coordination and wiring review"
+msgstr "هماهنگی طراحی تابلوها و بازبینی سیم‌کشی"
+
+#: templates/active/automation.html:91
+msgid "Factory acceptance testing (FAT) and site acceptance testing (SAT)"
+msgstr "برگزاری FAT و SAT پیش از بهره‌برداری"
+
+#: templates/active/automation.html:92
+msgid "Operator training and maintenance documentation"
+msgstr "آموزش اپراتورها و مستندسازی نگهداری و تعمیرات"
+
 # ==========================
 # base.html
 #: templates/active/base.html:7
 msgid "Fish Hatchery – Automation & Engineering – Commercial Services "
 msgstr "هچری ماهی – اتوماسیون و مهندسی"
 
-#: templates/active/base.html:142
+#: templates/active/base.html:212
 msgid "Tamhid Gostar"
 msgstr "تمهید گستر"
+
+#: templates/active/commercial.html:5
+msgid "Commercial Services & Consulting"
+msgstr "خدمات بازرگانی"
+
+#: templates/active/commercial.html:7
+msgid ""
+"Comprehensive project lifecycle support, from initial feasibility studies"
+" and conceptual design to system integration, commissioning, and "
+"operational handover for large-scale aquaculture facilities."
+msgstr ""
+"همراهی کامل در تمام مراحل پروژه؛ از امکان‌سنجی و طراحی اولیه تا "
+"یکپارچه‌سازی سیستم‌ها، راه‌اندازی نهایی و تحویل عملیاتی مراکز بزرگ "
+"آبزی‌پروری"
+
+#: templates/active/commercial.html:13
+msgid ""
+"Our commercial services division acts as your strategic partner "
+"throughout the entire lifecycle of your aquaculture project. We bridge "
+"the gap between biological requirements and robust engineering execution,"
+" ensuring projects are delivered on time, within budget, and meet "
+"performance metrics."
+msgstr ""
+"بخش خدمات تجاری ما به‌عنوان شریک راهبردی شما، در تمام چرخه عمر پروژه‌های "
+"آبزی‌پروری در کنار شماست. ما با ایجاد پیوند میان الزامات زیستی و اجرای "
+"مهندسی دقیق، تضمین می‌کنیم پروژه‌ها به‌موقع، در چارچوب بودجه و مطابق با "
+"شاخص‌های عملکردی تعیین‌شده اجرا شوند."
+
+#: templates/active/commercial.html:20
+msgid "Conceptual Design & Feasibility"
+msgstr "طراحی مفهومی و امکان‌سنجی"
+
+#: templates/active/commercial.html:22
+msgid ""
+"Initial assessment of site potential, species selection consultation, "
+"production target setting, and detailed techno-economic feasibility "
+"studies."
+msgstr ""
+"ارزیابی اولیه ظرفیت و پتانسیل سایت، مشاوره در انتخاب گونه، تعیین اهداف "
+"تولید، و انجام مطالعات امکان‌سنجی فنی–اقتصادی به‌صورت دقیق."
+
+#: templates/active/commercial.html:25
+msgid "Site suitability analysis"
+msgstr "بررسی قابلیت و تناسب محل اجرا"
+
+#: templates/active/commercial.html:26
+msgid "Process flow charting (PFD)"
+msgstr "ترسیم نمودار جریان فرایند (PFD)"
+
+#: templates/active/commercial.html:27
+msgid "Preliminary budget estimation"
+msgstr "تخمین اولیه بودجه پروژه"
+
+#: templates/active/commercial.html:32
+msgid "System Integration & Procurement"
+msgstr "یکپارچه‌سازی سیستم‌ها و تأمین تجهیزات"
+
+#: templates/active/commercial.html:33
+msgid ""
+"Managing the complex integration of mechanical, electrical, and "
+"automation components from global suppliers."
+msgstr ""
+"مدیریت یکپارچه‌سازی پیچیده اجزای مکانیکی، الکتریکی و اتوماسیون از "
+"تأمین‌کنندگان بین‌المللی."
+
+#: templates/active/commercial.html:35
+msgid "Vendor management & QA/QC"
+msgstr "مدیریت تأمین‌کنندگان و کنترل کیفیت (QA/QC)"
+
+#: templates/active/commercial.html:36
+msgid "Bill of Materials (BOM) finalization"
+msgstr "نهایی‌سازی فهرست اقلام و تجهیزات (BOM)"
+
+#: templates/active/commercial.html:37
+msgid "Supply chain logistics"
+msgstr "لجستیک زنجیره تأمین"
+
+#: templates/active/commercial.html:42
+msgid "Project Management (EPC/EPCM)"
+msgstr "مدیریت پروژه (EPC / EPCM)"
+
+#: templates/active/commercial.html:44
+msgid ""
+"Dedicated project management services overseeing civil works, equipment "
+"installation, and site coordination."
+msgstr ""
+"ارائه خدمات مدیریت پروژه اختصاصی برای نظارت بر عملیات عمرانی، نصب تجهیزات"
+" و هماهنگی کامل فعالیت‌های کارگاهی."
+
+#: templates/active/commercial.html:49
+msgid "Commissioning & Validation"
+msgstr "راه‌اندازی و پشتیبانی"
+
+#: templates/active/commercial.html:51
+msgid ""
+"Rigorous testing protocols for all subsystems (Water Quality, RAS "
+"function, Automation logic) prior to biological introduction."
+msgstr ""
+"اجرای پروتکل‌های دقیق آزمون برای تمامی زیرسیستم‌ها (کیفیت آب، عملکرد "
+"سیستم RAS و منطق اتوماسیون) پیش از ورود زیستی."
+
+#: templates/active/commercial.html:54
+msgid "Hydrostatic and integrity testing"
+msgstr "آزمون‌های هیدرواستاتیک و بررسی یکپارچگی سیستم"
+
+#: templates/active/commercial.html:55
+msgid "Automation FAT/SAT execution"
+msgstr "اتوماسیون و کنترل"
+
+#: templates/active/commercial.html:56
+msgid "Performance validation reports"
+msgstr "گزارش‌های تأیید عملکرد"
+
+#: templates/active/commercial.html:61
+msgid "Operational Training & SOPs"
+msgstr "آموزش بهره‌برداری و تدوین دستورالعمل‌های اجرایی (SOP)"
+
+#: templates/active/commercial.html:63
+msgid ""
+"Developing comprehensive Standard Operating Procedures and training site "
+"staff on system maintenance and critical operations."
+msgstr ""
+"تدوین دستورالعمل‌های جامع بهره‌برداری و آموزش کارکنان سایت در زمینه "
+"نگهداری سیستم‌ها و انجام عملیات‌های حیاتی."
+
+#: templates/active/commercial.html:68
+msgid "System Optimization & Audits"
+msgstr "بهینه‌سازی سیستم و انجام ممیزی‌ها"
+
+#: templates/active/commercial.html:70
+msgid ""
+"Post-launch analysis of operational data, energy efficiency audits, and "
+"process refinement recommendations."
+msgstr ""
+"تحلیل داده‌های بهره‌برداری پس از راه‌اندازی، انجام ممیزی بهره‌وری انرژی و"
+" ارائه پیشنهادهای بهبود و اصلاح فرایندها."
+
+#: templates/active/commercial.html:73
+msgid "Energy consumption analysis"
+msgstr "تحلیل مصرف انرژی"
+
+#: templates/active/commercial.html:74
+msgid "Biomass yield optimization"
+msgstr "بهینه‌سازی بازده زیست‌توده"
+
+#: templates/active/commercial.html:81
+msgid "Partnership Beyond Installation"
+msgstr "همکاری و همراهی فراتر از مرحله نصب"
+
+#: templates/active/commercial.html:83
+msgid ""
+"Our commitment extends past final handover. We offer optional long-term "
+"service contracts and technical advisory roles to ensure sustained, "
+"profitable operation of your capital investment."
+msgstr ""
+"تعهد ما به مرحله تحویل نهایی محدود نمی‌شود. ما با ارائه قراردادهای خدمات "
+"بلندمدت اختیاری و نقش‌های مشاوره فنی، تداوم بهره‌برداری پایدار و سودآور "
+"از سرمایه‌گذاری شما را تضمین می‌کنیم."
 
 #: templates/active/contact.html:5
 msgid "Technical Contact"
@@ -276,7 +592,9 @@ msgstr "سیستم‌ها و تجهیزات"
 msgid ""
 "Design, manufacturing, and supply of advanced aquaculture equipment and "
 "integrated systems for modern hatcheries and farms."
-msgstr " طراحی، تولید و تأمین تجهیزات پیشرفته آبزی‌پروری و سیستم‌های یکپارچه برای مراکز تکثیر و مزارع مدرن پرورش آبزیان"
+msgstr ""
+" طراحی، تولید و تأمین تجهیزات پیشرفته آبزی‌پروری و سیستم‌های یکپارچه برای"
+" مراکز تکثیر و مزارع مدرن پرورش آبزیان"
 
 #: templates/active/equipment.html:12
 msgid ""
@@ -284,7 +602,12 @@ msgid ""
 "and systems, covering water treatment, culture, biosecurity, and "
 "automation. All solutions are engineered for reliability, efficiency, and"
 " long-term operational performance."
-msgstr "ما با طراحی و تولید طیف کاملی از تجهیزات و سیستم‌های پیشرفته آبزی‌پروری، راهکارهایی نوآورانه برای تصفیه آب، پرورش، ایمنی زیستی و اتوماسیون ارائه می‌دهیم. تمامی محصولات ما با بالاترین استانداردهای کیفیت مهندسی شده‌اند تا حداکثر کارایی، اطمینان‌پذیری و عملکرد پایدار بلندمدت را برای مراکز مدرن پرورش آبزیان تضمین کنند."
+msgstr ""
+"ما با طراحی و تولید طیف کاملی از تجهیزات و سیستم‌های پیشرفته آبزی‌پروری، "
+"راهکارهایی نوآورانه برای تصفیه آب، پرورش، ایمنی زیستی و اتوماسیون ارائه "
+"می‌دهیم. تمامی محصولات ما با بالاترین استانداردهای کیفیت مهندسی شده‌اند "
+"تا حداکثر کارایی، اطمینان‌پذیری و عملکرد پایدار بلندمدت را برای مراکز "
+"مدرن پرورش آبزیان تضمین کنند."
 
 #: templates/active/equipment.html:19
 msgid "Microalgae Photobioreactors"
@@ -294,7 +617,9 @@ msgstr " سیستم‌های فتوبیورآکتور ریزجلبک با ران
 msgid ""
 "Design and manufacturing of closed and semi-closed photobioreactors for "
 "edible and industrial microalgae production."
-msgstr " طراحی و تولید فتوبیورآکتورهای بسته و نیمه‌بسته برای تولید ریزجلبک‌های خوراکی و صنعتی "
+msgstr ""
+" طراحی و تولید فتوبیورآکتورهای بسته و نیمه‌بسته برای تولید ریزجلبک‌های "
+"خوراکی و صنعتی "
 
 #: templates/active/equipment.html:24
 msgid "Larval nutrition"
@@ -334,7 +659,9 @@ msgstr " سیستم‌های ضدعفونی تخصصی آبزی‌پروری "
 
 #: templates/active/equipment.html:43
 msgid "UV and ozone systems for microbial control and enhanced farm biosecurity."
-msgstr " سیستم‌های فرابنفش (UV) و ازن برای کنترل میکروبی و ارتقای ایمنی زیستی مزارع پرورش آبزیان "
+msgstr ""
+" سیستم‌های فرابنفش (UV) و ازن برای کنترل میکروبی و ارتقای ایمنی زیستی "
+"مزارع پرورش آبزیان "
 
 #: templates/active/equipment.html:48
 msgid "RAS & Hybrid Systems"
@@ -344,7 +671,9 @@ msgstr " سیستم‌های RAS و هیبریدی (ترکیبی) "
 msgid ""
 "Complete Recirculating Aquaculture Systems (RAS) and hybrid "
 "configurations in various capacities."
-msgstr " سیستم‌های کامل بازچرخانی آبزی‌پروری (RAS) و پیکربندی‌های هیبریدی در ظرفیت‌های متنوع "
+msgstr ""
+" سیستم‌های کامل بازچرخانی آبزی‌پروری (RAS) و پیکربندی‌های هیبریدی در "
+"ظرفیت‌های متنوع "
 
 #: templates/active/equipment.html:53
 msgid "Pumps and skimmers"
@@ -366,7 +695,9 @@ msgstr " سیستم‌های هوادهی تخصصی آبزی‌پروری "
 msgid ""
 "Blowers, diffusers, paddle wheels, and nanobubble systems to ensure "
 "optimal dissolved oxygen levels."
-msgstr " بلوئرها، دیفیوزرها، پدل‌ویل‌ها و سیستم‌های نانوبابل برای تضمین سطوح بهینه اکسیژن محلول در آب"
+msgstr ""
+" بلوئرها، دیفیوزرها، پدل‌ویل‌ها و سیستم‌های نانوبابل برای تضمین سطوح "
+"بهینه اکسیژن محلول در آب"
 
 #: templates/active/equipment.html:67
 msgid "Rearing & Culture Tanks"
@@ -395,7 +726,12 @@ msgid ""
 "All equipment is designed based on process engineering principles, site-"
 "specific requirements, and long-term operational efficiency. Our scope "
 "includes manufacturing, system integration, testing, and commissioning."
-msgstr "تمامی تجهیزات ما با تکیه بر مهندسی فرایند پیشرفته، متناسب با شرایط اختصاصی هر پروژه و با هدف دستیابی به حداکثر بهره‌وری و عملکرد پایدار بلندمدت طراحی می‌شوند. ما با ارائه خدمات کامل از ساخت و یکپارچه‌سازی سیستم‌ها تا تست و راه‌اندازی نهایی، راهکارهایی قابل‌اعتماد و یکپارچه برای پروژه‌های آبزی‌پروری مدرن ارائه می‌دهیم."
+msgstr ""
+"تمامی تجهیزات ما با تکیه بر مهندسی فرایند پیشرفته، متناسب با شرایط "
+"اختصاصی هر پروژه و با هدف دستیابی به حداکثر بهره‌وری و عملکرد پایدار "
+"بلندمدت طراحی می‌شوند. ما با ارائه خدمات کامل از ساخت و یکپارچه‌سازی "
+"سیستم‌ها تا تست و راه‌اندازی نهایی، راهکارهایی قابل‌اعتماد و یکپارچه برای"
+" پروژه‌های آبزی‌پروری مدرن ارائه می‌دهیم."
 
 # ==========================
 # base.html
@@ -417,11 +753,11 @@ msgstr "مشاهده راهکارها"
 msgid "Contact Us"
 msgstr "تماس با ما"
 
-#: templates/active/index.html:32
+#: templates/active/index.html:35
 msgid "Equipment Manufacturing"
 msgstr "ساخت تجهیزات"
 
-#: templates/active/index.html:34
+#: templates/active/index.html:36
 msgid ""
 "Design and fabrication of hatchery equipment including tanks, RAS "
 "systems, and filtration units."
@@ -429,11 +765,11 @@ msgstr ""
 "طراحی و ساخت تجهیزات مراکز تکثیر، شامل مخازن، سیستم‌های RAS و واحدهای "
 "فیلتراسیون."
 
-#: templates/active/index.html:40
+#: templates/active/index.html:44
 msgid "Commercial Services"
 msgstr "خدمات بازرگانی"
 
-#: templates/active/index.html:42
+#: templates/active/index.html:45
 msgid ""
 "Engineering consulting, system integration, and commissioning services "
 "for aquaculture projects."
@@ -441,21 +777,13 @@ msgstr ""
 "خدمات مشاوره مهندسی، یکپارچه‌سازی سیستم و راه‌اندازی برای پروژه‌های "
 "آبزی‌پروری."
 
-#: templates/active/index.html:48
-msgid "Automation & Control"
-msgstr "اتوماسیون و کنترل"
-
-#: templates/active/index.html:50
+#: templates/active/index.html:54
 msgid "PLC, HMI, and control system design for reliable hatchery operations."
 msgstr ""
 "طراحی سیستم‌های PLC، HMI و کنترل برای بهره‌برداری پایدار و مطمئن از مراکز"
 " تکثیر."
 
-#: templates/active/index.html:56 templates/active/monitoring.html:4
-msgid "Monitoring & SCADA"
-msgstr "مانیتورینگ و اسکادا"
-
-#: templates/active/index.html:58
+#: templates/active/index.html:63
 msgid ""
 "Real-time monitoring, dashboards, alarms, and data logging for "
 "aquaculture facilities."
@@ -463,21 +791,29 @@ msgstr ""
 "پایش لحظه‌ای، داشبوردهای مدیریتی، سیستم‌های هشدار و ثبت داده‌ها برای "
 "تأسیسات آبزی‌پروری."
 
-#: templates/active/index.html:64
+#: templates/active/index.html:71 templates/active/rnd.html:6
 msgid "Research & Development (R&D)"
 msgstr "تحقیق و توسعه (R&D)"
 
-#: templates/active/index.html:66
+#: templates/active/index.html:72
 msgid ""
 "Innovation, pilot systems, and performance optimization for next-"
 "generation hatcheries."
 msgstr "نوآوری، سیستم‌های پایلوت و بهینه‌سازی عملکرد برای مراکز تکثیر نسل جدید."
 
-#: templates/active/index.html:74
+#: templates/active/index.html:81
 msgid "Company background, project experience, and expert team profiles."
 msgstr "معرفی شرکت، سوابق پروژه‌ها و تیم متخصص ما."
 
-#: templates/active/monitoring.html:7
+#: templates/active/monitoring.html:6
+msgid ""
+"SCADA dashboards, alarms, historical trends, KPIs, and secure remote "
+"access for aquaculture operations."
+msgstr ""
+"داشبوردهای SCADA، آلارم‌ها، روندهای تاریخی، شاخص‌های کلیدی عملکرد (KPI) و"
+" دسترسی امن از راه دور برای بهره‌برداری از مراکز آبزی‌پروری."
+
+#: templates/active/monitoring.html:10
 msgid ""
 "This section covers SCADA dashboards, alarms, historical trends, KPIs, "
 "and remote access."
@@ -485,29 +821,221 @@ msgstr ""
 "این بخش داشبوردهای اسکادا، آلارم‌ها، روندهای تاریخی، شاخص‌ها و دسترسی از "
 "راه دور را پوشش می‌دهد."
 
-#: templates/active/monitoring.html:11
+#: templates/active/monitoring.html:14
 msgid "SCADA Features"
 msgstr "ویژگی‌های SCADA"
 
-#: templates/active/monitoring.html:13
+#: templates/active/monitoring.html:16
 msgid "Sensor live monitoring (temperature, DO, pH, ORP)"
 msgstr "پایش زنده سنسورها (دما، اکسیژن محلول، pH، ORP)"
 
-#: templates/active/monitoring.html:14
+#: templates/active/monitoring.html:17
 msgid "Alarm notifications and fault signals"
 msgstr "اعلان‌های آلارم و سیگنال‌های خطا"
 
-#: templates/active/monitoring.html:15
+#: templates/active/monitoring.html:18
 msgid "Historical trend charts for every hatchery unit"
 msgstr "نمودارهای روند تاریخی برای هر واحد هچری"
 
-#: templates/active/monitoring.html:16
+#: templates/active/monitoring.html:19
 msgid "KPI calculations (FCR, survival rate)"
 msgstr "محاسبات شاخص‌ها (FCR، نرخ بقا)"
 
-#: templates/active/monitoring.html:17
+#: templates/active/monitoring.html:20
 msgid "Remote access and data visualization"
 msgstr "دسترسی از راه دور و یکپارچه‌سازی"
+
+#: templates/active/monitoring.html:26
+msgid "SCADA Live Mockup"
+msgstr "دموی زنده SCADA"
+
+#: templates/active/monitoring.html:31
+msgid "Incubation Temperature"
+msgstr "دمای انکوباسیون"
+
+#: templates/active/monitoring.html:37
+msgid "Dissolved Oxygen"
+msgstr "اکسیژن محلول (DO)"
+
+#: templates/active/monitoring.html:43
+msgid "Water Flow Rate"
+msgstr "نرخ جریان آب"
+
+#: templates/active/monitoring.html:49
+msgid "pH Level"
+msgstr "سطح pH"
+
+#: templates/active/rnd.html:8
+msgid ""
+"Applied research and innovation to improve performance, sustainability, "
+"fish health, and value creation across aquaculture operations."
+msgstr ""
+"پژوهش‌های کاربردی و نوآوری با هدف بهبود عملکرد، پایداری، سلامت آبزیان و "
+"خلق ارزش در سراسر عملیات آبزی‌پروری."
+
+#: templates/active/rnd.html:14
+msgid ""
+"Our R&D activities focus on practical, scalable outcomes—bridging science"
+" and production through formulation work, health solutions, genetics, and"
+" product development for modern aquaculture."
+msgstr ""
+"فعالیت‌های تحقیق و توسعه ما بر نتایج عملی و مقیاس‌پذیر متمرکز است؛ ایجاد "
+"پل میان علم و تولید از طریق توسعه فرمولاسیون‌ها، راهکارهای سلامت، ژنتیک و"
+" توسعه محصولات برای آبزی‌پروری مدرن."
+
+#: templates/active/rnd.html:21
+msgid "Feed Development"
+msgstr "فرمولاسیون و توسعه خوراک"
+
+#: templates/active/rnd.html:23
+msgid ""
+"Research on feed formulation optimization to enhance growth performance "
+"and feed conversion ratios (FCR)."
+msgstr ""
+"پژوهش در بهینه‌سازی فرمولاسیون خوراک با هدف ارتقای عملکرد رشد و بهبود "
+"ضریب تبدیل غذایی (FCR)."
+
+#: templates/active/rnd.html:26
+msgid "Nutrient profiling and formulation optimization"
+msgstr "پروفایل‌سازی مواد مغذی و بهینه‌سازی فرمولاسیون"
+
+#: templates/active/rnd.html:27
+msgid "Performance testing for growth and FCR"
+msgstr "آزمون عملکرد برای رشد و ضریب تبدیل غذایی (FCR)"
+
+#: templates/active/rnd.html:28
+msgid "Digestibility and waste reduction"
+msgstr "بهبود قابلیت هضم و کاهش پسماند"
+
+#: templates/active/rnd.html:33
+msgid "Alternative Protein Sources"
+msgstr "منابع پروتئینی جایگزین"
+
+#: templates/active/rnd.html:35
+msgid ""
+"Study and production of alternative protein sources such as insect "
+"protein, algae, and single-cell protein."
+msgstr ""
+"مطالعه و تولید منابع پروتئینی جایگزین از جمله پروتئین حشرات، جلبک‌ها و "
+"پروتئین‌های تک‌سلولی."
+
+#: templates/active/rnd.html:38
+msgid "Insect protein"
+msgstr "پروتئین حشرات"
+
+#: templates/active/rnd.html:39
+msgid "Algae and microalgae protein"
+msgstr "پروتئین جلبک‌ها و ریزجلبک‌ها"
+
+#: templates/active/rnd.html:40
+msgid "Single-cell protein (SCP)"
+msgstr "پروتئین تک‌سلولی (SCP)"
+
+#: templates/active/rnd.html:41
+msgid "Sustainability and scalability assessment"
+msgstr "ارزیابی پایداری و مقیاس‌پذیری"
+
+#: templates/active/rnd.html:46
+msgid "Vaccines"
+msgstr "واکسن"
+
+#: templates/active/rnd.html:48
+msgid ""
+"Research and development of species-specific aquatic vaccines aimed at "
+"reducing antibiotic usage."
+msgstr ""
+"تحقیق و توسعه واکسن‌های آبزیان اختصاصی هر گونه با هدف کاهش مصرف "
+"آنتی‌بیوتیک‌ها."
+
+#: templates/active/rnd.html:51
+msgid "Species-specific vaccine development"
+msgstr "توسعه واکسن‌های اختصاصی گونه‌محور"
+
+#: templates/active/rnd.html:52
+msgid "Preventive health management"
+msgstr "مدیریت پیشگیرانه سلامت"
+
+#: templates/active/rnd.html:53
+msgid "Antibiotic reduction strategies"
+msgstr "راهبردهای کاهش مصرف آنتی‌بیوتیک‌ها"
+
+#: templates/active/rnd.html:58
+msgid "Selective Breeding & Genetics"
+msgstr "اصلاح نژاد انتخابی و ژنتیک"
+
+#: templates/active/rnd.html:60
+msgid ""
+"Genetic improvement and selective breeding of fish species with high "
+"growth performance and resilience under intensive farming conditions, "
+"based on advanced global knowledge."
+msgstr ""
+"بهبود ژنتیکی و اصلاح نژاد انتخابی گونه‌های ماهی با عملکرد رشد بالا و "
+"مقاومت مناسب در شرایط پرورش متراکم، بر پایه دانش و تجربیات پیشرفته جهانی."
+
+#: templates/active/rnd.html:63
+msgid "Growth performance enhancement"
+msgstr "بهبود عملکرد رشد"
+
+#: templates/active/rnd.html:64
+msgid "Resilience under intensive farming conditions"
+msgstr "تاب‌آوری در شرایط پرورش متراکم"
+
+#: templates/active/rnd.html:65
+msgid "Genetic line selection and performance tracking"
+msgstr "انتخاب لاین‌های ژنتیکی و پایش عملکرد"
+
+#: templates/active/rnd.html:70
+msgid "Value-Added Products"
+msgstr "محصولات با ارزش افزوده"
+
+#: templates/active/rnd.html:72
+msgid ""
+"Research into seafood processing and development of high value-added "
+"products such as fillets, oils, and nutritional supplements."
+msgstr ""
+"پژوهش در حوزه فرآوری محصولات دریایی و توسعه محصولات با ارزش افزوده بالا "
+"مانند فیله، روغن‌ها و مکمل‌های تغذیه‌ای."
+
+#: templates/active/rnd.html:75
+msgid "Seafood processing and product development"
+msgstr "فرآوری محصولات دریایی و توسعه محصول"
+
+#: templates/active/rnd.html:76
+msgid "Fillets, oils, and extracts"
+msgstr "فیله‌ها، روغن‌ها و عصاره‌ها"
+
+#: templates/active/rnd.html:77
+msgid "Nutritional and functional supplements"
+msgstr "مکمل‌های تغذیه‌ای و عملکردی"
+
+#: templates/active/rnd.html:78
+msgid "Quality and market readiness focus"
+msgstr "تمرکز بر کیفیت و آمادگی ورود به بازار"
+
+#: templates/active/rnd.html:85
+msgid "R&D Scope & Deliverables"
+msgstr "دامنه و خروجی‌های تحقیق و توسعه (R&D)"
+
+#: templates/active/rnd.html:87
+msgid ""
+"Our scope includes research planning, formulation and protocol "
+"development, pilot validation, performance tracking, and "
+"documentation—designed to support real-world deployment and measurable "
+"operational improvement."
+msgstr ""
+"دامنه فعالیت‌های ما شامل برنامه‌ریزی تحقیق، توسعه فرمولاسیون و پروتکل‌ها،"
+" اعتبارسنجی پایلوت، پایش عملکرد و مستندسازی است؛ به‌گونه‌ای طراحی شده تا "
+"پیاده‌سازی عملی در مقیاس واقعی و بهبود قابل‌اندازه‌گیری عملکرد عملیاتی را"
+" پشتیبانی کند."
+
+#: templates/active/rnd.html:99
+msgid "Our team review every inquiry directly."
+msgstr "تمامی درخواست‌ها به‌صورت مستقیم توسط تیم ما بررسی می‌شود."
+
+#: templates/active/rnd.html:102
+
+msgid "Contact Our Team"
+msgstr "ارتباط با تیم ما"
 
 #: templates/active/partials/company_profile_cta.html:3
 msgid "Download Company Profile"
@@ -540,6 +1068,4 @@ msgstr ""
 #: templates/active/partials/specs_cta.html:13
 msgid "Download Specs (PDF)"
 msgstr "دانلود فایل مشخصات (PDF)"
-
-
 

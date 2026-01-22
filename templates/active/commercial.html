@@ -1,1 +1,91 @@
-{% include "partials/specs_cta.html" %}
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-header">
+  <h1>{{ _("Commercial Services & Consulting") }}</h1>
+  <p>
+    {{ _("Comprehensive project lifecycle support, from initial feasibility studies and conceptual design to system integration, commissioning, and operational handover for large-scale aquaculture facilities.") }}
+  </p>
+</section>
+
+<section class="section-white elev-1 section-panel">
+  <p>
+    {{ _("Our commercial services division acts as your strategic partner throughout the entire lifecycle of your aquaculture project. We bridge the gap between biological requirements and robust engineering execution, ensuring projects are delivered on time, within budget, and meet performance metrics.") }}
+  </p>
+</section>
+
+  <div class="engineering-cards">
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Conceptual Design & Feasibility") }}</h3>
+      <p>
+        {{ _("Initial assessment of site potential, species selection consultation, production target setting, and detailed techno-economic feasibility studies.") }}
+      </p>
+      <ul>
+        <li>{{ _("Site suitability analysis") }}</li>
+        <li>{{ _("Process flow charting (PFD)") }}</li>
+        <li>{{ _("Preliminary budget estimation") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("System Integration & Procurement") }}</h3>
+      <p>{{ _("Managing the complex integration of mechanical, electrical, and automation components from global suppliers.") }}</p>
+      <ul>
+        <li>{{ _("Vendor management & QA/QC") }}</li>
+        <li>{{ _("Bill of Materials (BOM) finalization") }}</li>
+        <li>{{ _("Supply chain logistics") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Project Management (EPC/EPCM)") }}</h3>
+      <p>
+        {{ _("Dedicated project management services overseeing civil works, equipment installation, and site coordination.") }}
+      </p>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Commissioning & Validation") }}</h3>
+      <p>
+        {{ _("Rigorous testing protocols for all subsystems (Water Quality, RAS function, Automation logic) prior to biological introduction.") }}
+      </p>
+      <ul>
+        <li>{{ _("Hydrostatic and integrity testing") }}</li>
+        <li>{{ _("Automation FAT/SAT execution") }}</li>
+        <li>{{ _("Performance validation reports") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Operational Training & SOPs") }}</h3>
+      <p>
+        {{ _("Developing comprehensive Standard Operating Procedures and training site staff on system maintenance and critical operations.") }}
+      </p>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("System Optimization & Audits") }}</h3>
+      <p>
+        {{ _("Post-launch analysis of operational data, energy efficiency audits, and process refinement recommendations.") }}
+      </p>
+      <ul>
+        <li>{{ _("Energy consumption analysis") }}</li>
+        <li>{{ _("Biomass yield optimization") }}</li>
+      </ul>
+    </div>
+
+  </div>
+
+<section class="section-white elev-1 section-panel">
+  <h2>{{ _("Partnership Beyond Installation") }}</h2>
+  <p>
+    {{ _("Our commitment extends past final handover. We offer optional long-term service contracts and technical advisory roles to ensure sustained, profitable operation of your capital investment.") }}
+  </p>
+</section>
+
+<section class="section-white elev-1 section-panel">
+  {% include "partials/company_profile_cta.html" %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="page-header">
+  <h1>{{ _("Automation & Control") }}</h1>
+  <p>
+    {{ _("PLC-based automation, monitoring, and control solutions engineered for reliable hatchery operations and long-term maintainability.") }}
+  </p>
+</section>
+
+<!-- Overview -->
+<section class="section-white elev-1 section-panel">
+  <p>
+    {{ _("We design and implement industrial automation systems for aquaculture facilities, covering PLC control, HMI operator interfaces, instrumentation integration, and commissioning support. Our focus is operational reliability, scalability, and clear documentation for long-term support.") }}
+  </p>
+</section>
+
+<!-- Core Capabilities (cards) -->
+
+  <div class="engineering-cards">
+
+    <!-- PLC -->
+    <div class="eng-card elev-2">
+      <h3>{{ _("PLC Systems") }}</h3>
+      <p>
+        {{ _("Control logic design and PLC programming for pumps, blowers, valves, filters, oxygenation units, feeders, and process interlocks.") }}
+      </p>
+      <ul>
+        <li>{{ _("Process sequencing and interlocks") }}</li>
+        <li>{{ _("Fail-safe behavior and alarm logic") }}</li>
+        <li>{{ _("I/O list, tag naming, and documentation") }}</li>
+        <li>{{ _("Commissioning and on-site testing") }}</li>
+      </ul>
+    </div>
+
+    <!-- HMI -->
+    <div class="eng-card elev-2">
+      <h3>{{ _("HMI Interfaces") }}</h3>
+      <p>
+        {{ _("Operator-focused HMI design for clear visualization, fast troubleshooting, and safe manual control when needed.") }}
+      </p>
+      <ul>
+        <li>{{ _("Touch-panel HMIs with clean navigation") }}</li>
+        <li>{{ _("Process overview screens and device pages") }}</li>
+        <li>{{ _("Alarm pages with acknowledge and history") }}</li>
+        <li>{{ _("Multi-language UI readiness") }}</li>
+      </ul>
+    </div>
+
+    <!-- Monitoring & SCADA (link to subpage) -->
+    <div class="eng-card elev-2">
+      <h3>{{ _("Monitoring & SCADA") }}</h3>
+      <p>
+        {{ _("Centralized monitoring, data logging, dashboards, KPIs, alarms, and remote access for single-site or multi-site aquaculture operations.") }}
+      </p>
+
+      <a href="{{ url_for('monitoring', lang=current_locale) }}" class="eng-card-link">
+        {{ _("Explore Monitoring & SCADA") }}
+      </a>
+    </div>
+
+    <!-- Instrumentation -->
+    <div class="eng-card elev-2">
+      <h3>{{ _("Instrumentation & Integration") }}</h3>
+      <p>
+        {{ _("Integration of field sensors and equipment into a stable control system with consistent tagging, calibration support, and validation testing.") }}
+      </p>
+      <ul>
+        <li>{{ _("Water quality sensors (DO, pH, temperature, ORP)") }}</li>
+        <li>{{ _("Flow, level, pressure transmitters") }}</li>
+        <li>{{ _("VFD/soft-starter control integration") }}</li>
+        <li>{{ _("Signal validation and fault handling") }}</li>
+      </ul>
+    </div>
+
+  </div>
+
+
+<!-- Delivery approach -->
+<section class="section-white elev-1 section-panel">
+  <h2>{{ _("Engineering Approach") }}</h2>
+  <p>
+    {{ _("We follow a structured workflow to ensure stable operation and clean handover: requirement definition, I/O mapping, control philosophy, implementation, testing, commissioning, and training.") }}
+  </p>
+
+  <ul>
+    <li>{{ _("Control philosophy and process mapping (PFD)") }}</li>
+    <li>{{ _("Panel design coordination and wiring review") }}</li>
+    <li>{{ _("Factory acceptance testing (FAT) and site acceptance testing (SAT)") }}</li>
+    <li>{{ _("Operator training and maintenance documentation") }}</li>
+  </ul>
+</section>
+
+<!-- CTA -->
+<section class="section-white elev-1 section-panel">
+  {% include "partials/specs_cta.html" %}
+</section>
+
+{% endblock %}

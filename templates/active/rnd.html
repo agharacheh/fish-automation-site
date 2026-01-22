@@ -1,0 +1,106 @@
+{# templates/rnd.html #}
+{% extends "base.html" %}
+{% block content %}
+
+<section class="page-header">
+  <h1>{{ _("Research & Development (R&D)") }}</h1>
+  <p>
+    {{ _("Applied research and innovation to improve performance, sustainability, fish health, and value creation across aquaculture operations.") }}
+  </p>
+</section>
+
+<section class="section-white elev-1 section-panel">
+  <p>
+    {{ _("Our R&D activities focus on practical, scalable outcomes—bridging science and production through formulation work, health solutions, genetics, and product development for modern aquaculture.") }}
+  </p>
+</section>
+
+<div class="engineering-cards">
+
+  <div class="eng-card elev-2">
+    <h3>{{ _("Feed Development") }}</h3>
+    <p>
+      {{ _("Research on feed formulation optimization to enhance growth performance and feed conversion ratios (FCR).") }}
+    </p>
+    <ul>
+      <li>{{ _("Nutrient profiling and formulation optimization") }}</li>
+      <li>{{ _("Performance testing for growth and FCR") }}</li>
+      <li>{{ _("Digestibility and waste reduction") }}</li>
+    </ul>
+  </div>
+
+  <div class="eng-card elev-2">
+    <h3>{{ _("Alternative Protein Sources") }}</h3>
+    <p>
+      {{ _("Study and production of alternative protein sources such as insect protein, algae, and single-cell protein.") }}
+    </p>
+    <ul>
+      <li>{{ _("Insect protein") }}</li>
+      <li>{{ _("Algae and microalgae protein") }}</li>
+      <li>{{ _("Single-cell protein (SCP)") }}</li>
+      <li>{{ _("Sustainability and scalability assessment") }}</li>
+    </ul>
+  </div>
+
+  <div class="eng-card elev-2">
+    <h3>{{ _("Vaccines") }}</h3>
+    <p>
+      {{ _("Research and development of species-specific aquatic vaccines aimed at reducing antibiotic usage.") }}
+    </p>
+    <ul>
+      <li>{{ _("Species-specific vaccine development") }}</li>
+      <li>{{ _("Preventive health management") }}</li>
+      <li>{{ _("Antibiotic reduction strategies") }}</li>
+    </ul>
+  </div>
+
+  <div class="eng-card elev-2">
+    <h3>{{ _("Selective Breeding & Genetics") }}</h3>
+    <p>
+      {{ _("Genetic improvement and selective breeding of fish species with high growth performance and resilience under intensive farming conditions, based on advanced global knowledge.") }}
+    </p>
+    <ul>
+      <li>{{ _("Growth performance enhancement") }}</li>
+      <li>{{ _("Resilience under intensive farming conditions") }}</li>
+      <li>{{ _("Genetic line selection and performance tracking") }}</li>
+    </ul>
+  </div>
+
+  <div class="eng-card elev-2">
+    <h3>{{ _("Value-Added Products") }}</h3>
+    <p>
+      {{ _("Research into seafood processing and development of high value-added products such as fillets, oils, and nutritional supplements.") }}
+    </p>
+    <ul>
+      <li>{{ _("Seafood processing and product development") }}</li>
+      <li>{{ _("Fillets, oils, and extracts") }}</li>
+      <li>{{ _("Nutritional and functional supplements") }}</li>
+      <li>{{ _("Quality and market readiness focus") }}</li>
+    </ul>
+  </div>
+
+</div>
+
+<section class="section-white elev-1 section-panel">
+  <h2>{{ _("R&D Scope & Deliverables") }}</h2>
+  <p>
+    {{ _("Our scope includes research planning, formulation and protocol development, pilot validation, performance tracking, and documentation—designed to support real-world deployment and measurable operational improvement.") }}
+  </p>
+</section>
+
+<section class="section-white elev-1 section-panel">
+  {% include "partials/specs_cta.html" %}
+</section>
+
+<section class="card-light about-cta">
+        <h2>{{ _("Work With Us") }}</h2>
+        <p>{{ _("Tell us about your hatchery project and we’ll respond with a clear technical path forward.") }}</p>
+        <p class="muted-text">
+            {{ _("Our team review every inquiry directly.") }}
+        </p>
+        <a href="{{ url_for('contact', lang=current_locale) }}" class="btn btn-primary">
+            {{ _("Contact Our Team") }}
+        </a>
+    </section>
+
+{% endblock %}

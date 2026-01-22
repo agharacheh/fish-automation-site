@@ -6,125 +6,168 @@
     <meta charset="UTF-8">
     <title>{{ _("Fish Hatchery – Automation & Engineering – Commercial Services ") }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='logo.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='logo.png') }}">
+        <link rel="apple-touch-icon" href="{{ url_for('static', filename='logo.png') }}">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
 </head>
 
 <body>
     
 {% include "partials/icons_sprite.html" %}
 
-
-
 <header class="header-light">
 
-    <div class="header-left">
-        <a href="{{ lang_url('index') }}" class="logo-link">
-            <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="logo">
-        </a>
+  <div class="header-left">
+    <a href="{{ lang_url('index') }}" class="logo-link">
+      <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="logo">
+    </a>
+  </div>
+
+  <!-- MOBILE TOGGLE -->
+  <button class="hamburger" id="navToggle" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- NAVIGATION -->
+  <nav class="nav-menu-light">
+
+    <!-- ENGLISH MENU -->
+    <div class="menu-en {% if current_locale != 'en' %}is-hidden{% endif %}">
+<a href="{{ lang_url('index') }}">
+  <svg class="icon nav-icon"><use href="#icon-home" xlink:href="#icon-home"></use></svg>
+  Home
+</a>
+
+<a href="{{ lang_url('equipment') }}">
+  <svg class="icon nav-icon"><use href="#icon-industry" xlink:href="#icon-industry"></use></svg>
+  Equipment Manufacturing
+</a>
+
+<a href="{{ lang_url('commercial') }}">
+  <svg class="icon nav-icon"><use href="#icon-briefcase" xlink:href="#icon-briefcase"></use></svg>
+  Commercial Services
+</a>
+
+<!-- <div class="dropdown">
+  <a class="dropdown-btn" href="{{ lang_url('automation') }}">
+    <svg class="icon nav-icon"><use href="#icon-microchip" xlink:href="#icon-microchip"></use></svg>
+    Automation & Control
+    <svg class="icon submenu-arrow" aria-hidden="true"><use href="#icon-caret-down" xlink:href="#icon-caret-down"></use></svg>
+  </a>
+
+  <div class="dropdown-content">
+    <a href="{{ lang_url('monitoring') }}">Monitoring & SCADA</a>
+  </div>
+</div> -->
+
+<a href="{{ lang_url('automation') }}">
+  <svg class="icon nav-icon">
+    <use href="#icon-microchip" xlink:href="#icon-microchip"></use>
+  </svg>
+  Automation & Control
+</a>
+
+<a href="{{ lang_url('rnd') }}">
+  <svg class="icon nav-icon"><use href="#icon-flask" xlink:href="#icon-flask"></use></svg>
+  Research & Development
+</a>
+
+<a href="{{ lang_url('about') }}">
+  <svg class="icon nav-icon"><use href="#icon-users" xlink:href="#icon-users"></use></svg>
+  About Us
+</a>
+
+<a href="{{ lang_url('contact') }}">
+  <svg class="icon nav-icon"><use href="#icon-email" xlink:href="#icon-email"></use></svg>
+  Contact / Specs
+</a>
+
     </div>
 
-    <!-- MOBILE TOGGLE -->
-    <button class="hamburger" id="navToggle" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <!-- PERSIAN MENU -->
+    <div class="menu-fa {% if current_locale != 'fa' %}is-hidden{% endif %}">
+<a href="{{ lang_url('index') }}">
+  <svg class="icon nav-icon"><use href="#icon-home" xlink:href="#icon-home"></use></svg>
+  خانه
+</a>
 
-   
+<a href="{{ lang_url('equipment') }}">
+  <svg class="icon nav-icon"><use href="#icon-industry" xlink:href="#icon-industry"></use></svg>
+  ساخت تجهیزات
+</a>
 
-    <!-- NAVIGATION -->
-    <nav class="nav-menu-light">
+<a href="{{ lang_url('commercial') }}">
+  <svg class="icon nav-icon"><use href="#icon-briefcase" xlink:href="#icon-briefcase"></use></svg>
+  خدمات بازرگانی
+</a>
 
-        <!-- ENGLISH MENU -->
-        <!-- <div class="menu-en"> -->
-            <div class="menu-en {% if current_locale != 'en' %}is-hidden{% endif %}">
-                <a href="{{ lang_url('index') }}">
-                    <i class="fa-solid fa-house nav-icon"></i> Home
-                </a>
+<!-- <div class="dropdown">
+  <a class="dropdown-btn" href="{{ lang_url('automation') }}">
+    <svg class="icon nav-icon"><use href="#icon-microchip" xlink:href="#icon-microchip"></use></svg>
+    اتوماسیون و کنترل
+    <svg class="icon submenu-arrow" aria-hidden="true"><use href="#icon-caret-down" xlink:href="#icon-caret-down"></use></svg>
+  </a>
 
-            <a href="{{ lang_url('equipment') }}">
-                <i class="fa-solid fa-industry nav-icon"></i> Equipment Manufacturing
-            </a>
+  <div class="dropdown-content">
+    <a href="{{ lang_url('monitoring') }}">پایش و اسکادا</a>
+  </div>
+</div> -->
 
-            <a href="{{ lang_url('commercial') }}">
-                <i class="fa-solid fa-briefcase nav-icon"></i> Commercial Services
-            </a>
+<a href="{{ lang_url('automation') }}">
+  <svg class="icon nav-icon">
+    <use href="#icon-microchip" xlink:href="#icon-microchip"></use>
+  </svg>
+  اتوماسیون و کنترل
+</a>
 
-            <div class="dropdown">
-                <a class="dropdown-btn">
-                    <i class="fa-solid fa-microchip nav-icon"></i>
-                    Automation & Control
-                    <i class="fa-solid fa-caret-down submenu-arrow"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="{{ lang_url('monitoring') }}">Monitoring & SCADA</a>
-                </div>
-            </div>
+<a href="{{ lang_url('rnd') }}">
+  <svg class="icon nav-icon"><use href="#icon-flask" xlink:href="#icon-flask"></use></svg>
+  تحقیق و توسعه
+</a>
 
-            <a href="{{ lang_url('rnd') }}">
-                <i class="fa-solid fa-flask nav-icon"></i> Research & Development
-            </a>
+<a href="{{ lang_url('about') }}">
+  <svg class="icon nav-icon"><use href="#icon-users" xlink:href="#icon-users"></use></svg>
+  درباره ما
+</a>
 
-            <a href="{{ lang_url('about') }}">
-                <i class="fa-solid fa-users nav-icon"></i> About Us
-            </a>
+<a href="{{ lang_url('contact') }}">
+  <svg class="icon nav-icon"><use href="#icon-email" xlink:href="#icon-email"></use></svg>
+  تماس / مشخصات
+</a>
 
-            <a href="{{ lang_url('contact') }}">
-                <i class="fa-solid fa-envelope nav-icon"></i> Contact / Specs
-            </a>
+    </div>
 
-        </div>
+  </nav>
 
-        <!-- PERSIAN MENU -->
-        <!-- <div class="menu-fa"> -->
-        <div class="menu-fa {% if current_locale != 'fa' %}is-hidden{% endif %}">
-        <a href="{{ lang_url('index') }}">
-                <i class="fa-solid fa-house nav-icon"></i> خانه
-            </a>
 
-            <a href="{{ lang_url('equipment') }}">
-                <i class="fa-solid fa-industry nav-icon"></i> ساخت تجهیزات
-            </a>
 
-            <a href="{{ lang_url('commercial') }}">
-                <i class="fa-solid fa-briefcase nav-icon"></i> خدمات بازرگانی
-            </a>
 
-            <div class="dropdown">
-                <a class="dropdown-btn">
-                    <i class="fa-solid fa-microchip nav-icon"></i>
-                    اتوماسیون و کنترل
-                    <i class="fa-solid fa-caret-down submenu-arrow"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="{{ lang_url('monitoring') }}">پایش و اسکادا</a>
-                </div>
-            </div>
-
-            <a href="{{ lang_url('rnd') }}">
-                <i class="fa-solid fa-flask nav-icon"></i> تحقیق و توسعه
-            </a>
-
-            <a href="{{ lang_url('about') }}">
-                <i class="fa-solid fa-users nav-icon"></i> درباره ما
-            </a>
-
-            <a href="{{ lang_url('contact') }}">
-                <i class="fa-solid fa-envelope nav-icon"></i> تماس / مشخصات
-            </a>
-
-        </div>
-
-    </nav>
-
-    <script>
-    document.querySelectorAll(".dropdown-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-            btn.nextElementSibling.classList.toggle("open");
-        });
+<!-- <script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".dropdown-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      // If user clicks the caret area, toggle submenu instead of navigating
+      const clickedCaret = e.target.closest(".submenu-arrow");
+      if (clickedCaret) {
+        e.preventDefault();
+        const menu = btn.nextElementSibling;
+        if (menu && menu.classList.contains("dropdown-content")) {
+          menu.classList.toggle("open");
+        }
+      }
+      // otherwise, normal click navigates to /automation via href
     });
-    </script>
+  });
+});
+</script> -->
+
+
 
     <div class="lang-switch-light">
         <a href="{{ url_for('setlang', lang_code='en', next=request.full_path) }}" class="lang-btn-light">EN</a>
@@ -162,16 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector(".nav-menu-light");
-
-    toggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-    });
-});
-</script>
 
 
 
