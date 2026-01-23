@@ -2512,7 +2512,8 @@ html[dir="rtl"] .submenu-arrow {
 
 /* flip state */
 .hero-tiles-flip .tile.is-flipping {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* keep your faces as you already have (front glass + back white) */
