@@ -215,55 +215,134 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Disable flips on mobile (match your breakpoint)
-  if (window.matchMedia("(max-width: 768px)").matches) return;
-
   const grid = document.querySelector(".hero-tiles-flip");
   if (!grid) return;
 
   const tiles = Array.from(grid.querySelectorAll(".tile"));
-  if (tiles.length === 0) return;
+  if (!tiles.length) return;
 
-  // Helper: pick N distinct random tiles
-  const pickRandomTiles = (n) => {
+  // Breakpoint + motion preference gates (single source of truth)
+  const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+  const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Calm timing
+  const FLIP_DURATION_MS = 900;   // tile stays flipped
+  const MIN_PAUSE_MS = 2600;      // min time between flip events
+  const MAX_PAUSE_MS = 5200;      // max time between flip events
+
+  // Behavior
+  const TWO_TILE_CHANCE = 0.35;   // ~35% of the time flip 2 tiles, otherwise 1
+  const TILE_COOLDOWN_MS = 9000;  // don't re-flip same tile too soon
+
+  // State
+  let running = false;
+  let timers = new Set();
+  const lastFlipAt = new WeakMap(); // tile -> timestamp
+
+  const clearTimers = () => {
+    timers.forEach(id => clearTimeout(id));
+    timers.clear();
+  };
+
+  const stop = () => {
+    running = false;
+    clearTimers();
+    tiles.forEach(t => t.classList.remove("is-flipping"));
+  };
+
+  const pickRandomTilesWithCooldown = (n) => {
+    const now = Date.now();
+
+    // Prefer tiles that are not in cooldown and not currently flipping
+    const eligible = tiles.filter(t => {
+      if (t.classList.contains("is-flipping")) return false;
+      const last = lastFlipAt.get(t) || 0;
+      return (now - last) >= TILE_COOLDOWN_MS;
+    });
+
+    // If everything is on cooldown, relax cooldown (still avoid currently flipping)
+    const pool = eligible.length ? eligible : tiles.filter(t => !t.classList.contains("is-flipping"));
+    if (!pool.length) return [];
+
     const picked = new Set();
-    while (picked.size < n && picked.size < tiles.length) {
-      const idx = Math.floor(Math.random() * tiles.length);
-      picked.add(tiles[idx]);
+    while (picked.size < n && picked.size < pool.length) {
+      const idx = Math.floor(Math.random() * pool.length);
+      picked.add(pool[idx]);
     }
     return Array.from(picked);
   };
 
-  // Calm enterprise timing
-  const FLIP_DURATION_MS = 900;       // how long the tile stays flipped
-  const MIN_PAUSE_MS = 2600;          // minimum time between flip events
-  const MAX_PAUSE_MS = 5200;          // maximum time between flip events
-  const THREE_TILE_CHANCE = 0.38;       // ~38% of the time flip 3 tiles
+  const schedule = (fn, ms) => {
+    const id = setTimeout(() => {
+      timers.delete(id);
+      fn();
+    }, ms);
+    timers.add(id);
+    return id;
+  };
 
   const loop = () => {
-    const count = (Math.random() < THREE_TILE_CHANCE) ? 3 : 1;
-    const selected = pickRandomTiles(count);
+    if (!running) return;
+
+    // If conditions changed, stop safely
+    if (isMobile() || reduceMotion()) {
+      stop();
+      return;
+    }
+
+    const count = (Math.random() < TWO_TILE_CHANCE) ? 2 : 1;
+    const selected = pickRandomTilesWithCooldown(count);
+    if (!selected.length) {
+      // Try again after a short pause if pool is empty
+      schedule(loop, 700);
+      return;
+    }
 
     // flip on
-    selected.forEach(t => t.classList.add("is-flipping"));
+    const now = Date.now();
+    selected.forEach(t => {
+      t.classList.add("is-flipping");
+      lastFlipAt.set(t, now);
+    });
 
-    // flip off after duration
-    setTimeout(() => {
+    // flip off
+    schedule(() => {
       selected.forEach(t => t.classList.remove("is-flipping"));
 
-      // wait a bit, then flip again
       const pause = Math.floor(MIN_PAUSE_MS + Math.random() * (MAX_PAUSE_MS - MIN_PAUSE_MS));
-      setTimeout(loop, pause);
+      schedule(loop, pause);
     }, FLIP_DURATION_MS);
   };
 
-  // Start after a short, calm delay
-  setTimeout(loop, 1200);
+  const startIfAllowed = () => {
+    // Always stop first to avoid duplicate loops
+    stop();
+    if (isMobile() || reduceMotion()) return;
+
+    running = true;
+    schedule(loop, 1200); // calm initial delay
+  };
+
+  // Start
+  startIfAllowed();
+
+  // React to resize/orientation + motion preference changes
+  let resizeDebounce = null;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeDebounce);
+    resizeDebounce = setTimeout(startIfAllowed, 250);
+  });
+
+  // Prefer-reduced-motion live changes
+  const prm = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (prm && prm.addEventListener) {
+    prm.addEventListener("change", startIfAllowed);
+  }
 });
 </script>
-
 
 </body>
 </html>
