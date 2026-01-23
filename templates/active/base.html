@@ -54,18 +54,6 @@
   Commercial Services
 </a>
 
-<!-- <div class="dropdown">
-  <a class="dropdown-btn" href="{{ lang_url('automation') }}">
-    <svg class="icon nav-icon"><use href="#icon-microchip" xlink:href="#icon-microchip"></use></svg>
-    Automation & Control
-    <svg class="icon submenu-arrow" aria-hidden="true"><use href="#icon-caret-down" xlink:href="#icon-caret-down"></use></svg>
-  </a>
-
-  <div class="dropdown-content">
-    <a href="{{ lang_url('monitoring') }}">Monitoring & SCADA</a>
-  </div>
-</div> -->
-
 <a href="{{ lang_url('automation') }}">
   <svg class="icon nav-icon">
     <use href="#icon-microchip" xlink:href="#icon-microchip"></use>
@@ -107,18 +95,6 @@
   خدمات بازرگانی
 </a>
 
-<!-- <div class="dropdown">
-  <a class="dropdown-btn" href="{{ lang_url('automation') }}">
-    <svg class="icon nav-icon"><use href="#icon-microchip" xlink:href="#icon-microchip"></use></svg>
-    اتوماسیون و کنترل
-    <svg class="icon submenu-arrow" aria-hidden="true"><use href="#icon-caret-down" xlink:href="#icon-caret-down"></use></svg>
-  </a>
-
-  <div class="dropdown-content">
-    <a href="{{ lang_url('monitoring') }}">پایش و اسکادا</a>
-  </div>
-</div> -->
-
 <a href="{{ lang_url('automation') }}">
   <svg class="icon nav-icon">
     <use href="#icon-microchip" xlink:href="#icon-microchip"></use>
@@ -144,30 +120,6 @@
     </div>
 
   </nav>
-
-
-
-
-<!-- <script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".dropdown-btn").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      // If user clicks the caret area, toggle submenu instead of navigating
-      const clickedCaret = e.target.closest(".submenu-arrow");
-      if (clickedCaret) {
-        e.preventDefault();
-        const menu = btn.nextElementSibling;
-        if (menu && menu.classList.contains("dropdown-content")) {
-          menu.classList.toggle("open");
-        }
-      }
-      // otherwise, normal click navigates to /automation via href
-    });
-  });
-});
-</script> -->
-
-
 
     <div class="lang-switch-light">
         <a href="{{ url_for('setlang', lang_code='en', next=request.full_path) }}" class="lang-btn-light">EN</a>
@@ -261,6 +213,54 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.classList.toggle("open");
     menu.classList.toggle("open");
   });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Disable flips on mobile (match your breakpoint)
+  if (window.matchMedia("(max-width: 768px)").matches) return;
+
+  const grid = document.querySelector(".hero-tiles-flip");
+  if (!grid) return;
+
+  const tiles = Array.from(grid.querySelectorAll(".tile"));
+  if (tiles.length === 0) return;
+
+  // Helper: pick N distinct random tiles
+  const pickRandomTiles = (n) => {
+    const picked = new Set();
+    while (picked.size < n && picked.size < tiles.length) {
+      const idx = Math.floor(Math.random() * tiles.length);
+      picked.add(tiles[idx]);
+    }
+    return Array.from(picked);
+  };
+
+  // Calm enterprise timing
+  const FLIP_DURATION_MS = 900;       // how long the tile stays flipped
+  const MIN_PAUSE_MS = 2600;          // minimum time between flip events
+  const MAX_PAUSE_MS = 5200;          // maximum time between flip events
+  const THREE_TILE_CHANCE = 0.38;       // ~38% of the time flip 3 tiles
+
+  const loop = () => {
+    const count = (Math.random() < THREE_TILE_CHANCE) ? 3 : 1;
+    const selected = pickRandomTiles(count);
+
+    // flip on
+    selected.forEach(t => t.classList.add("is-flipping"));
+
+    // flip off after duration
+    setTimeout(() => {
+      selected.forEach(t => t.classList.remove("is-flipping"));
+
+      // wait a bit, then flip again
+      const pause = Math.floor(MIN_PAUSE_MS + Math.random() * (MAX_PAUSE_MS - MIN_PAUSE_MS));
+      setTimeout(loop, pause);
+    }, FLIP_DURATION_MS);
+  };
+
+  // Start after a short, calm delay
+  setTimeout(loop, 1200);
 });
 </script>
 

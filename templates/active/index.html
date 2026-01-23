@@ -2,28 +2,43 @@
 
 {% block content %}
 
-<section class="hero-section">
-    <div class="hero-content fade-up">
-        <img src="{{ url_for('static', filename='logo.png') }}"
-             alt="Fish Hatchery Automation"
-             class="hero-logo">
 
-        <h1>{{ _("Fish Hatchery Automation & Engineering Commercial Services") }}</h1>
+<section class="hero-section hero-tiles">
 
-        <p>
-            {{ _("Design, manufacturing, automation, and SCADA solutions for modern aquaculture systems.") }}
-        </p>
+  <!-- static glass tiles / base layer -->
+  <div class="hero-tiles-bg"></div>
 
-        <div class="hero-buttons">
-            <a href="#main-sections" class="hero-btn primary">
-                {{ _("Explore Solutions") }}
-            </a>
-            <a href="{{ url_for('contact') }}" class="hero-btn secondary">
-                {{ _("Contact Us") }}
-            </a>
-        </div>
+  <!-- flipping tiles overlay -->
+  <div class="hero-tiles-flip" aria-hidden="true">
+    {% for i in range(1, 37) %}
+      <span class="tile"></span>
+    {% endfor %}
+  </div>
+
+  <!-- actual hero content (text, buttons) -->
+  <div class="hero-content fade-up">
+    <img src="{{ url_for('static', filename='logo.png') }}"
+         alt="Fish Hatchery Automation"
+         class="hero-logo">
+
+    <h1>{{ _("Fish Hatchery Automation & Engineering Commercial Services") }}</h1>
+
+    <p>
+      {{ _("Design, manufacturing, automation, and SCADA solutions for modern aquaculture systems.") }}
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#main-sections" class="hero-btn primary">
+        {{ _("Explore Solutions") }}
+      </a>
+      <a href="{{ url_for('contact') }}" class="hero-btn secondary">
+        {{ _("Contact Us") }}
+      </a>
     </div>
+  </div>
+
 </section>
+
 
 <main id="main-sections">
   <div class="engineering-cards">

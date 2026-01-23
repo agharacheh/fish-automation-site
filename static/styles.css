@@ -2346,3 +2346,187 @@ html[dir="rtl"] .submenu-arrow {
     order: 0 !important;
   }
 }
+/* =========================
+   HERO WINDOW TILES EFFECT
+   ========================= */
+
+.hero-tiles {
+  position: relative;
+  overflow: hidden;
+}
+/* Desktop tile size ~4cm on most displays (tweak if needed) */
+:root {
+  --hero-tile: 150px; /* ~4cm-ish; adjust to match your logo visually */
+}
+/* tiled glass background */
+.hero-tiles-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+
+  background-size: 120px 120px; /* tile size */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  opacity: 0.6;
+}
+
+/* subtle depth & lighting */
+.hero-tiles-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255,255,255,0.25),
+    transparent 60%
+  );
+}
+
+/* keep content above tiles */
+.hero-tiles .hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero-tiles-bg {
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.15),
+    inset 0 0 40px rgba(255,255,255,0.08);
+}
+@media (max-width: 768px) {
+  .hero-tiles-bg {
+    background-size: 80px 80px;
+    backdrop-filter: blur(3px);
+    opacity: 0.4;
+  }
+}
+/* =========================
+   HERO: TILE FLIP OVERLAY
+   ========================= */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* grid of tiles */
+.hero-tiles-flip {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--hero-tile), 1fr));
+  grid-auto-rows: var(--hero-tile);
+
+  gap: 0;              /* ❌ no gaps */
+  padding: 0;          /* ❌ no outer spacing */
+  pointer-events: none;
+  perspective: 900px;
+}
+
+
+/* each tile (3D flip) */
+.hero-tiles-flip .tile {
+  position: relative;
+  border-radius: 0;
+  transform-style: preserve-3d;
+  animation: tileFlip 7s ease-in-out infinite;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+}
+.hero-tiles-flip .tile {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;   /* 🔥 forces square tiles */
+}
+
+/* front face (your glass tile look) */
+.hero-tiles-flip .tile::before,
+.hero-tiles-flip .tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  backface-visibility: hidden;
+}
+
+/* front: glassy */
+.hero-tiles-flip .tile::before {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* back: WHITE tile */
+.hero-tiles-flip .tile::after {
+  background: rgba(255, 255, 255, 0.94);
+  transform: rotateY(180deg);
+}
+
+/* keep hero text above tiles */
+.hero-section .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* The flip motion */
+@keyframes tileFlip {
+  0%, 74% { transform: rotateY(0deg); }
+  80%     { transform: rotateY(180deg); }
+  86%     { transform: rotateY(0deg); }
+  100%    { transform: rotateY(0deg); }
+}
+
+/* "random-looking" timing variation */
+.hero-tiles-flip .tile:nth-child(3n) { animation-duration: 6.5s; animation-delay: -1.8s; }
+.hero-tiles-flip .tile:nth-child(4n) { animation-duration: 8.4s; animation-delay: -3.1s; }
+.hero-tiles-flip .tile:nth-child(5n) { animation-duration: 9.2s; animation-delay: -4.6s; }
+.hero-tiles-flip .tile:nth-child(7n) { animation-duration: 7.6s; animation-delay: -2.7s; }
+
+/* ===== Disable flips on mobile entirely ===== */
+@media (max-width: 768px) {
+  .hero-tiles-flip .tile {
+    animation: none !important;
+    transform: none !important;
+  }
+  .hero-tiles-flip .tile::after {
+    display: none; /* no "back face" flashes on mobile */
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-tiles-flip .tile { animation: none; }
+}
+/* CALM flip: tiles flip only when JS adds .is-flipping */
+.hero-tiles-flip .tile {
+  animation: none !important;
+  transform: rotateY(0deg);
+  transition: transform 600ms ease-in-out;
+}
+
+/* flip state */
+.hero-tiles-flip .tile.is-flipping {
+  transform: rotateY(180deg);
+}
+
+/* keep your faces as you already have (front glass + back white) */
+
+/* Mobile: no flips at all */
+@media (max-width: 768px) {
+  .hero-tiles-flip .tile {
+    transition: none !important;
+    transform: none !important;
+  }
+  .hero-tiles-flip .tile.is-flipping {
+    transform: none !important;
+  }
+  .hero-tiles-flip .tile::after {
+    display: none; /* no white backside on mobile */
+  }
+}
