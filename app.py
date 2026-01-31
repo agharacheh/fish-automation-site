@@ -1,8 +1,14 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import (
+    Flask, render_template, request, redirect, url_for,
+    Response, send_from_directory
+)
 from flask_babel import Babel, gettext as _, get_locale
 
+
 app = Flask(__name__, template_folder="templates/active")
+
+
 
 # -------------------------
 # CONFIG
@@ -87,17 +93,59 @@ def about():
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
+    success = False
     if request.method == "POST":
-        # validate + process form
+        # TODO: validate + process form (email later)
         success = True
-    else:
-        success = False
 
-    return render_template(
-        "contact.html",
-        page="contact",
-        success=success
-    )
+    return render_template("contact.html", page="contact", success=success)
+
+
+@app.route("/robots.txt")
+def robots():
+    return send_from_directory("static", "robots.txt")
+
+
+# SEO routes (place here)
+@app.route("/sitemap.xml")
+def sitemap():
+    # All public endpoints you want indexed
+    endpoints = [
+        "index",
+        "equipment",
+        "commercial",
+        "automation",
+        "monitoring",
+        "rnd",
+        "about",
+        "contact",
+    ]
+
+    languages = ["en", "fa"]
+    pages = []
+
+    for lang in languages:
+        for ep in endpoints:
+            base = url_for(ep, _external=True)
+            pages.append(f"{base}?lang={lang}")
+
+    xml = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    ]
+
+    for page in pages:
+        xml.append(
+            f"<url>"
+            f"<loc>{page}</loc>"
+            f"<changefreq>monthly</changefreq>"
+            f"<priority>0.8</priority>"
+            f"</url>"
+        )
+
+    xml.append("</urlset>")
+    return Response("\n".join(xml), mimetype="application/xml")
+
 
 # -------------------------
 # LOCAL DEV ONLY
