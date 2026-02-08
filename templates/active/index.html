@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block title %}{{ _("Fish Hatchery Automation & SCADA | Tamhid Gostar (TDQ Co)") }}{% endblock %}
+
+{% block meta_description %}
+{{ _("Tamhid Gostar Danesh Padid (TDQ Co) delivers fish hatchery automation, RAS engineering, and SCADA monitoring systems for modern aquaculture facilities.") }}
+{% endblock %}
+
 {% block content %}
 
 
@@ -18,20 +24,28 @@
   <!-- actual hero content (text, buttons) -->
   <div class="hero-content fade-up">
     <img src="{{ url_for('static', filename='logo.png') }}"
-         alt="Fish Hatchery Automation"
+         alt="Tamhid Gostar (TDQ Co) - Fish Hatchery Automation"
          class="hero-logo">
 
-    <h1>{{ _("Fish Hatchery Automation & Engineering Commercial Services") }}</h1>
+    <h1>{{ _("Fish Hatchery Automation & Aquaculture Engineering") }}</h1>
 
-    <p>
-      {{ _("Design, manufacturing, automation, and SCADA solutions for modern aquaculture systems.") }}
-    </p>
+      {% if current_locale == "fa" %}
+        <p class="brand-line muted">
+          تمهید گستر دانش پدید (TDQ Co) — شرکت مهندسی اتوماسیون و کنترل آبزی‌پروری
+        </p>
+      {% else %}
+        <p class="brand-line muted">
+          Tamhid Gostar Danesh Padid (TDQ Co) — fish hatchery automation & aquaculture engineering
+        </p>
+      {% endif %}
 
     <div class="hero-buttons">
       <a href="#main-sections" class="hero-btn primary">
         {{ _("Explore Solutions") }}
       </a>
-      <a href="{{ url_for('contact') }}" class="hero-btn secondary">
+      <!-- <a href="{{ url_for('contact') }}" class="hero-btn secondary"> -->
+      <a href="{{ lang_url('contact') }}" class="hero-btn secondary">
+
         {{ _("Contact Us") }}
       </a>
     </div>

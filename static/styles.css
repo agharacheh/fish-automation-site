@@ -2531,3 +2531,10 @@ html[dir="rtl"] .submenu-arrow {
     display: none; /* no white backside on mobile */
   }
 }
+
+.brand-line{
+    font-size: 0.95rem;
+    margin-top: 8px;
+    opacity: 0.8;
+    font-weight: 500;
+}

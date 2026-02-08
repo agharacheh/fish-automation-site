@@ -1,8 +1,24 @@
 {% from "partials/icons.html" import icon %}
 {% extends "base.html" %}
-{% block content %}
 
+{% block title %}{{ _("Contact | Tamhid Gostar (TDQ Co)") }}{% endblock %}
+
+{% block meta_description %}
+{{ _("Contact Tamhid Gostar Danesh Padid (TDQ Co) for fish hatchery automation, SCADA monitoring, RAS engineering, and equipment specifications.") }}
+{% endblock %}
+
+{% block content %}
 <h1>{{ _("Technical Contact") }}</h1>
+
+{% if current_locale == "fa" %}
+  <p class="brand-line muted">
+    تمهید گستر دانش پدید (TDQ Co) — ارتباط مستقیم با تیم فنی
+  </p>
+{% else %}
+  <p class="brand-line muted">
+    Tamhid Gostar Danesh Padid (TDQ Co) — direct technical inquiry
+  </p>
+{% endif %}
 
 <div class="card-light">
   
@@ -71,7 +87,7 @@
 {% include "partials/specs_cta.html" %}
 </section>
 <section class="section-white elev-1 section-panel">
-    <form action="{{ url_for('contact', lang=current_locale) }}" method="POST" class="contact-form">
+    <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
 
         <label>{{ _("Your Name") }}</label>
         <input type="text" name="name" required placeholder="{{ _('Enter your name') }}">

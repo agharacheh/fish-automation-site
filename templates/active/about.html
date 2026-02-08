@@ -1,6 +1,4 @@
-<!-- {% extends "base.html" %} -->
-
-{% extends "active/base.html" %}
+{% extends "base.html" %}
 
 {% block title %}{{ _("About | Tamhid Gostar (TDQ Co)") }}{% endblock %}
 
@@ -16,16 +14,16 @@
             <p class="lead">
                 {{ _("Engineering-driven automation and control solutions for modern fish hatcheries and RAS facilities.") }}
             </p>
-    </section>
-        <p class="muted">
-        Tamhid Gostar Danesh Padid (TDQ Co), also known as Tamhidgostar,
-        provides aquaculture engineering and fish hatchery automation solutions.
-        </p>
-
-        <p class="muted">
-        تمهید گستر دانش پدید (Tamhid Gostar Danesh Padid)
-        </p>
-
+                {% if current_locale == "fa" %}
+                    <p class="brand-line muted">
+                        تمهید گستر دانش پدید (TDQ Co) — شرکت مهندسی اتوماسیون و کنترل آبزی‌پروری
+                    </p>
+                {% else %}
+                    <p class="brand-line muted">
+                        Tamhid Gostar Danesh Padid (TDQ Co) — also known as Tamhidgostar
+                    </p>
+                {% endif %}
+        </section>
 
 <section class="section-white elev-1 section-panel">
     <section class="card-light about-overview">
@@ -134,6 +132,7 @@
             {{ _("Our engineers review every inquiry directly.") }}
         </p>
         <a href="{{ url_for('contact', lang=current_locale) }}" class="btn btn-primary">
+            
             {{ _("Contact Our Engineering Team") }}
         </a>
     </section>

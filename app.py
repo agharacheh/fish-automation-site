@@ -4,7 +4,7 @@ from flask import (
     Response, send_from_directory
 )
 from flask_babel import Babel, gettext as _, get_locale
-
+from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 app = Flask(__name__, template_folder="templates/active")
 
@@ -23,7 +23,8 @@ LANGUAGES = ["en", "fa"]
 # LANGUAGE HANDLING
 # -------------------------
 def select_locale():
-    lang = request.args.get("lang")
+    lang_list = request.args.getlist("lang")
+    lang = lang_list[-1] if lang_list else None
     if lang in LANGUAGES:
         return lang
 
@@ -33,21 +34,29 @@ def select_locale():
 
     return "en"
 
+
 babel = Babel(app, locale_selector=select_locale)
 
 @app.context_processor
 def inject_globals():
     current = str(get_locale())
 
-    def lang_url(endpoint, **values):
-        lang = request.args.get("lang") or request.cookies.get("lang") or current
-        values["lang"] = lang
-        return url_for(endpoint, **values)
+    def set_query(url, **params):
+        u = urlparse(url)
+        q = parse_qs(u.query)
+        for k, v in params.items():
+            q[k] = [v]  # replace
+        new_query = urlencode(q, doseq=True)
+        return urlunparse((u.scheme, u.netloc, u.path, u.params, new_query, u.fragment))
 
-    return {
-        "current_locale": current,
-        "lang_url": lang_url
-    }
+    def lang_url(endpoint, **values):
+        lang_list = request.args.getlist("lang")
+        lang = (lang_list[-1] if lang_list else None) or request.cookies.get("lang") or current
+        base = url_for(endpoint, **values)
+        return set_query(base, lang=lang)
+
+    return {"current_locale": current, "lang_url": lang_url}
+
 
 @app.route("/setlang/<lang_code>")
 def setlang(lang_code):
@@ -55,9 +64,18 @@ def setlang(lang_code):
         lang_code = "en"
 
     target = request.args.get("next") or "/"
-    resp = redirect(f"{target}?lang={lang_code}")
+
+    # If target already has ?lang=..., replace it safely
+    u = urlparse(target)
+    q = parse_qs(u.query)
+    q["lang"] = [lang_code]
+    new_query = urlencode(q, doseq=True)
+    target_fixed = urlunparse((u.scheme, u.netloc, u.path, u.params, new_query, u.fragment))
+
+    resp = redirect(target_fixed)
     resp.set_cookie("lang", lang_code, max_age=60 * 60 * 24 * 30)
     return resp
+
 
 # -------------------------
 # ROUTES (FINAL NAV)
