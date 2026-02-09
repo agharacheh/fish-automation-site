@@ -1,4 +1,5 @@
 import os
+from datetime import date
 from flask import (
     Flask, render_template, request, redirect, url_for,
     Response, send_from_directory
@@ -132,7 +133,7 @@ def robots():
 # SEO routes (place here)
 @app.route("/sitemap.xml")
 def sitemap():
-    # All public endpoints you want indexed
+    # Public endpoints you want indexed
     endpoints = [
         "index",
         "equipment",
@@ -144,30 +145,50 @@ def sitemap():
         "contact",
     ]
 
-    languages = ["en", "fa"]
-    pages = []
+    # Per-page SEO hints
+    # (tweak anytime; doesn't affect routing)
+    META = {
+        "index":      {"changefreq": "weekly",  "priority": "1.0"},
+        "equipment":  {"changefreq": "monthly", "priority": "0.85"},
+        "commercial": {"changefreq": "monthly", "priority": "0.85"},
+        "automation": {"changefreq": "monthly", "priority": "0.85"},
+        "monitoring": {"changefreq": "monthly", "priority": "0.85"},
+        "rnd":        {"changefreq": "monthly", "priority": "0.80"},
+        "about":      {"changefreq": "yearly",  "priority": "0.70"},
+        "contact":    {"changefreq": "yearly",  "priority": "0.70"},
+    }
 
-    for lang in languages:
-        for ep in endpoints:
-            base = url_for(ep, _external=True)
-            pages.append(f"{base}?lang={lang}")
+    languages = ["en", "fa"]
+
+    # Conservative: use "today" as lastmod
+    # (you can later replace with real per-page dates)
+    lastmod = date.today().isoformat()
 
     xml = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
     ]
 
-    for page in pages:
-        xml.append(
-            f"<url>"
-            f"<loc>{page}</loc>"
-            f"<changefreq>monthly</changefreq>"
-            f"<priority>0.8</priority>"
-            f"</url>"
-        )
+    for ep in endpoints:
+        base = url_for(ep, _external=True)
+
+        # Important: include both languages explicitly
+        for lang in languages:
+            loc = f"{base}?lang={lang}"
+            meta = META.get(ep, {"changefreq": "monthly", "priority": "0.8"})
+
+            xml.append(
+                "<url>"
+                f"<loc>{loc}</loc>"
+                f"<lastmod>{lastmod}</lastmod>"
+                f"<changefreq>{meta['changefreq']}</changefreq>"
+                f"<priority>{meta['priority']}</priority>"
+                "</url>"
+            )
 
     xml.append("</urlset>")
     return Response("\n".join(xml), mimetype="application/xml")
+
 
 
 # -------------------------
