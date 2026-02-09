@@ -1455,8 +1455,13 @@ html[dir="rtl"] .eng-text {
   width: 100%;
   max-width: 260px;
 
-  white-space: nowrap;
+  white-space: normal;      /* ✅ allow wrap */
+  overflow-wrap: anywhere;  /* ✅ prevent overflow on small screens */
+  word-break: normal;
+  text-align: center;
+  line-height: 1.2;
 }
+
 .specs-cta {
   text-align: center;
 }
@@ -2537,4 +2542,85 @@ html[dir="rtl"] .submenu-arrow {
     margin-top: 8px;
     opacity: 0.8;
     font-weight: 500;
+}
+/* ------------------------------
+   MOBILE ALIGNMENT FIXES
+   ------------------------------ */
+@media (max-width: 768px) {
+
+  /* Hero content should be visually centered (EN + FA) */
+  .hero-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .hero-content .brand-line {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Engineering cards container centered + symmetric padding */
+  #main-sections {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  .engineering-cards {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* If it's grid, force 1 column and center items */
+  .engineering-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 14px;
+  }
+
+  .eng-card-link {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .eng-card {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Buttons: prevent text overflow and keep it inside */
+  .btn,
+  .hero-btn,
+  .btn-primary,
+  .btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    white-space: normal;     /* allow wrap */
+    word-break: break-word;  /* prevent overflow */
+    line-height: 1.2;
+    padding: 12px 14px;
+  }
 }
