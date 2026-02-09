@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-
-<html lang="{{ current_locale }}" dir="{{ 'rtl' if current_locale == 'fa' else 'ltr' }}">
+<html lang="{{ 'fa' if current_locale == 'fa' else 'en' }}" dir="{{ 'rtl' if current_locale == 'fa' else 'ltr' }}">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ _("Fish Hatchery – Automation & Engineering – Commercial Services ") }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-        
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='logo.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='logo.png') }}">
-        <link rel="apple-touch-icon" href="{{ url_for('static', filename='logo.png') }}">
-        <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
-        <link rel="canonical" href="{{ request.url }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>
-          {% block title %}
-            {{ _("Fish Hatchery Automation & Aquaculture Engineering | TDQ Co") }}
-          {% endblock %}
-        </title>
+  {# hreflang #}
+  <link rel="alternate" hreflang="en" href="{{ request.base_url }}?lang=en">
+  <link rel="alternate" hreflang="fa" href="{{ request.base_url }}?lang=fa">
+  <link rel="alternate" hreflang="x-default" href="{{ request.base_url }}?lang=en">
 
-        <meta name="description"
-        content="{% block meta_description %}
-        {{ _("Advanced fish hatchery automation, RAS systems, SCADA, and aquaculture engineering solutions.") }}
-        {% endblock %}">
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Tamhid Gostar Danesh Padid (TDQ Co)",
-          "alternateName": "تمهید گستر دانش پدید",
-          "url": "https://tdqco.com",
-          "description": "Aquaculture engineering and fish hatchery automation company providing RAS systems, SCADA monitoring and industrial control solutions."
-        }
-        </script>
+  {# canonical #}
+  <link rel="canonical" href="{{ request.base_url }}?lang={{ current_locale }}">
+
+  <title>{% block title %}{{ _("Fish Hatchery Automation & Aquaculture Engineering | TDQ Co") }}{% endblock %}</title>
+
+  <meta name="description" content="{% block meta_description %}{{ _('Advanced fish hatchery automation, RAS systems, SCADA, and aquaculture engineering solutions.') }}{% endblock %}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='logo.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='logo.png') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='logo.png') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tamhid Gostar Danesh Padid (TDQ Co)",
+    "alternateName": "تمهید گستر دانش پدید",
+    "url": "https://tdqco.com",
+    "description": "Aquaculture engineering and fish hatchery automation company providing RAS systems, SCADA monitoring and industrial control solutions."
+  }
+  </script>
 </head>
+
 
 <body>
     
@@ -142,10 +142,10 @@
   </nav>
 
     <div class="lang-switch-light">
-        <a href="{{ url_for('setlang', lang_code='en', next=request.full_path) }}" class="lang-btn-light">EN</a>
-        <a href="{{ url_for('setlang', lang_code='fa', next=request.full_path) }}" class="lang-btn-light">FA</a>
+      <a href="{{ url_for('setlang', lang_code='en', next=request.path) }}" class="lang-btn-light">EN</a>
+      <a href="{{ url_for('setlang', lang_code='fa', next=request.path) }}" class="lang-btn-light">FA</a>
     </div>
-
+    
 </header>
 
 

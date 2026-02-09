@@ -57,7 +57,6 @@ def inject_globals():
 
     return {"current_locale": current, "lang_url": lang_url}
 
-
 @app.route("/setlang/<lang_code>")
 def setlang(lang_code):
     if lang_code not in LANGUAGES:
@@ -65,16 +64,22 @@ def setlang(lang_code):
 
     target = request.args.get("next") or "/"
 
-    # If target already has ?lang=..., replace it safely
-    u = urlparse(target)
-    q = parse_qs(u.query)
+    # Allow only local paths (avoid open redirect)
+    parsed = urlparse(target)
+    if parsed.scheme or parsed.netloc:
+        target = "/"
+        parsed = urlparse(target)
+
+    q = parse_qs(parsed.query)
     q["lang"] = [lang_code]
     new_query = urlencode(q, doseq=True)
-    target_fixed = urlunparse((u.scheme, u.netloc, u.path, u.params, new_query, u.fragment))
+
+    target_fixed = urlunparse(("", "", parsed.path or "/", parsed.params, new_query, parsed.fragment))
 
     resp = redirect(target_fixed)
     resp.set_cookie("lang", lang_code, max_age=60 * 60 * 24 * 30)
     return resp
+
 
 
 # -------------------------
