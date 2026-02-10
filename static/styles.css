@@ -1204,6 +1204,7 @@ html[dir="rtl"] .eng-text {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     display: block;
 }
+
 /* ===============================
    ABOUT US – PRESENTATION WIDTH
 =============================== */
@@ -2120,45 +2121,6 @@ html[dir="rtl"] .submenu-arrow {
     transform: translateY(0);
   }
 }
-/* ===============================
-   HAMBURGER BASE
-=============================== */
-
-.hamburger {
-  display: none;          /* hidden by default (desktop) */
-  width: 36px;
-  height: 28px;
-  flex-direction: column;
-  justify-content: space-between;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.hamburger span {
-  height: 3px;
-  width: 100%;
-  background-color: #1f5fa8;
-  border-radius: 3px;
-  transition: transform 260ms ease, opacity 180ms ease;
-}
-
-/* open → X */
-.hamburger.open span:nth-child(1) {
-  transform: translateY(12px) rotate(45deg);
-}
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-12px) rotate(-45deg);
-}
-@media (max-width: 900px) {
-  .hamburger {
-    display: flex;
-  }
-}
 
 /* =====================================================
    MOBILE NAV — SINGLE SOURCE OF TRUTH
@@ -2624,3 +2586,80 @@ html[dir="rtl"] .submenu-arrow {
     padding: 12px 14px;
   }
 }
+
+/* ===============================
+   HAMBURGER (single source of truth)
+=============================== */
+
+.hamburger{
+  display: none;                 /* desktop hidden */
+  background: none;
+  border: 0;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* ===============================
+   HAMBURGER — FINAL FIX (put at end of file)
+   Makes the X impossible to clip
+=============================== */
+
+@media (max-width: 900px) {
+
+  .header-light{
+    position: relative;
+    overflow: visible;
+    isolation: isolate;
+  }
+
+  /* button box is big enough for diagonal */
+  .hamburger{
+    display: inline-flex !important;
+    position: absolute !important;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    z-index: 999999 !important;
+    overflow: visible !important;
+  }
+
+  /* build bars as absolute so rotation stays inside the 42x42 box */
+  .hamburger span{
+    position: absolute;
+    left: 9px;               /* centers the line */
+    width: 24px;
+    height: 2px;
+    background: #1f5fa8;
+    border-radius: 2px;
+    transition: transform 260ms ease, opacity 180ms ease;
+    transform-origin: center;
+  }
+
+  .hamburger span:nth-child(1){ top: 14px; }
+  .hamburger span:nth-child(2){ top: 20px; }
+  .hamburger span:nth-child(3){ top: 26px; }
+
+  /* open → X */
+  .hamburger.open span:nth-child(1){
+    transform: translateY(6px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3){
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* keep logo from overlapping hamburger area */
+  .header-left .logo-link{
+    margin-left: 52px;
+  }
+}
+
+
