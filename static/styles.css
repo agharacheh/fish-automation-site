@@ -1,7 +1,33 @@
+/* ===============================
+   VAZIRMATN — SELF HOSTED
+=============================== */
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/static/fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/static/fonts/Vazirmatn-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/static/fonts/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 /* ----------------------------------------
    LIGHT ENGINEERING SCADA UI THEME
 ----------------------------------------- */
-
 /* GLOBAL */
 body {
     margin: 0;
@@ -1666,6 +1692,7 @@ html[lang="en"] body {
 
 /* Persian (Farsi) */
 html[lang="fa"] body {
+    font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
     text-align: justify;
     text-justify: inter-word;
     line-height: 1.9; /* important for Persian readability */
@@ -2661,5 +2688,126 @@ html[dir="rtl"] .submenu-arrow {
     margin-left: 52px;
   }
 }
+ /* ===============================
+   HERO TYPOGRAPHY REFINEMENT
+=============================== */
+
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-bottom: 22px;
+}
+
+.brand-line {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-bottom: 34px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 10px;
+  gap: 16px;
+}
+
+/* Persian Typography Upgrade */
+html[lang="fa"] body {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+/* Make Persian H1 slightly lighter spacing */
+html[lang="fa"] .hero-content h1 {
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+html[lang="en"] .hero-content h1 {
+  font-size: clamp(2.6rem, 4vw, 3.4rem);
+}
+html[lang="fa"] .hero-content h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+}
+html[lang="fa"] .hero-content h1{
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
 
 
+/* Very small phones */
+@media (max-width: 360px){
+  .hero-content h1{
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 900px){
+  html[lang="fa"] .hero-content h1{
+    line-height: 1.25;
+    letter-spacing: 0; /* Persian doesn’t need negative tracking */
+  }
+}
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.35;
+  }
+
+  .brand-line {
+    font-size: 0.95rem;
+    margin-bottom: 26px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+}
+/* ===============================
+   HERO — DESKTOP CENTERING FIX
+=============================== */
+
+.hero-content{
+  width: 100%;
+  max-width: 980px;      /* prevents super-wide lines */
+  margin: 0 auto;        /* true center */
+  text-align: center;    /* center the text */
+}
+
+.hero-content h1{
+  margin: 0 auto 14px;
+  max-width: 980px;      /* keep heading centered + readable */
+  line-height: 1.1;
+}
+
+.hero-content .brand-line{
+  margin: 0 auto 18px;
+  max-width: 860px;
+  line-height: 1.6;
+}
+
+/* keep the buttons a bit lower / less cramped */
+.hero-buttons{
+  margin-top: 16px;
+  justify-content: center;
+}
+
+/* IMPORTANT: stop FA "justify" from messing with hero */
+html[lang="fa"] .hero-content,
+html[lang="fa"] .hero-content *{
+  text-align: center !important;
+}
+/* IMPORTANT: stop EN "justify" from messing with hero */
+html[lang="en"] .hero-content,
+html[lang="en"] .hero-content *{
+  text-align: center !important;
+}
