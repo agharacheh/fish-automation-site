@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-02-09 00:22+0330\n"
+"POT-Creation-Date: 2026-02-14 15:25+0330\n"
 "PO-Revision-Date: 2025-12-07 21:55+0330\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,193 +18,258 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: templates/active/about.html:3
-msgid "About | Tamhid Gostar (TDQ Co)"
+#: templates/active/about.html:8
+msgid "About TDQ Co | Aquaculture Engineering & Automation Experts"
 msgstr ""
 
-#: templates/active/about.html:5
+#: templates/active/about.html:12
 msgid ""
-"Learn about TDQ Co: aquaculture engineering team delivering fish hatchery"
-" automation, RAS solutions, and sustainable project execution."
+"Learn about Tamhid Gostar Danesh Padid (TDQ Co), an aquaculture "
+"engineering company specializing in fish hatchery automation, RAS "
+"systems, PLC control panels, and SCADA monitoring."
 msgstr ""
 
-#: templates/active/about.html:13 templates/active/index.html:109
-msgid "About Us"
+#: templates/active/about.html:16
+msgid "About TDQ Co | Aquaculture Engineering Company"
 msgstr ""
 
-#: templates/active/about.html:15
+#: templates/active/about.html:20
+msgid ""
+"Engineering-driven automation and control solutions for fish hatcheries "
+"and RAS facilities — from design to commissioning."
+msgstr ""
+
+#: templates/active/about.html:27
+msgid "About Tamhid Gostar Danesh Padid (TDQ Co)"
+msgstr ""
+
+#: templates/active/about.html:30
 msgid ""
 "Engineering-driven automation and control solutions for modern fish "
 "hatcheries and RAS facilities."
 msgstr ""
 
-#: templates/active/about.html:31
+#: templates/active/about.html:48
 msgid "Company Overview"
 msgstr ""
 
-#: templates/active/about.html:33
+#: templates/active/about.html:51
 msgid ""
-"We specialize in the design and implementation of PLC-based automation, "
-"SCADA monitoring systems, and industrial control solutions for fish "
-"hatcheries and aquaculture facilities."
-msgstr ""
-
-#: templates/active/about.html:36
-msgid ""
-"Our work focuses on operational reliability, system scalability, and "
-"long-term maintainability — from concept design and engineering to "
-"commissioning and technical support."
-msgstr ""
-
-#: templates/active/about.html:43
-msgid "Automation and engineering for fish hatcheries"
-msgstr ""
-
-#: templates/active/about.html:50
-msgid "What We Do"
-msgstr ""
-
-#: templates/active/about.html:54
-msgid "Hatchery Automation & PLC"
+"TDQ Co is an aquaculture engineering company specializing in PLC-based "
+"automation, SCADA monitoring systems, RAS integration, and industrial "
+"control solutions for hatcheries and aquaculture facilities."
 msgstr ""
 
 #: templates/active/about.html:55
-msgid "Control logic, interlocks, and reliable operation for hatchery processes."
+msgid ""
+"Our work focuses on operational reliability, scalability, energy "
+"efficiency, and long-term maintainability — from concept design and "
+"system engineering to commissioning and technical support."
 msgstr ""
 
-#: templates/active/about.html:59
-msgid "SCADA & Monitoring"
-msgstr ""
-
-#: templates/active/about.html:60
-msgid "Real-time dashboards, alarms, trends, and remote visibility."
-msgstr ""
-
-#: templates/active/about.html:64
-msgid "RAS Engineering"
-msgstr ""
-
-#: templates/active/about.html:65
-msgid "System design support for recirculating aquaculture applications."
+#: templates/active/about.html:61
+msgid "Aquaculture automation engineering project"
 msgstr ""
 
 #: templates/active/about.html:69
-msgid "Electrical & Control Panels"
+msgid "Engineering Projects & Installations"
 msgstr ""
 
-#: templates/active/about.html:70
-msgid "Panel design, wiring standards, documentation, and integration."
+#: templates/active/about.html:71
+msgid ""
+"Selected examples of automation panels, SCADA dashboards, and RAS "
+"installations."
 msgstr ""
 
-#: templates/active/about.html:74
-msgid "Sensors & Instrumentation"
-msgstr ""
-
-#: templates/active/about.html:75
-msgid "Selection, installation, and calibration of industrial sensors."
-msgstr ""
-
-#: templates/active/about.html:79 templates/active/about.html:118
-msgid "Commissioning & Support"
+#: templates/active/about.html:78
+msgid "PLC control panel installation for fish hatchery automation"
 msgstr ""
 
 #: templates/active/about.html:80
-msgid "Testing, training, handover, and long-term technical support."
+msgid "RAS System Installation"
+msgstr ""
+
+#: templates/active/about.html:85
+msgid "SCADA monitoring dashboard for aquaculture facility"
 msgstr ""
 
 #: templates/active/about.html:87
-msgid "Facility & Engineering"
+msgid "SCADA Monitoring Dashboard"
 msgstr ""
 
-#: templates/active/about.html:89
-msgid "A glimpse into our engineering work and implementation environments."
+#: templates/active/about.html:92
+msgid "RAS system installation and piping engineering"
 msgstr ""
 
 #: templates/active/about.html:94
-msgid "Engineering work 1"
+msgid "PLC Control Panel Integration"
 msgstr ""
 
-#: templates/active/about.html:95
-msgid "Engineering work 2"
+#: templates/active/about.html:103 templates/active/automation.html:49
+msgid "Core Capabilities"
 msgstr ""
 
-#: templates/active/about.html:96
-msgid "Engineering work 3"
+#: templates/active/about.html:105
+msgid "Integrated engineering services for modern aquaculture operations."
 msgstr ""
 
-#: templates/active/about.html:102
-msgid "How We Work"
+#: templates/active/about.html:112
+msgid "Hatchery Automation & PLC"
 msgstr ""
 
-#: templates/active/about.html:106
+#: templates/active/about.html:113
+msgid ""
+"Control logic design, interlocks, and fail-safe behavior for hatchery "
+"processes."
+msgstr ""
+
+#: templates/active/about.html:117
+msgid "SCADA & Monitoring"
+msgstr ""
+
+#: templates/active/about.html:118
+msgid "Real-time dashboards, alarms, data logging, KPIs, and remote monitoring."
+msgstr ""
+
+#: templates/active/about.html:122
+msgid "RAS Engineering"
+msgstr ""
+
+#: templates/active/about.html:123
+msgid ""
+"Process design and system integration for recirculating aquaculture "
+"systems."
+msgstr ""
+
+#: templates/active/about.html:127
+msgid "Electrical & Control Panels"
+msgstr ""
+
+#: templates/active/about.html:128
+msgid "Industrial panel design, wiring standards, documentation, and integration."
+msgstr ""
+
+#: templates/active/about.html:132 templates/active/index.html:59
+msgid "Sensors & Instrumentation"
+msgstr ""
+
+#: templates/active/about.html:133
+msgid ""
+"Selection, installation, calibration, and validation of industrial "
+"sensors."
+msgstr ""
+
+#: templates/active/about.html:137
+msgid "Commissioning & Technical Support"
+msgstr ""
+
+#: templates/active/about.html:138
+msgid ""
+"On-site commissioning, operator training, and long-term technical "
+"assistance."
+msgstr ""
+
+#: templates/active/about.html:146
+msgid "Our Engineering Process"
+msgstr ""
+
+#: templates/active/about.html:150
 msgid "Assessment & Requirements"
 msgstr ""
 
-#: templates/active/about.html:107
+#: templates/active/about.html:151
 msgid ""
-"Technical review of process requirements, constraints, and operational "
-"goals."
+"Technical review of process requirements, operational constraints, and "
+"production targets."
 msgstr ""
 
-#: templates/active/about.html:110
-msgid "Engineering & Design"
+#: templates/active/about.html:154
+msgid "Engineering & System Design"
 msgstr ""
 
-#: templates/active/about.html:111
-msgid "We deliver diagrams, control philosophy, BOMs, and documentation."
+#: templates/active/about.html:155
+msgid "Control philosophy, diagrams, BOM development, and documentation."
 msgstr ""
 
-#: templates/active/about.html:114
+#: templates/active/about.html:158
 msgid "Manufacturing & Integration"
 msgstr ""
 
-#: templates/active/about.html:115
-msgid "Panels, wiring, assembly, and system integration testing."
+#: templates/active/about.html:159
+msgid "Panel assembly, system integration, and factory testing."
 msgstr ""
 
-#: templates/active/about.html:119
-msgid "On-site or remote commissioning, training, and ongoing support."
+#: templates/active/about.html:162
+msgid "Commissioning & Support"
 msgstr ""
 
-#: templates/active/about.html:129 templates/active/rnd.html:100
-msgid "Work With Us"
+#: templates/active/about.html:163
+msgid "On-site commissioning, training, and structured handover."
 msgstr ""
 
-#: templates/active/about.html:130 templates/active/rnd.html:101
+#: templates/active/about.html:170
+msgid "Aquaculture Engineering Company for Hatcheries & RAS"
+msgstr ""
+
+#: templates/active/about.html:172
 msgid ""
-"Tell us about your hatchery project and we’ll respond with a clear "
-"technical path forward."
+"TDQ Co combines equipment manufacturing, PLC automation, and SCADA "
+"monitoring to deliver integrated aquaculture engineering solutions "
+"tailored for hatcheries and RAS facilities."
 msgstr ""
 
-#: templates/active/about.html:132
-msgid "Our engineers review every inquiry directly."
+#: templates/active/about.html:176 templates/active/commercial.html:136
+msgid "Aquaculture equipment manufacturing"
 msgstr ""
 
-#: templates/active/about.html:136
-msgid "Contact Our Engineering Team"
+#: templates/active/about.html:177
+msgid "PLC automation systems"
 msgstr ""
 
-#: templates/active/automation.html:3
-msgid "Automation & Control | Tamhid Gostar (TDQ Co)"
+#: templates/active/about.html:178
+msgid "SCADA monitoring & dashboards"
 msgstr ""
 
-#: templates/active/automation.html:5
-msgid ""
-"Automation solutions for fish hatcheries: PLC/SCADA, sensors, alarms, "
-"control logic, remote monitoring, and data analytics."
-msgstr ""
-
-#: templates/active/automation.html:10 templates/active/index.html:82
-msgid "Automation & Control"
+#: templates/active/automation.html:8
+msgid "PLC & SCADA Systems for Aquaculture | Industrial Automation | TDQ Co"
 msgstr ""
 
 #: templates/active/automation.html:12
+msgid ""
+"TDQ Co designs and integrates PLC control panels, SCADA monitoring "
+"systems, HMI interfaces, and industrial automation solutions for fish "
+"hatcheries and RAS facilities."
+msgstr ""
+
+#: templates/active/automation.html:16
+msgid "PLC & SCADA Automation Systems for Aquaculture | TDQ Co"
+msgstr ""
+
+#: templates/active/automation.html:20
+msgid ""
+"Industrial PLC control panels, SCADA dashboards, HMI interfaces, and "
+"integrated automation solutions for fish hatcheries and RAS systems."
+msgstr ""
+
+#: templates/active/automation.html:28
+msgid "PLC & SCADA Automation Systems for Aquaculture"
+msgstr ""
+
+#: templates/active/automation.html:31
 msgid ""
 "PLC-based automation, monitoring, and control solutions engineered for "
 "reliable hatchery operations and long-term maintainability."
 msgstr ""
 
-#: templates/active/automation.html:19
+#: templates/active/automation.html:35
+msgid ""
+"Our automation solutions combine PLC control panels, SCADA dashboards, "
+"industrial sensors, and HMI interfaces to deliver reliable, scalable "
+"automation systems for fish hatcheries and recirculating aquaculture "
+"systems (RAS)."
+msgstr ""
+
+#: templates/active/automation.html:42
 msgid ""
 "We design and implement industrial automation systems for aquaculture "
 "facilities, covering PLC control, HMI operator interfaces, "
@@ -213,288 +278,365 @@ msgid ""
 "term support."
 msgstr ""
 
-#: templates/active/automation.html:29
+#: templates/active/automation.html:51
+msgid ""
+"From PLC logic to SCADA dashboards — designed for stable operation and "
+"clean handover."
+msgstr ""
+
+#: templates/active/automation.html:59
 msgid "PLC Systems"
 msgstr ""
 
-#: templates/active/automation.html:31
+#: templates/active/automation.html:61
 msgid ""
 "Control logic design and PLC programming for pumps, blowers, valves, "
 "filters, oxygenation units, feeders, and process interlocks."
 msgstr ""
 
-#: templates/active/automation.html:34
+#: templates/active/automation.html:64
 msgid "Process sequencing and interlocks"
 msgstr ""
 
-#: templates/active/automation.html:35
+#: templates/active/automation.html:65
 msgid "Fail-safe behavior and alarm logic"
 msgstr ""
 
-#: templates/active/automation.html:36
+#: templates/active/automation.html:66
 msgid "I/O list, tag naming, and documentation"
 msgstr ""
 
-#: templates/active/automation.html:37
+#: templates/active/automation.html:67
 msgid "Commissioning and on-site testing"
 msgstr ""
 
-#: templates/active/automation.html:43
+#: templates/active/automation.html:73
 msgid "HMI Interfaces"
 msgstr ""
 
-#: templates/active/automation.html:45
+#: templates/active/automation.html:75
 msgid ""
 "Operator-focused HMI design for clear visualization, fast "
 "troubleshooting, and safe manual control when needed."
 msgstr ""
 
-#: templates/active/automation.html:48
+#: templates/active/automation.html:78
 msgid "Touch-panel HMIs with clean navigation"
 msgstr ""
 
-#: templates/active/automation.html:49
+#: templates/active/automation.html:79
 msgid "Process overview screens and device pages"
 msgstr ""
 
-#: templates/active/automation.html:50
+#: templates/active/automation.html:80
 msgid "Alarm pages with acknowledge and history"
 msgstr ""
 
-#: templates/active/automation.html:51
+#: templates/active/automation.html:81
 msgid "Multi-language UI readiness"
 msgstr ""
 
-#: templates/active/automation.html:57 templates/active/index.html:91
-#: templates/active/monitoring.html:10
+#: templates/active/automation.html:87 templates/active/index.html:170
 msgid "Monitoring & SCADA"
 msgstr ""
 
-#: templates/active/automation.html:59
+#: templates/active/automation.html:89
 msgid ""
 "Centralized monitoring, data logging, dashboards, KPIs, alarms, and "
 "remote access for single-site or multi-site aquaculture operations."
 msgstr ""
 
-#: templates/active/automation.html:63
+#: templates/active/automation.html:93
 msgid "Explore Monitoring & SCADA"
 msgstr ""
 
-#: templates/active/automation.html:69
+#: templates/active/automation.html:100
 msgid "Instrumentation & Integration"
 msgstr ""
 
-#: templates/active/automation.html:71
+#: templates/active/automation.html:102
 msgid ""
 "Integration of field sensors and equipment into a stable control system "
 "with consistent tagging, calibration support, and validation testing."
 msgstr ""
 
-#: templates/active/automation.html:74
+#: templates/active/automation.html:105
 msgid "Water quality sensors (DO, pH, temperature, ORP)"
 msgstr ""
 
-#: templates/active/automation.html:75
+#: templates/active/automation.html:106
 msgid "Flow, level, pressure transmitters"
 msgstr ""
 
-#: templates/active/automation.html:76
+#: templates/active/automation.html:107
 msgid "VFD/soft-starter control integration"
 msgstr ""
 
-#: templates/active/automation.html:77
+#: templates/active/automation.html:108
 msgid "Signal validation and fault handling"
 msgstr ""
 
-#: templates/active/automation.html:86
+#: templates/active/automation.html:117
+msgid "Industrial Automation for Hatcheries & RAS Facilities"
+msgstr ""
+
+#: templates/active/automation.html:119
+msgid ""
+"We design and implement fully integrated control systems including "
+"programmable logic controllers (PLC), supervisory control and data "
+"acquisition (SCADA), remote monitoring, alarm management, and performance"
+" analytics."
+msgstr ""
+
+#: templates/active/automation.html:122
+msgid ""
+"Our systems improve operational efficiency, biosecurity, energy "
+"optimization, and production stability across single-site and multi-site "
+"aquaculture operations."
+msgstr ""
+
+#: templates/active/automation.html:126 templates/active/commercial.html:138
+#: templates/active/equipment.html:135
+msgid "SCADA monitoring systems"
+msgstr ""
+
+#: templates/active/automation.html:127 templates/active/index.html:230
+#: templates/active/monitoring.html:104
+msgid "RAS equipment manufacturing"
+msgstr ""
+
+#: templates/active/automation.html:128 templates/active/equipment.html:136
+#: templates/active/monitoring.html:105
+msgid "Request a consultation"
+msgstr ""
+
+#: templates/active/automation.html:134
 msgid "Engineering Approach"
 msgstr ""
 
-#: templates/active/automation.html:88
+#: templates/active/automation.html:136
 msgid ""
 "We follow a structured workflow to ensure stable operation and clean "
 "handover: requirement definition, I/O mapping, control philosophy, "
 "implementation, testing, commissioning, and training."
 msgstr ""
 
-#: templates/active/automation.html:92
+#: templates/active/automation.html:140
 msgid "Control philosophy and process mapping (PFD)"
 msgstr ""
 
-#: templates/active/automation.html:93
+#: templates/active/automation.html:141
 msgid "Panel design coordination and wiring review"
 msgstr ""
 
-#: templates/active/automation.html:94
+#: templates/active/automation.html:142
 msgid "Factory acceptance testing (FAT) and site acceptance testing (SAT)"
 msgstr ""
 
-#: templates/active/automation.html:95
+#: templates/active/automation.html:143
 msgid "Operator training and maintenance documentation"
 msgstr ""
 
-#: templates/active/base.html:6
-msgid "Fish Hatchery – Automation & Engineering – Commercial Services "
-msgstr ""
-
-#: templates/active/base.html:18
+#: templates/active/base.html:6 templates/active/base.html:13
 msgid "Fish Hatchery Automation & Aquaculture Engineering | TDQ Co"
 msgstr ""
 
-#: templates/active/base.html:24
+#: templates/active/base.html:7 templates/active/base.html:14
 msgid ""
 "Advanced fish hatchery automation, RAS systems, SCADA, and aquaculture "
 "engineering solutions."
 msgstr ""
 
-#: templates/active/base.html:157
+#: templates/active/base.html:183
 msgid "Tamhid Gostar"
 msgstr ""
 
-#: templates/active/commercial.html:3
-msgid "Commercial Services | Tamhid Gostar (TDQ Co)"
+#: templates/active/commercial.html:8
+msgid "Aquaculture Commercial Services | EPC, Consulting & Commissioning | TDQ Co"
 msgstr ""
 
-#: templates/active/commercial.html:5
+#: templates/active/commercial.html:12
 msgid ""
-"Commercial services for aquaculture projects including procurement, "
-"installation, commissioning, and operational support."
+"Commercial and engineering services for aquaculture projects including "
+"feasibility studies, EPC/EPCM project management, procurement, "
+"commissioning, and operational optimization."
 msgstr ""
 
-#: templates/active/commercial.html:9
-msgid "Commercial Services & Consulting"
+#: templates/active/commercial.html:16
+msgid "Aquaculture EPC & Consulting Services | TDQ Co"
 msgstr ""
 
-#: templates/active/commercial.html:11
+#: templates/active/commercial.html:20
 msgid ""
-"Comprehensive project lifecycle support, from initial feasibility studies"
-" and conceptual design to system integration, commissioning, and "
-"operational handover for large-scale aquaculture facilities."
+"End-to-end aquaculture project services: feasibility, EPC/EPCM, "
+"procurement, commissioning, training, and operational optimization."
 msgstr ""
 
-#: templates/active/commercial.html:17
-msgid ""
-"Our commercial services division acts as your strategic partner "
-"throughout the entire lifecycle of your aquaculture project. We bridge "
-"the gap between biological requirements and robust engineering execution,"
-" ensuring projects are delivered on time, within budget, and meet "
-"performance metrics."
-msgstr ""
-
-#: templates/active/commercial.html:24
-msgid "Conceptual Design & Feasibility"
-msgstr ""
-
-#: templates/active/commercial.html:26
-msgid ""
-"Initial assessment of site potential, species selection consultation, "
-"production target setting, and detailed techno-economic feasibility "
-"studies."
-msgstr ""
-
-#: templates/active/commercial.html:29
-msgid "Site suitability analysis"
-msgstr ""
-
-#: templates/active/commercial.html:30
-msgid "Process flow charting (PFD)"
+#: templates/active/commercial.html:28
+msgid "Aquaculture Commercial Services & EPC Solutions"
 msgstr ""
 
 #: templates/active/commercial.html:31
-msgid "Preliminary budget estimation"
-msgstr ""
-
-#: templates/active/commercial.html:36
-msgid "System Integration & Procurement"
-msgstr ""
-
-#: templates/active/commercial.html:37
 msgid ""
-"Managing the complex integration of mechanical, electrical, and "
-"automation components from global suppliers."
+"End-to-end lifecycle support for hatcheries and RAS facilities — from "
+"feasibility and design to commissioning and operational optimization."
 msgstr ""
 
-#: templates/active/commercial.html:39
-msgid "Vendor management & QA/QC"
-msgstr ""
-
-#: templates/active/commercial.html:40
-msgid "Bill of Materials (BOM) finalization"
-msgstr ""
-
-#: templates/active/commercial.html:41
-msgid "Supply chain logistics"
-msgstr ""
-
-#: templates/active/commercial.html:46
-msgid "Project Management (EPC/EPCM)"
-msgstr ""
-
-#: templates/active/commercial.html:48
+#: templates/active/commercial.html:38
 msgid ""
-"Dedicated project management services overseeing civil works, equipment "
-"installation, and site coordination."
+"Our commercial services division acts as your strategic engineering "
+"partner throughout the entire lifecycle of your aquaculture project. We "
+"bridge biological requirements with robust engineering execution to "
+"ensure projects are delivered on time, within budget, and meet "
+"performance targets."
 msgstr ""
 
-#: templates/active/commercial.html:53
-msgid "Commissioning & Validation"
+#: templates/active/commercial.html:45
+msgid "Project Lifecycle Services"
 msgstr ""
 
-#: templates/active/commercial.html:55
+#: templates/active/commercial.html:47
+msgid "Structured engineering support from concept to operation."
+msgstr ""
+
+#: templates/active/commercial.html:54
+msgid "Conceptual Design & Feasibility"
+msgstr ""
+
+#: templates/active/commercial.html:56
 msgid ""
-"Rigorous testing protocols for all subsystems (Water Quality, RAS "
-"function, Automation logic) prior to biological introduction."
-msgstr ""
-
-#: templates/active/commercial.html:58
-msgid "Hydrostatic and integrity testing"
+"Site assessment, species selection consultation, production planning, and"
+" detailed techno-economic feasibility studies."
 msgstr ""
 
 #: templates/active/commercial.html:59
-msgid "Automation FAT/SAT execution"
+msgid "Site suitability analysis"
 msgstr ""
 
 #: templates/active/commercial.html:60
-msgid "Performance validation reports"
+msgid "Process flow diagrams (PFD)"
 msgstr ""
 
-#: templates/active/commercial.html:65
-msgid "Operational Training & SOPs"
+#: templates/active/commercial.html:61
+msgid "Preliminary CAPEX/OPEX estimation"
 msgstr ""
 
-#: templates/active/commercial.html:67
+#: templates/active/commercial.html:66
+msgid "System Integration & Procurement"
+msgstr ""
+
+#: templates/active/commercial.html:68
 msgid ""
-"Developing comprehensive Standard Operating Procedures and training site "
-"staff on system maintenance and critical operations."
+"Integration of mechanical, electrical, and automation systems sourced "
+"from qualified global suppliers."
+msgstr ""
+
+#: templates/active/commercial.html:71
+msgid "Vendor evaluation & QA/QC"
 msgstr ""
 
 #: templates/active/commercial.html:72
-msgid "System Optimization & Audits"
+msgid "Bill of Materials (BOM) finalization"
 msgstr ""
 
-#: templates/active/commercial.html:74
-msgid ""
-"Post-launch analysis of operational data, energy efficiency audits, and "
-"process refinement recommendations."
-msgstr ""
-
-#: templates/active/commercial.html:77
-msgid "Energy consumption analysis"
+#: templates/active/commercial.html:73
+msgid "Supply chain coordination"
 msgstr ""
 
 #: templates/active/commercial.html:78
-msgid "Biomass yield optimization"
+msgid "Project Management (EPC / EPCM)"
+msgstr ""
+
+#: templates/active/commercial.html:80
+msgid ""
+"Full engineering, procurement, and construction management oversight "
+"including civil works, installation supervision, and multi-discipline "
+"coordination."
 msgstr ""
 
 #: templates/active/commercial.html:85
-msgid "Partnership Beyond Installation"
+msgid "Commissioning & Validation"
 msgstr ""
 
 #: templates/active/commercial.html:87
 msgid ""
-"Our commitment extends past final handover. We offer optional long-term "
-"service contracts and technical advisory roles to ensure sustained, "
-"profitable operation of your capital investment."
+"Structured commissioning of water treatment, RAS functionality, "
+"automation logic, and performance validation before biological "
+"introduction."
+msgstr ""
+
+#: templates/active/commercial.html:90
+msgid "Hydrostatic and integrity testing"
+msgstr ""
+
+#: templates/active/commercial.html:91
+msgid "Automation FAT/SAT execution"
+msgstr ""
+
+#: templates/active/commercial.html:92
+msgid "Performance validation reports"
+msgstr ""
+
+#: templates/active/commercial.html:97
+msgid "Operational Training & SOP Development"
+msgstr ""
+
+#: templates/active/commercial.html:99
+msgid ""
+"Development of Standard Operating Procedures (SOPs) and structured "
+"training for operators and maintenance teams."
+msgstr ""
+
+#: templates/active/commercial.html:104
+msgid "System Optimization & Technical Audits"
+msgstr ""
+
+#: templates/active/commercial.html:106
+msgid ""
+"Post-launch operational audits including energy analysis, biomass yield "
+"optimization, and process refinement."
+msgstr ""
+
+#: templates/active/commercial.html:109
+msgid "Energy consumption analysis"
+msgstr ""
+
+#: templates/active/commercial.html:110
+msgid "Production efficiency improvement"
+msgstr ""
+
+#: templates/active/commercial.html:119
+msgid "Long-Term Partnership Beyond Installation"
+msgstr ""
+
+#: templates/active/commercial.html:121
+msgid ""
+"Our commitment extends beyond final handover. We offer structured "
+"technical advisory roles and optional long-term service agreements to "
+"ensure sustained, profitable operation of your aquaculture investment."
+msgstr ""
+
+#: templates/active/commercial.html:127
+msgid "Aquaculture EPC & Consulting Services for Hatcheries and RAS Facilities"
+msgstr ""
+
+#: templates/active/commercial.html:129
+msgid ""
+"TDQ Co provides structured EPC and consulting services for aquaculture "
+"projects including design validation, procurement management, "
+"commissioning, and performance optimization."
+msgstr ""
+
+#: templates/active/commercial.html:132
+msgid ""
+"Our commercial team works closely with equipment manufacturing, PLC "
+"automation, and SCADA monitoring divisions to deliver fully integrated "
+"and performance-ready aquaculture systems."
+msgstr ""
+
+#: templates/active/commercial.html:137 templates/active/equipment.html:134
+#: templates/active/index.html:224
+msgid "PLC automation & control systems"
 msgstr ""
 
 #: templates/active/contact.html:4
@@ -569,438 +711,692 @@ msgstr ""
 msgid "Your message was sent successfully!"
 msgstr ""
 
-#: templates/active/equipment.html:3
-msgid "Equipment Manufacturing | Tamhid Gostar (TDQ Co)"
+#: templates/active/equipment.html:8
+msgid "Aquaculture Equipment Manufacturing | RAS, Filtration & Tanks | TDQ Co"
 msgstr ""
 
-#: templates/active/equipment.html:5
+#: templates/active/equipment.html:12
 msgid ""
-"Custom equipment manufacturing for aquaculture and hatchery projects: "
-"tanks, piping, filtration, control panels, and integration."
+"TDQ Co designs and manufactures aquaculture equipment including RAS "
+"systems, filtration units, tanks, disinfection systems, aeration systems,"
+" and integrated hatchery solutions."
 msgstr ""
 
-#: templates/active/equipment.html:10
-msgid "Equipment & Systems"
+#: templates/active/equipment.html:16
+msgid "Aquaculture Equipment Manufacturing | RAS & Filtration Systems | TDQ Co"
 msgstr ""
 
-#: templates/active/equipment.html:13
+#: templates/active/equipment.html:20
 msgid ""
-"Design, manufacturing, and supply of advanced aquaculture equipment and "
-"integrated systems for modern hatcheries and farms."
+"Custom RAS systems, filtration units, tanks, aeration and disinfection "
+"systems engineered for reliable hatchery and aquaculture operations."
 msgstr ""
 
-#: templates/active/equipment.html:17
-msgid ""
-"We design and manufacture a comprehensive range of aquaculture equipment "
-"and systems, covering water treatment, culture, biosecurity, and "
-"automation. All solutions are engineered for reliability, efficiency, and"
-" long-term operational performance."
-msgstr ""
-
-#: templates/active/equipment.html:24
-msgid "Microalgae Photobioreactors"
-msgstr ""
-
-#: templates/active/equipment.html:26
-msgid ""
-"Design and manufacturing of closed and semi-closed photobioreactors for "
-"edible and industrial microalgae production."
-msgstr ""
-
-#: templates/active/equipment.html:29
-msgid "Larval nutrition"
-msgstr ""
-
-#: templates/active/equipment.html:30
-msgid "Biomass production"
+#: templates/active/equipment.html:28
+msgid "Aquaculture Equipment Manufacturing & RAS Systems"
 msgstr ""
 
 #: templates/active/equipment.html:31
+msgid ""
+"Design, manufacturing, and integration of advanced aquaculture equipment "
+"for fish hatcheries, RAS facilities, and commercial farms."
+msgstr ""
+
+#: templates/active/equipment.html:38
+msgid ""
+"We design and manufacture a comprehensive range of aquaculture equipment "
+"covering water treatment, culture systems, biosecurity, and automation "
+"integration. All solutions are engineered for reliability, efficiency, "
+"and long-term operational performance."
+msgstr ""
+
+#: templates/active/equipment.html:45
+msgid "Equipment Portfolio"
+msgstr ""
+
+#: templates/active/equipment.html:47
+msgid ""
+"From filtration to complete RAS installations — engineered for stable "
+"production."
+msgstr ""
+
+#: templates/active/equipment.html:54
+msgid "Microalgae Photobioreactors"
+msgstr ""
+
+#: templates/active/equipment.html:56
+msgid ""
+"Closed and semi-closed photobioreactors for edible and industrial "
+"microalgae production."
+msgstr ""
+
+#: templates/active/equipment.html:59
+msgid "Larval nutrition systems"
+msgstr ""
+
+#: templates/active/equipment.html:60
+msgid "Biomass production"
+msgstr ""
+
+#: templates/active/equipment.html:61
 msgid "Pigment extraction and fatty acids"
 msgstr ""
 
-#: templates/active/equipment.html:36
+#: templates/active/equipment.html:66
 msgid "Filtration Systems"
 msgstr ""
 
-#: templates/active/equipment.html:37
-msgid "Mechanical and biological filtration solutions for optimal water quality."
+#: templates/active/equipment.html:67
+msgid ""
+"Mechanical and biological filtration systems for optimal water quality "
+"control."
 msgstr ""
 
-#: templates/active/equipment.html:39
+#: templates/active/equipment.html:69
 msgid "Drum filters"
 msgstr ""
 
-#: templates/active/equipment.html:40
+#: templates/active/equipment.html:70
 msgid "Biofilters"
 msgstr ""
 
-#: templates/active/equipment.html:41
+#: templates/active/equipment.html:71
 msgid "Sand & carbon filters"
 msgstr ""
 
-#: templates/active/equipment.html:46
+#: templates/active/equipment.html:76
 msgid "Disinfection Systems"
 msgstr ""
 
-#: templates/active/equipment.html:48
+#: templates/active/equipment.html:78
 msgid "UV and ozone systems for microbial control and enhanced farm biosecurity."
 msgstr ""
 
-#: templates/active/equipment.html:53
+#: templates/active/equipment.html:83
 msgid "RAS & Hybrid Systems"
 msgstr ""
 
-#: templates/active/equipment.html:55
+#: templates/active/equipment.html:85
 msgid ""
 "Complete Recirculating Aquaculture Systems (RAS) and hybrid "
 "configurations in various capacities."
 msgstr ""
 
-#: templates/active/equipment.html:58
+#: templates/active/equipment.html:88
 msgid "Pumps and skimmers"
 msgstr ""
 
-#: templates/active/equipment.html:59
+#: templates/active/equipment.html:89
 msgid "Oxygenation systems"
 msgstr ""
 
-#: templates/active/equipment.html:60
-msgid "Smart control systems"
+#: templates/active/equipment.html:90
+msgid "Integrated PLC control systems"
 msgstr ""
 
-#: templates/active/equipment.html:65
+#: templates/active/equipment.html:95
 msgid "Aeration Systems"
 msgstr ""
 
-#: templates/active/equipment.html:67
+#: templates/active/equipment.html:97
 msgid ""
 "Blowers, diffusers, paddle wheels, and nanobubble systems to ensure "
 "optimal dissolved oxygen levels."
 msgstr ""
 
-#: templates/active/equipment.html:72
+#: templates/active/equipment.html:102
 msgid "Rearing & Culture Tanks"
 msgstr ""
 
-#: templates/active/equipment.html:74
+#: templates/active/equipment.html:104
 msgid ""
 "Fiberglass and polyethylene tanks with optimized hydrodynamic design and "
 "easy maintenance."
 msgstr ""
 
-#: templates/active/equipment.html:77
+#: templates/active/equipment.html:107
 msgid "Central or side outlets"
 msgstr ""
 
-#: templates/active/equipment.html:78
+#: templates/active/equipment.html:108
 msgid "Custom sizes and configurations"
 msgstr ""
 
-#: templates/active/equipment.html:85
+#: templates/active/equipment.html:117
 msgid "Engineering & Manufacturing Scope"
 msgstr ""
 
-#: templates/active/equipment.html:87
+#: templates/active/equipment.html:119
 msgid ""
 "All equipment is designed based on process engineering principles, site-"
 "specific requirements, and long-term operational efficiency. Our scope "
-"includes manufacturing, system integration, testing, and commissioning."
+"includes manufacturing, system integration, testing, commissioning, and "
+"performance validation."
 msgstr ""
 
-#: templates/active/index.html:3
+#: templates/active/equipment.html:125
+msgid "Aquaculture Equipment for Modern Hatcheries & RAS Facilities"
+msgstr ""
+
+#: templates/active/equipment.html:127
+msgid ""
+"TDQ Co provides engineered aquaculture equipment including RAS systems, "
+"filtration units, disinfection systems, aeration solutions, and "
+"integrated control-ready infrastructure for scalable hatchery operations."
+msgstr ""
+
+#: templates/active/equipment.html:130
+msgid ""
+"Our equipment integrates seamlessly with PLC automation and SCADA "
+"monitoring systems to ensure operational stability, biosecurity, and "
+"long-term production efficiency."
+msgstr ""
+
+#: templates/active/index.html:7
 msgid "Fish Hatchery Automation & SCADA | Tamhid Gostar (TDQ Co)"
 msgstr ""
 
-#: templates/active/index.html:6
+#: templates/active/index.html:12
 msgid ""
 "Tamhid Gostar Danesh Padid (TDQ Co) delivers fish hatchery automation, "
 "RAS engineering, and SCADA monitoring systems for modern aquaculture "
 "facilities."
 msgstr ""
 
-#: templates/active/index.html:30
-msgid "Fish Hatchery Automation & Aquaculture Engineering"
+#: templates/active/index.html:27
+msgid "Fish Hatchery Automation & Engineering"
 msgstr ""
 
-#: templates/active/index.html:44
-msgid "Explore Solutions"
+#: templates/active/index.html:31
+msgid "Industrial"
 msgstr ""
 
-#: templates/active/index.html:49
-msgid "Contact Us"
+#: templates/active/index.html:32 templates/active/index.html:80
+msgid "Automation"
 msgstr ""
 
-#: templates/active/index.html:64
+#: templates/active/index.html:33
+msgid "for Aquaculture"
+msgstr ""
+
+#: templates/active/index.html:40
+msgid ""
+"PLC/SCADA, sensors, dashboards, alarms, and data-driven control — "
+"designed for reliable hatchery operations and scalable growth."
+msgstr ""
+
+#: templates/active/index.html:47
+msgid "Request a Consultation"
+msgstr ""
+
+#: templates/active/index.html:51
+msgid "Explore Services"
+msgstr ""
+
+#: templates/active/index.html:58
+msgid "PLC / SCADA / HMI"
+msgstr ""
+
+#: templates/active/index.html:60
+msgid "Industrial IoT"
+msgstr ""
+
+#: templates/active/index.html:61
+msgid "Control Panels"
+msgstr ""
+
+#: templates/active/index.html:71
+msgid "System Overview"
+msgstr ""
+
+#: templates/active/index.html:76
+msgid "Live Sensors"
+msgstr ""
+
+#: templates/active/index.html:77
+msgid "Temp, DO, pH, ORP"
+msgstr ""
+
+#: templates/active/index.html:81
+msgid "Feeding, aeration, dosing"
+msgstr ""
+
+#: templates/active/index.html:84
+msgid "SCADA"
+msgstr ""
+
+#: templates/active/index.html:85
+msgid "Trends, alarms, KPIs"
+msgstr ""
+
+#: templates/active/index.html:93
+msgid "Monitoring"
+msgstr ""
+
+#: templates/active/index.html:97
+msgid "Stable Control"
+msgstr ""
+
+#: templates/active/index.html:101
+msgid "Unified System"
+msgstr ""
+
+#: templates/active/index.html:108
+msgid "Alarm Ready"
+msgstr ""
+
+#: templates/active/index.html:109
+msgid "SMS/Email/SCADA alerts"
+msgstr ""
+
+#: templates/active/index.html:113
+msgid "Data Logging"
+msgstr ""
+
+#: templates/active/index.html:114
+msgid "Trends & reports"
+msgstr ""
+
+#: templates/active/index.html:125
+msgid "Engineering Solutions"
+msgstr ""
+
+#: templates/active/index.html:126
+msgid ""
+"Design, automation, monitoring, and R&D — built for reliable hatchery "
+"performance."
+msgstr ""
+
+#: templates/active/index.html:137
 msgid "Equipment Manufacturing"
 msgstr ""
 
-#: templates/active/index.html:65
+#: templates/active/index.html:138
 msgid ""
 "Design and fabrication of hatchery equipment including tanks, RAS "
 "systems, and filtration units."
 msgstr ""
 
-#: templates/active/index.html:73
+#: templates/active/index.html:148
 msgid "Commercial Services"
 msgstr ""
 
-#: templates/active/index.html:74
+#: templates/active/index.html:149
 msgid ""
 "Engineering consulting, system integration, and commissioning services "
 "for aquaculture projects."
 msgstr ""
 
-#: templates/active/index.html:83
+#: templates/active/index.html:159
+msgid "Automation & Control"
+msgstr ""
+
+#: templates/active/index.html:160
 msgid "PLC, HMI, and control system design for reliable hatchery operations."
 msgstr ""
 
-#: templates/active/index.html:92
+#: templates/active/index.html:171
 msgid ""
 "Real-time monitoring, dashboards, alarms, and data logging for "
 "aquaculture facilities."
 msgstr ""
 
-#: templates/active/index.html:100 templates/active/rnd.html:10
+#: templates/active/index.html:181
 msgid "Research & Development (R&D)"
 msgstr ""
 
-#: templates/active/index.html:101
+#: templates/active/index.html:182
 msgid ""
 "Innovation, pilot systems, and performance optimization for next-"
 "generation hatcheries."
 msgstr ""
 
-#: templates/active/index.html:110
+#: templates/active/index.html:192
+msgid "About Us"
+msgstr ""
+
+#: templates/active/index.html:193
 msgid "Company background, project experience, and expert team profiles."
 msgstr ""
 
-#: templates/active/monitoring.html:3
-msgid "Monitoring & SCADA | Tamhid Gostar (TDQ Co)"
+#: templates/active/index.html:213
+msgid "Fish Hatchery Automation & SCADA Systems"
 msgstr ""
 
-#: templates/active/monitoring.html:5
+#: templates/active/index.html:215
 msgid ""
-"SCADA dashboards, alarms, trends, KPIs, and remote monitoring for "
-"hatchery and aquaculture facilities."
+"TDQ Co delivers fish hatchery automation and aquaculture engineering "
+"solutions including PLC control panels, SCADA dashboards, alarms, sensors"
+" (DO, pH, ORP, temperature), and data logging for modern hatcheries and "
+"RAS facilities."
 msgstr ""
 
-#: templates/active/monitoring.html:11
+#: templates/active/index.html:218
 msgid ""
-"SCADA dashboards, alarms, historical trends, KPIs, and secure remote "
-"access for aquaculture operations."
+"Our engineering services cover equipment manufacturing, system "
+"integration, commissioning, and performance optimization to improve "
+"reliability, biosecurity, and operational efficiency."
 msgstr ""
 
-#: templates/active/monitoring.html:15
+#: templates/active/index.html:227
+msgid "Monitoring & SCADA dashboards"
+msgstr ""
+
+#: templates/active/monitoring.html:8
 msgid ""
-"This section covers SCADA dashboards, alarms, historical trends, KPIs, "
-"and remote access."
+"SCADA Monitoring & Dashboards for Fish Hatcheries | Alarms & Trends | TDQ"
+" Co"
 msgstr ""
 
-#: templates/active/monitoring.html:19
-msgid "SCADA Features"
+#: templates/active/monitoring.html:12
+msgid ""
+"TDQ Co delivers SCADA monitoring for fish hatcheries and RAS facilities: "
+"dashboards, alarms, historical trends, KPIs, data logging, and secure "
+"remote access."
 msgstr ""
 
-#: templates/active/monitoring.html:21
-msgid "Sensor live monitoring (temperature, DO, pH, ORP)"
+#: templates/active/monitoring.html:16
+msgid "SCADA Monitoring & Dashboards for Fish Hatcheries | TDQ Co"
 msgstr ""
 
-#: templates/active/monitoring.html:22
-msgid "Alarm notifications and fault signals"
+#: templates/active/monitoring.html:20
+msgid ""
+"Dashboards, alarms, trends, KPIs, and data logging — SCADA monitoring "
+"designed for reliable aquaculture operations and RAS facilities."
 msgstr ""
 
-#: templates/active/monitoring.html:23
-msgid "Historical trend charts for every hatchery unit"
-msgstr ""
-
-#: templates/active/monitoring.html:24
-msgid "KPI calculations (FCR, survival rate)"
-msgstr ""
-
-#: templates/active/monitoring.html:25
-msgid "Remote access and data visualization"
+#: templates/active/monitoring.html:28
+msgid "SCADA Monitoring & Dashboards for Fish Hatcheries"
 msgstr ""
 
 #: templates/active/monitoring.html:31
-msgid "SCADA Live Mockup"
+msgid ""
+"Real-time monitoring, alarms, historical trends, KPI reporting, and "
+"secure remote access — built for stable hatchery operations and scalable "
+"RAS facilities."
 msgstr ""
 
-#: templates/active/monitoring.html:36
-msgid "Incubation Temperature"
+#: templates/active/monitoring.html:38
+msgid ""
+"Our SCADA systems centralize sensor data (temperature, DO, pH, ORP, flow,"
+" level), automate alarms and notifications, and provide clear dashboards "
+"for operators, maintenance, and management."
 msgstr ""
 
-#: templates/active/monitoring.html:42
-msgid "Dissolved Oxygen"
+#: templates/active/monitoring.html:44
+msgid "SCADA Capabilities"
+msgstr ""
+
+#: templates/active/monitoring.html:46
+msgid "Live sensor monitoring (temperature, DO, pH, ORP, flow, level)"
+msgstr ""
+
+#: templates/active/monitoring.html:47
+msgid "Alarm notifications, fault signals, and event history"
 msgstr ""
 
 #: templates/active/monitoring.html:48
+msgid "Historical trends and data logging for each hatchery unit"
+msgstr ""
+
+#: templates/active/monitoring.html:49
+msgid "KPIs and performance indicators (FCR, survival rate, energy usage)"
+msgstr ""
+
+#: templates/active/monitoring.html:50
+msgid "Secure remote access and role-based visualization"
+msgstr ""
+
+#: templates/active/monitoring.html:57
+msgid "SCADA Live Mockup"
+msgstr ""
+
+#: templates/active/monitoring.html:59
+msgid ""
+"A simplified demo panel showing typical hatchery signals and status "
+"indicators. Values update automatically."
+msgstr ""
+
+#: templates/active/monitoring.html:65
+msgid "Incubation Temperature"
+msgstr ""
+
+#: templates/active/monitoring.html:71
+msgid "Dissolved Oxygen"
+msgstr ""
+
+#: templates/active/monitoring.html:77
 msgid "Water Flow Rate"
 msgstr ""
 
-#: templates/active/monitoring.html:54
+#: templates/active/monitoring.html:83
 msgid "pH Level"
 msgstr ""
 
-#: templates/active/rnd.html:4
-msgid "R&D | Tamhid Gostar (TDQ Co)"
+#: templates/active/monitoring.html:94
+msgid "SCADA Systems for Aquaculture Operations"
 msgstr ""
 
-#: templates/active/rnd.html:6
+#: templates/active/monitoring.html:96
 msgid ""
-"Research and development for aquaculture: pilot testing, process "
-"optimization, water quality control, and performance improvement."
+"TDQ Co designs SCADA monitoring for hatcheries and RAS facilities, "
+"including dashboards, alarm management, trend charts, KPI reporting, and "
+"data logging for operational control and decision support."
+msgstr ""
+
+#: templates/active/monitoring.html:99
+msgid ""
+"We integrate monitoring with PLC automation, sensors, and control panels "
+"to create a unified system that improves reliability, biosecurity, and "
+"production stability."
+msgstr ""
+
+#: templates/active/monitoring.html:103 templates/active/rnd.html:137
+msgid "PLC automation & control"
+msgstr ""
+
+#: templates/active/rnd.html:8
+msgid "Aquaculture Research & Development | Feed, Health & Genetics | TDQ Co"
 msgstr ""
 
 #: templates/active/rnd.html:12
 msgid ""
-"Applied research and innovation to improve performance, sustainability, "
-"fish health, and value creation across aquaculture operations."
+"TDQ Co provides aquaculture R&D including feed development, alternative "
+"proteins, fish health solutions, selective breeding and genetics, and "
+"value-added product development for hatcheries and RAS facilities."
 msgstr ""
 
-#: templates/active/rnd.html:18
+#: templates/active/rnd.html:16
+msgid "Aquaculture R&D | Feed, Fish Health & Genetics | TDQ Co"
+msgstr ""
+
+#: templates/active/rnd.html:20
 msgid ""
-"Our R&D activities focus on practical, scalable outcomes—bridging science"
-" and production through formulation work, health solutions, genetics, and"
-" product development for modern aquaculture."
+"Applied aquaculture research: feed formulation, alternative proteins, "
+"vaccines, genetics, and value-added products — focused on measurable "
+"performance improvements."
 msgstr ""
 
-#: templates/active/rnd.html:25
-msgid "Feed Development"
-msgstr ""
-
-#: templates/active/rnd.html:27
-msgid ""
-"Research on feed formulation optimization to enhance growth performance "
-"and feed conversion ratios (FCR)."
-msgstr ""
-
-#: templates/active/rnd.html:30
-msgid "Nutrient profiling and formulation optimization"
+#: templates/active/rnd.html:28
+msgid "Aquaculture Research & Development (R&D)"
 msgstr ""
 
 #: templates/active/rnd.html:31
-msgid "Performance testing for growth and FCR"
-msgstr ""
-
-#: templates/active/rnd.html:32
-msgid "Digestibility and waste reduction"
-msgstr ""
-
-#: templates/active/rnd.html:37
-msgid "Alternative Protein Sources"
-msgstr ""
-
-#: templates/active/rnd.html:39
 msgid ""
-"Study and production of alternative protein sources such as insect "
-"protein, algae, and single-cell protein."
+"Applied research and innovation to improve performance, sustainability, "
+"fish health, and value creation across hatcheries and aquaculture "
+"operations."
 msgstr ""
 
-#: templates/active/rnd.html:42
-msgid "Insect protein"
-msgstr ""
-
-#: templates/active/rnd.html:43
-msgid "Algae and microalgae protein"
-msgstr ""
-
-#: templates/active/rnd.html:44
-msgid "Single-cell protein (SCP)"
+#: templates/active/rnd.html:38
+msgid ""
+"Our R&D focuses on practical, scalable outcomes — bridging science and "
+"production through formulation work, health solutions, genetics, and "
+"product development for modern aquaculture."
 msgstr ""
 
 #: templates/active/rnd.html:45
-msgid "Sustainability and scalability assessment"
+msgid "R&D Focus Areas"
 msgstr ""
 
-#: templates/active/rnd.html:50
-msgid "Vaccines"
-msgstr ""
-
-#: templates/active/rnd.html:52
+#: templates/active/rnd.html:47
 msgid ""
-"Research and development of species-specific aquatic vaccines aimed at "
-"reducing antibiotic usage."
+"Research programs designed for measurable outcomes and real-world "
+"deployment."
 msgstr ""
 
-#: templates/active/rnd.html:55
-msgid "Species-specific vaccine development"
+#: templates/active/rnd.html:54
+msgid "Feed Development"
 msgstr ""
 
 #: templates/active/rnd.html:56
-msgid "Preventive health management"
-msgstr ""
-
-#: templates/active/rnd.html:57
-msgid "Antibiotic reduction strategies"
-msgstr ""
-
-#: templates/active/rnd.html:62
-msgid "Selective Breeding & Genetics"
-msgstr ""
-
-#: templates/active/rnd.html:64
 msgid ""
-"Genetic improvement and selective breeding of fish species with high "
-"growth performance and resilience under intensive farming conditions, "
-"based on advanced global knowledge."
+"Feed formulation optimization to improve growth performance and feed "
+"conversion ratio (FCR)."
 msgstr ""
 
-#: templates/active/rnd.html:67
-msgid "Growth performance enhancement"
+#: templates/active/rnd.html:59
+msgid "Nutrient profiling and formulation optimization"
+msgstr ""
+
+#: templates/active/rnd.html:60
+msgid "Performance testing for growth and FCR"
+msgstr ""
+
+#: templates/active/rnd.html:61
+msgid "Digestibility and waste reduction"
+msgstr ""
+
+#: templates/active/rnd.html:66
+msgid "Alternative Protein Sources"
 msgstr ""
 
 #: templates/active/rnd.html:68
-msgid "Resilience under intensive farming conditions"
+msgid ""
+"Development and evaluation of alternative proteins such as insect "
+"protein, algae, and single-cell protein (SCP)."
 msgstr ""
 
-#: templates/active/rnd.html:69
-msgid "Genetic line selection and performance tracking"
+#: templates/active/rnd.html:71
+msgid "Insect protein"
+msgstr ""
+
+#: templates/active/rnd.html:72
+msgid "Algae and microalgae protein"
+msgstr ""
+
+#: templates/active/rnd.html:73
+msgid "Single-cell protein (SCP)"
 msgstr ""
 
 #: templates/active/rnd.html:74
-msgid "Value-Added Products"
-msgstr ""
-
-#: templates/active/rnd.html:76
-msgid ""
-"Research into seafood processing and development of high value-added "
-"products such as fillets, oils, and nutritional supplements."
+msgid "Sustainability and scalability assessment"
 msgstr ""
 
 #: templates/active/rnd.html:79
-msgid "Seafood processing and product development"
-msgstr ""
-
-#: templates/active/rnd.html:80
-msgid "Fillets, oils, and extracts"
+msgid "Fish Health & Vaccines"
 msgstr ""
 
 #: templates/active/rnd.html:81
-msgid "Nutritional and functional supplements"
+msgid ""
+"R&D on species-specific aquatic health solutions and vaccines aimed at "
+"reducing antibiotic usage."
 msgstr ""
 
-#: templates/active/rnd.html:82
-msgid "Quality and market readiness focus"
+#: templates/active/rnd.html:84
+msgid "Preventive health management"
 msgstr ""
 
-#: templates/active/rnd.html:89
-msgid "R&D Scope & Deliverables"
+#: templates/active/rnd.html:85
+msgid "Species-specific vaccine development"
+msgstr ""
+
+#: templates/active/rnd.html:86
+msgid "Antibiotic reduction strategies"
 msgstr ""
 
 #: templates/active/rnd.html:91
+msgid "Selective Breeding & Genetics"
+msgstr ""
+
+#: templates/active/rnd.html:93
 msgid ""
-"Our scope includes research planning, formulation and protocol "
-"development, pilot validation, performance tracking, and "
-"documentation—designed to support real-world deployment and measurable "
-"operational improvement."
+"Selective breeding and genetics programs to improve growth performance "
+"and resilience under intensive farming conditions."
+msgstr ""
+
+#: templates/active/rnd.html:96
+msgid "Growth performance enhancement"
+msgstr ""
+
+#: templates/active/rnd.html:97
+msgid "Resilience and survival improvement"
+msgstr ""
+
+#: templates/active/rnd.html:98
+msgid "Genetic line selection and performance tracking"
 msgstr ""
 
 #: templates/active/rnd.html:103
-msgid "Our team review every inquiry directly."
+msgid "Value-Added Products"
 msgstr ""
 
-#: templates/active/rnd.html:106
-msgid "Contact Our Team"
+#: templates/active/rnd.html:105
+msgid ""
+"R&D on seafood processing and development of value-added products such as"
+" fillets, oils, extracts, and nutritional supplements."
+msgstr ""
+
+#: templates/active/rnd.html:108
+msgid "Seafood processing and product development"
+msgstr ""
+
+#: templates/active/rnd.html:109
+msgid "Fillets, oils, and extracts"
+msgstr ""
+
+#: templates/active/rnd.html:110
+msgid "Nutritional and functional supplements"
+msgstr ""
+
+#: templates/active/rnd.html:111
+msgid "Quality and market readiness focus"
+msgstr ""
+
+#: templates/active/rnd.html:120
+msgid "R&D Scope & Deliverables"
+msgstr ""
+
+#: templates/active/rnd.html:122
+msgid ""
+"Our scope includes research planning, protocol development, pilot "
+"validation, performance tracking, and documentation — designed to support"
+" measurable operational improvement."
+msgstr ""
+
+#: templates/active/rnd.html:128
+msgid "Applied Aquaculture R&D for Hatcheries and RAS Facilities"
+msgstr ""
+
+#: templates/active/rnd.html:130
+msgid ""
+"TDQ Co conducts applied research to improve feed efficiency, fish health,"
+" genetics, and production performance — supporting sustainable growth in "
+"modern aquaculture."
+msgstr ""
+
+#: templates/active/rnd.html:133
+msgid ""
+"R&D outcomes can be integrated with automation and SCADA monitoring to "
+"validate improvements using real production data."
+msgstr ""
+
+#: templates/active/rnd.html:138
+msgid "SCADA monitoring & data logging"
+msgstr ""
+
+#: templates/active/rnd.html:139
+msgid "Discuss an R&D collaboration"
 msgstr ""
 
 #: templates/active/partials/company_profile_cta.html:3
@@ -1028,7 +1424,7 @@ msgid ""
 msgstr ""
 
 #: templates/active/partials/specs_cta.html:13
-msgid "Download Specs (PDF)"
+msgid "Download Specs"
 msgstr ""
 
 #~ msgid "PLC / RTU Layer"
@@ -1387,5 +1783,408 @@ msgstr ""
 #~ "Contact TDQ Co for fish hatchery "
 #~ "automation, SCADA systems, and aquaculture "
 #~ "engineering solutions."
+#~ msgstr ""
+
+#~ msgid "Fish Hatchery – Automation & Engineering – Commercial Services "
+#~ msgstr ""
+
+#~ msgid "Fish Hatchery Automation & Aquaculture Engineering"
+#~ msgstr ""
+
+#~ msgid "Explore Solutions"
+#~ msgstr ""
+
+#~ msgid "Contact Us"
+#~ msgstr ""
+
+#~ msgid "Download Specs (PDF)"
+#~ msgstr ""
+
+#~ msgid "Automation & Control | Tamhid Gostar (TDQ Co)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Automation solutions for fish hatcheries: "
+#~ "PLC/SCADA, sensors, alarms, control logic, "
+#~ "remote monitoring, and data analytics."
+#~ msgstr ""
+
+#~ msgid "Monitoring & SCADA | Tamhid Gostar (TDQ Co)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SCADA dashboards, alarms, trends, KPIs, "
+#~ "and remote monitoring for hatchery and"
+#~ " aquaculture facilities."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SCADA dashboards, alarms, historical trends,"
+#~ " KPIs, and secure remote access for"
+#~ " aquaculture operations."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This section covers SCADA dashboards, "
+#~ "alarms, historical trends, KPIs, and "
+#~ "remote access."
+#~ msgstr ""
+
+#~ msgid "SCADA Features"
+#~ msgstr ""
+
+#~ msgid "Sensor live monitoring (temperature, DO, pH, ORP)"
+#~ msgstr ""
+
+#~ msgid "Alarm notifications and fault signals"
+#~ msgstr ""
+
+#~ msgid "Historical trend charts for every hatchery unit"
+#~ msgstr ""
+
+#~ msgid "KPI calculations (FCR, survival rate)"
+#~ msgstr ""
+
+#~ msgid "Remote access and data visualization"
+#~ msgstr ""
+
+#~ msgid "Equipment Manufacturing | Tamhid Gostar (TDQ Co)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Custom equipment manufacturing for aquaculture"
+#~ " and hatchery projects: tanks, piping, "
+#~ "filtration, control panels, and integration."
+#~ msgstr ""
+
+#~ msgid "Equipment & Systems"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Design, manufacturing, and supply of "
+#~ "advanced aquaculture equipment and integrated"
+#~ " systems for modern hatcheries and "
+#~ "farms."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We design and manufacture a "
+#~ "comprehensive range of aquaculture equipment"
+#~ " and systems, covering water treatment, "
+#~ "culture, biosecurity, and automation. All "
+#~ "solutions are engineered for reliability, "
+#~ "efficiency, and long-term operational "
+#~ "performance."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Design and manufacturing of closed and"
+#~ " semi-closed photobioreactors for edible"
+#~ " and industrial microalgae production."
+#~ msgstr ""
+
+#~ msgid "Larval nutrition"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Mechanical and biological filtration solutions"
+#~ " for optimal water quality."
+#~ msgstr ""
+
+#~ msgid "Smart control systems"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All equipment is designed based on "
+#~ "process engineering principles, site-specific"
+#~ " requirements, and long-term operational"
+#~ " efficiency. Our scope includes "
+#~ "manufacturing, system integration, testing, "
+#~ "and commissioning."
+#~ msgstr ""
+
+#~ msgid "Commercial Services | Tamhid Gostar (TDQ Co)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Commercial services for aquaculture projects"
+#~ " including procurement, installation, "
+#~ "commissioning, and operational support."
+#~ msgstr ""
+
+#~ msgid "Commercial Services & Consulting"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Comprehensive project lifecycle support, from"
+#~ " initial feasibility studies and conceptual"
+#~ " design to system integration, "
+#~ "commissioning, and operational handover for"
+#~ " large-scale aquaculture facilities."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Our commercial services division acts as"
+#~ " your strategic partner throughout the "
+#~ "entire lifecycle of your aquaculture "
+#~ "project. We bridge the gap between "
+#~ "biological requirements and robust engineering"
+#~ " execution, ensuring projects are delivered"
+#~ " on time, within budget, and meet "
+#~ "performance metrics."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Initial assessment of site potential, "
+#~ "species selection consultation, production "
+#~ "target setting, and detailed techno-"
+#~ "economic feasibility studies."
+#~ msgstr ""
+
+#~ msgid "Process flow charting (PFD)"
+#~ msgstr ""
+
+#~ msgid "Preliminary budget estimation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Managing the complex integration of "
+#~ "mechanical, electrical, and automation "
+#~ "components from global suppliers."
+#~ msgstr ""
+
+#~ msgid "Vendor management & QA/QC"
+#~ msgstr ""
+
+#~ msgid "Supply chain logistics"
+#~ msgstr ""
+
+#~ msgid "Project Management (EPC/EPCM)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Dedicated project management services "
+#~ "overseeing civil works, equipment "
+#~ "installation, and site coordination."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Rigorous testing protocols for all "
+#~ "subsystems (Water Quality, RAS function, "
+#~ "Automation logic) prior to biological "
+#~ "introduction."
+#~ msgstr ""
+
+#~ msgid "Operational Training & SOPs"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Developing comprehensive Standard Operating "
+#~ "Procedures and training site staff on"
+#~ " system maintenance and critical "
+#~ "operations."
+#~ msgstr ""
+
+#~ msgid "System Optimization & Audits"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Post-launch analysis of operational "
+#~ "data, energy efficiency audits, and "
+#~ "process refinement recommendations."
+#~ msgstr ""
+
+#~ msgid "Biomass yield optimization"
+#~ msgstr ""
+
+#~ msgid "Partnership Beyond Installation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Our commitment extends past final "
+#~ "handover. We offer optional long-term"
+#~ " service contracts and technical advisory"
+#~ " roles to ensure sustained, profitable "
+#~ "operation of your capital investment."
+#~ msgstr ""
+
+#~ msgid "R&D | Tamhid Gostar (TDQ Co)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Research and development for aquaculture: "
+#~ "pilot testing, process optimization, water "
+#~ "quality control, and performance improvement."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Applied research and innovation to "
+#~ "improve performance, sustainability, fish "
+#~ "health, and value creation across "
+#~ "aquaculture operations."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Our R&D activities focus on practical,"
+#~ " scalable outcomes—bridging science and "
+#~ "production through formulation work, health"
+#~ " solutions, genetics, and product "
+#~ "development for modern aquaculture."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Research on feed formulation optimization "
+#~ "to enhance growth performance and feed"
+#~ " conversion ratios (FCR)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Study and production of alternative "
+#~ "protein sources such as insect protein,"
+#~ " algae, and single-cell protein."
+#~ msgstr ""
+
+#~ msgid "Vaccines"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Research and development of species-"
+#~ "specific aquatic vaccines aimed at "
+#~ "reducing antibiotic usage."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Genetic improvement and selective breeding "
+#~ "of fish species with high growth "
+#~ "performance and resilience under intensive "
+#~ "farming conditions, based on advanced "
+#~ "global knowledge."
+#~ msgstr ""
+
+#~ msgid "Resilience under intensive farming conditions"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Research into seafood processing and "
+#~ "development of high value-added products"
+#~ " such as fillets, oils, and "
+#~ "nutritional supplements."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Our scope includes research planning, "
+#~ "formulation and protocol development, pilot"
+#~ " validation, performance tracking, and "
+#~ "documentation—designed to support real-world"
+#~ " deployment and measurable operational "
+#~ "improvement."
+#~ msgstr ""
+
+#~ msgid "Our team review every inquiry directly."
+#~ msgstr ""
+
+#~ msgid "Contact Our Team"
+#~ msgstr ""
+
+#~ msgid "About | Tamhid Gostar (TDQ Co)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Learn about TDQ Co: aquaculture "
+#~ "engineering team delivering fish hatchery "
+#~ "automation, RAS solutions, and sustainable "
+#~ "project execution."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We specialize in the design and "
+#~ "implementation of PLC-based automation, "
+#~ "SCADA monitoring systems, and industrial "
+#~ "control solutions for fish hatcheries "
+#~ "and aquaculture facilities."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Our work focuses on operational "
+#~ "reliability, system scalability, and long-"
+#~ "term maintainability — from concept "
+#~ "design and engineering to commissioning "
+#~ "and technical support."
+#~ msgstr ""
+
+#~ msgid "Automation and engineering for fish hatcheries"
+#~ msgstr ""
+
+#~ msgid "What We Do"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Control logic, interlocks, and reliable "
+#~ "operation for hatchery processes."
+#~ msgstr ""
+
+#~ msgid "Real-time dashboards, alarms, trends, and remote visibility."
+#~ msgstr ""
+
+#~ msgid "System design support for recirculating aquaculture applications."
+#~ msgstr ""
+
+#~ msgid "Panel design, wiring standards, documentation, and integration."
+#~ msgstr ""
+
+#~ msgid "Selection, installation, and calibration of industrial sensors."
+#~ msgstr ""
+
+#~ msgid "Testing, training, handover, and long-term technical support."
+#~ msgstr ""
+
+#~ msgid "Facility & Engineering"
+#~ msgstr ""
+
+#~ msgid "A glimpse into our engineering work and implementation environments."
+#~ msgstr ""
+
+#~ msgid "Engineering work 1"
+#~ msgstr ""
+
+#~ msgid "Engineering work 2"
+#~ msgstr ""
+
+#~ msgid "Engineering work 3"
+#~ msgstr ""
+
+#~ msgid "How We Work"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Technical review of process requirements, "
+#~ "constraints, and operational goals."
+#~ msgstr ""
+
+#~ msgid "Engineering & Design"
+#~ msgstr ""
+
+#~ msgid "We deliver diagrams, control philosophy, BOMs, and documentation."
+#~ msgstr ""
+
+#~ msgid "Panels, wiring, assembly, and system integration testing."
+#~ msgstr ""
+
+#~ msgid "On-site or remote commissioning, training, and ongoing support."
+#~ msgstr ""
+
+#~ msgid "Work With Us"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Tell us about your hatchery project "
+#~ "and we’ll respond with a clear "
+#~ "technical path forward."
+#~ msgstr ""
+
+#~ msgid "Our engineers review every inquiry directly."
+#~ msgstr ""
+
+#~ msgid "Contact Our Engineering Team"
 #~ msgstr ""
 

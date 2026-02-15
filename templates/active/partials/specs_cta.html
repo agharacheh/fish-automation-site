@@ -1,15 +1,18 @@
 <div class="specs-cta">
   <h3>{{ _("Download Technical Specifications") }}</h3>
+
   <p class="muted-text">
     {{ _("Get an overview of our automation, control systems, and hatchery engineering capabilities.") }}
   </p>
+
   <a href="{{ url_for('static', filename='docs/hatchery_specs.pdf') }}"
      class="btn btn-primary track-cta"
      data-event="download_specs"
-     download>
-    <svg class="icon icon-pdf">
-     <use href="#icon-pdf"></use>
+     download
+     rel="noopener">
+    <svg class="icon icon-pdf" aria-hidden="true">
+      <use href="#icon-pdf"></use>
     </svg>
-     {{ _("Download Specs") }}
+    {{ _("Download Specs") }}
   </a>
 </div>

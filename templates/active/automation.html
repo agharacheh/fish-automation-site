@@ -1,15 +1,38 @@
 {% extends "base.html" %}
 
-{% block title %}{{ _("Automation & Control | Tamhid Gostar (TDQ Co)") }}{% endblock %}
+{# ==============================
+   SEO: Title + Meta + OG
+============================== #}
 
-{% block meta_description %}{{ _("Automation solutions for fish hatcheries: PLC/SCADA, sensors, alarms, control logic, remote monitoring, and data analytics.") }}{% endblock %}
+{% block title %}
+  {{ _("PLC & SCADA Systems for Aquaculture | Industrial Automation | TDQ Co") }}
+{% endblock %}
+
+{% block meta_description %}
+  {{ _("TDQ Co designs and integrates PLC control panels, SCADA monitoring systems, HMI interfaces, and industrial automation solutions for fish hatcheries and RAS facilities.") }}
+{% endblock %}
+
+{% block og_title %}
+  {{ _("PLC & SCADA Automation Systems for Aquaculture | TDQ Co") }}
+{% endblock %}
+
+{% block og_description %}
+  {{ _("Industrial PLC control panels, SCADA dashboards, HMI interfaces, and integrated automation solutions for fish hatcheries and RAS systems.") }}
+{% endblock %}
+
+
 {% block content %}
 
 <!-- Page Header -->
 <section class="page-header">
-  <h1>{{ _("Automation & Control") }}</h1>
+  <h1>{{ _("PLC & SCADA Automation Systems for Aquaculture") }}</h1>
+
   <p>
     {{ _("PLC-based automation, monitoring, and control solutions engineered for reliable hatchery operations and long-term maintainability.") }}
+  </p>
+
+  <p class="page-intro">
+    {{ _("Our automation solutions combine PLC control panels, SCADA dashboards, industrial sensors, and HMI interfaces to deliver reliable, scalable automation systems for fish hatcheries and recirculating aquaculture systems (RAS).") }}
   </p>
 </section>
 
@@ -20,7 +43,14 @@
   </p>
 </section>
 
-<!-- Core Capabilities (cards) -->
+<!-- Core Capabilities -->
+<section class="tdq-home-section">
+  <div class="tdq-home-head">
+    <h2 class="tdq-home-title">{{ _("Core Capabilities") }}</h2>
+    <p class="tdq-home-sub">
+      {{ _("From PLC logic to SCADA dashboards — designed for stable operation and clean handover.") }}
+    </p>
+  </div>
 
   <div class="engineering-cards">
 
@@ -52,15 +82,16 @@
       </ul>
     </div>
 
-    <!-- Monitoring & SCADA (link to subpage) -->
+    <!-- Monitoring & SCADA -->
     <div class="eng-card elev-2">
       <h3>{{ _("Monitoring & SCADA") }}</h3>
       <p>
         {{ _("Centralized monitoring, data logging, dashboards, KPIs, alarms, and remote access for single-site or multi-site aquaculture operations.") }}
       </p>
 
-      <a href="{{ url_for('monitoring', lang=current_locale) }}" class="eng-card-link">
+      <a href="{{ lang_url('monitoring') }}" class="tdq-btn tdq-btn-ghost tdq-btn-ghost-onlight">
         {{ _("Explore Monitoring & SCADA") }}
+        <span class="tdq-btn-arrow" aria-hidden="true">→</span>
       </a>
     </div>
 
@@ -79,7 +110,24 @@
     </div>
 
   </div>
+</section>
 
+<!-- SEO Block -->
+<section class="tdq-seo-block">
+  <h2>{{ _("Industrial Automation for Hatcheries & RAS Facilities") }}</h2>
+  <p>
+    {{ _("We design and implement fully integrated control systems including programmable logic controllers (PLC), supervisory control and data acquisition (SCADA), remote monitoring, alarm management, and performance analytics.") }}
+  </p>
+  <p>
+    {{ _("Our systems improve operational efficiency, biosecurity, energy optimization, and production stability across single-site and multi-site aquaculture operations.") }}
+  </p>
+
+  <div class="tdq-seo-links">
+    <a href="{{ lang_url('monitoring') }}">{{ _("SCADA monitoring systems") }}</a>
+    <a href="{{ lang_url('equipment') }}">{{ _("RAS equipment manufacturing") }}</a>
+    <a href="{{ lang_url('contact') }}">{{ _("Request a consultation") }}</a>
+  </div>
+</section>
 
 <!-- Delivery approach -->
 <section class="section-white elev-1 section-panel">

@@ -1,15 +1,14 @@
 import os
+import time
 from datetime import date
 from flask import (
     Flask, render_template, request, redirect, url_for,
-    Response, send_from_directory
+    Response, send_from_directory, abort
 )
 from flask_babel import Babel, gettext as _, get_locale
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 app = Flask(__name__, template_folder="templates/active")
-
-
 
 # -------------------------
 # CONFIG
@@ -115,14 +114,41 @@ def rnd():
 def about():
     return render_template("about.html", page="about")
 
+# @app.route("/contact", methods=["GET", "POST"])
+# def contact():
+#     if request.method == "POST":
+        # TODO: process form (send email / store / etc.)
+        # on success:
+        # return redirect(url_for("contact", sent="1") + "#contact-form")
+
+    # GET request
+    # success = (request.args.get("sent") == "1")
+    # return render_template("contact.html", success=success)
+
+
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
-    success = False
     if request.method == "POST":
-        # TODO: validate + process form (email later)
-        success = True
+        # Honeypot: must be empty
+        if (request.form.get("company") or "").strip():
+            abort(400)
 
-    return render_template("contact.html", page="contact", success=success)
+        # Time-to-submit check (e.g., must be > 2 seconds)
+        form_ts = request.form.get("form_ts", "")
+        try:
+            delta_ms = int(time.time() * 1000) - int(form_ts)
+        except Exception:
+            abort(400)
+
+        if delta_ms < 2000:
+            abort(400)
+
+        # ... process valid form (send/store) ...
+        return redirect(url_for("contact", sent="1") + "#contact-result")
+
+    success = (request.args.get("sent") == "1")
+    return render_template("contact.html", success=success)
+
 
 
 @app.route("/robots.txt")

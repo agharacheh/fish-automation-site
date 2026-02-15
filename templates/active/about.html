@@ -1,144 +1,195 @@
 {% extends "base.html" %}
 
-{% block title %}{{ _("About | Tamhid Gostar (TDQ Co)") }}{% endblock %}
+{# ==============================
+   SEO: Title + Meta + OG
+============================== #}
 
-{% block meta_description %}{{ _("Learn about TDQ Co: aquaculture engineering team delivering fish hatchery automation, RAS solutions, and sustainable project execution.") }}{% endblock %}
+{% block title %}
+  {{ _("About TDQ Co | Aquaculture Engineering & Automation Experts") }}
+{% endblock %}
+
+{% block meta_description %}
+  {{ _("Learn about Tamhid Gostar Danesh Padid (TDQ Co), an aquaculture engineering company specializing in fish hatchery automation, RAS systems, PLC control panels, and SCADA monitoring.") }}
+{% endblock %}
+
+{% block og_title %}
+  {{ _("About TDQ Co | Aquaculture Engineering Company") }}
+{% endblock %}
+
+{% block og_description %}
+  {{ _("Engineering-driven automation and control solutions for fish hatcheries and RAS facilities — from design to commissioning.") }}
+{% endblock %}
 
 {% block content %}
 
+<!-- Header -->
+<section class="page-header">
+  <h1>{{ _("About Tamhid Gostar Danesh Padid (TDQ Co)") }}</h1>
 
-<section class="about-container">
+  <p class="page-intro">
+    {{ _("Engineering-driven automation and control solutions for modern fish hatcheries and RAS facilities.") }}
+  </p>
 
-    <section class="page-header">
-        <h1>{{ _("About Us") }}</h1>
-            <p class="lead">
-                {{ _("Engineering-driven automation and control solutions for modern fish hatcheries and RAS facilities.") }}
-            </p>
-                {% if current_locale == "fa" %}
-                    <p class="brand-line muted">
-                        تمهید گستر دانش پدید (TDQ Co) — شرکت مهندسی اتوماسیون و کنترل آبزی‌پروری
-                    </p>
-                {% else %}
-                    <p class="brand-line muted">
-                        Tamhid Gostar Danesh Padid (TDQ Co) — also known as Tamhidgostar
-                    </p>
-                {% endif %}
-        </section>
-
-<section class="section-white elev-1 section-panel">
-    <section class="card-light about-overview">
-        <div class="about-overview-text">
-            <h2>{{ _("Company Overview") }}</h2>
-                <p>
-                    {{ _("We specialize in the design and implementation of PLC-based automation, SCADA monitoring systems, and industrial control solutions for fish hatcheries and aquaculture facilities.") }}
-                </p>
-                <p>
-                    {{ _("Our work focuses on operational reliability, system scalability, and long-term maintainability — from concept design and engineering to commissioning and technical support.") }}
-                </p>
-        </div>
-
-        <div class="about-overview-visual">
-            <!-- Replace with chosen image -->
-            <img src="{{ url_for('static', filename='img/about/overview.jpg') }}"
-                alt="{{ _('Automation and engineering for fish hatcheries') }}"
-                loading="lazy">
-        </div>
-    </section>
-    </section>
-<section class="section-white elev-1 section-panel">
-    <section class="card-light">
-        <h2>{{ _("What We Do") }}</h2>
-
-        <div class="capabilities-grid">
-            <div class="capability">
-                <h3><span class="cap-icon">⚙️</span> {{ _("Hatchery Automation & PLC") }}</h3>
-                <p>{{ _("Control logic, interlocks, and reliable operation for hatchery processes.") }}</p>
-            </div>
-
-            <div class="capability">
-                <h3><span class="cap-icon">📊</span> {{ _("SCADA & Monitoring") }}</h3>
-                <p>{{ _("Real-time dashboards, alarms, trends, and remote visibility.") }}</p>
-            </div>
-
-            <div class="capability">
-                <h3><span class="cap-icon">👷</span> {{ _("RAS Engineering") }}</h3>
-                <p>{{ _("System design support for recirculating aquaculture applications.") }}</p>
-            </div>
-
-            <div class="capability">
-                <h3><span class="cap-icon">🔌</span> {{ _("Electrical & Control Panels") }}</h3>
-                <p>{{ _("Panel design, wiring standards, documentation, and integration.") }}</p>
-            </div>
-
-            <div class="capability">
-                <h3><span class="cap-icon">🧪</span> {{ _("Sensors & Instrumentation") }}</h3>
-                <p>{{ _("Selection, installation, and calibration of industrial sensors.") }}</p>
-            </div>
-
-            <div class="capability">
-                <h3><span class="cap-icon">🛠</span> {{ _("Commissioning & Support") }}</h3>
-                <p>{{ _("Testing, training, handover, and long-term technical support.") }}</p>
-            </div>
-        </div>
-    </section>
-</section>
-<section class="section-white elev-1 section-panel">
-    <section class="card-light">
-        <h2>{{ _("Facility & Engineering") }}</h2>
-        <p class="muted-text">
-            {{ _("A glimpse into our engineering work and implementation environments.") }}
-        </p>
-
-        <div class="about-gallery">
-            <!-- Add 2–4 real images here -->
-            <img src="{{ url_for('static', filename='img/about/gallery-1.jpg') }}" alt="{{ _('Engineering work 1') }}" loading="lazy">
-            <img src="{{ url_for('static', filename='img/about/gallery-2.jpg') }}" alt="{{ _('Engineering work 2') }}" loading="lazy">
-            <img src="{{ url_for('static', filename='img/about/gallery-3.jpg') }}" alt="{{ _('Engineering work 3') }}" loading="lazy">
-        </div>
-    </section>
-</section>
-<section class="section-white elev-1 section-panel">
-    <section class="card-light">
-        <h2>{{ _("How We Work") }}</h2>
-
-        <ol class="work-steps">
-            <li>
-                <strong>{{ _("Assessment & Requirements") }}</strong><br>
-                {{ _("Technical review of process requirements, constraints, and operational goals.") }}
-            </li>
-            <li>
-                <strong>{{ _("Engineering & Design") }}</strong><br>
-                {{ _("We deliver diagrams, control philosophy, BOMs, and documentation.") }}
-            </li>
-            <li>
-                <strong>{{ _("Manufacturing & Integration") }}</strong><br>
-                {{ _("Panels, wiring, assembly, and system integration testing.") }}
-            </li>
-            <li>
-                <strong>{{ _("Commissioning & Support") }}</strong><br>
-                {{ _("On-site or remote commissioning, training, and ongoing support.") }}
-            </li>
-        </ol>
-    </section>
-    </section>
-    <section class="section-white elev-1 section-panel">
-        {% include "partials/company_profile_cta.html" %}
-    </section>
-    <section class="section-white elev-1 about-cta">
-    <section class="card-light about-cta">
-        <h2>{{ _("Work With Us") }}</h2>
-        <p>{{ _("Tell us about your hatchery project and we’ll respond with a clear technical path forward.") }}</p>
-        <p class="muted-text">
-            {{ _("Our engineers review every inquiry directly.") }}
-        </p>
-        <a href="{{ url_for('contact', lang=current_locale) }}" class="btn btn-primary">
-            
-            {{ _("Contact Our Engineering Team") }}
-        </a>
-    </section>
-    </section>
+  {% if current_locale == "fa" %}
+    <p class="brand-line muted">
+      تمهید گستر دانش پدید (TDQ Co) — شرکت مهندسی اتوماسیون و کنترل آبزی‌پروری
+    </p>
+  {% else %}
+    <p class="brand-line muted">
+      Tamhid Gostar Danesh Padid (TDQ Co) — Aquaculture Engineering & Automation Specialists
+    </p>
+  {% endif %}
 </section>
 
+<!-- Company Overview -->
+<section class="section-white elev-1 section-panel">
+  <div class="card-light about-overview">
+    <div class="about-overview-text">
+      <h2>{{ _("Company Overview") }}</h2>
 
+      <p>
+        {{ _("TDQ Co is an aquaculture engineering company specializing in PLC-based automation, SCADA monitoring systems, RAS integration, and industrial control solutions for hatcheries and aquaculture facilities.") }}
+      </p>
+
+      <p>
+        {{ _("Our work focuses on operational reliability, scalability, energy efficiency, and long-term maintainability — from concept design and system engineering to commissioning and technical support.") }}
+      </p>
+    </div>
+
+    <div class="about-overview-visual">
+      <img src="{{ url_for('static', filename='img/about/overview.jpg') }}"
+           alt="{{ _('Aquaculture automation engineering project') }}"
+           loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Engineering Gallery -->
+<section class="section-white elev-1 section-panel">
+  <h2>{{ _("Engineering Projects & Installations") }}</h2>
+  <p class="muted-text">
+    {{ _("Selected examples of automation panels, SCADA dashboards, and RAS installations.") }}
+  </p>
+
+  <div class="tdq-gallery">
+
+    <figure class="tdq-gallery-item">
+      <img src="{{ url_for('static', filename='img/about/gallery-1.jpg') }}"
+           alt="{{ _('PLC control panel installation for fish hatchery automation') }}"
+           loading="lazy">
+      <figcaption>{{ _("RAS System Installation") }}</figcaption>
+    </figure>
+
+    <figure class="tdq-gallery-item">
+      <img src="{{ url_for('static', filename='img/about/gallery-2.jpg') }}"
+           alt="{{ _('SCADA monitoring dashboard for aquaculture facility') }}"
+           loading="lazy">
+      <figcaption>{{ _("SCADA Monitoring Dashboard") }}</figcaption>
+    </figure>
+
+    <figure class="tdq-gallery-item">
+      <img src="{{ url_for('static', filename='img/about/gallery-3.jpg') }}"
+           alt="{{ _('RAS system installation and piping engineering') }}"
+           loading="lazy">
+      <figcaption>{{ _("PLC Control Panel Integration") }}</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<!-- Core Capabilities -->
+<section class="tdq-home-section">
+  <div class="tdq-home-head">
+    <h2 class="tdq-home-title">{{ _("Core Capabilities") }}</h2>
+    <p class="tdq-home-sub">
+      {{ _("Integrated engineering services for modern aquaculture operations.") }}
+    </p>
+  </div>
+
+  <div class="engineering-cards">
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Hatchery Automation & PLC") }}</h3>
+      <p>{{ _("Control logic design, interlocks, and fail-safe behavior for hatchery processes.") }}</p>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("SCADA & Monitoring") }}</h3>
+      <p>{{ _("Real-time dashboards, alarms, data logging, KPIs, and remote monitoring.") }}</p>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("RAS Engineering") }}</h3>
+      <p>{{ _("Process design and system integration for recirculating aquaculture systems.") }}</p>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Electrical & Control Panels") }}</h3>
+      <p>{{ _("Industrial panel design, wiring standards, documentation, and integration.") }}</p>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Sensors & Instrumentation") }}</h3>
+      <p>{{ _("Selection, installation, calibration, and validation of industrial sensors.") }}</p>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Commissioning & Technical Support") }}</h3>
+      <p>{{ _("On-site commissioning, operator training, and long-term technical assistance.") }}</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Engineering Process -->
+<section class="section-white elev-1 section-panel">
+  <h2>{{ _("Our Engineering Process") }}</h2>
+
+  <ol class="work-steps">
+    <li>
+      <strong>{{ _("Assessment & Requirements") }}</strong><br>
+      {{ _("Technical review of process requirements, operational constraints, and production targets.") }}
+    </li>
+    <li>
+      <strong>{{ _("Engineering & System Design") }}</strong><br>
+      {{ _("Control philosophy, diagrams, BOM development, and documentation.") }}
+    </li>
+    <li>
+      <strong>{{ _("Manufacturing & Integration") }}</strong><br>
+      {{ _("Panel assembly, system integration, and factory testing.") }}
+    </li>
+    <li>
+      <strong>{{ _("Commissioning & Support") }}</strong><br>
+      {{ _("On-site commissioning, training, and structured handover.") }}
+    </li>
+  </ol>
+</section>
+
+<!-- SEO Cluster Block -->
+<section class="tdq-seo-block">
+  <h2>{{ _("Aquaculture Engineering Company for Hatcheries & RAS") }}</h2>
+  <p>
+    {{ _("TDQ Co combines equipment manufacturing, PLC automation, and SCADA monitoring to deliver integrated aquaculture engineering solutions tailored for hatcheries and RAS facilities.") }}
+  </p>
+
+  <div class="tdq-seo-links">
+    <a href="{{ lang_url('equipment') }}">{{ _("Aquaculture equipment manufacturing") }}</a>
+    <a href="{{ lang_url('automation') }}">{{ _("PLC automation systems") }}</a>
+    <a href="{{ lang_url('monitoring') }}">{{ _("SCADA monitoring & dashboards") }}</a>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="section-white elev-1 section-panel">
+  {% include "partials/company_profile_cta.html" %}
+</section>
+
+<!-- Gallery Modal -->
+<div class="tdq-modal" id="tdqModal">
+  <span class="tdq-modal-close" id="tdqModalClose">&times;</span>
+  <img class="tdq-modal-img" id="tdqModalImg">
+  <div class="tdq-modal-caption" id="tdqModalCaption"></div>
+</div>
 
 {% endblock %}

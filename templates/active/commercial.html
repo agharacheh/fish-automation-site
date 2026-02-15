@@ -1,58 +1,90 @@
 {% extends "base.html" %}
 
-{% block title %}{{ _("Commercial Services | Tamhid Gostar (TDQ Co)") }}{% endblock %}
+{# ==============================
+   SEO: Title + Meta + OG
+============================== #}
 
-{% block meta_description %}{{ _("Commercial services for aquaculture projects including procurement, installation, commissioning, and operational support.") }}{% endblock %}
+{% block title %}
+  {{ _("Aquaculture Commercial Services | EPC, Consulting & Commissioning | TDQ Co") }}
+{% endblock %}
+
+{% block meta_description %}
+  {{ _("Commercial and engineering services for aquaculture projects including feasibility studies, EPC/EPCM project management, procurement, commissioning, and operational optimization.") }}
+{% endblock %}
+
+{% block og_title %}
+  {{ _("Aquaculture EPC & Consulting Services | TDQ Co") }}
+{% endblock %}
+
+{% block og_description %}
+  {{ _("End-to-end aquaculture project services: feasibility, EPC/EPCM, procurement, commissioning, training, and operational optimization.") }}
+{% endblock %}
+
+
 {% block content %}
 
+<!-- Page Header -->
 <section class="page-header">
-  <h1>{{ _("Commercial Services & Consulting") }}</h1>
-  <p>
-    {{ _("Comprehensive project lifecycle support, from initial feasibility studies and conceptual design to system integration, commissioning, and operational handover for large-scale aquaculture facilities.") }}
+  <h1>{{ _("Aquaculture Commercial Services & EPC Solutions") }}</h1>
+
+  <p class="page-intro">
+    {{ _("End-to-end lifecycle support for hatcheries and RAS facilities — from feasibility and design to commissioning and operational optimization.") }}
   </p>
 </section>
 
+<!-- Overview -->
 <section class="section-white elev-1 section-panel">
   <p>
-    {{ _("Our commercial services division acts as your strategic partner throughout the entire lifecycle of your aquaculture project. We bridge the gap between biological requirements and robust engineering execution, ensuring projects are delivered on time, within budget, and meet performance metrics.") }}
+    {{ _("Our commercial services division acts as your strategic engineering partner throughout the entire lifecycle of your aquaculture project. We bridge biological requirements with robust engineering execution to ensure projects are delivered on time, within budget, and meet performance targets.") }}
   </p>
 </section>
+
+<!-- Core Services -->
+<section class="tdq-home-section">
+  <div class="tdq-home-head">
+    <h2 class="tdq-home-title">{{ _("Project Lifecycle Services") }}</h2>
+    <p class="tdq-home-sub">
+      {{ _("Structured engineering support from concept to operation.") }}
+    </p>
+  </div>
 
   <div class="engineering-cards">
 
     <div class="eng-card elev-2">
       <h3>{{ _("Conceptual Design & Feasibility") }}</h3>
       <p>
-        {{ _("Initial assessment of site potential, species selection consultation, production target setting, and detailed techno-economic feasibility studies.") }}
+        {{ _("Site assessment, species selection consultation, production planning, and detailed techno-economic feasibility studies.") }}
       </p>
       <ul>
         <li>{{ _("Site suitability analysis") }}</li>
-        <li>{{ _("Process flow charting (PFD)") }}</li>
-        <li>{{ _("Preliminary budget estimation") }}</li>
+        <li>{{ _("Process flow diagrams (PFD)") }}</li>
+        <li>{{ _("Preliminary CAPEX/OPEX estimation") }}</li>
       </ul>
     </div>
 
     <div class="eng-card elev-2">
       <h3>{{ _("System Integration & Procurement") }}</h3>
-      <p>{{ _("Managing the complex integration of mechanical, electrical, and automation components from global suppliers.") }}</p>
+      <p>
+        {{ _("Integration of mechanical, electrical, and automation systems sourced from qualified global suppliers.") }}
+      </p>
       <ul>
-        <li>{{ _("Vendor management & QA/QC") }}</li>
+        <li>{{ _("Vendor evaluation & QA/QC") }}</li>
         <li>{{ _("Bill of Materials (BOM) finalization") }}</li>
-        <li>{{ _("Supply chain logistics") }}</li>
+        <li>{{ _("Supply chain coordination") }}</li>
       </ul>
     </div>
 
     <div class="eng-card elev-2">
-      <h3>{{ _("Project Management (EPC/EPCM)") }}</h3>
+      <h3>{{ _("Project Management (EPC / EPCM)") }}</h3>
       <p>
-        {{ _("Dedicated project management services overseeing civil works, equipment installation, and site coordination.") }}
+        {{ _("Full engineering, procurement, and construction management oversight including civil works, installation supervision, and multi-discipline coordination.") }}
       </p>
     </div>
 
     <div class="eng-card elev-2">
       <h3>{{ _("Commissioning & Validation") }}</h3>
       <p>
-        {{ _("Rigorous testing protocols for all subsystems (Water Quality, RAS function, Automation logic) prior to biological introduction.") }}
+        {{ _("Structured commissioning of water treatment, RAS functionality, automation logic, and performance validation before biological introduction.") }}
       </p>
       <ul>
         <li>{{ _("Hydrostatic and integrity testing") }}</li>
@@ -62,32 +94,52 @@
     </div>
 
     <div class="eng-card elev-2">
-      <h3>{{ _("Operational Training & SOPs") }}</h3>
+      <h3>{{ _("Operational Training & SOP Development") }}</h3>
       <p>
-        {{ _("Developing comprehensive Standard Operating Procedures and training site staff on system maintenance and critical operations.") }}
+        {{ _("Development of Standard Operating Procedures (SOPs) and structured training for operators and maintenance teams.") }}
       </p>
     </div>
 
     <div class="eng-card elev-2">
-      <h3>{{ _("System Optimization & Audits") }}</h3>
+      <h3>{{ _("System Optimization & Technical Audits") }}</h3>
       <p>
-        {{ _("Post-launch analysis of operational data, energy efficiency audits, and process refinement recommendations.") }}
+        {{ _("Post-launch operational audits including energy analysis, biomass yield optimization, and process refinement.") }}
       </p>
       <ul>
         <li>{{ _("Energy consumption analysis") }}</li>
-        <li>{{ _("Biomass yield optimization") }}</li>
+        <li>{{ _("Production efficiency improvement") }}</li>
       </ul>
     </div>
 
   </div>
+</section>
 
+<!-- Partnership Section -->
 <section class="section-white elev-1 section-panel">
-  <h2>{{ _("Partnership Beyond Installation") }}</h2>
+  <h2>{{ _("Long-Term Partnership Beyond Installation") }}</h2>
   <p>
-    {{ _("Our commitment extends past final handover. We offer optional long-term service contracts and technical advisory roles to ensure sustained, profitable operation of your capital investment.") }}
+    {{ _("Our commitment extends beyond final handover. We offer structured technical advisory roles and optional long-term service agreements to ensure sustained, profitable operation of your aquaculture investment.") }}
   </p>
 </section>
 
+<!-- SEO Cluster Block -->
+<section class="tdq-seo-block">
+  <h2>{{ _("Aquaculture EPC & Consulting Services for Hatcheries and RAS Facilities") }}</h2>
+  <p>
+    {{ _("TDQ Co provides structured EPC and consulting services for aquaculture projects including design validation, procurement management, commissioning, and performance optimization.") }}
+  </p>
+  <p>
+    {{ _("Our commercial team works closely with equipment manufacturing, PLC automation, and SCADA monitoring divisions to deliver fully integrated and performance-ready aquaculture systems.") }}
+  </p>
+
+  <div class="tdq-seo-links">
+    <a href="{{ lang_url('equipment') }}">{{ _("Aquaculture equipment manufacturing") }}</a>
+    <a href="{{ lang_url('automation') }}">{{ _("PLC automation & control systems") }}</a>
+    <a href="{{ lang_url('monitoring') }}">{{ _("SCADA monitoring systems") }}</a>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="section-white elev-1 section-panel">
   {% include "partials/company_profile_cta.html" %}
 </section>

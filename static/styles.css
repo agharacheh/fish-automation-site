@@ -1,3 +1,12 @@
+/* =========================================
+   FORM & BUTTON FONT FIX (FA + EN)
+   ========================================= */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
 /* ===============================
    VAZIRMATN — SELF HOSTED
 =============================== */
@@ -111,17 +120,119 @@ body {
 .lang-btn-light {
     background: #1F6FB2;
     color: white;
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 500;
     text-decoration: none;
     border: 1px solid #104A7A;
-    transition: 0.25s ease-in-out;
+    transition:
+    background 180ms ease,
+    transform 180ms ease;
 }
 
 .lang-btn-light:hover {
     background: #3485CC;
+    transform: translateY(-1px);
 }
+.nav-menu-light a {
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.nav-menu-light a::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 2px;
+  background: #406aa6;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.nav-menu-light a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ===============================
+   Header premium upgrade
+=============================== */
+
+/* ===============================
+   Header — premium glass refinement
+=============================== */
+
+.header-light {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.65);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: 
+    background 240ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease;
+}
+
+/* Stronger state when scrolled */
+.header-light.scrolled {
+  background: rgba(255,255,255,0.88);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+
+/* Nav links: subtle underline on hover */
+/* Nav link refinement */
+.nav-menu-light a {
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.nav-menu-light a:hover {
+  background: rgba(64,106,166,0.08);
+  color: #2f558d;
+}
+
+
+.nav-menu-light a::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 2px;
+  background: #406aa6;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.nav-menu-light a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Keyboard focus accessibility */
+.nav-menu-light a:focus-visible,
+.lang-btn-light:focus-visible,
+.hamburger:focus-visible {
+  outline: 2px solid rgba(64,106,166,0.65);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
 /* ===============================
    LANGUAGE SWITCH – SIZE LOCK
 =============================== */
@@ -148,11 +259,7 @@ main {
     padding: 28px;
     margin-bottom: 28px;
 }
-/* .card-light {
-  box-shadow:
-    0 2px 4px rgba(0,0,0,0.06),
-    0 14px 36px rgba(0,0,0,0.08);
-} */
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -230,6 +337,550 @@ html[lang="fa"] .menu-fa {
 
 .section-panel > *:last-child {
   margin-bottom: 0;
+}
+
+/* ===============================
+   TDQ HERO — Phase 2 (Safe, prefixed)
+=============================== */
+
+.tdq-hero {
+  color: #f4f7ff;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  margin: 18px;
+  padding: 34px 18px;
+  margin-bottom: 20px;
+  background:   
+    radial-gradient(1000px 600px at 12% 25%, rgba(64, 106, 166, 0.35), transparent 60%),
+    radial-gradient(900px 600px at 88% 70%, rgba(64, 106, 166, 0.20), transparent 70%),
+    linear-gradient(135deg, #08121b 0%, #0d1722 100%);
+}
+
+.tdq-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 26px;
+  align-items: center;
+}
+
+/* Background layers */
+.tdq-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tdq-hero-grid {
+  position: absolute;
+  inset: -40px;
+  opacity: 0.10;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  transform: translateZ(0);
+}
+
+.tdq-hero-glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 999px;
+  filter: blur(46px);
+  opacity: 0.18;
+  transform: translateZ(0);
+}
+
+.tdq-hero-glow-1 {
+  top: -220px;
+  left: -200px;
+  background: radial-gradient(circle at 30% 30%, rgba(84,140,255,1), rgba(84,140,255,0));
+}
+
+.tdq-hero-glow-2 {
+  bottom: -240px;
+  right: -220px;
+  background: radial-gradient(circle at 70% 70%, rgba(88,220,185,1), rgba(88,220,185,0));
+}
+
+/* Content */
+.tdq-hero-kicker {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.95rem;
+  opacity: 0.88;
+  margin: 0 0 10px;
+  letter-spacing: 0.2px;
+}
+
+.tdq-hero-title {
+  margin: 0 0 12px;
+  line-height: 1.10;
+  font-size: clamp(1.75rem, 3.4vw, 3.0rem);
+  letter-spacing: -0.3px;
+}
+
+.tdq-hero-accent {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.tdq-hero-accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  opacity: 0.75;
+  background: linear-gradient(90deg, rgba(84,140,255,1), rgba(88,220,185,1));
+  transform-origin: left;
+  transform: scaleX(0.65);
+  transition: transform 420ms ease;
+}
+
+.tdq-hero:hover .tdq-hero-accent::after {
+  transform: scaleX(1);
+}
+
+.tdq-hero-subtitle {
+  margin: 0 0 16px;
+  font-size: 1.02rem;
+  opacity: 0.92;
+  max-width: 62ch;
+}
+
+/* Buttons (scoped) */
+.tdq-hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;       /* key */
+  margin: 12px 0 14px;
+  align-items: center;
+}
+.tdq-hero .tdq-btn {
+  margin: 0;            /* prevents site-wide link/button margins from affecting it */
+  white-space: nowrap;  /* stops awkward wrapping inside buttons */
+}
+.tdq-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 180ms ease, box-shadow 220ms ease, background 220ms ease, border-color 220ms ease;
+}
+
+.tdq-btn-primary {
+  color: #ffffff;
+  background: linear-gradient(90deg, rgba(84,140,255,1), rgba(88,220,185,1));
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+
+.tdq-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.28);
+}
+
+.tdq-btn-ghost {
+  color: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.tdq-btn-ghost:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.20);
+}
+
+.tdq-btn-arrow {
+  transition: transform 200ms ease;
+}
+.tdq-btn-ghost:hover .tdq-btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Meta chips */
+.tdq-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tdq-meta-chip {
+  font-size: 0.9rem;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  opacity: 0.92;
+}
+
+/* Right panel (engineering card look) */
+.tdq-hero-panel {
+  position: relative;
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+}
+
+.tdq-panel-card {
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.34);
+  backdrop-filter: blur(10px);
+}
+
+.tdq-panel-card-main {
+  width: 100%;
+  max-width: 440px;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.tdq-hero:hover .tdq-panel-card-main {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 58px rgba(0,0,0,0.42);
+}
+
+.tdq-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.tdq-panel-card-main {
+  z-index: 2;
+}
+
+.tdq-panel-card-float {
+  z-index: 3;
+}
+.tdq-panel-card-float {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+}
+
+
+.tdq-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+}
+
+.tdq-panel-title {
+  margin-left: 8px;
+  font-weight: 700;
+  opacity: 0.92;
+}
+
+.tdq-panel-body {
+  padding: 14px;
+}
+
+.tdq-panel-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.tdq-panel-label {
+  opacity: 0.78;
+}
+
+.tdq-panel-value {
+  opacity: 0.92;
+  font-weight: 600;
+  text-align: right;
+}
+
+.tdq-panel-divider {
+  height: 1px;
+  margin: 12px 0;
+  background: rgba(255,255,255,0.10);
+}
+
+.tdq-mini-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.tdq-metric {
+  padding: 10px 10px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.16);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.tdq-metric-num {
+  font-weight: 800;
+  opacity: 0.95;
+}
+
+.tdq-metric-label {
+  font-size: 0.88rem;
+  opacity: 0.78;
+  margin-top: 4px;
+}
+
+/* Floating mini cards */
+.tdq-panel-card-float {
+  position: absolute;
+  width: 220px;
+  padding: 12px 12px;
+  transition: transform 260ms ease;
+}
+
+.tdq-float-title {
+  font-weight: 800;
+  opacity: 0.94;
+}
+
+.tdq-float-sub {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  opacity: 0.78;
+}
+
+.tdq-float-1 {
+  top: -8px;
+  right: -14px;
+  transform: translate(0, 0);
+}
+
+.tdq-float-2 {
+  bottom: -10px;
+  left: -14px;
+  transform: translate(0, 0);
+}
+
+
+.tdq-hero:hover .tdq-float-1 {
+  transform: translate(10px, -8px);
+}
+
+.tdq-hero:hover .tdq-float-2 {
+  transform: translate(-10px, 2px);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .tdq-hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .tdq-hero-panel {
+    min-height: auto;
+    margin-top: 6px;
+  }
+  .tdq-panel-card-float {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .tdq-hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tdq-hero-cta .tdq-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tdq-btn,
+  .tdq-panel-card-main,
+  .tdq-btn-arrow,
+  .tdq-hero-accent::after,
+  .tdq-panel-card-float {
+    transition: none !important;
+  }
+}
+/* === TDQ HERO: force readable text on dark hero === */
+.tdq-hero {
+  color: #f4f7ff; /* <-- critical fix */
+}
+
+.tdq-hero .tdq-hero-kicker,
+.tdq-hero .tdq-hero-subtitle,
+.tdq-hero .tdq-panel-title,
+.tdq-hero .tdq-panel-label,
+.tdq-hero .tdq-panel-value,
+.tdq-hero .tdq-metric-label {
+  color: rgba(255,255,255,0.82);
+  opacity: 0.95;
+}
+
+.tdq-hero .tdq-hero-title {
+  color: #ffffff;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.55);
+}
+/* ===============================
+   TDQ Premium Panel Version (Right Side)
+   - cleaner overlap
+   - better depth + SCADA vibe
+=============================== */
+
+.tdq-hero-panel { 
+  padding-right: 6px;
+}
+
+.tdq-panel-card {
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.40);
+  backdrop-filter: blur(12px);
+}
+
+/* Main panel stronger + more defined */
+.tdq-panel-card-main {
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(64,106,166,0.22);           /* subtle brand edge */
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* Header: a little more "dashboard" */
+.tdq-panel-header {
+  background: linear-gradient(90deg, rgba(64,106,166,0.14), rgba(255,255,255,0.00));
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.tdq-panel-title {
+  letter-spacing: 0.2px;
+}
+
+/* Rows tighter and cleaner */
+.tdq-panel-row {
+  padding: 9px 0;
+}
+
+.tdq-panel-divider {
+  background: rgba(255,255,255,0.12);
+}
+
+/* Metric tiles: more like UI widgets */
+.tdq-metric {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+/* Floating cards: intentional placement + less heavy overlap */
+.tdq-panel-card-float {
+  z-index: 3;
+  width: 205px;
+  padding: 12px 12px;
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(64,106,166,0.18);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.38);
+}
+
+/* Push floats slightly outside the main panel */
+.tdq-float-1 {
+  top: -12px;
+  right: -16px;
+  transform: none;
+}
+
+.tdq-float-2 {
+  bottom: -12px;
+  left: -16px;
+  transform: none;
+}
+
+/* Hover: calmer motion */
+.tdq-hero:hover .tdq-float-1 {
+  transform: translateY(-3px);
+}
+
+.tdq-hero:hover .tdq-float-2 {
+  transform: translateY(3px);
+}
+/* ===============================
+   TDQ HERO — spacing / density polish
+=============================== */
+
+/* More balanced padding */
+.tdq-hero {
+  padding: 40px 22px;
+}
+
+/* Slightly tighter grid gap */
+.tdq-hero-inner {
+  gap: 22px;
+}
+
+/* Better text rhythm */
+.tdq-hero-kicker {
+  margin-bottom: 8px;
+}
+
+.tdq-hero-title {
+  margin-bottom: 10px;
+  line-height: 1.08;
+  max-width: 18ch; /* keeps title from becoming too wide */
+}
+
+.tdq-hero-subtitle {
+  margin-bottom: 14px;
+  max-width: 60ch;
+}
+
+/* CTA: keep clean on mid screens */
+.tdq-hero-cta {
+  margin: 10px 0 12px;
+}
+
+/* Right side: slightly smaller footprint so it doesn’t dominate */
+.tdq-panel-card-main {
+  max-width: 420px;
+}
+
+/* Make chips feel more compact */
+.tdq-meta-chip {
+  padding: 6px 10px;
+  font-size: 0.88rem;
+}
+
+/* Responsive tuning */
+@media (max-width: 980px) {
+  .tdq-hero {
+    padding: 28px 16px;
+  }
+  .tdq-hero-title {
+    max-width: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .tdq-hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tdq-hero-cta .tdq-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 
@@ -394,16 +1045,69 @@ html[dir="rtl"] .hero-content {
     cursor: pointer;
     font-weight: bold;
 }
+/* Contact form: prevent double-submit + show loading state */
+.btn-submit[disabled]{
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-submit .btn-loading{
+  display: none;
+}
 
 .btn-submit:hover {
     background: #155A8A;
 }
 
-.success-msg {
-    margin-top: 15px;
-    color: #0A801A;
-    font-weight: bold;
+/* Success message: smooth fade/slide */
+.success-msg{
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  transform: translateY(-6px);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity .25s ease, transform .25s ease, max-height .35s ease;
 }
+
+/* When visible */
+.success-msg.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 120px; /* enough for 1–2 lines */
+}
+/* Hide animation state */
+.success-msg.is-hiding{
+  opacity: 0;
+  transform: translateY(-6px);
+  max-height: 0;
+}
+/* Honeypot: hidden without affecting layout/scroll */
+.hp-field{
+  position: fixed !important;
+  top: -10000px !important;
+  right: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+
+
+/* Optional: if you already style success background elsewhere, keep yours.
+   If not, uncomment these:
+*/
+/*
+.success-msg{
+  background: rgba(34,197,94,.12);
+  border: 1px solid rgba(34,197,94,.25);
+}
+*/
+
+
+
 /* ============= INTERACTIVE DIAGRAM ================= */
 
 .diagram-container {
@@ -515,9 +1219,8 @@ html[dir="rtl"] .nav-menu-light a {
 
 /* ACTIVE MENU ITEM ----------------------------------- */
 .nav-menu-light a.active {
-    color: #0D5C91;                  /* Strong engineering blue */
-    border-bottom: 3px solid #0D5C91;
-    padding-bottom: 6px;
+  color: #406aa6;
+  font-weight: 600;
 }
 
 .nav-menu-light a.active .nav-icon {
@@ -694,8 +1397,7 @@ html[dir="rtl"] .dropdown-content a:hover {
 
 /* Active menu item highlight */
 .nav-menu-light a.active::after {
-    width: 100%;
-    background-color: #1A7AC7;
+  transform: scaleX(1);
 }
 /* ============================== */
 /* HERO WAVE BACKGROUND          */
@@ -750,12 +1452,6 @@ html[dir="rtl"] .dropdown-content a:hover {
 
 .upload-form .btn-submit:hover {
     background: #0D5C91;
-}
-
-.success-msg {
-    margin-top: 10px;
-    color: #0D5C91;
-    font-weight: bold;
 }
 
 .file-table {
@@ -911,6 +1607,143 @@ html[dir="rtl"] .eng-card {
     0 2px 4px rgba(0, 0, 0, 0.06),
     0 14px 36px rgba(0, 0, 0, 0.08);
   background: #ffffff;
+}
+/* ===============================
+   Engineering cards — SVG icon style
+=============================== */
+
+.eng-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.eng-card-icon {
+  width: 26px;
+  height: 26px;
+  fill: #406aa6;
+  opacity: 0.95;
+}
+
+.eng-card h3 {
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+/* ===============================
+   Card icon micro-interactions
+=============================== */
+
+.eng-card-icon {
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.eng-card:hover .eng-card-icon {
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+/* ===============================
+   Home cards — premium polish
+=============================== */
+
+.tdq-home-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 8px 0 10px;
+}
+
+.tdq-home-head {
+  padding: 6px 6px 14px;
+}
+/* soft spotlight behind the section heading */
+.tdq-home-head {
+  background: radial-gradient(700px 200px at 20% 0%,
+    rgba(64,106,166,0.10),
+    transparent 60%);
+  border-radius: 14px;
+}
+
+
+.tdq-home-title {
+  margin: 0 0 6px;
+  letter-spacing: -0.2px;
+}
+
+.tdq-home-sub {
+  margin: 0;
+  opacity: 0.78;
+  max-width: 70ch;
+}
+
+/* Make cards align nicely */
+.engineering-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Link wrapper: remove weird underline colors */
+.eng-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Card feel: border + hover lift */
+.eng-card {
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  transition: transform 200ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  height: 100%;
+}
+
+.eng-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.22);
+  border-color: rgba(64,106,166,0.28);
+}
+
+/* Make the emoji icons consistent */
+.eng-icon {
+  font-size: 1.55rem;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .engineering-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .engineering-cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===============================
+   Micro-alignment: Hero -> Section transition
+=============================== */
+
+.tdq-home-section {
+  position: relative;
+  margin-top: 14px;      /* creates breathing room after hero */
+  padding-top: 12px;     /* spacing above the heading */
+}
+
+/* tighten heading spacing */
+.tdq-home-head {
+  padding: 10px 6px 12px;   /* top / sides / bottom */
+}
+
+.tdq-home-title {
+  margin: 0 0 6px;
+}
+
+.tdq-home-sub {
+  margin: 0;
 }
 
 /* ---------------------------------
@@ -1220,15 +2053,20 @@ html[dir="rtl"] .eng-text {
 }
 .contact-map {
     margin: 0;
+    width: 100%;
+      max-width: 100%;
+      overflow: hidden;      /* key */
+      box-sizing: border-box;
+      border-radius: 12px;   /* optional */
 }
 
+/* Contact map must never exceed viewport width (prevents RTL shift) */
 .contact-map iframe {
-    width: 100%;
-    height: 320px;
-    border: 0;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 320px;
+  border: 0;
+  display: block;
 }
 
 /* ===============================
@@ -2810,4 +3648,536 @@ html[lang="fa"] .hero-content *{
 html[lang="en"] .hero-content,
 html[lang="en"] .hero-content *{
   text-align: center !important;
+}
+/* ===============================
+   NAV — clean active/hover (no !important)
+=============================== */
+
+.nav-menu-light a {
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.nav-menu-light a:hover {
+  background: rgba(64,106,166,0.08);
+  color: #2f558d;
+}
+
+/* underline */
+.nav-menu-light a::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 2px;
+  background: #406aa6;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.nav-menu-light a:hover::after {
+  transform: scaleX(1);
+}
+
+/* active state */
+.nav-menu-light a.active {
+  background: rgba(64,106,166,0.10);
+  color: #406aa6;
+  font-weight: 600;
+}
+
+.nav-menu-light a.active::after {
+  transform: scaleX(1);
+}
+/* ===============================
+   SEO content block (home)
+=============================== */
+.tdq-seo-block {
+  max-width: 1180px;
+  margin: 18px auto 0;
+  padding: 12px 6px 0;
+}
+
+.tdq-seo-block h2 {
+  margin: 0 0 8px;
+}
+
+.tdq-seo-block p {
+  margin: 0 0 10px;
+  opacity: 0.85;
+  max-width: 90ch;
+}
+/* ===============================
+   SEO links — premium styling
+=============================== */
+
+.tdq-seo-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.tdq-seo-links a {
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(64,106,166,0.08);
+  border: 1px solid rgba(64,106,166,0.18);
+  text-decoration: none;
+  color: #406aa6;
+  transition: background 180ms ease, transform 160ms ease;
+}
+
+.tdq-seo-links a:hover {
+  background: rgba(64,106,166,0.15);
+  transform: translateY(-1px);
+}
+/* ===============================
+   RTL polish — mirror the section highlight wash
+=============================== */
+
+[dir="rtl"] .tdq-home-head::before,
+[dir="rtl"] .tdq-home-section::before {
+  /* If you use a ::before highlight, mirror it */
+  left: auto !important;
+  right: 0 !important;
+}
+
+/* If your effect is a radial/linear gradient on the element itself */
+[dir="rtl"] .tdq-home-head,
+[dir="rtl"] .tdq-home-section {
+  /* Mirror background position */
+  background-position: right top;
+}
+/* RTL: if the wash uses radial-gradient anchored to the left, re-anchor to the right */
+[dir="rtl"] .tdq-home-section {
+  background-image:
+    radial-gradient(700px 280px at 88% 20%, rgba(64,106,166,0.10), rgba(255,255,255,0) 60%);
+}
+  /* ===============================
+   RTL fix — mirror tdq-home-head highlight wash
+=============================== */
+
+/* If the wash is a ::before pseudo-element */
+[dir="rtl"] .tdq-home-head::before {
+  left: auto;
+  right: 0;
+}
+
+/* If the wash is a background gradient on the element itself */
+[dir="rtl"] .tdq-home-head {
+  background-position: right top;
+}
+/* RTL: re-anchor the radial wash to the right */
+[dir="rtl"] .tdq-home-head {
+  background-image:
+    radial-gradient(700px 280px at 88% 20%, rgba(64,106,166,0.10), rgba(255,255,255,0) 60%);
+}
+/* Light background button override (Automation page cards) */
+.eng-card .tdq-btn-ghost {
+  color: #4e7db2;               /* dark readable text */
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.eng-card .tdq-btn-ghost:hover {
+  background: rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.18);
+}
+/* Ghost button variant for light backgrounds (cards/sections) */
+.tdq-btn-ghost-onlight{
+  margin-top: 10px;
+  display: inline-flex;
+  color: #1f2d3d;
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.12);
+}
+.tdq-btn-ghost-onlight:hover{
+  background: rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.18);
+}
+/* SEO internal links spacing */
+.tdq-seo-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 42px; /* ← THIS fixes your issue */
+}
+.tdq-seo-links a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(64,106,166,0.08);
+  border: 1px solid rgba(64,106,166,0.18);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tdq-seo-links a:hover {
+  background: rgba(64,106,166,0.14);
+}
+.tdq-seo-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:18px;
+}
+.tdq-seo-links a{
+  padding:8px 14px;
+  border-radius:999px;
+  background: rgba(64,106,166,0.08);
+  border: 1px solid rgba(64,106,166,0.18);
+  text-decoration:none;
+  font-weight:500;
+}
+.tdq-seo-links a:hover{
+  background: rgba(64,106,166,0.14);
+}
+/* ===============================
+   TDQ HERO panel — interactive focus
+=============================== */
+
+.tdq-hero-panel {
+  position: relative;
+}
+
+/* Smoothness */
+.tdq-hero-panel .tdq-panel-card {
+  transition: transform 220ms ease, filter 220ms ease, opacity 220ms ease, box-shadow 220ms ease;
+  will-change: transform, filter, opacity;
+}
+
+/* Default stacking */
+.tdq-panel-card-main { position: relative; z-index: 2; }
+.tdq-panel-card-float { z-index: 3; }
+
+/* When panel is in "focus mode" dim/blur everything... */
+.tdq-hero-panel.is-focus .tdq-panel-card {
+  filter: blur(2.2px);
+  opacity: 0.55;
+  transform: translateZ(0) scale(0.995);
+}
+
+/* ...except the hovered card */
+.tdq-hero-panel.is-focus .tdq-panel-card.is-active {
+  filter: none;
+  opacity: 1;
+  transform: translateZ(0) scale(1.02);
+  box-shadow: 0 22px 58px rgba(0,0,0,0.45);
+}
+
+/* Make sure active card is always on top */
+.tdq-hero-panel .tdq-panel-card.is-active {
+  z-index: 10 !important;
+}
+
+/* Extra: When System Overview is active, push floats away a bit
+   (so its text stays fully readable) */
+.tdq-hero-panel.is-focus.is-main-active .tdq-float-1 {
+  transform: translate(34px, -18px);
+  opacity: 0.35; /* still visible, but clearly de-emphasized */
+}
+
+.tdq-hero-panel.is-focus.is-main-active .tdq-float-2 {
+  transform: translate(-34px, 18px);
+  opacity: 0.35;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tdq-hero-panel .tdq-panel-card {
+    transition: none !important;
+  }
+}
+/* ==============================
+   TDQ Premium Engineering Gallery
+============================== */
+
+.tdq-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 28px;
+}
+
+.tdq-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #0f1622;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.35);
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+  cursor: pointer;
+}
+
+/* Image base state */
+.tdq-gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 600ms ease, filter 600ms ease;
+  filter: grayscale(80%) contrast(1.05);
+}
+
+/* Hover Effects */
+.tdq-gallery-item:hover img {
+  transform: scale(1.07);
+  filter: grayscale(0%) contrast(1.08);
+}
+
+.tdq-gallery-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(64,106,166,0.6);
+  box-shadow:
+    0 26px 60px rgba(0,0,0,0.5),
+    0 0 25px rgba(64,106,166,0.35);
+}
+
+/* Dark overlay */
+.tdq-gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10,15,25,0.85),
+    rgba(10,15,25,0.35) 40%,
+    rgba(10,15,25,0.05)
+  );
+  pointer-events: none;
+}
+
+/* Caption */
+.tdq-gallery-item figcaption {
+  position: absolute;
+  bottom: 16px;
+  left: 18px;
+  right: 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
+  z-index: 2;
+  letter-spacing: 0.4px;
+}
+/* ==============================
+   TDQ Modal
+============================== */
+
+.tdq-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8,12,18,0.92);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.tdq-modal-img {
+  max-width: 85%;
+  max-height: 75vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.7);
+}
+
+.tdq-modal-caption {
+  margin-top: 18px;
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.tdq-modal-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 32px;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+
+.tdq-modal-close:hover {
+  color: #406aa6;
+}
+.social-coming-soon {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.social-coming-soon:hover {
+  opacity: 0.9;
+}
+/* =========================================
+   CONTACT (FA / RTL) — MOBILE ALIGNMENT FIX
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* Ensure the main content area is centered with equal gutters in RTL */
+  html[lang="fa"] main,
+  html[dir="rtl"] main {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-inline: 16px; /* match your normal mobile gutter */
+    box-sizing: border-box;
+  }
+
+  /* If you have a container wrapper inside main (common in base.html) */
+  html[lang="fa"] main .container,
+  html[dir="rtl"] main .container {
+    margin-inline: auto;
+    padding-inline: 0; /* prevents double-padding in RTL */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Remove default UL indentation that can shift content in RTL */
+  html[lang="fa"] .contact-details,
+  html[dir="rtl"] .contact-details {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+/* =========================================
+   CONTACT PAGE — FA (RTL) MOBILE OFFSET FIX
+   Forces symmetric gutters + true centering
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* 1) Ensure the main content column is centered */
+  html[lang="fa"] main {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 16px; /* your mobile gutter */
+    box-sizing: border-box;
+  }
+
+  /* 2) If you use any inner wrapper on pages, neutralize asymmetric spacing */
+  html[lang="fa"] main > .container,
+  html[lang="fa"] main > .wrap,
+  html[lang="fa"] main > .content,
+  html[lang="fa"] main > .page,
+  html[lang="fa"] main > .page-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 0; /* prevents double-padding */
+    box-sizing: border-box;
+  }
+
+  /* 3) These blocks often carry LTR margins/padding — force symmetric */
+  html[lang="fa"] .section-panel,
+  html[lang="fa"] .section-white,
+  html[lang="fa"] .card-light {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 16px;
+    box-sizing: border-box;
+  }
+
+  /* 4) Kill any default list indentation that can create "mystery offset" */
+  html[lang="fa"] .contact-details {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+/* =========================================
+   GLOBAL MOBILE CONTAINER — SAME WIDTH (EN/FA)
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* Main content column */
+  main {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 16px;   /* consistent mobile gutter */
+    box-sizing: border-box;
+  }
+
+  /* Common inner wrappers (keep whichever you actually use) */
+  main > .container,
+  main > .wrap,
+  main > .content,
+  main > .page,
+  main > .page-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 0;      /* prevent double padding */
+    box-sizing: border-box;
+  }
+}
+html, body { overflow-x: hidden; }
+/* RTL (FA) overflow fixes */
+html[lang="fa"], html[lang="fa"] body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent common offenders from exceeding viewport */
+html[lang="fa"] main,
+html[lang="fa"] .section-panel,
+html[lang="fa"] .section-white,
+html[lang="fa"] .card-light,
+html[lang="fa"] .contact-map,
+html[lang="fa"] iframe {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* Prevent nested scrolling containers on FA pages */
+html[lang="fa"] body {
+  overflow-y: auto;
+}
+
+html[lang="fa"] main {
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+}
+html[lang="fa"] .page,
+html[lang="fa"] .page-wrap,
+html[lang="fa"] .content,
+html[lang="fa"] .container,
+html[lang="fa"] .wrapper {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+/* Tooltips must not create horizontal overflow */
+.contact-socials a {
+  position: relative;       /* tooltip positioning context */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* If you use a pseudo tooltip, force it to be out-of-flow */
+.contact-socials a[data-tooltip]::after,
+.contact-socials a[data-tooltip]::before {
+  position: absolute !important;
+  inset: auto !important;
+  white-space: nowrap !important;
+  max-width: 220px;
+  pointer-events: none;
 }

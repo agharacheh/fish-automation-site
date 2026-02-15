@@ -1,32 +1,62 @@
 {% extends "base.html" %}
 
-{% block title %}{{ _("Equipment Manufacturing | Tamhid Gostar (TDQ Co)") }}{% endblock %}
+{# ==============================
+   SEO: Title + Meta + OG
+============================== #}
 
-{% block meta_description %}{{ _("Custom equipment manufacturing for aquaculture and hatchery projects: tanks, piping, filtration, control panels, and integration.") }}{% endblock %}
+{% block title %}
+  {{ _("Aquaculture Equipment Manufacturing | RAS, Filtration & Tanks | TDQ Co") }}
+{% endblock %}
+
+{% block meta_description %}
+  {{ _("TDQ Co designs and manufactures aquaculture equipment including RAS systems, filtration units, tanks, disinfection systems, aeration systems, and integrated hatchery solutions.") }}
+{% endblock %}
+
+{% block og_title %}
+  {{ _("Aquaculture Equipment Manufacturing | RAS & Filtration Systems | TDQ Co") }}
+{% endblock %}
+
+{% block og_description %}
+  {{ _("Custom RAS systems, filtration units, tanks, aeration and disinfection systems engineered for reliable hatchery and aquaculture operations.") }}
+{% endblock %}
+
 
 {% block content %}
 
+<!-- Page Header -->
 <section class="page-header">
-  <h1>{{ _("Equipment & Systems") }}</h1>
-  
-  <p>
-    {{ _("Design, manufacturing, and supply of advanced aquaculture equipment and integrated systems for modern hatcheries and farms.") }}
-  </p>
-<section class="section-white elev-1 section-panel">
-  <p>
-    {{ _("We design and manufacture a comprehensive range of aquaculture equipment and systems, covering water treatment, culture, biosecurity, and automation. All solutions are engineered for reliability, efficiency, and long-term operational performance.") }}
+  <h1>{{ _("Aquaculture Equipment Manufacturing & RAS Systems") }}</h1>
+
+  <p class="page-intro">
+    {{ _("Design, manufacturing, and integration of advanced aquaculture equipment for fish hatcheries, RAS facilities, and commercial farms.") }}
   </p>
 </section>
+
+<!-- Overview -->
+<section class="section-white elev-1 section-panel">
+  <p>
+    {{ _("We design and manufacture a comprehensive range of aquaculture equipment covering water treatment, culture systems, biosecurity, and automation integration. All solutions are engineered for reliability, efficiency, and long-term operational performance.") }}
+  </p>
+</section>
+
+<!-- Core Equipment -->
+<section class="tdq-home-section">
+  <div class="tdq-home-head">
+    <h2 class="tdq-home-title">{{ _("Equipment Portfolio") }}</h2>
+    <p class="tdq-home-sub">
+      {{ _("From filtration to complete RAS installations — engineered for stable production.") }}
+    </p>
+  </div>
 
   <div class="engineering-cards">
 
     <div class="eng-card elev-2">
       <h3>{{ _("Microalgae Photobioreactors") }}</h3>
       <p>
-        {{ _("Design and manufacturing of closed and semi-closed photobioreactors for edible and industrial microalgae production.") }}
+        {{ _("Closed and semi-closed photobioreactors for edible and industrial microalgae production.") }}
       </p>
       <ul>
-        <li>{{ _("Larval nutrition") }}</li>
+        <li>{{ _("Larval nutrition systems") }}</li>
         <li>{{ _("Biomass production") }}</li>
         <li>{{ _("Pigment extraction and fatty acids") }}</li>
       </ul>
@@ -34,7 +64,7 @@
 
     <div class="eng-card elev-2">
       <h3>{{ _("Filtration Systems") }}</h3>
-      <p>{{ _("Mechanical and biological filtration solutions for optimal water quality.") }}</p>
+      <p>{{ _("Mechanical and biological filtration systems for optimal water quality control.") }}</p>
       <ul>
         <li>{{ _("Drum filters") }}</li>
         <li>{{ _("Biofilters") }}</li>
@@ -57,7 +87,7 @@
       <ul>
         <li>{{ _("Pumps and skimmers") }}</li>
         <li>{{ _("Oxygenation systems") }}</li>
-        <li>{{ _("Smart control systems") }}</li>
+        <li>{{ _("Integrated PLC control systems") }}</li>
       </ul>
     </div>
 
@@ -80,13 +110,34 @@
     </div>
 
   </div>
+</section>
 
+<!-- Engineering Scope -->
 <section class="section-white elev-1 section-panel">
   <h2>{{ _("Engineering & Manufacturing Scope") }}</h2>
   <p>
-    {{ _("All equipment is designed based on process engineering principles, site-specific requirements, and long-term operational efficiency. Our scope includes manufacturing, system integration, testing, and commissioning.") }}
+    {{ _("All equipment is designed based on process engineering principles, site-specific requirements, and long-term operational efficiency. Our scope includes manufacturing, system integration, testing, commissioning, and performance validation.") }}
   </p>
 </section>
+
+<!-- SEO Block + Internal Links -->
+<section class="tdq-seo-block">
+  <h2>{{ _("Aquaculture Equipment for Modern Hatcheries & RAS Facilities") }}</h2>
+  <p>
+    {{ _("TDQ Co provides engineered aquaculture equipment including RAS systems, filtration units, disinfection systems, aeration solutions, and integrated control-ready infrastructure for scalable hatchery operations.") }}
+  </p>
+  <p>
+    {{ _("Our equipment integrates seamlessly with PLC automation and SCADA monitoring systems to ensure operational stability, biosecurity, and long-term production efficiency.") }}
+  </p>
+
+  <div class="tdq-seo-links">
+    <a href="{{ lang_url('automation') }}">{{ _("PLC automation & control systems") }}</a>
+    <a href="{{ lang_url('monitoring') }}">{{ _("SCADA monitoring systems") }}</a>
+    <a href="{{ lang_url('contact') }}">{{ _("Request a consultation") }}</a>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="section-white elev-1 section-panel">
   {% include "partials/specs_cta.html" %}
 </section>

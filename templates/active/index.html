@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}{{ _("Fish Hatchery Automation & SCADA | Tamhid Gostar (TDQ Co)") }}{% endblock %}
+{% block title %}
+  {% if current_locale == "fa" %}
+    اتوماسیون پرورش ماهی و سیستم اسکادا | تمهید گستر دانش پدید
+  {% else %}
+    {{ _("Fish Hatchery Automation & SCADA | Tamhid Gostar (TDQ Co)") }}
+  {% endif %}
+{% endblock %}
 
 {% block meta_description %}
 {{ _("Tamhid Gostar Danesh Padid (TDQ Co) delivers fish hatchery automation, RAS engineering, and SCADA monitoring systems for modern aquaculture facilities.") }}
@@ -8,59 +14,126 @@
 
 {% block content %}
 
-
-<section class="hero-section hero-tiles">
-
-  <!-- static glass tiles / base layer -->
-  <div class="hero-tiles-bg"></div>
-
-  <!-- flipping tiles overlay -->
-  <div class="hero-tiles-flip" aria-hidden="true">
-    {% for i in range(1, 37) %}
-      <span class="tile"></span>
-    {% endfor %}
+<section class="tdq-hero" aria-label="TDQ Hero">
+  <div class="tdq-hero-bg" aria-hidden="true">
+    <div class="tdq-hero-grid"></div>
+    <div class="tdq-hero-glow tdq-hero-glow-1"></div>
+    <div class="tdq-hero-glow tdq-hero-glow-2"></div>
   </div>
 
-  <!-- actual hero content (text, buttons) -->
-  <div class="hero-content fade-up">
-    <img src="{{ url_for('static', filename='logo.png') }}"
-         alt="Tamhid Gostar (TDQ Co) - Fish Hatchery Automation"
-         class="hero-logo">
+  <div class="tdq-hero-inner">
+    <div class="tdq-hero-content">
+      <p class="tdq-hero-kicker">
+        {{ _("Fish Hatchery Automation & Engineering") }}
+      </p>
 
-    <h1>{{ _("Fish Hatchery Automation & Aquaculture Engineering") }}</h1>
+      <h1 class="tdq-hero-title">
+        {{ _("Industrial") }}
+        <span class="tdq-hero-accent">{{ _("Automation") }}</span>
+        {{ _("for Aquaculture") }}
+      </h1>
 
-      {% if current_locale == "fa" %}
-        <p class="brand-line muted">
-          تمهید گستر دانش پدید (TDQ Co) — شرکت مهندسی اتوماسیون و کنترل آبزی‌پروری
-        </p>
-      {% else %}
-        <p class="brand-line muted">
-          Tamhid Gostar Danesh Padid (TDQ Co) — fish hatchery automation & aquaculture engineering
-        </p>
-      {% endif %}
+      <p class="tdq-hero-subtitle">
+        {% if current_locale == "fa" %}
+           شرکت تمهید گستر دانش پدید ارائه‌دهنده سیستم‌های اتوماسیون، کنترل و اسکادا برای مزارع پرورش ماهی و سیستم‌های RAS با تمرکز بر پایش لحظه‌ای، سنسورها و بهره‌وری عملیاتی.
+        {% else %}
+          {{ _("PLC/SCADA, sensors, dashboards, alarms, and data-driven control — designed for reliable hatchery operations and scalable growth.") }}
+        {% endif %}
+</p>
 
-    <div class="hero-buttons">
-      <a href="#main-sections" class="hero-btn primary">
-        {{ _("Explore Solutions") }}
+
+      <div class="tdq-hero-cta">
+        <a class="tdq-btn tdq-btn-primary" href="{{ url_for('contact') }}">
+          {{ _("Request a Consultation") }}
+        </a>
+
+      <a class="tdq-btn tdq-btn-ghost" href="#main-sections">
+        {{ _("Explore Services") }}
+        <span class="tdq-btn-arrow" aria-hidden="true">→</span>
       </a>
-      <!-- <a href="{{ url_for('contact') }}" class="hero-btn secondary"> -->
-      <a href="{{ lang_url('contact') }}" class="hero-btn secondary">
 
-        {{ _("Contact Us") }}
-      </a>
+      </div>
+
+      <div class="tdq-hero-meta">
+        <div class="tdq-meta-chip">{{ _("PLC / SCADA / HMI") }}</div>
+        <div class="tdq-meta-chip">{{ _("Sensors & Instrumentation") }}</div>
+        <div class="tdq-meta-chip">{{ _("Industrial IoT") }}</div>
+        <div class="tdq-meta-chip">{{ _("Control Panels") }}</div>
+      </div>
+    </div>
+
+    <div class="tdq-hero-panel" aria-hidden="true">
+      <div class="tdq-panel-card tdq-panel-card-main">
+        <div class="tdq-panel-header">
+          <div class="tdq-dot"></div>
+          <div class="tdq-dot"></div>
+          <div class="tdq-dot"></div>
+          <div class="tdq-panel-title">{{ _("System Overview") }}</div>
+        </div>
+
+        <div class="tdq-panel-body">
+          <div class="tdq-panel-row">
+            <div class="tdq-panel-label">{{ _("Live Sensors") }}</div>
+            <div class="tdq-panel-value">{{ _("Temp, DO, pH, ORP") }}</div>
+          </div>
+          <div class="tdq-panel-row">
+            <div class="tdq-panel-label">{{ _("Automation") }}</div>
+            <div class="tdq-panel-value">{{ _("Feeding, aeration, dosing") }}</div>
+          </div>
+          <div class="tdq-panel-row">
+            <div class="tdq-panel-label">{{ _("SCADA") }}</div>
+            <div class="tdq-panel-value">{{ _("Trends, alarms, KPIs") }}</div>
+          </div>
+
+          <div class="tdq-panel-divider"></div>
+
+          <div class="tdq-mini-metrics">
+            <div class="tdq-metric">
+              <div class="tdq-metric-num">24/7</div>
+              <div class="tdq-metric-label">{{ _("Monitoring") }}</div>
+            </div>
+            <div class="tdq-metric">
+              <div class="tdq-metric-num">±</div>
+              <div class="tdq-metric-label">{{ _("Stable Control") }}</div>
+            </div>
+            <div class="tdq-metric">
+              <div class="tdq-metric-num">1</div>
+              <div class="tdq-metric-label">{{ _("Unified System") }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tdq-panel-card tdq-panel-card-float tdq-float-1">
+        <div class="tdq-float-title">{{ _("Alarm Ready") }}</div>
+        <div class="tdq-float-sub">{{ _("SMS/Email/SCADA alerts") }}</div>
+      </div>
+
+      <div class="tdq-panel-card tdq-panel-card-float tdq-float-2">
+        <div class="tdq-float-title">{{ _("Data Logging") }}</div>
+        <div class="tdq-float-sub">{{ _("Trends & reports") }}</div>
+      </div>
     </div>
   </div>
-
 </section>
 
 
-<main id="main-sections">
+
+
+<section class="tdq-home-section" id="main-sections">
+  <div class="tdq-home-head">
+    <h2 class="tdq-home-title">{{ _("Engineering Solutions") }}</h2>
+    <p class="tdq-home-sub">{{ _("Design, automation, monitoring, and R&D — built for reliable hatchery performance.") }}</p>
+  </div>
   <div class="engineering-cards">
 
     <!-- Equipment Manufacturing -->
     <a href="{{ lang_url('equipment') }}" class="eng-card-link">
       <div class="eng-card elev-2 fade-up delay-1">
-        <div class="eng-icon">⚙️</div>
+        <div class="eng-icon" aria-hidden="true">
+          <svg class="icon eng-card-icon"><use href="#icon-industry" xlink:href="#icon-industry"></use></svg>
+        </div>
+
         <h3>{{ _("Equipment Manufacturing") }}</h3>
         <p>{{ _("Design and fabrication of hatchery equipment including tanks, RAS systems, and filtration units.") }}</p>
       </div>
@@ -69,7 +142,9 @@
     <!-- Commercial Services -->
     <a href="{{ lang_url('commercial') }}" class="eng-card-link">
       <div class="eng-card elev-2 fade-up delay-2">
-        <div class="eng-icon">🏗️</div>
+        <div class="eng-icon" aria-hidden="true">
+          <svg class="icon eng-card-icon"><use href="#icon-briefcase" xlink:href="#icon-briefcase"></use></svg>
+        </div>
         <h3>{{ _("Commercial Services") }}</h3>
         <p>{{ _("Engineering consulting, system integration, and commissioning services for aquaculture projects.") }}</p>
       </div>
@@ -78,7 +153,9 @@
     <!-- Automation & Control -->
     <a href="{{ lang_url('automation') }}" class="eng-card-link">
       <div class="eng-card elev-2 fade-up delay-3">
-        <div class="eng-icon">🤖</div>
+        <div class="eng-icon" aria-hidden="true">
+          <svg class="icon eng-card-icon"><use href="#icon-microchip" xlink:href="#icon-microchip"></use></svg>
+        </div>
         <h3>{{ _("Automation & Control") }}</h3>
         <p>{{ _("PLC, HMI, and control system design for reliable hatchery operations.") }}</p>
       </div>
@@ -87,7 +164,9 @@
     <!-- Monitoring & SCADA -->
     <a href="{{ lang_url('monitoring') }}" class="eng-card-link">
       <div class="eng-card elev-2 fade-up delay-4">
-        <div class="eng-icon">📊</div>
+        <div class="eng-icon" aria-hidden="true">
+          <svg class="icon eng-card-icon"><use href="#icon-chart" xlink:href="#icon-chart"></use></svg>
+        </div>
         <h3>{{ _("Monitoring & SCADA") }}</h3>
         <p>{{ _("Real-time monitoring, dashboards, alarms, and data logging for aquaculture facilities.") }}</p>
       </div>
@@ -96,7 +175,9 @@
     <!-- R&D -->
     <a href="{{ lang_url('rnd') }}" class="eng-card-link">
       <div class="eng-card elev-2 fade-up delay-1">
-        <div class="eng-icon">🧪</div>
+        <div class="eng-icon" aria-hidden="true">
+          <svg class="icon eng-card-icon"><use href="#icon-flask" xlink:href="#icon-flask"></use></svg>
+        </div>  
         <h3>{{ _("Research & Development (R&D)") }}</h3>
         <p>{{ _("Innovation, pilot systems, and performance optimization for next-generation hatcheries.") }}</p>
       </div>
@@ -105,15 +186,50 @@
     <!-- About Us -->
     <a href="{{ lang_url('about') }}" class="eng-card-link">
       <div class="eng-card elev-2 fade-up delay-2">
-        <div class="eng-icon">ℹ️</div>
+        <div class="eng-icon" aria-hidden="true">
+          <svg class="icon eng-card-icon"><use href="#icon-users" xlink:href="#icon-users"></use></svg>
+        </div>
         <h3>{{ _("About Us") }}</h3>
         <p>{{ _("Company background, project experience, and expert team profiles.") }}</p>
       </div>
     </a>
 
   </div>
-</main>
+</section>
 
+<section class="tdq-seo-block">
+  {% if current_locale == "fa" %}
+    <h2>اتوماسیون پرورش ماهی و سیستم‌های اسکادا آبزی‌پروری</h2>
+    <p>
+      تمهید گستر دانش پدید راهکارهای مهندسی شامل طراحی تابلوهای PLC،
+      پیاده‌سازی سیستم‌های اسکادا، سنسورهای DO، pH و ORP و سیستم‌های پایش و ثبت داده
+      برای هچری‌ها و مزارع پرورش ماهی ارائه می‌دهد.
+    </p>
+    <p>
+      این راهکارها با هدف افزایش پایداری، بهبود عملکرد زیستی و کاهش ریسک عملیاتی در
+      سیستم‌های RAS و واحدهای آبزی‌پروری طراحی شده‌اند.
+    </p>
+  {% else %}
+    <h2>{{ _("Fish Hatchery Automation & SCADA Systems") }}</h2>
+    <p>
+      {{ _("TDQ Co delivers fish hatchery automation and aquaculture engineering solutions including PLC control panels, SCADA dashboards, alarms, sensors (DO, pH, ORP, temperature), and data logging for modern hatcheries and RAS facilities.") }}
+    </p>
+    <p>
+      {{ _("Our engineering services cover equipment manufacturing, system integration, commissioning, and performance optimization to improve reliability, biosecurity, and operational efficiency.") }}
+    </p>
+  {% endif %}
 
+  <div class="tdq-seo-links">
+    <a href="{{ lang_url('automation') }}">
+      {% if current_locale == "fa" %}سیستم‌های اتوماسیون و کنترل PLC{% else %}{{ _("PLC automation & control systems") }}{% endif %}
+    </a>
+    <a href="{{ lang_url('monitoring') }}">
+      {% if current_locale == "fa" %}داشبوردهای اسکادا و پایش آنلاین{% else %}{{ _("Monitoring & SCADA dashboards") }}{% endif %}
+    </a>
+    <a href="{{ lang_url('equipment') }}">
+      {% if current_locale == "fa" %}ساخت تجهیزات و سیستم‌های RAS{% else %}{{ _("RAS equipment manufacturing") }}{% endif %}
+    </a>
+  </div>
+</section>
 
 {% endblock %}

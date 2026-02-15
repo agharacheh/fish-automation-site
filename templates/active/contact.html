@@ -20,91 +20,133 @@
   </p>
 {% endif %}
 
-<div class="card-light">
-  
-    <p>{{ _("Send your technical inquiry for hatchery engineering, automation, SCADA integration, or equipment specifications.") }}</p>
+<p class="muted">
+  {{ _("Send your technical inquiry for hatchery engineering, automation, SCADA integration, or equipment specifications.") }}
+</p>
+
 <section class="section-white elev-1 section-panel">
-    <!-- contact details -->
-<ul class="contact-details">
-  <li>
-    <svg class="icon"><use href="#icon-location"></use></svg>
-    <span class="contact-label">{{ _("Office Location") }}:</span>
-    <span class="contact-address" id="office-address">
-        {{ _("Shiraz, Iran East Ghodoosi, Seda va sima street, Honar building") }}
-    </span>
-  </li>
-  <li>
-    <svg class="icon"><use href="#icon-email"></use></svg>
-    <a href="mailto:info@tdqco.com"
-        class="copyable"
-        data-copy="info@tdqco.com">
-        <span class="email" dir="ltr">info@tdqco.com</span>
-    </a>
-  </li>
-  <li>
-    <svg class="icon"><use href="#icon-phone"></use></svg>
-    <a href="tel:+987138239933"
-        class="ltr copyable"
-        data-copy="+98 71 3823 9933">
-        <span class="phone-number" dir="ltr">+98 71 3823 9933</span>
-    </a>
-  </li>
+  <ul class="contact-details">
     <li>
-        <svg class="icon"><use href="#icon-clock"></use></svg>
-        <span class="contact-label">{{ _("Working Hours") }}:</span>
-        <span class="contact-value">
-            {{ _("Saturday to Thursday, 8:00 – 16:00") }}
-        </span>
+      <svg class="icon" aria-hidden="true"><use href="#icon-location"></use></svg>
+      <span class="contact-label">{{ _("Office Location") }}:</span>
+      <span class="contact-address" id="office-address">
+        {{ _("Shiraz, Iran East Ghodoosi, Seda va sima street, Honar building") }}
+      </span>
     </li>
-</ul>
-<hr class="soft-divider">
-<div class="contact-socials">
-  <a href="https://wa.me/989379964159" aria-label="WhatsApp" data-tooltip="WhatsApp">
-    <svg class="icon"><use href="#icon-whatsapp"></use></svg>
-  </a>
-  <a href="https://t.me/989379964159" aria-label="Telegram" data-tooltip="Telegram">
-    <svg class="icon"><use href="#icon-telegram"></use></svg>
-  </a>
-  <a href="https://instagram.com/yourinstagram" aria-label="Instagram" data-tooltip="Instagram">
-    <svg class="icon"><use href="#icon-instagram"></use></svg>
-  </a>
-  <a href="https://linkedin.com/company/yourlinkedin" aria-label="LinkedIn" data-tooltip="LinkedIn">
-    <svg class="icon"><use href="#icon-linkedin"></use></svg>
-  </a>
-</div>
+
+    <li>
+      <svg class="icon" aria-hidden="true"><use href="#icon-email"></use></svg>
+      <span class="contact-label">{{ _("Email") }}:</span>
+      <a href="mailto:info@tdqco.com"
+         class="copyable"
+         data-copy="info@tdqco.com">
+        <span class="email" dir="ltr">info@tdqco.com</span>
+      </a>
+    </li>
+
+    <li>
+      <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+      <span class="contact-label">{{ _("Phone") }}:</span>
+      <a href="tel:+987138239933"
+         class="copyable"
+         data-copy="+98 71 3823 9933">
+        <span class="phone-number" dir="ltr">+98 71 3823 9933</span>
+      </a>
+    </li>
+
+    <li>
+      <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+      <span class="contact-label">{{ _("Working Hours") }}:</span>
+      <span class="contact-value">
+        {{ _("Saturday to Thursday, 8:00 – 16:00") }}
+      </span>
+    </li>
+  </ul>
+
+  <hr class="soft-divider">
+
+  <div class="contact-socials" aria-label="{{ _('Social links') }}">
+    <a href="https://wa.me/989379964159" aria-label="WhatsApp" data-tooltip="WhatsApp" rel="noopener">
+      <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+    </a>
+    <a href="https://t.me/989379964159" aria-label="Telegram" data-tooltip="Telegram" rel="noopener">
+      <svg class="icon" aria-hidden="true"><use href="#icon-telegram"></use></svg>
+    </a>
+
+    {# Hide these until real links exist (recommended) #}
+    {# 
+    <a href="https://instagram.com/yourinstagram" aria-label="Instagram" data-tooltip="Instagram" rel="noopener nofollow">
+      <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>
+    </a>
+    <a href="https://linkedin.com/company/yourlinkedin" aria-label="LinkedIn" data-tooltip="LinkedIn" rel="noopener nofollow">
+      <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+    </a>
+    #}
+    <a href="https://instagram.com/yourinstagram"
+       aria-label="Instagram — Coming soon"
+       data-tooltip="{{ _('Instagram — Coming soon') }}"
+       rel="nofollow noopener"
+       target="_blank"
+       class="social-coming-soon">
+      <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>
+    </a>
+
+    <a href="https://linkedin.com/company/yourlinkedin"
+       aria-label="LinkedIn — Coming soon"
+       data-tooltip="{{ _('LinkedIn — Coming soon') }}"
+       rel="nofollow noopener"
+       target="_blank"
+       class="social-coming-soon">
+      <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+    </a>
+  </div>
 </section>
+
 <section class="section-white elev-1 section-panel">
-    <div class="contact-map" id="office-map">
-    <iframe
-        src="https://www.google.com/maps?q=Shiraz+E Ghodoosi Blvd+املاک صفاریان&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        aria-label="{{ _('Company location map') }}">
-    </iframe>
+<div class="contact-map" id="office-map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d216.76382851312553!2d52.48440825723477!3d29.626316444932836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fb213cc2f0e854f%3A0x949cf012758c60bd!2sFars%20Province%2C%20Shiraz%2C%20Telvizion%2C%20JFGM%2BGQW%2C%20Iran!5e0!3m2!1sen!2s!4v1771076504220!5m2!1sen!2s"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen
+    aria-label="{{ _('Company location map') }}">
+  </iframe>
 </div>
-</section>
+
 <section class="section-white elev-1 section-panel">
-{% include "partials/specs_cta.html" %}
+  {% include "partials/specs_cta.html" %}
 </section>
-<section class="section-white elev-1 section-panel">
-    <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
 
-        <label>{{ _("Your Name") }}</label>
-        <input type="text" name="name" required placeholder="{{ _('Enter your name') }}">
+<section class="section-white elev-1 section-panel" id="contact-form">
+  <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+    <div class="hp-field" aria-hidden="true">
+      <label for="company">{{ _("Company") }}</label>
+      <input id="company" type="text" name="company" tabindex="-1" autocomplete="off">
+    </div>
+<input type="hidden" name="form_ts" id="form-ts" value="">
 
-        <label>{{ _("Email Address") }}</label>
-        <input type="email" name="email" required placeholder="{{ _('Enter your email') }}">
+    <label for="contact-name">{{ _("Your Name") }}</label>
+    <input id="contact-name" type="text" name="name" required placeholder="{{ _('Enter your name') }}">
 
-        <label>{{ _("Message") }}</label>
-        <textarea name="message" required placeholder="{{ _('Write your inquiry here…') }}"></textarea>
+    <label for="contact-email">{{ _("Email Address") }}</label>
+    <input id="contact-email" type="email" name="email" required placeholder="{{ _('Enter your email') }}">
 
-        <button type="submit" class="btn-submit">{{ _("Send Message") }}</button>
-    </form>
+    <label for="contact-message">{{ _("Message") }}</label>
+    <textarea id="contact-message" name="message" required placeholder="{{ _('Write your inquiry here…') }}"></textarea>
 
-    {% if success %}
-        <p class="success-msg">{{ _("Your message was sent successfully!") }}</p>
-    {% endif %}
-    </section>
-</div>
+    <button type="submit" class="btn-submit" id="contact-submit">
+      <span class="btn-text">{{ _("Send Message") }}</span>
+      <span class="btn-loading" aria-hidden="true" style="display:none;">{{ _("Sending…") }}</span>
+    </button>
+  </form>
+
+  <p class="success-msg {% if success %}is-visible{% endif %}"
+     role="status"
+     id="contact-result"
+     {% if not success %}aria-hidden="true"{% endif %}>
+    {{ _("Your message was sent successfully!") }}
+  </p>
+</section>
+
 
 {% endblock %}

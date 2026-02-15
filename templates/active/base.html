@@ -3,6 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ _("Fish Hatchery Automation & Aquaculture Engineering | TDQ Co") }}{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}{{ _('Advanced fish hatchery automation, RAS systems, SCADA, and aquaculture engineering solutions.') }}{% endblock %}">
+
+
+
+{# --- Open Graph / Twitter (safe + no stray text) --- #}
+
+{% set og_title %}{% block og_title %}{{ _('Fish Hatchery Automation & Aquaculture Engineering | TDQ Co') }}{% endblock %}{% endset %}
+{% set og_description %}{% block og_description %}{{ _('Advanced fish hatchery automation, RAS systems, SCADA, and aquaculture engineering solutions.') }}{% endblock %}{% endset %}
+
+{% set og_title = og_title|striptags|trim %}
+{% set og_description = og_description|striptags|trim %}
+
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ og_description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.base_url }}?lang={{ current_locale }}">
+<meta property="og:image" content="{{ url_for('static', filename='logo.png', _external=True) }}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ og_title }}">
+<meta name="twitter:description" content="{{ og_description }}">
+<meta name="twitter:image" content="{{ url_for('static', filename='logo.png', _external=True) }}">
+
+
 
   {# hreflang #}
   <link rel="alternate" hreflang="en" href="{{ request.base_url }}?lang=en">
@@ -12,17 +37,18 @@
   {# canonical #}
   <link rel="canonical" href="{{ request.base_url }}?lang={{ current_locale }}">
 
-  <title>{% block title %}{{ _("Fish Hatchery Automation & Aquaculture Engineering | TDQ Co") }}{% endblock %}</title>
-
-  <meta name="description" content="{% block meta_description %}{{ _('Advanced fish hatchery automation, RAS systems, SCADA, and aquaculture engineering solutions.') }}{% endblock %}">
-
+  
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='logo.png') }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='logo.png') }}">
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='logo.png') }}">
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
 
-  <link rel="preload" href="{{ url_for('static', filename='fonts/vazirmatn-regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload"
+      href="{{ url_for('static', filename='fonts/Vazirmatn-SemiBold.woff2') }}"
+      as="font"
+      type="font/woff2"
+      crossorigin>
 
   <script type="application/ld+json">
   {
@@ -61,39 +87,41 @@
 
     <!-- ENGLISH MENU -->
     <div class="menu-en {% if current_locale != 'en' %}is-hidden{% endif %}">
-<a href="{{ lang_url('index') }}">
+  <a href="{{ lang_url('index') }}" class="{% if request.path == '/' %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-home" xlink:href="#icon-home"></use></svg>
   Home
-</a>
+  </a>
 
-<a href="{{ lang_url('equipment') }}">
+
+<a href="{{ lang_url('equipment') }}" class="{% if request.path.startswith('/equipment') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-industry" xlink:href="#icon-industry"></use></svg>
   Equipment Manufacturing
 </a>
 
-<a href="{{ lang_url('commercial') }}">
+
+<a href="{{ lang_url('commercial') }}" class="{% if request.path.startswith('/commercial') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-briefcase" xlink:href="#icon-briefcase"></use></svg>
   Commercial Services
 </a>
 
-<a href="{{ lang_url('automation') }}">
+<a href="{{ lang_url('automation') }}" class="{% if request.path.startswith('/automation') %}active{% endif %}">
   <svg class="icon nav-icon">
     <use href="#icon-microchip" xlink:href="#icon-microchip"></use>
   </svg>
   Automation & Control
 </a>
 
-<a href="{{ lang_url('rnd') }}">
+<a href="{{ lang_url('rnd') }}"  class="{% if request.path.startswith('/rnd') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-flask" xlink:href="#icon-flask"></use></svg>
   Research & Development
 </a>
 
-<a href="{{ lang_url('about') }}">
+<a href="{{ lang_url('about') }}" class="{% if request.path.startswith('/about') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-users" xlink:href="#icon-users"></use></svg>
   About Us
 </a>
 
-<a href="{{ lang_url('contact') }}">
+<a href="{{ lang_url('contact') }}"  class="{% if request.path.startswith('/contact') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-email" xlink:href="#icon-email"></use></svg>
   Contact / Specs
 </a>
@@ -102,39 +130,39 @@
 
     <!-- PERSIAN MENU -->
     <div class="menu-fa {% if current_locale != 'fa' %}is-hidden{% endif %}">
-<a href="{{ lang_url('index') }}">
+<a href="{{ lang_url('index') }}" class="{% if request.path == '/' %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-home" xlink:href="#icon-home"></use></svg>
   خانه
 </a>
 
-<a href="{{ lang_url('equipment') }}">
+<a href="{{ lang_url('equipment') }}" class="{% if request.path.startswith('/equipment') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-industry" xlink:href="#icon-industry"></use></svg>
   ساخت تجهیزات
 </a>
 
-<a href="{{ lang_url('commercial') }}">
+<a href="{{ lang_url('commercial') }}" class="{% if request.path.startswith('/commercial') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-briefcase" xlink:href="#icon-briefcase"></use></svg>
   خدمات بازرگانی
 </a>
 
-<a href="{{ lang_url('automation') }}">
+<a href="{{ lang_url('automation') }}" class="{% if request.path.startswith('/automation') %}active{% endif %}">
   <svg class="icon nav-icon">
     <use href="#icon-microchip" xlink:href="#icon-microchip"></use>
   </svg>
   اتوماسیون و کنترل
 </a>
 
-<a href="{{ lang_url('rnd') }}">
+<a href="{{ lang_url('rnd') }}"  class="{% if request.path.startswith('/rnd') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-flask" xlink:href="#icon-flask"></use></svg>
   تحقیق و توسعه
 </a>
 
-<a href="{{ lang_url('about') }}">
+<a href="{{ lang_url('about') }}" class="{% if request.path.startswith('/about') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-users" xlink:href="#icon-users"></use></svg>
   درباره ما
 </a>
 
-<a href="{{ lang_url('contact') }}">
+<a href="{{ lang_url('contact') }}"  class="{% if request.path.startswith('/contact') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-email" xlink:href="#icon-email"></use></svg>
   تماس / مشخصات
 </a>
@@ -365,6 +393,158 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const panel = document.querySelector(".tdq-hero-panel");
+  if (!panel) return;
+
+  const cards = Array.from(panel.querySelectorAll(".tdq-panel-card"));
+  const mainCard = panel.querySelector(".tdq-panel-card-main");
+
+  const activate = (card) => {
+    panel.classList.add("is-focus");
+    cards.forEach(c => c.classList.toggle("is-active", c === card));
+
+    // special state when the main "System Overview" is active
+    if (mainCard && card === mainCard) panel.classList.add("is-main-active");
+    else panel.classList.remove("is-main-active");
+  };
+
+  const clear = () => {
+    panel.classList.remove("is-focus", "is-main-active");
+    cards.forEach(c => c.classList.remove("is-active"));
+  };
+
+  cards.forEach(card => {
+    card.addEventListener("mouseenter", () => activate(card));
+    card.addEventListener("mouseleave", clear);
+
+    // (optional) keyboard accessibility
+    card.setAttribute("tabindex", "0");
+    card.addEventListener("focus", () => activate(card));
+    card.addEventListener("blur", clear);
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const modal = document.getElementById("tdqModal");
+  const modalImg = document.getElementById("tdqModalImg");
+  const modalCaption = document.getElementById("tdqModalCaption");
+  const modalClose = document.getElementById("tdqModalClose");
+
+  // If the modal doesn't exist on this page, do nothing (prevents errors)
+  if (!modal || !modalImg || !modalCaption) return;
+
+  // Gallery click handlers (only if items exist)
+  document.querySelectorAll(".tdq-gallery-item").forEach(item => {
+    item.addEventListener("click", function () {
+      const img = item.querySelector("img");
+      const caption = item.querySelector("figcaption");
+
+      if (!img) return;
+
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+      modalCaption.innerText = caption ? caption.innerText : "";
+    });
+  });
+
+  // Close button (only if it exists)
+  if (modalClose) {
+    modalClose.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  }
+
+  // Close when clicking the backdrop
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+});
+</script>
+
+
+<script>
+  (function () {
+    const form = document.querySelector(".contact-form");
+    if (!form) return;
+
+    const btn = document.getElementById("contact-submit");
+    if (!btn) return;
+
+    const text = btn.querySelector(".btn-text");
+    const loading = btn.querySelector(".btn-loading");
+
+    form.addEventListener("submit", function () {
+      // disable to prevent double click
+      btn.disabled = true;
+
+      // swap labels
+      if (text) text.style.display = "none";
+      if (loading) loading.style.display = "inline";
+
+      // optional: add a class for styling
+      btn.classList.add("is-loading");
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    const ts = document.getElementById("form-ts");
+    if (ts) ts.value = Date.now().toString();
+  })();
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".contact-form");
+  if (!form) return;
+
+  // Timestamp for anti-spam
+  const ts = document.getElementById("form-ts");
+  if (ts) ts.value = Date.now().toString();
+
+  // Loading state
+  const btn = document.getElementById("contact-submit");
+  if (btn) {
+    const text = btn.querySelector(".btn-text");
+    const loading = btn.querySelector(".btn-loading");
+
+    form.addEventListener("submit", function () {
+      btn.disabled = true;
+      if (text) text.style.display = "none";
+      if (loading) loading.style.display = "inline";
+      btn.classList.add("is-loading");
+    });
+  }
+
+  // Success message scroll + auto-hide
+  const msg = document.getElementById("contact-result");
+  if (msg && msg.classList.contains("is-visible")) {
+    requestAnimationFrame(() => {
+      msg.scrollIntoView({ behavior: "smooth", block: "center" });
+      msg.setAttribute("tabindex", "-1");
+      msg.focus({ preventScroll: true });
+    });
+
+    window.setTimeout(() => {
+      msg.classList.add("is-hiding");
+      msg.classList.remove("is-visible");
+      msg.setAttribute("aria-hidden", "true");
+    }, 6000);
+  }
+});
+</script>
+
 
 </body>
 </html>

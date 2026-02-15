@@ -1,34 +1,63 @@
 {% extends "base.html" %}
 
-{% block title %}{{ _("Monitoring & SCADA | Tamhid Gostar (TDQ Co)") }}{% endblock %}
+{# ==============================
+   SEO: Title + Meta + OG
+============================== #}
 
-{% block meta_description %}{{ _("SCADA dashboards, alarms, trends, KPIs, and remote monitoring for hatchery and aquaculture facilities.") }}{% endblock %}
+{% block title %}
+  {{ _("SCADA Monitoring & Dashboards for Fish Hatcheries | Alarms & Trends | TDQ Co") }}
+{% endblock %}
+
+{% block meta_description %}
+  {{ _("TDQ Co delivers SCADA monitoring for fish hatcheries and RAS facilities: dashboards, alarms, historical trends, KPIs, data logging, and secure remote access.") }}
+{% endblock %}
+
+{% block og_title %}
+  {{ _("SCADA Monitoring & Dashboards for Fish Hatcheries | TDQ Co") }}
+{% endblock %}
+
+{% block og_description %}
+  {{ _("Dashboards, alarms, trends, KPIs, and data logging — SCADA monitoring designed for reliable aquaculture operations and RAS facilities.") }}
+{% endblock %}
+
 
 {% block content %}
 
+<!-- Page Header -->
 <section class="page-header">
-  <h1>{{ _("Monitoring & SCADA") }}</h1>
-  <p>{{ _("SCADA dashboards, alarms, historical trends, KPIs, and secure remote access for aquaculture operations.") }}</p>
+  <h1>{{ _("SCADA Monitoring & Dashboards for Fish Hatcheries") }}</h1>
+
+  <p class="page-intro">
+    {{ _("Real-time monitoring, alarms, historical trends, KPI reporting, and secure remote access — built for stable hatchery operations and scalable RAS facilities.") }}
+  </p>
 </section>
 
+<!-- Overview -->
 <section class="section-white elev-1 section-panel">
-  <p>{{ _("This section covers SCADA dashboards, alarms, historical trends, KPIs, and remote access.") }}</p>
+  <p>
+    {{ _("Our SCADA systems centralize sensor data (temperature, DO, pH, ORP, flow, level), automate alarms and notifications, and provide clear dashboards for operators, maintenance, and management.") }}
+  </p>
 </section>
 
+<!-- Key Features -->
 <section class="section-white elev-1 section-panel">
-  <h2>{{ _("SCADA Features") }}</h2>
+  <h2>{{ _("SCADA Capabilities") }}</h2>
   <ul>
-    <li>{{ _("Sensor live monitoring (temperature, DO, pH, ORP)") }}</li>
-    <li>{{ _("Alarm notifications and fault signals") }}</li>
-    <li>{{ _("Historical trend charts for every hatchery unit") }}</li>
-    <li>{{ _("KPI calculations (FCR, survival rate)") }}</li>
-    <li>{{ _("Remote access and data visualization") }}</li>
+    <li>{{ _("Live sensor monitoring (temperature, DO, pH, ORP, flow, level)") }}</li>
+    <li>{{ _("Alarm notifications, fault signals, and event history") }}</li>
+    <li>{{ _("Historical trends and data logging for each hatchery unit") }}</li>
+    <li>{{ _("KPIs and performance indicators (FCR, survival rate, energy usage)") }}</li>
+    <li>{{ _("Secure remote access and role-based visualization") }}</li>
   </ul>
 </section>
 
+<!-- Live Mockup -->
 <section class="section-light">
   <div class="section-white elev-1 section-panel">
     <h2>{{ _("SCADA Live Mockup") }}</h2>
+    <p style="margin-top:6px;">
+      {{ _("A simplified demo panel showing typical hatchery signals and status indicators. Values update automatically.") }}
+    </p>
 
     <div class="scada-panel">
 
@@ -54,35 +83,72 @@
         <h3>{{ _("pH Level") }}</h3>
         <div class="scada-value" id="phVal">7.6</div>
         <div class="status-light green" id="phStatus"></div>
-    </div>
-
+      </div>
 
     </div>
   </div>
 </section>
 
+<!-- SEO Block + Internal Links -->
+<section class="tdq-seo-block">
+  <h2>{{ _("SCADA Systems for Aquaculture Operations") }}</h2>
+  <p>
+    {{ _("TDQ Co designs SCADA monitoring for hatcheries and RAS facilities, including dashboards, alarm management, trend charts, KPI reporting, and data logging for operational control and decision support.") }}
+  </p>
+  <p>
+    {{ _("We integrate monitoring with PLC automation, sensors, and control panels to create a unified system that improves reliability, biosecurity, and production stability.") }}
+  </p>
+
+  <div class="tdq-seo-links">
+    <a href="{{ lang_url('automation') }}">{{ _("PLC automation & control") }}</a>
+    <a href="{{ lang_url('equipment') }}">{{ _("RAS equipment manufacturing") }}</a>
+    <a href="{{ lang_url('contact') }}">{{ _("Request a consultation") }}</a>
+  </div>
+</section>
+
 <script>
-function simulateValues() {
-  const tempEl = document.getElementById("tempVal");
-  const doEl = document.getElementById("doVal");
-  const flowEl = document.getElementById("flowVal");
-  const phEl = document.getElementById("phVal");
+(function () {
+  const update = () => {
+    const tempEl = document.getElementById("tempVal");
+    const doEl = document.getElementById("doVal");
+    const flowEl = document.getElementById("flowVal");
+    const phEl = document.getElementById("phVal");
+    if (!tempEl || !doEl || !flowEl || !phEl) return;
 
-  if (!tempEl || !doEl || !flowEl || !phEl) return;
+    const t = (26 + Math.random() * 2).toFixed(1);
+    const d = (6.5 + Math.random() * 1).toFixed(1);
+    const f = (400 + Math.random() * 60).toFixed(0);
+    const ph = (7.0 + Math.random() * (8.2 - 7.0)).toFixed(1);
 
-  const t = (26 + Math.random() * 2).toFixed(1);
-  const d = (6.5 + Math.random() * 1).toFixed(1);
-  const f = (400 + Math.random() * 60).toFixed(0);
+    tempEl.textContent = t + "°C";
+    doEl.textContent = d + " mg/L";
+    flowEl.textContent = f + " L/hr";
+    phEl.textContent = ph;
+  };
 
-  // pH range: 7.0 to 8.2
-  const ph = (7.0 + Math.random() * (8.2 - 7.0)).toFixed(1);
+  let timer = null;
 
-  tempEl.innerText = t + "°C";
-  doEl.innerText = d + " mg/L";
-  flowEl.innerText = f + " L/hr";
-  phEl.innerText = ph;
-}
-setInterval(simulateValues, 3000);
+  const start = () => {
+    if (timer) return;
+    update();
+    timer = setInterval(update, 3000);
+  };
+
+  const stop = () => {
+    if (!timer) return;
+    clearInterval(timer);
+    timer = null;
+  };
+
+  // Pause when tab not visible
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stop();
+    else start();
+  });
+
+  // Start only if the mockup exists
+  if (document.getElementById("tempVal")) start();
+})();
 </script>
 
 

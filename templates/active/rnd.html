@@ -1,110 +1,148 @@
-{# templates/rnd.html #}
 {% extends "base.html" %}
 
-{% block title %}{{ _("R&D | Tamhid Gostar (TDQ Co)") }}{% endblock %}
+{# ==============================
+   SEO: Title + Meta + OG
+============================== #}
 
-{% block meta_description %}{{ _("Research and development for aquaculture: pilot testing, process optimization, water quality control, and performance improvement.") }}{% endblock %}
+{% block title %}
+  {{ _("Aquaculture Research & Development | Feed, Health & Genetics | TDQ Co") }}
+{% endblock %}
+
+{% block meta_description %}
+  {{ _("TDQ Co provides aquaculture R&D including feed development, alternative proteins, fish health solutions, selective breeding and genetics, and value-added product development for hatcheries and RAS facilities.") }}
+{% endblock %}
+
+{% block og_title %}
+  {{ _("Aquaculture R&D | Feed, Fish Health & Genetics | TDQ Co") }}
+{% endblock %}
+
+{% block og_description %}
+  {{ _("Applied aquaculture research: feed formulation, alternative proteins, vaccines, genetics, and value-added products — focused on measurable performance improvements.") }}
+{% endblock %}
+
+
 {% block content %}
 
+<!-- Page Header -->
 <section class="page-header">
-  <h1>{{ _("Research & Development (R&D)") }}</h1>
-  <p>
-    {{ _("Applied research and innovation to improve performance, sustainability, fish health, and value creation across aquaculture operations.") }}
+  <h1>{{ _("Aquaculture Research & Development (R&D)") }}</h1>
+
+  <p class="page-intro">
+    {{ _("Applied research and innovation to improve performance, sustainability, fish health, and value creation across hatcheries and aquaculture operations.") }}
   </p>
 </section>
 
+<!-- Overview -->
 <section class="section-white elev-1 section-panel">
   <p>
-    {{ _("Our R&D activities focus on practical, scalable outcomes—bridging science and production through formulation work, health solutions, genetics, and product development for modern aquaculture.") }}
+    {{ _("Our R&D focuses on practical, scalable outcomes — bridging science and production through formulation work, health solutions, genetics, and product development for modern aquaculture.") }}
   </p>
 </section>
 
-<div class="engineering-cards">
-
-  <div class="eng-card elev-2">
-    <h3>{{ _("Feed Development") }}</h3>
-    <p>
-      {{ _("Research on feed formulation optimization to enhance growth performance and feed conversion ratios (FCR).") }}
+<!-- Core R&D Areas -->
+<section class="tdq-home-section">
+  <div class="tdq-home-head">
+    <h2 class="tdq-home-title">{{ _("R&D Focus Areas") }}</h2>
+    <p class="tdq-home-sub">
+      {{ _("Research programs designed for measurable outcomes and real-world deployment.") }}
     </p>
-    <ul>
-      <li>{{ _("Nutrient profiling and formulation optimization") }}</li>
-      <li>{{ _("Performance testing for growth and FCR") }}</li>
-      <li>{{ _("Digestibility and waste reduction") }}</li>
-    </ul>
   </div>
 
-  <div class="eng-card elev-2">
-    <h3>{{ _("Alternative Protein Sources") }}</h3>
-    <p>
-      {{ _("Study and production of alternative protein sources such as insect protein, algae, and single-cell protein.") }}
-    </p>
-    <ul>
-      <li>{{ _("Insect protein") }}</li>
-      <li>{{ _("Algae and microalgae protein") }}</li>
-      <li>{{ _("Single-cell protein (SCP)") }}</li>
-      <li>{{ _("Sustainability and scalability assessment") }}</li>
-    </ul>
+  <div class="engineering-cards">
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Feed Development") }}</h3>
+      <p>
+        {{ _("Feed formulation optimization to improve growth performance and feed conversion ratio (FCR).") }}
+      </p>
+      <ul>
+        <li>{{ _("Nutrient profiling and formulation optimization") }}</li>
+        <li>{{ _("Performance testing for growth and FCR") }}</li>
+        <li>{{ _("Digestibility and waste reduction") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Alternative Protein Sources") }}</h3>
+      <p>
+        {{ _("Development and evaluation of alternative proteins such as insect protein, algae, and single-cell protein (SCP).") }}
+      </p>
+      <ul>
+        <li>{{ _("Insect protein") }}</li>
+        <li>{{ _("Algae and microalgae protein") }}</li>
+        <li>{{ _("Single-cell protein (SCP)") }}</li>
+        <li>{{ _("Sustainability and scalability assessment") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Fish Health & Vaccines") }}</h3>
+      <p>
+        {{ _("R&D on species-specific aquatic health solutions and vaccines aimed at reducing antibiotic usage.") }}
+      </p>
+      <ul>
+        <li>{{ _("Preventive health management") }}</li>
+        <li>{{ _("Species-specific vaccine development") }}</li>
+        <li>{{ _("Antibiotic reduction strategies") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Selective Breeding & Genetics") }}</h3>
+      <p>
+        {{ _("Selective breeding and genetics programs to improve growth performance and resilience under intensive farming conditions.") }}
+      </p>
+      <ul>
+        <li>{{ _("Growth performance enhancement") }}</li>
+        <li>{{ _("Resilience and survival improvement") }}</li>
+        <li>{{ _("Genetic line selection and performance tracking") }}</li>
+      </ul>
+    </div>
+
+    <div class="eng-card elev-2">
+      <h3>{{ _("Value-Added Products") }}</h3>
+      <p>
+        {{ _("R&D on seafood processing and development of value-added products such as fillets, oils, extracts, and nutritional supplements.") }}
+      </p>
+      <ul>
+        <li>{{ _("Seafood processing and product development") }}</li>
+        <li>{{ _("Fillets, oils, and extracts") }}</li>
+        <li>{{ _("Nutritional and functional supplements") }}</li>
+        <li>{{ _("Quality and market readiness focus") }}</li>
+      </ul>
+    </div>
+
   </div>
+</section>
 
-  <div class="eng-card elev-2">
-    <h3>{{ _("Vaccines") }}</h3>
-    <p>
-      {{ _("Research and development of species-specific aquatic vaccines aimed at reducing antibiotic usage.") }}
-    </p>
-    <ul>
-      <li>{{ _("Species-specific vaccine development") }}</li>
-      <li>{{ _("Preventive health management") }}</li>
-      <li>{{ _("Antibiotic reduction strategies") }}</li>
-    </ul>
-  </div>
-
-  <div class="eng-card elev-2">
-    <h3>{{ _("Selective Breeding & Genetics") }}</h3>
-    <p>
-      {{ _("Genetic improvement and selective breeding of fish species with high growth performance and resilience under intensive farming conditions, based on advanced global knowledge.") }}
-    </p>
-    <ul>
-      <li>{{ _("Growth performance enhancement") }}</li>
-      <li>{{ _("Resilience under intensive farming conditions") }}</li>
-      <li>{{ _("Genetic line selection and performance tracking") }}</li>
-    </ul>
-  </div>
-
-  <div class="eng-card elev-2">
-    <h3>{{ _("Value-Added Products") }}</h3>
-    <p>
-      {{ _("Research into seafood processing and development of high value-added products such as fillets, oils, and nutritional supplements.") }}
-    </p>
-    <ul>
-      <li>{{ _("Seafood processing and product development") }}</li>
-      <li>{{ _("Fillets, oils, and extracts") }}</li>
-      <li>{{ _("Nutritional and functional supplements") }}</li>
-      <li>{{ _("Quality and market readiness focus") }}</li>
-    </ul>
-  </div>
-
-</div>
-
+<!-- Scope & Deliverables -->
 <section class="section-white elev-1 section-panel">
   <h2>{{ _("R&D Scope & Deliverables") }}</h2>
   <p>
-    {{ _("Our scope includes research planning, formulation and protocol development, pilot validation, performance tracking, and documentation—designed to support real-world deployment and measurable operational improvement.") }}
+    {{ _("Our scope includes research planning, protocol development, pilot validation, performance tracking, and documentation — designed to support measurable operational improvement.") }}
   </p>
 </section>
 
+<!-- SEO Block + Internal Links -->
+<section class="tdq-seo-block">
+  <h2>{{ _("Applied Aquaculture R&D for Hatcheries and RAS Facilities") }}</h2>
+  <p>
+    {{ _("TDQ Co conducts applied research to improve feed efficiency, fish health, genetics, and production performance — supporting sustainable growth in modern aquaculture.") }}
+  </p>
+  <p>
+    {{ _("R&D outcomes can be integrated with automation and SCADA monitoring to validate improvements using real production data.") }}
+  </p>
+
+  <div class="tdq-seo-links">
+    <a href="{{ lang_url('automation') }}">{{ _("PLC automation & control") }}</a>
+    <a href="{{ lang_url('monitoring') }}">{{ _("SCADA monitoring & data logging") }}</a>
+    <a href="{{ lang_url('contact') }}">{{ _("Discuss an R&D collaboration") }}</a>
+  </div>
+</section>
+
+<!-- Single CTA (keep one, not two) -->
 <section class="section-white elev-1 section-panel">
   {% include "partials/specs_cta.html" %}
 </section>
-
-<section class="card-light about-cta">
-        <h2>{{ _("Work With Us") }}</h2>
-        <p>{{ _("Tell us about your hatchery project and we’ll respond with a clear technical path forward.") }}</p>
-        <p class="muted-text">
-            {{ _("Our team review every inquiry directly.") }}
-        </p>
-        <a href="{{ url_for('contact', lang=current_locale) }}" class="btn btn-primary">
-            {{ _("Contact Our Team") }}
-        </a>
-    </section>
 
 {% endblock %}
