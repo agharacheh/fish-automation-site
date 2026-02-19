@@ -89,41 +89,48 @@
     <div class="menu-en {% if current_locale != 'en' %}is-hidden{% endif %}">
   <a href="{{ lang_url('index') }}" class="{% if request.path == '/' %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-home" xlink:href="#icon-home"></use></svg>
-  Home
+    <span class="nav-label">Home</span>
   </a>
 
 
 <a href="{{ lang_url('equipment') }}" class="{% if request.path.startswith('/equipment') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-industry" xlink:href="#icon-industry"></use></svg>
-  Equipment Manufacturing
+    <span class="nav-label">Equipment Manufacturing</span>
+
+  
 </a>
 
 
 <a href="{{ lang_url('commercial') }}" class="{% if request.path.startswith('/commercial') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-briefcase" xlink:href="#icon-briefcase"></use></svg>
-  Commercial Services
+    <span class="nav-label">Commercial Services</span>
+
+  
 </a>
 
 <a href="{{ lang_url('automation') }}" class="{% if request.path.startswith('/automation') %}active{% endif %}">
   <svg class="icon nav-icon">
     <use href="#icon-microchip" xlink:href="#icon-microchip"></use>
   </svg>
-  Automation & Control
+    <span class="nav-label">Automation & Control</span>
+
+  
 </a>
 
 <a href="{{ lang_url('rnd') }}"  class="{% if request.path.startswith('/rnd') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-flask" xlink:href="#icon-flask"></use></svg>
-  Research & Development
+    <span class="nav-label">Research & Development</span>
 </a>
 
 <a href="{{ lang_url('about') }}" class="{% if request.path.startswith('/about') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-users" xlink:href="#icon-users"></use></svg>
-  About Us
+    <span class="nav-label">About Us</span>
+
 </a>
 
 <a href="{{ lang_url('contact') }}"  class="{% if request.path.startswith('/contact') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-email" xlink:href="#icon-email"></use></svg>
-  Contact / Specs
+    <span class="nav-label">Contact / Specs</span>
 </a>
 
     </div>
@@ -132,39 +139,43 @@
     <div class="menu-fa {% if current_locale != 'fa' %}is-hidden{% endif %}">
 <a href="{{ lang_url('index') }}" class="{% if request.path == '/' %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-home" xlink:href="#icon-home"></use></svg>
-  خانه
+  <span class="nav-label">خانه</span>
 </a>
+
 
 <a href="{{ lang_url('equipment') }}" class="{% if request.path.startswith('/equipment') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-industry" xlink:href="#icon-industry"></use></svg>
-  ساخت تجهیزات
+   <span class="nav-label">ساخت تجهیزات</span>
+
 </a>
 
 <a href="{{ lang_url('commercial') }}" class="{% if request.path.startswith('/commercial') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-briefcase" xlink:href="#icon-briefcase"></use></svg>
-  خدمات بازرگانی
+   <span class="nav-label">خدمات بازرگانی</span>
+
 </a>
 
 <a href="{{ lang_url('automation') }}" class="{% if request.path.startswith('/automation') %}active{% endif %}">
   <svg class="icon nav-icon">
-    <use href="#icon-microchip" xlink:href="#icon-microchip"></use>
-  </svg>
-  اتوماسیون و کنترل
+    <use href="#icon-microchip" xlink:href="#icon-microchip"></use></svg>
+    <span class="nav-label">اتوماسیون و کنترل</span>
 </a>
 
 <a href="{{ lang_url('rnd') }}"  class="{% if request.path.startswith('/rnd') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-flask" xlink:href="#icon-flask"></use></svg>
-  تحقیق و توسعه
+   <span class="nav-label">تحقیق و توسعه</span>
+
 </a>
 
 <a href="{{ lang_url('about') }}" class="{% if request.path.startswith('/about') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-users" xlink:href="#icon-users"></use></svg>
-  درباره ما
+   <span class="nav-label">درباره ما</span>
+
 </a>
 
 <a href="{{ lang_url('contact') }}"  class="{% if request.path.startswith('/contact') %}active{% endif %}">
   <svg class="icon nav-icon"><use href="#icon-email" xlink:href="#icon-email"></use></svg>
-  تماس / مشخصات
+   <span class="nav-label">تماس / مشخصات</span>
 </a>
 
     </div>
