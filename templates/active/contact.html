@@ -38,9 +38,10 @@
       <svg class="icon" aria-hidden="true"><use href="#icon-email"></use></svg>
       <span class="contact-label">{{ _("Email") }}:</span>
       <a href="mailto:info@tdqco.com"
-         class="copyable"
-         data-copy="info@tdqco.com">
+        class="copyable"
+        data-copy="info@tdqco.com">
         <span class="email" dir="ltr">info@tdqco.com</span>
+        <span class="copy-tooltip">{{ _("Copied") }}</span>
       </a>
     </li>
 
@@ -48,9 +49,10 @@
       <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
       <span class="contact-label">{{ _("Phone") }}:</span>
       <a href="tel:+987138239933"
-         class="copyable"
-         data-copy="+98 71 3823 9933">
+        class="copyable"
+        data-copy="+98 71 3823 9933">
         <span class="phone-number" dir="ltr">+98 71 3823 9933</span>
+        <span class="copy-tooltip">{{ _("Copied") }}</span>
       </a>
     </li>
 
@@ -147,6 +149,29 @@
     {{ _("Your message was sent successfully!") }}
   </p>
 </section>
+
+<script>
+document.addEventListener("click", function (e) {
+  const link = e.target.closest(".copyable");
+  if (!link) return;
+
+  const text = link.getAttribute("data-copy");
+  if (!text) return;
+
+  // Prevent normal navigation on copy click
+  e.preventDefault();
+
+  navigator.clipboard.writeText(text).then(() => {
+    link.classList.add("copied");
+
+    setTimeout(() => {
+      link.classList.remove("copied");
+    }, 1200);
+  }).catch(() => {
+    console.warn("Clipboard copy failed");
+  });
+});
+</script>
 
 
 {% endblock %}

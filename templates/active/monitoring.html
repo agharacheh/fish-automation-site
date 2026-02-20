@@ -54,35 +54,106 @@
 <!-- Live Mockup -->
 <section class="section-light">
   <div class="section-white elev-1 section-panel">
-    <h2>{{ _("SCADA Live Mockup") }}</h2>
-    <p style="margin-top:6px;">
+
+    <div class="scada-head">
+      <div class="scada-head-left">
+        <span class="scada-dot" aria-hidden="true"></span>
+        <h2 class="scada-title">{{ _("SCADA Live Mockup") }}</h2>
+        <span class="scada-badge">{{ _("LIVE") }}</span>
+      </div>
+        <div class="scada-head-right">
+          <span class="scada-meta">{{ _("Auto-refresh") }}: 2s</span>
+        </div>
+    </div>
+
+    <p class="scada-desc">
       {{ _("A simplified demo panel showing typical hatchery signals and status indicators. Values update automatically.") }}
     </p>
 
-    <div class="scada-panel">
+    <div class="scada-grid">
 
-      <div class="scada-card elev-2">
-        <h3>{{ _("Incubation Temperature") }}</h3>
-        <div class="scada-value" id="tempVal">27.1°C</div>
-        <div class="status-light green" id="tempStatus"></div>
+      <!-- Temperature -->
+      <div class="scada-kpi elev-2">
+        <div class="scada-kpi-top">
+          <h3 class="scada-kpi-title">{{ _("Incubation Temperature") }}</h3>
+          <div class="scada-kpi-right">
+            <span class="scada-chip scada-chip--ok" id="tempChip">{{ _("Normal") }}</span>
+            <span class="status-light green" id="tempStatus" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="scada-kpi-value">
+          <span class="scada-num" id="tempVal">27.1</span>
+          <span class="scada-unit">°C</span>
+        </div>
+
+        <div class="scada-range">
+          <span>22</span><span>28</span>
+        </div>
+        <div class="scada-bar"><span id="tempBar" style="width:72%"></span></div>
       </div>
 
-      <div class="scada-card elev-2">
-        <h3>{{ _("Dissolved Oxygen") }}</h3>
-        <div class="scada-value" id="doVal">6.9 mg/L</div>
-        <div class="status-light green" id="doStatus"></div>
+      <!-- DO -->
+      <div class="scada-kpi elev-2">
+        <div class="scada-kpi-top">
+          <h3 class="scada-kpi-title">{{ _("Dissolved Oxygen") }}</h3>
+          <div class="scada-kpi-right">
+            <span class="scada-chip scada-chip--warn" id="doChip">{{ _("Low") }}</span>
+            <span class="status-light green" id="doStatus" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="scada-kpi-value">
+          <span class="scada-num" id="doVal">6.9</span>
+          <span class="scada-unit">mg/L</span>
+        </div>
+
+        <div class="scada-range">
+          <span>7.0</span><span>9.0</span>
+        </div>
+        <div class="scada-bar"><span id="doBar" style="width:45%"></span></div>
       </div>
 
-      <div class="scada-card elev-2">
-        <h3>{{ _("Water Flow Rate") }}</h3>
-        <div class="scada-value" id="flowVal">420 L/hr</div>
-        <div class="status-light green" id="flowStatus"></div>
+      <!-- Flow -->
+      <div class="scada-kpi elev-2">
+        <div class="scada-kpi-top">
+          <h3 class="scada-kpi-title">{{ _("Water Flow Rate") }}</h3>
+          <div class="scada-kpi-right">
+            <span class="scada-chip scada-chip--ok" id="flowChip">{{ _("Stable") }}</span>
+            <span class="status-light green" id="flowStatus" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="scada-kpi-value">
+          <span class="scada-num" id="flowVal">420</span>
+          <span class="scada-unit">L/hr</span>
+        </div>
+
+        <div class="scada-range">
+          <span>350</span><span>520</span>
+        </div>
+        <div class="scada-bar"><span id="flowBar" style="width:55%"></span></div>
       </div>
 
-      <div class="scada-card elev-2">
-        <h3>{{ _("pH Level") }}</h3>
-        <div class="scada-value" id="phVal">7.6</div>
-        <div class="status-light green" id="phStatus"></div>
+      <!-- pH -->
+      <div class="scada-kpi elev-2">
+        <div class="scada-kpi-top">
+          <h3 class="scada-kpi-title">{{ _("pH Level") }}</h3>
+          <div class="scada-kpi-right">
+            <span class="scada-chip scada-chip--ok" id="phChip">{{ _("Normal") }}</span>
+            <span class="status-light green" id="phStatus" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="scada-kpi-value">
+          <span class="scada-num" id="phVal">7.6</span>
+          <span class="scada-unit">pH</span>
+        </div>
+
+        <div class="scada-range">
+          <span>7.0</span><span>8.2</span>
+        </div>
+        <div class="scada-bar"><span id="phBar" style="width:25%"></span></div>
       </div>
 
     </div>
@@ -105,25 +176,93 @@
     <a href="{{ lang_url('contact') }}">{{ _("Request a consultation") }}</a>
   </div>
 </section>
-
 <script>
 (function () {
+  // Helpers
+  const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+  const pct = (v, min, max) => ((v - min) / (max - min)) * 100;
+
+  const setStatus = (lightEl, chipEl, stateTextKey, state) => {
+    // state: "green" | "yellow" | "red"
+    if (lightEl) {
+      lightEl.classList.remove("green", "yellow", "red");
+      lightEl.classList.add(state);
+    }
+    if (chipEl) {
+      chipEl.classList.remove("scada-chip--ok", "scada-chip--warn");
+      // keep it simple: ok vs warn
+      chipEl.classList.add(state === "green" ? "scada-chip--ok" : "scada-chip--warn");
+      chipEl.textContent = stateTextKey;
+    }
+  };
+
   const update = () => {
     const tempEl = document.getElementById("tempVal");
     const doEl = document.getElementById("doVal");
     const flowEl = document.getElementById("flowVal");
     const phEl = document.getElementById("phVal");
+
     if (!tempEl || !doEl || !flowEl || !phEl) return;
 
-    const t = (26 + Math.random() * 2).toFixed(1);
-    const d = (6.5 + Math.random() * 1).toFixed(1);
-    const f = (400 + Math.random() * 60).toFixed(0);
-    const ph = (7.0 + Math.random() * (8.2 - 7.0)).toFixed(1);
+    // Optional UI elements
+    const tempBar = document.getElementById("tempBar");
+    const doBar = document.getElementById("doBar");
+    const flowBar = document.getElementById("flowBar");
+    const phBar = document.getElementById("phBar");
 
-    tempEl.textContent = t + "°C";
-    doEl.textContent = d + " mg/L";
-    flowEl.textContent = f + " L/hr";
-    phEl.textContent = ph;
+    const tempStatus = document.getElementById("tempStatus");
+    const doStatus = document.getElementById("doStatus");
+    const flowStatus = document.getElementById("flowStatus");
+    const phStatus = document.getElementById("phStatus");
+
+    const tempChip = document.getElementById("tempChip");
+    const doChip = document.getElementById("doChip");
+    const flowChip = document.getElementById("flowChip");
+    const phChip = document.getElementById("phChip");
+
+    // Ranges (adjust anytime)
+    const TEMP_MIN = 22, TEMP_MAX = 28;
+    const DO_MIN = 7.0, DO_MAX = 9.0;
+    const FLOW_MIN = 350, FLOW_MAX = 520;
+    const PH_MIN = 7.0, PH_MAX = 8.2;
+
+    // Generate demo values
+    const t = +(26 + Math.random() * 2).toFixed(1);               // 26.0–28.0
+    const d = +(6.5 + Math.random() * 1).toFixed(1);              // 6.5–7.5
+    const f = +(400 + Math.random() * 60).toFixed(0);             // 400–460
+    const ph = +(7.0 + Math.random() * (8.2 - 7.0)).toFixed(1);   // 7.0–8.2
+
+    // Write numbers only (units are in HTML)
+    tempEl.textContent = t.toFixed(1);
+    doEl.textContent = d.toFixed(1);
+    flowEl.textContent = String(f);
+    phEl.textContent = ph.toFixed(1);
+
+    // Bars
+    if (tempBar) tempBar.style.width = clamp(pct(t, TEMP_MIN, TEMP_MAX), 0, 100) + "%";
+    if (doBar) doBar.style.width = clamp(pct(d, DO_MIN, DO_MAX), 0, 100) + "%";
+    if (flowBar) flowBar.style.width = clamp(pct(f, FLOW_MIN, FLOW_MAX), 0, 100) + "%";
+    if (phBar) phBar.style.width = clamp(pct(ph, PH_MIN, PH_MAX), 0, 100) + "%";
+
+    // Status logic (simple + readable)
+    // Temperature
+    if (t < TEMP_MIN || t > TEMP_MAX) setStatus(tempStatus, tempChip, "Alarm", "red");
+    else if (t < TEMP_MIN + 0.5 || t > TEMP_MAX - 0.5) setStatus(tempStatus, tempChip, "Warning", "yellow");
+    else setStatus(tempStatus, tempChip, "Normal", "green");
+
+    // DO (below min is bad)
+    if (d < DO_MIN) setStatus(doStatus, doChip, "Low", "yellow");
+    else if (d > DO_MAX) setStatus(doStatus, doChip, "High", "yellow");
+    else setStatus(doStatus, doChip, "Normal", "green");
+
+    // Flow
+    if (f < FLOW_MIN) setStatus(flowStatus, flowChip, "Low", "yellow");
+    else if (f > FLOW_MAX) setStatus(flowStatus, flowChip, "High", "yellow");
+    else setStatus(flowStatus, flowChip, "Stable", "green");
+
+    // pH
+    if (ph < PH_MIN || ph > PH_MAX) setStatus(phStatus, phChip, "Out of range", "yellow");
+    else setStatus(phStatus, phChip, "Normal", "green");
   };
 
   let timer = null;
@@ -140,13 +279,11 @@
     timer = null;
   };
 
-  // Pause when tab not visible
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) stop();
     else start();
   });
 
-  // Start only if the mockup exists
   if (document.getElementById("tempVal")) start();
 })();
 </script>

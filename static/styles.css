@@ -87,6 +87,11 @@ html[lang="en"] .tdq-hero,
 html[lang="en"] .tdq-hero * {
   text-align: start;
 }
+@media (min-width: 900px) {
+  html[lang="fa"] .tdq-hero h1 {
+    letter-spacing: -0.2px;
+  }
+}
 
 /* ===============================
    LAYOUT
@@ -492,71 +497,71 @@ html[dir="rtl"] .submenu-arrow { margin-left: 0; margin-right: 6px; }
 /* ===============================
    TDQ HERO — Phase 2 (LATEST)
 =============================== */
-.tdq-hero {
-  color: #f4f7ff;
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  margin: 18px;
-  padding: 40px 22px;
-  margin-bottom: 20px;
-  background:
-    radial-gradient(1000px 600px at 12% 25%, rgba(64, 106, 166, 0.35), transparent 60%),
-    radial-gradient(900px 600px at 88% 70%, rgba(64, 106, 166, 0.20), transparent 70%),
-    linear-gradient(135deg, #08121b 0%, #0d1722 100%);
-}
+  .tdq-hero {
+    color: #f4f7ff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    margin: 18px;
+    padding: 40px 22px;
+    margin-bottom: 20px;
+    background:
+      radial-gradient(1000px 600px at 12% 25%, rgba(64, 106, 166, 0.35), transparent 60%),
+      radial-gradient(900px 600px at 88% 70%, rgba(64, 106, 166, 0.20), transparent 70%),
+      linear-gradient(135deg, #08121b 0%, #0d1722 100%);
+  }
 
-.tdq-hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 1180px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 22px;
-  align-items: center;
-}
+  .tdq-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 22px;
+    align-items: center;
+  }
 
-@media (max-width: 980px) {
-  .tdq-hero { padding: 28px 16px; }
-  .tdq-hero-inner { grid-template-columns: 1fr; }
-}
+  @media (max-width: 980px) {
+    .tdq-hero { padding: 28px 16px; }
+    .tdq-hero-inner { grid-template-columns: 1fr; }
+  }
 
-.tdq-hero-title {
-  margin: 0 0 10px;
-  line-height: 1.08;
-  font-size: clamp(1.75rem, 3.4vw, 3rem);
-  letter-spacing: -0.3px;
-  color: #fff;
-  text-shadow: 0 3px 18px rgba(0,0,0,0.55);
-}
+  .tdq-hero-title {
+    margin: 0 0 10px;
+    line-height: 1.08;
+    font-size: clamp(1.75rem, 3.4vw, 3rem);
+    letter-spacing: -0.3px;
+    color: #fff;
+    text-shadow: 0 3px 18px rgba(0,0,0,0.55);
+  }
 
-.tdq-hero-subtitle {
-  margin: 0 0 14px;
-  font-size: 1.02rem;
-  opacity: 0.92;
-  max-width: 60ch;
-}
+  .tdq-hero-subtitle {
+    margin: 0 0 14px;
+    font-size: 1.02rem;
+    opacity: 0.92;
+    max-width: 60ch;
+  }
 
-.tdq-hero-kicker {
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  font-size: 0.95rem;
-  opacity: 0.88;
-  margin: 0 0 8px;
-}
+  .tdq-hero-kicker {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.95rem;
+    opacity: 0.88;
+    margin: 0 0 8px;
+  }
 
-.tdq-hero-cta {
-  display: flex;
-  gap: 12px;
-  flex-wrap: nowrap;
-  margin: 10px 0 12px;
-  align-items: center;
-}
-@media (max-width: 620px) {
-  .tdq-hero-cta { flex-direction: column; align-items: stretch; }
-}
+  .tdq-hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: nowrap;
+    margin: 10px 0 12px;
+    align-items: center;
+  }
+  @media (max-width: 620px) {
+    .tdq-hero-cta { flex-direction: column; align-items: stretch; }
+  }
 
 .tdq-btn {
   display: inline-flex;
@@ -732,8 +737,25 @@ html[dir="rtl"] .submenu-arrow { margin-left: 0; margin-right: 6px; }
   text-decoration: none;
   color: inherit;
   display: block;
-  height: 100%;
 }
+
+.eng-card-link .eng-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.eng-card-link:hover .eng-card {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+.eng-card-link:hover .eng-card h3 {
+  color: #1f3c6d; /* your primary brand blue */
+}
+.eng-card-link:hover .eng-card {
+  border: 1px solid rgba(31, 60, 109, 0.15);
+}
+
+
 
 .eng-card {
   background: #fff;
@@ -1339,4 +1361,239 @@ html[dir="rtl"] .eng-card {
 .tdq-seo-links a:focus-visible{
   outline: 2px solid rgba(64,106,166,0.55);
   outline-offset: 2px;
+}
+/* ===============================
+   SCADA LIVE MOCKUP (Dashboard KPI)
+=============================== */
+
+.scada-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom: 8px;
+}
+
+.scada-head-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap: wrap;
+}
+
+.scada-title{
+  margin:0;
+}
+
+.scada-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34,197,94,.15);
+}
+
+.scada-badge{
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(20,40,80,.12);
+  background: rgba(255,255,255,.75);
+}
+
+.scada-head-right .scada-meta{
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(10,20,40,.58);
+}
+
+.scada-desc{
+  margin: 6px 0 14px;
+  color: rgba(10,20,40,.78);
+}
+
+/* KPI grid */
+.scada-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 1100px){
+  .scada-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (max-width: 560px){
+  .scada-head{ align-items:flex-start; }
+  .scada-grid{ grid-template-columns: 1fr; }
+}
+
+/* KPI card */
+.scada-kpi{
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(20,40,80,.10);
+  border-radius: 16px;
+  padding: 14px 14px 12px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.05);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.scada-kpi:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(0,0,0,.08);
+}
+
+.scada-kpi-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom: 10px;
+}
+
+.scada-kpi-title{
+  margin:0;
+  font-size: 15px;
+  font-weight: 800;
+  color: rgba(10,20,40,.92);
+}
+
+.scada-kpi-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* value */
+.scada-kpi-value{
+  display:flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.scada-num{
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: .2px;
+  color: rgba(10,20,40,.96);
+}
+
+.scada-unit{
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(10,20,40,.62);
+}
+
+/* chips */
+.scada-chip{
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(20,40,80,.12);
+  background: rgba(255,255,255,.75);
+  white-space: nowrap;
+}
+
+.scada-chip--ok{
+  border-color: rgba(34,197,94,.25);
+}
+
+.scada-chip--warn{
+  border-color: rgba(245,158,11,.35);
+}
+
+/* range + bar */
+.scada-range{
+  display:flex;
+  justify-content:space-between;
+  font-size: 12px;
+  color: rgba(10,20,40,.55);
+  margin-bottom: 6px;
+}
+
+.scada-bar{
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(20,40,80,.10);
+  overflow:hidden;
+}
+
+.scada-bar > span{
+  display:block;
+  height: 100%;
+  border-radius: 999px;
+  background: rgba(35, 110, 210, .65);
+}
+.status-light.yellow { background: #f59e0b; box-shadow: 0 0 10px rgba(245,158,11,.45); }
+.status-light.red    { background: #ef4444; box-shadow: 0 0 10px rgba(239,68,68,.45); }
+/* ===============================
+   CONTACT LINKS – CLEAN CORPORATE STYLE
+=============================== */
+
+.contact-info a,
+.section-panel a.copyable {
+  color: #1f3c6d; /* TDQ primary blue */
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Prevent purple visited links */
+.contact-info a:visited,
+.section-panel a.copyable:visited {
+  color: #1f3c6d;
+}
+
+/* Hover effect */
+.contact-info a:hover,
+.section-panel a.copyable:hover {
+  color: #0d2a4d;
+  border-bottom: 1px solid rgba(31, 60, 109, 0.4);
+}
+/* ===============================
+   COPY TOOLTIP
+=============================== */
+
+.copyable {
+  position: relative;
+  cursor: pointer;
+}
+
+.copy-tooltip {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f3c6d;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.copy-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px;
+  border-style: solid;
+  border-color: #1f3c6d transparent transparent transparent;
+}
+
+/* Active state */
+.copyable.copied .copy-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-3px);
 }
