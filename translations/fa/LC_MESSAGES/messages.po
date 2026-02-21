@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  fish-hatchery-automation\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-02-14 15:25+0330\n"
+"POT-Creation-Date: 2026-02-21 12:23+0330\n"
 "PO-Revision-Date: 2025-12-07 00:00+0000\n"
 "Last-Translator: Amir\n"
 "Language: fa\n"
@@ -62,14 +62,20 @@ msgid ""
 "TDQ Co is an aquaculture engineering company specializing in PLC-based "
 "automation, SCADA monitoring systems, RAS integration, and industrial "
 "control solutions for hatcheries and aquaculture facilities."
-msgstr "شرکت تمهید گستر در زمینه مهندسی آبزی‌پروری فعالیت داشته و با تمرکز بر اتوماسیون PLC، سامانه‌های SCADA، ادغام سیستم‌های RAS و کنترل صنعتی، راهکارهای تخصصی برای هچری‌ها و مراکز پرورش ارائه می‌دهد."
+msgstr ""
+"شرکت تمهید گستر در زمینه مهندسی آبزی‌پروری فعالیت داشته و با تمرکز بر "
+"اتوماسیون PLC، سامانه‌های SCADA، ادغام سیستم‌های RAS و کنترل صنعتی، "
+"راهکارهای تخصصی برای هچری‌ها و مراکز پرورش ارائه می‌دهد."
 
 #: templates/active/about.html:55
 msgid ""
 "Our work focuses on operational reliability, scalability, energy "
 "efficiency, and long-term maintainability — from concept design and "
 "system engineering to commissioning and technical support."
-msgstr "تمرکز فعالیت‌های ما بر قابلیت اطمینان عملیاتی، مقیاس‌پذیری، بهره‌وری انرژی و قابلیت نگهداری بلندمدت است — از طراحی مفهومی و مهندسی سیستم‌ها تا راه‌اندازی و پشتیبانی فنی."
+msgstr ""
+"تمرکز فعالیت‌های ما بر قابلیت اطمینان عملیاتی، مقیاس‌پذیری، بهره‌وری "
+"انرژی و قابلیت نگهداری بلندمدت است — از طراحی مفهومی و مهندسی سیستم‌ها تا"
+" راه‌اندازی و پشتیبانی فنی."
 
 # ==========================
 # base.html
@@ -85,7 +91,9 @@ msgstr "پروژه‌ها و نصب‌های مهندسی"
 msgid ""
 "Selected examples of automation panels, SCADA dashboards, and RAS "
 "installations."
-msgstr "نمونه‌هایی منتخب از تابلوهای اتوماسیون، داشبوردهای SCADA و نصب سیستم‌های RAS."
+msgstr ""
+"نمونه‌هایی منتخب از تابلوهای اتوماسیون، داشبوردهای SCADA و نصب سیستم‌های "
+"RAS."
 
 #: templates/active/about.html:78
 msgid "PLC control panel installation for fish hatchery automation"
@@ -129,7 +137,9 @@ msgstr "اتوماسیون هچری و PLC"
 msgid ""
 "Control logic design, interlocks, and fail-safe behavior for hatchery "
 "processes."
-msgstr "طراحی منطق کنترلی، اینترلاک‌ها و عملکرد ایمن (Fail-Safe) برای فرآیندهای هچری"
+msgstr ""
+"طراحی منطق کنترلی، اینترلاک‌ها و عملکرد ایمن (Fail-Safe) برای فرآیندهای "
+"هچری"
 
 #: templates/active/about.html:117
 msgid "SCADA & Monitoring"
@@ -137,7 +147,9 @@ msgstr "اسکادا و مانیتورینگ"
 
 #: templates/active/about.html:118
 msgid "Real-time dashboards, alarms, data logging, KPIs, and remote monitoring."
-msgstr "داشبوردهای لحظه‌ای، سیستم‌های هشدار، ثبت داده‌ها، شاخص‌های کلیدی عملکرد (KPI) و مانیتورینگ از راه دور"
+msgstr ""
+"داشبوردهای لحظه‌ای، سیستم‌های هشدار، ثبت داده‌ها، شاخص‌های کلیدی عملکرد "
+"(KPI) و مانیتورینگ از راه دور"
 
 # ==========================
 # process.html
@@ -150,7 +162,9 @@ msgstr "مهندسی فرآیند هچری"
 msgid ""
 "Process design and system integration for recirculating aquaculture "
 "systems."
-msgstr "طراحی فرآیند و یکپارچه‌سازی سیستم‌ها برای سامانه‌های پرورش آبزیان با گردش مجدد (RAS)"
+msgstr ""
+"طراحی فرآیند و یکپارچه‌سازی سیستم‌ها برای سامانه‌های پرورش آبزیان با گردش"
+" مجدد (RAS)"
 
 #: templates/active/about.html:127
 msgid "Electrical & Control Panels"
@@ -181,7 +195,6 @@ msgid ""
 msgstr "راه‌اندازی در محل پروژه، آموزش اپراتورها و پشتیبانی فنی بلندمدت."
 
 #: templates/active/about.html:146
-
 msgid "Our Engineering Process"
 msgstr "فرآیند مهندسی ما"
 
@@ -201,7 +214,9 @@ msgstr "مهندسی و طراحی سیستم"
 
 #: templates/active/about.html:155
 msgid "Control philosophy, diagrams, BOM development, and documentation."
-msgstr "تدوین فلسفه کنترل، طراحی نقشه‌ها و دیاگرام‌های مهندسی، توسعه لیست اقلام (BOM) و تهیه مستندات فنی کامل."
+msgstr ""
+"تدوین فلسفه کنترل، طراحی نقشه‌ها و دیاگرام‌های مهندسی، توسعه لیست اقلام "
+"(BOM) و تهیه مستندات فنی کامل."
 
 #: templates/active/about.html:158
 msgid "Manufacturing & Integration"
@@ -228,7 +243,10 @@ msgid ""
 "TDQ Co combines equipment manufacturing, PLC automation, and SCADA "
 "monitoring to deliver integrated aquaculture engineering solutions "
 "tailored for hatcheries and RAS facilities."
-msgstr "شرکت تمهید گستر با ترکیب تولید تجهیزات، اتوماسیون مبتنی بر PLC و مانیتورینگ SCADA، راهکارهای مهندسی یکپارچه آبزی‌پروری را متناسب با نیاز هچری‌ها و تأسیسات RAS ارائه می‌دهد."
+msgstr ""
+"شرکت تمهید گستر با ترکیب تولید تجهیزات، اتوماسیون مبتنی بر PLC و "
+"مانیتورینگ SCADA، راهکارهای مهندسی یکپارچه آبزی‌پروری را متناسب با نیاز "
+"هچری‌ها و تأسیسات RAS ارائه می‌دهد."
 
 #: templates/active/about.html:176 templates/active/commercial.html:136
 msgid "Aquaculture equipment manufacturing"
@@ -372,11 +390,11 @@ msgstr "صفحات آلارم با امکان تأیید (Acknowledge) و ثبت
 msgid "Multi-language UI readiness"
 msgstr "آمادگی رابط کاربری چندزبانه"
 
-#: templates/active/automation.html:87 templates/active/index.html:170
+#: templates/active/automation.html:88 templates/active/index.html:170
 msgid "Monitoring & SCADA"
 msgstr "مانیتورینگ و اسکادا"
 
-#: templates/active/automation.html:89
+#: templates/active/automation.html:90
 msgid ""
 "Centralized monitoring, data logging, dashboards, KPIs, alarms, and "
 "remote access for single-site or multi-site aquaculture operations."
@@ -385,15 +403,11 @@ msgstr ""
 "(KPI)، آلارم‌ها و دسترسی از راه دور برای بهره‌برداری از مراکز آبزی‌پروری "
 "تک‌سایته یا چندسایته."
 
-#: templates/active/automation.html:93
-msgid "Explore Monitoring & SCADA"
-msgstr "مشاهده و بررسی سامانه‌های مانیتورینگ و SCADA"
-
-#: templates/active/automation.html:100
+#: templates/active/automation.html:98
 msgid "Instrumentation & Integration"
 msgstr "ابزار دقیق و یکپارچه‌سازی سیستم‌ها"
 
-#: templates/active/automation.html:102
+#: templates/active/automation.html:100
 msgid ""
 "Integration of field sensors and equipment into a stable control system "
 "with consistent tagging, calibration support, and validation testing."
@@ -401,27 +415,27 @@ msgstr ""
 "یکپارچه‌سازی سنسورها و تجهیزات میدانی در یک سیستم کنترلی پایدار، همراه با"
 " نام‌گذاری یکنواخت تگ‌ها، پشتیبانی کالیبراسیون و آزمون‌های اعتبارسنجی."
 
-#: templates/active/automation.html:105
+#: templates/active/automation.html:103
 msgid "Water quality sensors (DO, pH, temperature, ORP)"
 msgstr "سنسورهای کیفیت آب (اکسیژن محلول DO، pH، دما و ORP)"
 
-#: templates/active/automation.html:106
+#: templates/active/automation.html:104
 msgid "Flow, level, pressure transmitters"
 msgstr "ترانسمیترهای دبی، سطح و فشار"
 
-#: templates/active/automation.html:107
+#: templates/active/automation.html:105
 msgid "VFD/soft-starter control integration"
 msgstr "یکپارچه‌سازی کنترل درایوهای VFD و سافت‌استارتر"
 
-#: templates/active/automation.html:108
+#: templates/active/automation.html:106
 msgid "Signal validation and fault handling"
 msgstr "بررسی صحت سیگنال‌ها و رسیدگی به خطاها"
 
-#: templates/active/automation.html:117
+#: templates/active/automation.html:115
 msgid "Industrial Automation for Hatcheries & RAS Facilities"
 msgstr "اتوماسیون صنعتی برای مراکز تکثیر و تأسیسات RAS"
 
-#: templates/active/automation.html:119
+#: templates/active/automation.html:117
 msgid ""
 "We design and implement fully integrated control systems including "
 "programmable logic controllers (PLC), supervisory control and data "
@@ -432,7 +446,7 @@ msgstr ""
 " سامانه‌های نظارت و گردآوری داده (SCADA)، پایش از راه دور، مدیریت "
 "آلارم‌ها و تحلیل عملکرد را طراحی و اجرا می‌کنیم."
 
-#: templates/active/automation.html:122
+#: templates/active/automation.html:120
 msgid ""
 "Our systems improve operational efficiency, biosecurity, energy "
 "optimization, and production stability across single-site and multi-site "
@@ -441,26 +455,26 @@ msgstr ""
 "سیستم‌های ما بهره‌وری عملیاتی، امنیت زیستی، بهینه‌سازی مصرف انرژی و "
 "پایداری تولید را در مراکز آبزی‌پروری تک‌سایته و چندسایته ارتقا می‌دهند."
 
-#: templates/active/automation.html:126 templates/active/commercial.html:138
+#: templates/active/automation.html:124 templates/active/commercial.html:138
 #: templates/active/equipment.html:135
 msgid "SCADA monitoring systems"
 msgstr "اسکادا و مانیتورینگ"
 
-#: templates/active/automation.html:127 templates/active/index.html:230
-#: templates/active/monitoring.html:104
+#: templates/active/automation.html:125 templates/active/index.html:230
+#: templates/active/monitoring.html:175
 msgid "RAS equipment manufacturing"
 msgstr "ساخت تجهیزات سیستم‌های RAS"
 
-#: templates/active/automation.html:128 templates/active/equipment.html:136
-#: templates/active/monitoring.html:105
+#: templates/active/automation.html:126 templates/active/equipment.html:136
+#: templates/active/monitoring.html:176
 msgid "Request a consultation"
 msgstr "درخواست مشاوره"
 
-#: templates/active/automation.html:134
+#: templates/active/automation.html:132
 msgid "Engineering Approach"
 msgstr "رویکرد مهندسی"
 
-#: templates/active/automation.html:136
+#: templates/active/automation.html:134
 msgid ""
 "We follow a structured workflow to ensure stable operation and clean "
 "handover: requirement definition, I/O mapping, control philosophy, "
@@ -470,19 +484,19 @@ msgstr ""
 "تحویل شفاف پروژه تضمین شود؛ از تعریف نیازمندی‌ها، نگاشت I/O و تدوین فلسفه"
 " کنترلی گرفته تا پیاده‌سازی، آزمون، راه‌اندازی و آموزش."
 
-#: templates/active/automation.html:140
+#: templates/active/automation.html:138
 msgid "Control philosophy and process mapping (PFD)"
 msgstr "فلسفه کنترلی و ترسیم نقشه فرایند (PFD)"
 
-#: templates/active/automation.html:141
+#: templates/active/automation.html:139
 msgid "Panel design coordination and wiring review"
 msgstr "هماهنگی طراحی تابلوها و بازبینی سیم‌کشی"
 
-#: templates/active/automation.html:142
+#: templates/active/automation.html:140
 msgid "Factory acceptance testing (FAT) and site acceptance testing (SAT)"
 msgstr "برگزاری FAT و SAT پیش از بهره‌برداری"
 
-#: templates/active/automation.html:143
+#: templates/active/automation.html:141
 msgid "Operator training and maintenance documentation"
 msgstr "آموزش اپراتورها و مستندسازی نگهداری و تعمیرات"
 
@@ -500,7 +514,7 @@ msgstr ""
 "راهکارهای پیشرفته اتوماسیون مراکز تکثیر، سیستم‌های RAS، SCADA و مهندسی "
 "آبزی‌پروری."
 
-#: templates/active/base.html:183
+#: templates/active/base.html:198
 msgid "Tamhid Gostar"
 msgstr "تمهید گستر"
 
@@ -736,7 +750,7 @@ msgstr ""
 msgid "Technical Contact"
 msgstr "تماس با تیم فنی"
 
-#: templates/active/contact.html:25
+#: templates/active/contact.html:24
 msgid ""
 "Send your technical inquiry for hatchery engineering, automation, SCADA "
 "integration, or equipment specifications."
@@ -752,47 +766,80 @@ msgstr "دفتر مرکزی"
 msgid "Shiraz, Iran East Ghodoosi, Seda va sima street, Honar building"
 msgstr "شیراز، خیابان قدوسی شرقی، خیابان صدا و سیما، ساختمان هنر"
 
-#: templates/active/contact.html:54
+#: templates/active/contact.html:39
+msgid "Email"
+msgstr ""
+
+#: templates/active/contact.html:44 templates/active/contact.html:55
+msgid "Copied"
+msgstr ""
+
+#: templates/active/contact.html:50
+msgid "Phone"
+msgstr ""
+
+#: templates/active/contact.html:61
 msgid "Working Hours"
 msgstr "ساعات کاری"
 
-#: templates/active/contact.html:56
+#: templates/active/contact.html:63
 msgid "Saturday to Thursday, 8:00 – 16:00"
 msgstr "شنبه تا چهارشنبه، 8:00 تا 16:00"
 
-#: templates/active/contact.html:82
+#: templates/active/contact.html:70
+msgid "Social links"
+msgstr ""
+
+#: templates/active/contact.html:89
+msgid "Instagram — Coming soon"
+msgstr ""
+
+#: templates/active/contact.html:98
+msgid "LinkedIn — Coming soon"
+msgstr ""
+
+#: templates/active/contact.html:114
 msgid "Company location map"
 msgstr "موقعیت مکانی شرکت"
 
-#: templates/active/contact.html:92
+#: templates/active/contact.html:125
+#, fuzzy
+msgid "Company"
+msgstr "بررسی اجمالی شرکت"
+
+#: templates/active/contact.html:130
 msgid "Your Name"
 msgstr "نام شما"
 
-#: templates/active/contact.html:93
+#: templates/active/contact.html:131
 msgid "Enter your name"
 msgstr "نام خود را وارد کنید"
 
-#: templates/active/contact.html:95
+#: templates/active/contact.html:133
 msgid "Email Address"
 msgstr "ایمیل"
 
-#: templates/active/contact.html:96
+#: templates/active/contact.html:134
 msgid "Enter your email"
 msgstr "ایمیل خود را وارد کنید"
 
-#: templates/active/contact.html:98
+#: templates/active/contact.html:136
 msgid "Message"
 msgstr "پیام"
 
-#: templates/active/contact.html:99
+#: templates/active/contact.html:137
 msgid "Write your inquiry here…"
 msgstr "پیام خود را اینجا بنویسید…"
 
-#: templates/active/contact.html:101
+#: templates/active/contact.html:140
 msgid "Send Message"
 msgstr "ارسال پیام"
 
-#: templates/active/contact.html:105
+#: templates/active/contact.html:141
+msgid "Sending…"
+msgstr ""
+
+#: templates/active/contact.html:149
 msgid "Your message was sent successfully!"
 msgstr "پیام شما با موفقیت ارسال شد!"
 
@@ -1017,11 +1064,9 @@ msgstr ""
 " آبزیان، مهندسی سیستم‌های RAS و سامانه‌های پایش و مانیتورینگ SCADA برای "
 "مراکز مدرن آبزی‌پروری است."
 
-# ==========================
-# base.html
 #: templates/active/index.html:27
-msgid "Fish Hatchery Automation & Engineering"
-msgstr "اتوماسیون و مهندسی پرورش ماهی"
+msgid "Hatchery, Aquaculture Processing & Aquaponic Facility Design and Execution"
+msgstr "طراحی و اجرا مراکز تکثیر آبزیان، فرآوری آبزیان و مزارع آکواپونیک "
 
 #: templates/active/index.html:31
 msgid "Industrial"
@@ -1289,11 +1334,19 @@ msgstr ""
 msgid "Secure remote access and role-based visualization"
 msgstr "دسترسی امن از راه دور و نمایش اطلاعات بر اساس سطح دسترسی کاربران"
 
-#: templates/active/monitoring.html:57
+#: templates/active/monitoring.html:61
 msgid "SCADA Live Mockup"
 msgstr "دموی زنده SCADA"
 
-#: templates/active/monitoring.html:59
+#: templates/active/monitoring.html:62
+msgid "LIVE"
+msgstr "زنده"
+
+#: templates/active/monitoring.html:65
+msgid "Auto-refresh"
+msgstr "به روزرسانی - خودکار"
+
+#: templates/active/monitoring.html:70
 msgid ""
 "A simplified demo panel showing typical hatchery signals and status "
 "indicators. Values update automatically."
@@ -1301,27 +1354,40 @@ msgstr ""
 "یک پنل نمایشی ساده که سیگنال‌ها و شاخص‌های وضعیت معمول در هچری را نمایش "
 "می‌دهد. مقادیر به‌صورت خودکار به‌روزرسانی می‌شوند."
 
-#: templates/active/monitoring.html:65
+#: templates/active/monitoring.html:78
 msgid "Incubation Temperature"
 msgstr "دمای انکوباسیون"
 
-#: templates/active/monitoring.html:71
+#: templates/active/monitoring.html:80 templates/active/monitoring.html:143
+msgid "Normal"
+msgstr ""
+
+#: templates/active/monitoring.html:99
 msgid "Dissolved Oxygen"
 msgstr "اکسیژن محلول (DO)"
 
-#: templates/active/monitoring.html:77
+#: templates/active/monitoring.html:101
+msgid "Low"
+msgstr ""
+
+#: templates/active/monitoring.html:120
 msgid "Water Flow Rate"
 msgstr "نرخ جریان آب"
 
-#: templates/active/monitoring.html:83
+#: templates/active/monitoring.html:122
+#, fuzzy
+msgid "Stable"
+msgstr "کنترل پایدار"
+
+#: templates/active/monitoring.html:141
 msgid "pH Level"
 msgstr "سطح pH"
 
-#: templates/active/monitoring.html:94
+#: templates/active/monitoring.html:165
 msgid "SCADA Systems for Aquaculture Operations"
 msgstr "سیستم‌های SCADA برای عملیات آبزی‌پروری"
 
-#: templates/active/monitoring.html:96
+#: templates/active/monitoring.html:167
 msgid ""
 "TDQ Co designs SCADA monitoring for hatcheries and RAS facilities, "
 "including dashboards, alarm management, trend charts, KPI reporting, and "
@@ -1332,7 +1398,7 @@ msgstr ""
 "گزارش‌گیری شاخص‌های کلیدی عملکرد (KPI) و ثبت داده‌ها به‌منظور کنترل "
 "عملیاتی و پشتیبانی از تصمیم‌گیری."
 
-#: templates/active/monitoring.html:99
+#: templates/active/monitoring.html:170
 msgid ""
 "We integrate monitoring with PLC automation, sensors, and control panels "
 "to create a unified system that improves reliability, biosecurity, and "
@@ -1342,7 +1408,7 @@ msgstr ""
 " کنترلی یکپارچه می‌کنیم تا سیستمی منسجم ایجاد شود که قابلیت اطمینان، "
 "امنیت زیستی و پایداری تولید را ارتقا دهد."
 
-#: templates/active/monitoring.html:103 templates/active/rnd.html:137
+#: templates/active/monitoring.html:174 templates/active/rnd.html:137
 msgid "PLC automation & control"
 msgstr "اتوماسیون و کنترل مبتنی بر PLC"
 
@@ -1596,7 +1662,7 @@ msgstr "دانلود فایل مشخصات (PDF)"
 msgid "Download Technical Specifications"
 msgstr "دانلود مشخصات فنی"
 
-#: templates/active/partials/specs_cta.html:4
+#: templates/active/partials/specs_cta.html:5
 msgid ""
 "Get an overview of our automation, control systems, and hatchery "
 "engineering capabilities."
@@ -1604,7 +1670,7 @@ msgstr ""
 "نمایی کلی از توانمندی‌های ما در حوزه اتوماسیون، سیستم‌های کنترل، مهندسی "
 "آبزی‌پروری و تجهیزات آبزی‌پروری."
 
-#: templates/active/partials/specs_cta.html:13
+#: templates/active/partials/specs_cta.html:16
 msgid "Download Specs"
 msgstr "دانلود فایل مشخصات "
 
@@ -1729,4 +1795,15 @@ msgstr "دانلود فایل مشخصات "
 
 #~ msgid "Contact Our Engineering Team"
 #~ msgstr "ارتباط با تیم مهندسی"
+
+#~ msgid "Explore Monitoring & SCADA"
+#~ msgstr "مشاهده و بررسی سامانه‌های مانیتورینگ و SCADA"
+
+# ==========================
+# base.html
+#~ msgid "Fish Hatchery Automation & Engineering"
+#~ msgstr "اتوماسیون و مهندسی پرورش ماهی"
+
+#~ msgid "Integrated Engineering for Modern Hatchery Facilities"
+#~ msgstr "طراحی و اجرا مراکز تکثیر آبزیان "
 

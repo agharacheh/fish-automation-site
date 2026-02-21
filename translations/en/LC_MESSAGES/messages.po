@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-02-14 15:25+0330\n"
+"POT-Creation-Date: 2026-02-21 12:23+0330\n"
 "PO-Revision-Date: 2025-12-07 21:55+0330\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -336,51 +336,47 @@ msgstr ""
 msgid "Multi-language UI readiness"
 msgstr ""
 
-#: templates/active/automation.html:87 templates/active/index.html:170
+#: templates/active/automation.html:88 templates/active/index.html:170
 msgid "Monitoring & SCADA"
 msgstr ""
 
-#: templates/active/automation.html:89
+#: templates/active/automation.html:90
 msgid ""
 "Centralized monitoring, data logging, dashboards, KPIs, alarms, and "
 "remote access for single-site or multi-site aquaculture operations."
 msgstr ""
 
-#: templates/active/automation.html:93
-msgid "Explore Monitoring & SCADA"
-msgstr ""
-
-#: templates/active/automation.html:100
+#: templates/active/automation.html:98
 msgid "Instrumentation & Integration"
 msgstr ""
 
-#: templates/active/automation.html:102
+#: templates/active/automation.html:100
 msgid ""
 "Integration of field sensors and equipment into a stable control system "
 "with consistent tagging, calibration support, and validation testing."
 msgstr ""
 
-#: templates/active/automation.html:105
+#: templates/active/automation.html:103
 msgid "Water quality sensors (DO, pH, temperature, ORP)"
 msgstr ""
 
-#: templates/active/automation.html:106
+#: templates/active/automation.html:104
 msgid "Flow, level, pressure transmitters"
 msgstr ""
 
-#: templates/active/automation.html:107
+#: templates/active/automation.html:105
 msgid "VFD/soft-starter control integration"
 msgstr ""
 
-#: templates/active/automation.html:108
+#: templates/active/automation.html:106
 msgid "Signal validation and fault handling"
 msgstr ""
 
-#: templates/active/automation.html:117
+#: templates/active/automation.html:115
 msgid "Industrial Automation for Hatcheries & RAS Facilities"
 msgstr ""
 
-#: templates/active/automation.html:119
+#: templates/active/automation.html:117
 msgid ""
 "We design and implement fully integrated control systems including "
 "programmable logic controllers (PLC), supervisory control and data "
@@ -388,52 +384,52 @@ msgid ""
 " analytics."
 msgstr ""
 
-#: templates/active/automation.html:122
+#: templates/active/automation.html:120
 msgid ""
 "Our systems improve operational efficiency, biosecurity, energy "
 "optimization, and production stability across single-site and multi-site "
 "aquaculture operations."
 msgstr ""
 
-#: templates/active/automation.html:126 templates/active/commercial.html:138
+#: templates/active/automation.html:124 templates/active/commercial.html:138
 #: templates/active/equipment.html:135
 msgid "SCADA monitoring systems"
 msgstr ""
 
-#: templates/active/automation.html:127 templates/active/index.html:230
-#: templates/active/monitoring.html:104
+#: templates/active/automation.html:125 templates/active/index.html:230
+#: templates/active/monitoring.html:175
 msgid "RAS equipment manufacturing"
 msgstr ""
 
-#: templates/active/automation.html:128 templates/active/equipment.html:136
-#: templates/active/monitoring.html:105
+#: templates/active/automation.html:126 templates/active/equipment.html:136
+#: templates/active/monitoring.html:176
 msgid "Request a consultation"
 msgstr ""
 
-#: templates/active/automation.html:134
+#: templates/active/automation.html:132
 msgid "Engineering Approach"
 msgstr ""
 
-#: templates/active/automation.html:136
+#: templates/active/automation.html:134
 msgid ""
 "We follow a structured workflow to ensure stable operation and clean "
 "handover: requirement definition, I/O mapping, control philosophy, "
 "implementation, testing, commissioning, and training."
 msgstr ""
 
-#: templates/active/automation.html:140
+#: templates/active/automation.html:138
 msgid "Control philosophy and process mapping (PFD)"
 msgstr ""
 
-#: templates/active/automation.html:141
+#: templates/active/automation.html:139
 msgid "Panel design coordination and wiring review"
 msgstr ""
 
-#: templates/active/automation.html:142
+#: templates/active/automation.html:140
 msgid "Factory acceptance testing (FAT) and site acceptance testing (SAT)"
 msgstr ""
 
-#: templates/active/automation.html:143
+#: templates/active/automation.html:141
 msgid "Operator training and maintenance documentation"
 msgstr ""
 
@@ -447,7 +443,7 @@ msgid ""
 "engineering solutions."
 msgstr ""
 
-#: templates/active/base.html:183
+#: templates/active/base.html:198
 msgid "Tamhid Gostar"
 msgstr ""
 
@@ -653,7 +649,7 @@ msgstr ""
 msgid "Technical Contact"
 msgstr ""
 
-#: templates/active/contact.html:25
+#: templates/active/contact.html:24
 msgid ""
 "Send your technical inquiry for hatchery engineering, automation, SCADA "
 "integration, or equipment specifications."
@@ -667,47 +663,79 @@ msgstr ""
 msgid "Shiraz, Iran East Ghodoosi, Seda va sima street, Honar building"
 msgstr ""
 
-#: templates/active/contact.html:54
+#: templates/active/contact.html:39
+msgid "Email"
+msgstr ""
+
+#: templates/active/contact.html:44 templates/active/contact.html:55
+msgid "Copied"
+msgstr ""
+
+#: templates/active/contact.html:50
+msgid "Phone"
+msgstr ""
+
+#: templates/active/contact.html:61
 msgid "Working Hours"
 msgstr ""
 
-#: templates/active/contact.html:56
+#: templates/active/contact.html:63
 msgid "Saturday to Thursday, 8:00 – 16:00"
 msgstr ""
 
-#: templates/active/contact.html:82
-msgid "Company location map"
+#: templates/active/contact.html:70
+msgid "Social links"
 msgstr ""
 
-#: templates/active/contact.html:92
-msgid "Your Name"
-msgstr ""
-
-#: templates/active/contact.html:93
-msgid "Enter your name"
-msgstr ""
-
-#: templates/active/contact.html:95
-msgid "Email Address"
-msgstr ""
-
-#: templates/active/contact.html:96
-msgid "Enter your email"
+#: templates/active/contact.html:89
+msgid "Instagram — Coming soon"
 msgstr ""
 
 #: templates/active/contact.html:98
+msgid "LinkedIn — Coming soon"
+msgstr ""
+
+#: templates/active/contact.html:114
+msgid "Company location map"
+msgstr ""
+
+#: templates/active/contact.html:125
+msgid "Company"
+msgstr ""
+
+#: templates/active/contact.html:130
+msgid "Your Name"
+msgstr ""
+
+#: templates/active/contact.html:131
+msgid "Enter your name"
+msgstr ""
+
+#: templates/active/contact.html:133
+msgid "Email Address"
+msgstr ""
+
+#: templates/active/contact.html:134
+msgid "Enter your email"
+msgstr ""
+
+#: templates/active/contact.html:136
 msgid "Message"
 msgstr ""
 
-#: templates/active/contact.html:99
+#: templates/active/contact.html:137
 msgid "Write your inquiry here…"
 msgstr ""
 
-#: templates/active/contact.html:101
+#: templates/active/contact.html:140
 msgid "Send Message"
 msgstr ""
 
-#: templates/active/contact.html:105
+#: templates/active/contact.html:141
+msgid "Sending…"
+msgstr ""
+
+#: templates/active/contact.html:149
 msgid "Your message was sent successfully!"
 msgstr ""
 
@@ -904,7 +932,7 @@ msgid ""
 msgstr ""
 
 #: templates/active/index.html:27
-msgid "Fish Hatchery Automation & Engineering"
+msgid "Hatchery, Aquaculture Processing & Aquaponic Facility Design and Execution"
 msgstr ""
 
 #: templates/active/index.html:31
@@ -1147,51 +1175,71 @@ msgstr ""
 msgid "Secure remote access and role-based visualization"
 msgstr ""
 
-#: templates/active/monitoring.html:57
+#: templates/active/monitoring.html:61
 msgid "SCADA Live Mockup"
 msgstr ""
 
-#: templates/active/monitoring.html:59
+#: templates/active/monitoring.html:62
+msgid "LIVE"
+msgstr ""
+
+#: templates/active/monitoring.html:65
+msgid "Auto-refresh"
+msgstr ""
+
+#: templates/active/monitoring.html:70
 msgid ""
 "A simplified demo panel showing typical hatchery signals and status "
 "indicators. Values update automatically."
 msgstr ""
 
-#: templates/active/monitoring.html:65
+#: templates/active/monitoring.html:78
 msgid "Incubation Temperature"
 msgstr ""
 
-#: templates/active/monitoring.html:71
+#: templates/active/monitoring.html:80 templates/active/monitoring.html:143
+msgid "Normal"
+msgstr ""
+
+#: templates/active/monitoring.html:99
 msgid "Dissolved Oxygen"
 msgstr ""
 
-#: templates/active/monitoring.html:77
+#: templates/active/monitoring.html:101
+msgid "Low"
+msgstr ""
+
+#: templates/active/monitoring.html:120
 msgid "Water Flow Rate"
 msgstr ""
 
-#: templates/active/monitoring.html:83
+#: templates/active/monitoring.html:122
+msgid "Stable"
+msgstr ""
+
+#: templates/active/monitoring.html:141
 msgid "pH Level"
 msgstr ""
 
-#: templates/active/monitoring.html:94
+#: templates/active/monitoring.html:165
 msgid "SCADA Systems for Aquaculture Operations"
 msgstr ""
 
-#: templates/active/monitoring.html:96
+#: templates/active/monitoring.html:167
 msgid ""
 "TDQ Co designs SCADA monitoring for hatcheries and RAS facilities, "
 "including dashboards, alarm management, trend charts, KPI reporting, and "
 "data logging for operational control and decision support."
 msgstr ""
 
-#: templates/active/monitoring.html:99
+#: templates/active/monitoring.html:170
 msgid ""
 "We integrate monitoring with PLC automation, sensors, and control panels "
 "to create a unified system that improves reliability, biosecurity, and "
 "production stability."
 msgstr ""
 
-#: templates/active/monitoring.html:103 templates/active/rnd.html:137
+#: templates/active/monitoring.html:174 templates/active/rnd.html:137
 msgid "PLC automation & control"
 msgstr ""
 
@@ -1417,13 +1465,13 @@ msgstr ""
 msgid "Download Technical Specifications"
 msgstr ""
 
-#: templates/active/partials/specs_cta.html:4
+#: templates/active/partials/specs_cta.html:5
 msgid ""
 "Get an overview of our automation, control systems, and hatchery "
 "engineering capabilities."
 msgstr ""
 
-#: templates/active/partials/specs_cta.html:13
+#: templates/active/partials/specs_cta.html:16
 msgid "Download Specs"
 msgstr ""
 
@@ -2186,5 +2234,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Contact Our Engineering Team"
+#~ msgstr ""
+
+#~ msgid "Explore Monitoring & SCADA"
+#~ msgstr ""
+
+#~ msgid "Integrated Engineering for Modern Hatchery Facilities"
 #~ msgstr ""
 
